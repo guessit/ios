@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22089BA97554462C80199B37 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62620204B775499F949AB190 /* libPods.a */; };
+		BFAD126716F136A100F6D429 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126616F136A100F6D429 /* UIKit.framework */; };
+		BFAD126916F136A100F6D429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126816F136A100F6D429 /* Foundation.framework */; };
+		BFAD126B16F136A100F6D429 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126A16F136A100F6D429 /* CoreGraphics.framework */; };
+		BFAD127116F136A100F6D429 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFAD126F16F136A100F6D429 /* InfoPlist.strings */; };
+		BFAD128016F136A200F6D429 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAD127E16F136A200F6D429 /* MainStoryboard.storyboard */; };
+		BFAD128B16F136A200F6D429 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD128A16F136A200F6D429 /* SenTestingKit.framework */; };
+		BFAD128C16F136A200F6D429 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126616F136A100F6D429 /* UIKit.framework */; };
+		BFAD128D16F136A200F6D429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126816F136A100F6D429 /* Foundation.framework */; };
+		BFAD129516F136A200F6D429 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFAD129316F136A200F6D429 /* InfoPlist.strings */; };
+		BFAD129816F136A200F6D429 /* GuessItBSITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD129716F136A200F6D429 /* GuessItBSITests.m */; };
+		BFAD12AD16F1376600F6D429 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFAD12A316F1376600F6D429 /* Default-568h@2x.png */; };
+		BFAD12AE16F1376600F6D429 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BFAD12A416F1376600F6D429 /* Default.png */; };
+		BFAD12AF16F1376600F6D429 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFAD12A516F1376600F6D429 /* Default@2x.png */; };
+		BFAD12B016F1376600F6D429 /* GIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12A916F1376600F6D429 /* GIAppDelegate.m */; };
+		BFAD12B116F1376600F6D429 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12AB16F1376600F6D429 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFAD128E16F136A200F6D429 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFAD125B16F136A100F6D429 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFAD126216F136A100F6D429;
+			remoteInfo = GuessItBSI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		62620204B775499F949AB190 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD30177A3D9541AEB54F865D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		BFAD126316F136A100F6D429 /* GuessItBSI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessItBSI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFAD126616F136A100F6D429 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BFAD126816F136A100F6D429 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BFAD126A16F136A100F6D429 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BFAD126E16F136A100F6D429 /* GuessItBSI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GuessItBSI-Info.plist"; sourceTree = "<group>"; };
+		BFAD127016F136A100F6D429 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BFAD127F16F136A200F6D429 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		BFAD128916F136A200F6D429 /* GuessItBSITests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessItBSITests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFAD128A16F136A200F6D429 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		BFAD129216F136A200F6D429 /* GuessItBSITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GuessItBSITests-Info.plist"; sourceTree = "<group>"; };
+		BFAD129416F136A200F6D429 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BFAD129616F136A200F6D429 /* GuessItBSITests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuessItBSITests.h; sourceTree = "<group>"; };
+		BFAD129716F136A200F6D429 /* GuessItBSITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuessItBSITests.m; sourceTree = "<group>"; };
+		BFAD12A316F1376600F6D429 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BFAD12A416F1376600F6D429 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BFAD12A516F1376600F6D429 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		BFAD12A816F1376600F6D429 /* GIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIAppDelegate.h; sourceTree = "<group>"; };
+		BFAD12A916F1376600F6D429 /* GIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIAppDelegate.m; sourceTree = "<group>"; };
+		BFAD12AA16F1376600F6D429 /* GuessItBSI-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GuessItBSI-Prefix.pch"; sourceTree = "<group>"; };
+		BFAD12AB16F1376600F6D429 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFAD126016F136A100F6D429 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAD126716F136A100F6D429 /* UIKit.framework in Frameworks */,
+				BFAD126916F136A100F6D429 /* Foundation.framework in Frameworks */,
+				BFAD126B16F136A100F6D429 /* CoreGraphics.framework in Frameworks */,
+				22089BA97554462C80199B37 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFAD128516F136A200F6D429 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAD128B16F136A200F6D429 /* SenTestingKit.framework in Frameworks */,
+				BFAD128C16F136A200F6D429 /* UIKit.framework in Frameworks */,
+				BFAD128D16F136A200F6D429 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BFAD125A16F136A100F6D429 = {
+			isa = PBXGroup;
+			children = (
+				BFAD126C16F136A100F6D429 /* GuessItBSI */,
+				BFAD129016F136A200F6D429 /* GuessItBSITests */,
+				BFAD126516F136A100F6D429 /* Frameworks */,
+				BFAD126416F136A100F6D429 /* Products */,
+				BD30177A3D9541AEB54F865D /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		BFAD126416F136A100F6D429 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFAD126316F136A100F6D429 /* GuessItBSI.app */,
+				BFAD128916F136A200F6D429 /* GuessItBSITests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFAD126516F136A100F6D429 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFAD126616F136A100F6D429 /* UIKit.framework */,
+				BFAD126816F136A100F6D429 /* Foundation.framework */,
+				BFAD126A16F136A100F6D429 /* CoreGraphics.framework */,
+				BFAD128A16F136A200F6D429 /* SenTestingKit.framework */,
+				62620204B775499F949AB190 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFAD126C16F136A100F6D429 /* GuessItBSI */ = {
+			isa = PBXGroup;
+			children = (
+				BFAD12A116F1376600F6D429 /* controller */,
+				BFAD12A616F1376600F6D429 /* model */,
+				BFAD12AC16F1376600F6D429 /* view */,
+				BFAD12A216F1376600F6D429 /* images */,
+				BFAD12A716F1376600F6D429 /* other */,
+				BFAD127E16F136A200F6D429 /* MainStoryboard.storyboard */,
+				BFAD126D16F136A100F6D429 /* Supporting Files */,
+			);
+			path = GuessItBSI;
+			sourceTree = "<group>";
+		};
+		BFAD126D16F136A100F6D429 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFAD126E16F136A100F6D429 /* GuessItBSI-Info.plist */,
+				BFAD126F16F136A100F6D429 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFAD129016F136A200F6D429 /* GuessItBSITests */ = {
+			isa = PBXGroup;
+			children = (
+				BFAD129616F136A200F6D429 /* GuessItBSITests.h */,
+				BFAD129716F136A200F6D429 /* GuessItBSITests.m */,
+				BFAD129116F136A200F6D429 /* Supporting Files */,
+			);
+			path = GuessItBSITests;
+			sourceTree = "<group>";
+		};
+		BFAD129116F136A200F6D429 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFAD129216F136A200F6D429 /* GuessItBSITests-Info.plist */,
+				BFAD129316F136A200F6D429 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFAD12A116F1376600F6D429 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		BFAD12A216F1376600F6D429 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				BFAD12A316F1376600F6D429 /* Default-568h@2x.png */,
+				BFAD12A416F1376600F6D429 /* Default.png */,
+				BFAD12A516F1376600F6D429 /* Default@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		BFAD12A616F1376600F6D429 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		BFAD12A716F1376600F6D429 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				BFAD12A816F1376600F6D429 /* GIAppDelegate.h */,
+				BFAD12A916F1376600F6D429 /* GIAppDelegate.m */,
+				BFAD12AA16F1376600F6D429 /* GuessItBSI-Prefix.pch */,
+				BFAD12AB16F1376600F6D429 /* main.m */,
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
+		BFAD12AC16F1376600F6D429 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFAD126216F136A100F6D429 /* GuessItBSI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFAD129B16F136A200F6D429 /* Build configuration list for PBXNativeTarget "GuessItBSI" */;
+			buildPhases = (
+				BFAD125F16F136A100F6D429 /* Sources */,
+				BFAD126016F136A100F6D429 /* Frameworks */,
+				BFAD126116F136A100F6D429 /* Resources */,
+				0001E6E06D584022AC208D44 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GuessItBSI;
+			productName = GuessItBSI;
+			productReference = BFAD126316F136A100F6D429 /* GuessItBSI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFAD128816F136A200F6D429 /* GuessItBSITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFAD129E16F136A200F6D429 /* Build configuration list for PBXNativeTarget "GuessItBSITests" */;
+			buildPhases = (
+				BFAD128416F136A200F6D429 /* Sources */,
+				BFAD128516F136A200F6D429 /* Frameworks */,
+				BFAD128616F136A200F6D429 /* Resources */,
+				BFAD128716F136A200F6D429 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFAD128F16F136A200F6D429 /* PBXTargetDependency */,
+			);
+			name = GuessItBSITests;
+			productName = GuessItBSITests;
+			productReference = BFAD128916F136A200F6D429 /* GuessItBSITests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFAD125B16F136A100F6D429 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GI;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Marlon Andrade";
+			};
+			buildConfigurationList = BFAD125E16F136A100F6D429 /* Build configuration list for PBXProject "GuessItBSI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BFAD125A16F136A100F6D429;
+			productRefGroup = BFAD126416F136A100F6D429 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFAD126216F136A100F6D429 /* GuessItBSI */,
+				BFAD128816F136A200F6D429 /* GuessItBSITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFAD126116F136A100F6D429 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAD127116F136A100F6D429 /* InfoPlist.strings in Resources */,
+				BFAD128016F136A200F6D429 /* MainStoryboard.storyboard in Resources */,
+				BFAD12AD16F1376600F6D429 /* Default-568h@2x.png in Resources */,
+				BFAD12AE16F1376600F6D429 /* Default.png in Resources */,
+				BFAD12AF16F1376600F6D429 /* Default@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFAD128616F136A200F6D429 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAD129516F136A200F6D429 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0001E6E06D584022AC208D44 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		BFAD128716F136A200F6D429 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFAD125F16F136A100F6D429 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAD12B016F1376600F6D429 /* GIAppDelegate.m in Sources */,
+				BFAD12B116F1376600F6D429 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFAD128416F136A200F6D429 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAD129816F136A200F6D429 /* GuessItBSITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFAD128F16F136A200F6D429 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFAD126216F136A100F6D429 /* GuessItBSI */;
+			targetProxy = BFAD128E16F136A200F6D429 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BFAD126F16F136A100F6D429 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFAD127016F136A100F6D429 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BFAD127E16F136A200F6D429 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFAD127F16F136A200F6D429 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		BFAD129316F136A200F6D429 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFAD129416F136A200F6D429 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFAD129916F136A200F6D429 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BFAD129A16F136A200F6D429 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFAD129C16F136A200F6D429 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GuessItBSI/other/GuessItBSI-Prefix.pch";
+				INFOPLIST_FILE = "GuessItBSI/GuessItBSI-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BFAD129D16F136A200F6D429 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GuessItBSI/other/GuessItBSI-Prefix.pch";
+				INFOPLIST_FILE = "GuessItBSI/GuessItBSI-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BFAD129F16F136A200F6D429 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GuessItBSI.app/GuessItBSI";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GuessItBSI/GuessItBSI-Prefix.pch";
+				INFOPLIST_FILE = "GuessItBSITests/GuessItBSITests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		BFAD12A016F136A200F6D429 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GuessItBSI.app/GuessItBSI";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GuessItBSI/GuessItBSI-Prefix.pch";
+				INFOPLIST_FILE = "GuessItBSITests/GuessItBSITests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFAD125E16F136A100F6D429 /* Build configuration list for PBXProject "GuessItBSI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFAD129916F136A200F6D429 /* Debug */,
+				BFAD129A16F136A200F6D429 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFAD129B16F136A200F6D429 /* Build configuration list for PBXNativeTarget "GuessItBSI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFAD129C16F136A200F6D429 /* Debug */,
+				BFAD129D16F136A200F6D429 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFAD129E16F136A200F6D429 /* Build configuration list for PBXNativeTarget "GuessItBSITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFAD129F16F136A200F6D429 /* Debug */,
+				BFAD12A016F136A200F6D429 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFAD125B16F136A100F6D429 /* Project object */;
+}

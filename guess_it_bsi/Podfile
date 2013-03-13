@@ -1,0 +1,3 @@
+platform :ios, '5.0'
+
+pod 'MALazykit', :podspec => 'https://raw.github.com/marlonandrade/Specs/master/MALazykit/0.1.2/MALazykit.podspec'

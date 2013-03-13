@@ -1,0 +1,15 @@
+
+PODS:
+- MALazykit (0.1.2)
+
+DEPENDENCIES:
+- MALazykit (from `https://raw.github.com/marlonandrade/Specs/master/MALazykit/0.1.2/MALazykit.podspec')
+
+EXTERNAL SOURCES:
+  MALazykit:
+    :podspec: https://raw.github.com/marlonandrade/Specs/master/MALazykit/0.1.2/MALazykit.podspec
+
+SPEC CHECKSUMS:
+  MALazykit: c3b160c8bec7e9a19ab7596b4bfaa3e720a56a93
+
+COCOAPODS: 0.16.4
