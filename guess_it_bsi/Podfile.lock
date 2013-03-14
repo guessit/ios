@@ -1,9 +1,11 @@
 
 PODS:
 - MALazykit (0.1.2)
+- SSToolkit (1.0.2)
 
 DEPENDENCIES:
 - MALazykit (from `https://raw.github.com/marlonandrade/Specs/master/MALazykit/0.1.2/MALazykit.podspec')
+- SSToolkit
 
 EXTERNAL SOURCES:
   MALazykit:
@@ -11,5 +13,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   MALazykit: c3b160c8bec7e9a19ab7596b4bfaa3e720a56a93
+  SSToolkit: 9751b7ec0d068dc1dc46c8121dfeff808f9e3d35
 
 COCOAPODS: 0.16.4

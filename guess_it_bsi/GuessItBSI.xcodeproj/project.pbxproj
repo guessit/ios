@@ -23,6 +23,10 @@
 		BFAD12AF16F1376600F6D429 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFAD12A516F1376600F6D429 /* Default@2x.png */; };
 		BFAD12B016F1376600F6D429 /* GIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12A916F1376600F6D429 /* GIAppDelegate.m */; };
 		BFAD12B116F1376600F6D429 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12AB16F1376600F6D429 /* main.m */; };
+		BFAD12B416F1387C00F6D429 /* GICategory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12B316F1387C00F6D429 /* GICategory.m */; };
+		BFAD12B716F138A700F6D429 /* GICategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12B616F138A700F6D429 /* GICategoriesViewController.m */; };
+		BFAD12BA16F13D5F00F6D429 /* GILevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12B916F13D5F00F6D429 /* GILevelsViewController.m */; };
+		BFAD12BD16F13D8200F6D429 /* GILevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12BC16F13D8200F6D429 /* GILevel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,14 @@
 		BFAD12A916F1376600F6D429 /* GIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIAppDelegate.m; sourceTree = "<group>"; };
 		BFAD12AA16F1376600F6D429 /* GuessItBSI-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GuessItBSI-Prefix.pch"; sourceTree = "<group>"; };
 		BFAD12AB16F1376600F6D429 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BFAD12B216F1387C00F6D429 /* GICategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GICategory.h; sourceTree = "<group>"; };
+		BFAD12B316F1387C00F6D429 /* GICategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GICategory.m; sourceTree = "<group>"; };
+		BFAD12B516F138A700F6D429 /* GICategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GICategoriesViewController.h; sourceTree = "<group>"; };
+		BFAD12B616F138A700F6D429 /* GICategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GICategoriesViewController.m; sourceTree = "<group>"; };
+		BFAD12B816F13D5F00F6D429 /* GILevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelsViewController.h; sourceTree = "<group>"; };
+		BFAD12B916F13D5F00F6D429 /* GILevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelsViewController.m; sourceTree = "<group>"; };
+		BFAD12BB16F13D8200F6D429 /* GILevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevel.h; sourceTree = "<group>"; };
+		BFAD12BC16F13D8200F6D429 /* GILevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,11 +132,11 @@
 		BFAD126C16F136A100F6D429 /* GuessItBSI */ = {
 			isa = PBXGroup;
 			children = (
-				BFAD12A116F1376600F6D429 /* controller */,
-				BFAD12A616F1376600F6D429 /* model */,
-				BFAD12AC16F1376600F6D429 /* view */,
-				BFAD12A216F1376600F6D429 /* images */,
-				BFAD12A716F1376600F6D429 /* other */,
+				BFAD12A116F1376600F6D429 /* Controller */,
+				BFAD12A616F1376600F6D429 /* Model */,
+				BFAD12AC16F1376600F6D429 /* View */,
+				BFAD12A216F1376600F6D429 /* Images */,
+				BFAD12A716F1376600F6D429 /* Other */,
 				BFAD127E16F136A200F6D429 /* MainStoryboard.storyboard */,
 				BFAD126D16F136A100F6D429 /* Supporting Files */,
 			);
@@ -159,31 +171,42 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BFAD12A116F1376600F6D429 /* controller */ = {
+		BFAD12A116F1376600F6D429 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BFAD12B516F138A700F6D429 /* GICategoriesViewController.h */,
+				BFAD12B616F138A700F6D429 /* GICategoriesViewController.m */,
+				BFAD12B816F13D5F00F6D429 /* GILevelsViewController.h */,
+				BFAD12B916F13D5F00F6D429 /* GILevelsViewController.m */,
 			);
+			name = Controller;
 			path = controller;
 			sourceTree = "<group>";
 		};
-		BFAD12A216F1376600F6D429 /* images */ = {
+		BFAD12A216F1376600F6D429 /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				BFAD12A316F1376600F6D429 /* Default-568h@2x.png */,
 				BFAD12A416F1376600F6D429 /* Default.png */,
 				BFAD12A516F1376600F6D429 /* Default@2x.png */,
 			);
+			name = Images;
 			path = images;
 			sourceTree = "<group>";
 		};
-		BFAD12A616F1376600F6D429 /* model */ = {
+		BFAD12A616F1376600F6D429 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BFAD12B216F1387C00F6D429 /* GICategory.h */,
+				BFAD12B316F1387C00F6D429 /* GICategory.m */,
+				BFAD12BB16F13D8200F6D429 /* GILevel.h */,
+				BFAD12BC16F13D8200F6D429 /* GILevel.m */,
 			);
+			name = Model;
 			path = model;
 			sourceTree = "<group>";
 		};
-		BFAD12A716F1376600F6D429 /* other */ = {
+		BFAD12A716F1376600F6D429 /* Other */ = {
 			isa = PBXGroup;
 			children = (
 				BFAD12A816F1376600F6D429 /* GIAppDelegate.h */,
@@ -191,13 +214,15 @@
 				BFAD12AA16F1376600F6D429 /* GuessItBSI-Prefix.pch */,
 				BFAD12AB16F1376600F6D429 /* main.m */,
 			);
+			name = Other;
 			path = other;
 			sourceTree = "<group>";
 		};
-		BFAD12AC16F1376600F6D429 /* view */ = {
+		BFAD12AC16F1376600F6D429 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
+			name = View;
 			path = view;
 			sourceTree = "<group>";
 		};
@@ -329,6 +354,10 @@
 			files = (
 				BFAD12B016F1376600F6D429 /* GIAppDelegate.m in Sources */,
 				BFAD12B116F1376600F6D429 /* main.m in Sources */,
+				BFAD12B416F1387C00F6D429 /* GICategory.m in Sources */,
+				BFAD12B716F138A700F6D429 /* GICategoriesViewController.m in Sources */,
+				BFAD12BA16F13D5F00F6D429 /* GILevelsViewController.m in Sources */,
+				BFAD12BD16F13D8200F6D429 /* GILevel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +470,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GuessItBSI/other/GuessItBSI-Prefix.pch";
 				INFOPLIST_FILE = "GuessItBSI/GuessItBSI-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -454,7 +483,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GuessItBSI/other/GuessItBSI-Prefix.pch";
 				INFOPLIST_FILE = "GuessItBSI/GuessItBSI-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
