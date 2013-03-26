@@ -11,7 +11,6 @@
 @interface GICategory : NSObject
 
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, strong) NSArray *levels;
 
 + (instancetype)categoryWithName:(NSString *)name;
 - (id)initWithName:(NSString *)name;

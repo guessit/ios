@@ -39,12 +39,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *categoryWithLevelsIdentifier = @"category_with_levels_row";
-    static NSString *categoryWithoutLevelsIdentifier = @"category_without_levels_row";
+    static NSString *categoriesIdentifier = @"category_row";
 
     GICategory *category = [self.bsiCategories objectAtIndex:indexPath.row];
 
-    UITableViewCell *categoryCell = [tableView dequeueReusableCellWithIdentifier:categoryWithLevelsIdentifier];
+    UITableViewCell *categoryCell = [tableView dequeueReusableCellWithIdentifier:categoriesIdentifier];
 
     categoryCell.textLabel.text = category.name;
 

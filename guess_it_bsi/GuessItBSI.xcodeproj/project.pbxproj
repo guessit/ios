@@ -25,8 +25,11 @@
 		BFAD12B116F1376600F6D429 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12AB16F1376600F6D429 /* main.m */; };
 		BFAD12B416F1387C00F6D429 /* GICategory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12B316F1387C00F6D429 /* GICategory.m */; };
 		BFAD12B716F138A700F6D429 /* GICategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12B616F138A700F6D429 /* GICategoriesViewController.m */; };
-		BFAD12BA16F13D5F00F6D429 /* GILevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12B916F13D5F00F6D429 /* GILevelsViewController.m */; };
-		BFAD12BD16F13D8200F6D429 /* GILevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12BC16F13D8200F6D429 /* GILevel.m */; };
+		BFBDD2121701092000F5698E /* GIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBDD2111701092000F5698E /* GIMainViewController.m */; };
+		BFBDD2151701201200F5698E /* ico_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = BFBDD2131701201200F5698E /* ico_settings.png */; };
+		BFBDD2161701201200F5698E /* ico_settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFBDD2141701201200F5698E /* ico_settings@2x.png */; };
+		BFBDD2191701215700F5698E /* ico_info.png in Resources */ = {isa = PBXBuildFile; fileRef = BFBDD2171701215700F5698E /* ico_info.png */; };
+		BFBDD21A1701215700F5698E /* ico_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFBDD2181701215700F5698E /* ico_info@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,10 +69,12 @@
 		BFAD12B316F1387C00F6D429 /* GICategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GICategory.m; sourceTree = "<group>"; };
 		BFAD12B516F138A700F6D429 /* GICategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GICategoriesViewController.h; sourceTree = "<group>"; };
 		BFAD12B616F138A700F6D429 /* GICategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GICategoriesViewController.m; sourceTree = "<group>"; };
-		BFAD12B816F13D5F00F6D429 /* GILevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelsViewController.h; sourceTree = "<group>"; };
-		BFAD12B916F13D5F00F6D429 /* GILevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelsViewController.m; sourceTree = "<group>"; };
-		BFAD12BB16F13D8200F6D429 /* GILevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevel.h; sourceTree = "<group>"; };
-		BFAD12BC16F13D8200F6D429 /* GILevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevel.m; sourceTree = "<group>"; };
+		BFBDD2101701092000F5698E /* GIMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIMainViewController.h; sourceTree = "<group>"; };
+		BFBDD2111701092000F5698E /* GIMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIMainViewController.m; sourceTree = "<group>"; };
+		BFBDD2131701201200F5698E /* ico_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_settings.png; sourceTree = "<group>"; };
+		BFBDD2141701201200F5698E /* ico_settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_settings@2x.png"; sourceTree = "<group>"; };
+		BFBDD2171701215700F5698E /* ico_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_info.png; sourceTree = "<group>"; };
+		BFBDD2181701215700F5698E /* ico_info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_info@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,8 +181,8 @@
 			children = (
 				BFAD12B516F138A700F6D429 /* GICategoriesViewController.h */,
 				BFAD12B616F138A700F6D429 /* GICategoriesViewController.m */,
-				BFAD12B816F13D5F00F6D429 /* GILevelsViewController.h */,
-				BFAD12B916F13D5F00F6D429 /* GILevelsViewController.m */,
+				BFBDD2101701092000F5698E /* GIMainViewController.h */,
+				BFBDD2111701092000F5698E /* GIMainViewController.m */,
 			);
 			name = Controller;
 			path = controller;
@@ -189,6 +194,10 @@
 				BFAD12A316F1376600F6D429 /* Default-568h@2x.png */,
 				BFAD12A416F1376600F6D429 /* Default.png */,
 				BFAD12A516F1376600F6D429 /* Default@2x.png */,
+				BFBDD2171701215700F5698E /* ico_info.png */,
+				BFBDD2181701215700F5698E /* ico_info@2x.png */,
+				BFBDD2131701201200F5698E /* ico_settings.png */,
+				BFBDD2141701201200F5698E /* ico_settings@2x.png */,
 			);
 			name = Images;
 			path = images;
@@ -199,8 +208,6 @@
 			children = (
 				BFAD12B216F1387C00F6D429 /* GICategory.h */,
 				BFAD12B316F1387C00F6D429 /* GICategory.m */,
-				BFAD12BB16F13D8200F6D429 /* GILevel.h */,
-				BFAD12BC16F13D8200F6D429 /* GILevel.m */,
 			);
 			name = Model;
 			path = model;
@@ -304,6 +311,10 @@
 				BFAD12AD16F1376600F6D429 /* Default-568h@2x.png in Resources */,
 				BFAD12AE16F1376600F6D429 /* Default.png in Resources */,
 				BFAD12AF16F1376600F6D429 /* Default@2x.png in Resources */,
+				BFBDD2151701201200F5698E /* ico_settings.png in Resources */,
+				BFBDD2161701201200F5698E /* ico_settings@2x.png in Resources */,
+				BFBDD2191701215700F5698E /* ico_info.png in Resources */,
+				BFBDD21A1701215700F5698E /* ico_info@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,8 +367,7 @@
 				BFAD12B116F1376600F6D429 /* main.m in Sources */,
 				BFAD12B416F1387C00F6D429 /* GICategory.m in Sources */,
 				BFAD12B716F138A700F6D429 /* GICategoriesViewController.m in Sources */,
-				BFAD12BA16F13D5F00F6D429 /* GILevelsViewController.m in Sources */,
-				BFAD12BD16F13D8200F6D429 /* GILevel.m in Sources */,
+				BFBDD2121701092000F5698E /* GIMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
