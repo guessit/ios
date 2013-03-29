@@ -11,6 +11,7 @@
 @interface GILevel : NSObject
 
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, strong) NSArray *guessingItems;
 
 + (instancetype)levelWithName:(NSString *)name;
 - (id)initWithName:(NSString *)name;

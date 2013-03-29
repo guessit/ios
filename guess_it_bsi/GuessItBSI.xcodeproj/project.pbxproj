@@ -11,7 +11,8 @@
 		BF1F2998170246F800A83FE3 /* GILevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F2997170246F800A83FE3 /* GILevel.m */; };
 		BF1F299B1702477000A83FE3 /* GILevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F299A1702477000A83FE3 /* GILevelsViewController.m */; };
 		BF1F299E170249D300A83FE3 /* GIUserInterfaceCustomizations.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F299D170249D300A83FE3 /* GIUserInterfaceCustomizations.m */; };
-		BF1F29A0170274C900A83FE3 /* black_pixel.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1F299F170274C900A83FE3 /* black_pixel.png */; };
+		BF1F29A2170633FF00A83FE3 /* navbar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1F29A1170633FF00A83FE3 /* navbar_background.png */; };
+		BF1F29A5170634BB00A83FE3 /* GILevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29A4170634BB00A83FE3 /* GILevelCell.m */; };
 		BFAD126716F136A100F6D429 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126616F136A100F6D429 /* UIKit.framework */; };
 		BFAD126916F136A100F6D429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126816F136A100F6D429 /* Foundation.framework */; };
 		BFAD126B16F136A100F6D429 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126A16F136A100F6D429 /* CoreGraphics.framework */; };
@@ -53,7 +54,9 @@
 		BF1F299A1702477000A83FE3 /* GILevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelsViewController.m; sourceTree = "<group>"; };
 		BF1F299C170249D300A83FE3 /* GIUserInterfaceCustomizations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIUserInterfaceCustomizations.h; sourceTree = "<group>"; };
 		BF1F299D170249D300A83FE3 /* GIUserInterfaceCustomizations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIUserInterfaceCustomizations.m; sourceTree = "<group>"; };
-		BF1F299F170274C900A83FE3 /* black_pixel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black_pixel.png; sourceTree = "<group>"; };
+		BF1F29A1170633FF00A83FE3 /* navbar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar_background.png; sourceTree = "<group>"; };
+		BF1F29A3170634BB00A83FE3 /* GILevelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelCell.h; sourceTree = "<group>"; };
+		BF1F29A4170634BB00A83FE3 /* GILevelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelCell.m; sourceTree = "<group>"; };
 		BFAD126316F136A100F6D429 /* GuessItBSI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessItBSI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAD126616F136A100F6D429 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BFAD126816F136A100F6D429 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -203,7 +206,7 @@
 				BFBDD2181701215700F5698E /* ico_info@2x.png */,
 				BFBDD2131701201200F5698E /* ico_settings.png */,
 				BFBDD2141701201200F5698E /* ico_settings@2x.png */,
-				BF1F299F170274C900A83FE3 /* black_pixel.png */,
+				BF1F29A1170633FF00A83FE3 /* navbar_background.png */,
 			);
 			name = Images;
 			path = images;
@@ -236,6 +239,8 @@
 		BFAD12AC16F1376600F6D429 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BF1F29A3170634BB00A83FE3 /* GILevelCell.h */,
+				BF1F29A4170634BB00A83FE3 /* GILevelCell.m */,
 			);
 			name = View;
 			path = view;
@@ -323,7 +328,7 @@
 				BFBDD2161701201200F5698E /* ico_settings@2x.png in Resources */,
 				BFBDD2191701215700F5698E /* ico_info.png in Resources */,
 				BFBDD21A1701215700F5698E /* ico_info@2x.png in Resources */,
-				BF1F29A0170274C900A83FE3 /* black_pixel.png in Resources */,
+				BF1F29A2170633FF00A83FE3 /* navbar_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +383,7 @@
 				BF1F2998170246F800A83FE3 /* GILevel.m in Sources */,
 				BF1F299B1702477000A83FE3 /* GILevelsViewController.m in Sources */,
 				BF1F299E170249D300A83FE3 /* GIUserInterfaceCustomizations.m in Sources */,
+				BF1F29A5170634BB00A83FE3 /* GILevelCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

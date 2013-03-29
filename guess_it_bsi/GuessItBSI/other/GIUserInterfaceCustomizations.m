@@ -29,16 +29,12 @@
 #pragma mark - Private Interface
 
 - (void)_customizeNavigationBar {
-    UIImage *blackPixel = [UIImage imageNamed:@"black_pixel"];
-
-    [[UINavigationBar appearance] setBackgroundImage:blackPixel
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navbar_background"]
                                        forBarMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance] setTintColor:[UIColor colorWithWhite:0.05 alpha:1.f]];
+    [[UINavigationBar appearance] setTintColor:GI_BACKGROUND_MAIN_COLOR];
     [[UINavigationBar appearance] setTitleTextAttributes:@{
         UITextAttributeFont: [UIFont fontWithName:@"GillSans-Bold" size:22.f],
-        UITextAttributeTextColor: [UIColor colorWithWhite:0.40 alpha:1.f],
-        UITextAttributeTextShadowColor: [UIColor colorWithWhite:0.9 alpha:0.25f],
-        UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0.f, -1.f)]
+        UITextAttributeTextColor: GI_FONT_MAIN_COLOR
     }];
 }
 
