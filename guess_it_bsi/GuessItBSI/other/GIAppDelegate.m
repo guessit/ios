@@ -7,11 +7,14 @@
 //
 
 #import "GIAppDelegate.h"
+#import "GIUserInterfaceCustomizations.h"
 
 @implementation GIAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[GIUserInterfaceCustomizations userInterfaceCustomizations] customizeUserInterface];
+
     // Override point for customization after application launch.
     return YES;
 }
