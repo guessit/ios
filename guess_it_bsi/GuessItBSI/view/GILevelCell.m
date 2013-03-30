@@ -8,6 +8,12 @@
 
 #import "GILevelCell.h"
 
+@interface GILevelCell()
+
+- (void)_initialize;
+
+@end
+
 @implementation GILevelCell
 
 #pragma mark - Setter
@@ -19,6 +25,30 @@
         self.nameLabel.text = level.name;
         self.progressLabel.text = [NSString stringWithFormat:@"%02d/%02d", 0, level.guessingItems.count];
     }
+}
+
+#pragma mark - Designated Initializer
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        [self _initialize];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self _initialize];
+    }
+    return self;
+}
+
+#pragma mark - Private Interface
+
+- (void)_initialize {
+    self.accessoryView = [UIImageView imageViewWithImageNamed:@"ico_accessory_view"];
 }
 
 @end

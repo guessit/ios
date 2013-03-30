@@ -10,10 +10,13 @@
 
 #import "GILevel.h"
 #import "GILevelCell.h"
+#import "GIUserInterfaceCustomizations.h"
 
 @interface GILevelsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSArray *bsiLevels;
+
+- (void)_backButtonTouched:(id)sender;
 
 @end
 
@@ -38,12 +41,22 @@
     [super viewDidLoad];
 
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    backButton.frame = CGRectMake(0.f, 0.f, 100.f, 40.f);
-    backButton.backgroundColor = [UIColor redColor];
-    [backButton setTitle:@"Teste" forState:UIControlStateNormal];
+    [backButton setImage:[UIImage imageNamed:@"ico_back"] forState:UIControlStateNormal];
+    backButton.imageEdgeInsets = UIEdgeInsetsMake(3.f, 0.f, 0.f, 40.f);
+
+    backButton.frame = CGRectMake(0.f, 0.f, 70.f, 40.f);
+    [backButton addTarget:self
+                   action:@selector(_backButtonTouched:)
+         forControlEvents:UIControlEventTouchUpInside];
 
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithCustomView:backButton];
     self.navigationItem.hidesBackButton = YES;
+}
+
+#pragma mark - Private Interface
+
+- (void)_backButtonTouched:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - UITableViewDataSource Methods
