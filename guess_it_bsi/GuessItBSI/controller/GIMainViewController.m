@@ -7,8 +7,15 @@
 //
 
 #import "GIMainViewController.h"
+#import "GIUserInterfaceCustomizations.h"
 
 @implementation GIMainViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    self.view.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

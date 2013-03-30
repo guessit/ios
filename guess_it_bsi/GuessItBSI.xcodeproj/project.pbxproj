@@ -11,7 +11,6 @@
 		BF1F2998170246F800A83FE3 /* GILevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F2997170246F800A83FE3 /* GILevel.m */; };
 		BF1F299B1702477000A83FE3 /* GILevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F299A1702477000A83FE3 /* GILevelsViewController.m */; };
 		BF1F299E170249D300A83FE3 /* GIUserInterfaceCustomizations.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F299D170249D300A83FE3 /* GIUserInterfaceCustomizations.m */; };
-		BF1F29A2170633FF00A83FE3 /* navbar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1F29A1170633FF00A83FE3 /* navbar_background.png */; };
 		BF1F29A5170634BB00A83FE3 /* GILevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29A4170634BB00A83FE3 /* GILevelCell.m */; };
 		BF1F29A817072A2C00A83FE3 /* ico_accessory_view.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1F29A617072A2C00A83FE3 /* ico_accessory_view.png */; };
 		BF1F29A917072A2C00A83FE3 /* ico_accessory_view@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1F29A717072A2C00A83FE3 /* ico_accessory_view@2x.png */; };
@@ -22,6 +21,7 @@
 		BF1F29B6170761D400A83FE3 /* GIItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B5170761D400A83FE3 /* GIItemViewController.m */; };
 		BF1F29B9170766B800A83FE3 /* ico_more.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1F29B7170766B800A83FE3 /* ico_more.png */; };
 		BF1F29BA170766B800A83FE3 /* ico_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1F29B8170766B800A83FE3 /* ico_more@2x.png */; };
+		BF1F29D11707817200A83FE3 /* navbar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1F29D01707817200A83FE3 /* navbar_background.png */; };
 		BFAD126716F136A100F6D429 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126616F136A100F6D429 /* UIKit.framework */; };
 		BFAD126916F136A100F6D429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126816F136A100F6D429 /* Foundation.framework */; };
 		BFAD126B16F136A100F6D429 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126A16F136A100F6D429 /* CoreGraphics.framework */; };
@@ -59,7 +59,6 @@
 		BF1F299A1702477000A83FE3 /* GILevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelsViewController.m; sourceTree = "<group>"; };
 		BF1F299C170249D300A83FE3 /* GIUserInterfaceCustomizations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIUserInterfaceCustomizations.h; sourceTree = "<group>"; };
 		BF1F299D170249D300A83FE3 /* GIUserInterfaceCustomizations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIUserInterfaceCustomizations.m; sourceTree = "<group>"; };
-		BF1F29A1170633FF00A83FE3 /* navbar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar_background.png; sourceTree = "<group>"; };
 		BF1F29A3170634BB00A83FE3 /* GILevelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelCell.h; sourceTree = "<group>"; };
 		BF1F29A4170634BB00A83FE3 /* GILevelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelCell.m; sourceTree = "<group>"; };
 		BF1F29A617072A2C00A83FE3 /* ico_accessory_view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_accessory_view.png; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		BF1F29B5170761D400A83FE3 /* GIItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIItemViewController.m; sourceTree = "<group>"; };
 		BF1F29B7170766B800A83FE3 /* ico_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_more.png; sourceTree = "<group>"; };
 		BF1F29B8170766B800A83FE3 /* ico_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_more@2x.png"; sourceTree = "<group>"; };
+		BF1F29D01707817200A83FE3 /* navbar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar_background.png; sourceTree = "<group>"; };
 		BFAD126316F136A100F6D429 /* GuessItBSI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessItBSI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAD126616F136A100F6D429 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BFAD126816F136A100F6D429 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -225,7 +225,7 @@
 				BF1F29AB17072D0900A83FE3 /* ico_back@2x.png */,
 				BF1F29B7170766B800A83FE3 /* ico_more.png */,
 				BF1F29B8170766B800A83FE3 /* ico_more@2x.png */,
-				BF1F29A1170633FF00A83FE3 /* navbar_background.png */,
+				BF1F29D01707817200A83FE3 /* navbar_background.png */,
 			);
 			name = Images;
 			path = images;
@@ -345,13 +345,13 @@
 				BFAD12AD16F1376600F6D429 /* Default-568h@2x.png in Resources */,
 				BFAD12AE16F1376600F6D429 /* Default.png in Resources */,
 				BFAD12AF16F1376600F6D429 /* Default@2x.png in Resources */,
-				BF1F29A2170633FF00A83FE3 /* navbar_background.png in Resources */,
 				BF1F29A817072A2C00A83FE3 /* ico_accessory_view.png in Resources */,
 				BF1F29A917072A2C00A83FE3 /* ico_accessory_view@2x.png in Resources */,
 				BF1F29AC17072D0900A83FE3 /* ico_back.png in Resources */,
 				BF1F29AD17072D0900A83FE3 /* ico_back@2x.png in Resources */,
 				BF1F29B9170766B800A83FE3 /* ico_more.png in Resources */,
 				BF1F29BA170766B800A83FE3 /* ico_more@2x.png in Resources */,
+				BF1F29D11707817200A83FE3 /* navbar_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

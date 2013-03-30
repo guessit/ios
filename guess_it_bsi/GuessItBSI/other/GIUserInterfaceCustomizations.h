@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 #define GI_BACKGROUND_MAIN_COLOR [UIColor colorWithWhite:0.12f alpha:1.f]
-#define GI_FONT_MAIN_COLOR [UIColor colorWithWhite:0.65 alpha:1.f]
+#define GI_FONT_MAIN_COLOR [UIColor colorWithWhite:0.65f alpha:1.f]
+
 @interface GIUserInterfaceCustomizations : NSObject
 
 + (instancetype)userInterfaceCustomizations;

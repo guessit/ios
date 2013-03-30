@@ -14,6 +14,7 @@
 
 @interface GILevelsViewController () <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *bsiLevels;
 
 @end
@@ -37,6 +38,14 @@
         ];
     }
     return _bsiLevels;
+}
+
+#pragma mark - UIViewController Methods
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    self.tableView.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
 }
 
 #pragma mark - UITableViewDataSource Methods

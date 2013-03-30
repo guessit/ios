@@ -8,11 +8,20 @@
 
 #import "GIItemViewController.h"
 
+#import "GIUserInterfaceCustomizations.h"
+
 @interface GIItemViewController()
 
 @end
 
 @implementation GIItemViewController
 
+#pragma mark - UIViewController Methods
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    self.view.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
+}
 
 @end
