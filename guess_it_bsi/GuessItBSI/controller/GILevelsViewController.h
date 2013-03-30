@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Marlon Andrade. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GIViewController.h"
 
-@interface GILevelsViewController : UIViewController
+@interface GILevelsViewController : GIViewController
 
 @end

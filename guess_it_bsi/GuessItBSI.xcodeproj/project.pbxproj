@@ -17,6 +17,11 @@
 		BF1F29A917072A2C00A83FE3 /* ico_accessory_view@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1F29A717072A2C00A83FE3 /* ico_accessory_view@2x.png */; };
 		BF1F29AC17072D0900A83FE3 /* ico_back.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1F29AA17072D0900A83FE3 /* ico_back.png */; };
 		BF1F29AD17072D0900A83FE3 /* ico_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1F29AB17072D0900A83FE3 /* ico_back@2x.png */; };
+		BF1F29B01707347900A83FE3 /* GIItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29AF1707347800A83FE3 /* GIItem.m */; };
+		BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B21707617700A83FE3 /* GIViewController.m */; };
+		BF1F29B6170761D400A83FE3 /* GIItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B5170761D400A83FE3 /* GIItemViewController.m */; };
+		BF1F29B9170766B800A83FE3 /* ico_more.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1F29B7170766B800A83FE3 /* ico_more.png */; };
+		BF1F29BA170766B800A83FE3 /* ico_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1F29B8170766B800A83FE3 /* ico_more@2x.png */; };
 		BFAD126716F136A100F6D429 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126616F136A100F6D429 /* UIKit.framework */; };
 		BFAD126916F136A100F6D429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126816F136A100F6D429 /* Foundation.framework */; };
 		BFAD126B16F136A100F6D429 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126A16F136A100F6D429 /* CoreGraphics.framework */; };
@@ -33,10 +38,6 @@
 		BFAD12B016F1376600F6D429 /* GIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12A916F1376600F6D429 /* GIAppDelegate.m */; };
 		BFAD12B116F1376600F6D429 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12AB16F1376600F6D429 /* main.m */; };
 		BFBDD2121701092000F5698E /* GIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBDD2111701092000F5698E /* GIMainViewController.m */; };
-		BFBDD2151701201200F5698E /* ico_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = BFBDD2131701201200F5698E /* ico_settings.png */; };
-		BFBDD2161701201200F5698E /* ico_settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFBDD2141701201200F5698E /* ico_settings@2x.png */; };
-		BFBDD2191701215700F5698E /* ico_info.png in Resources */ = {isa = PBXBuildFile; fileRef = BFBDD2171701215700F5698E /* ico_info.png */; };
-		BFBDD21A1701215700F5698E /* ico_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFBDD2181701215700F5698E /* ico_info@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,14 @@
 		BF1F29A717072A2C00A83FE3 /* ico_accessory_view@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_accessory_view@2x.png"; sourceTree = "<group>"; };
 		BF1F29AA17072D0900A83FE3 /* ico_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_back.png; sourceTree = "<group>"; };
 		BF1F29AB17072D0900A83FE3 /* ico_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_back@2x.png"; sourceTree = "<group>"; };
+		BF1F29AE1707347800A83FE3 /* GIItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIItem.h; sourceTree = "<group>"; };
+		BF1F29AF1707347800A83FE3 /* GIItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIItem.m; sourceTree = "<group>"; };
+		BF1F29B11707617700A83FE3 /* GIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIViewController.h; sourceTree = "<group>"; };
+		BF1F29B21707617700A83FE3 /* GIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIViewController.m; sourceTree = "<group>"; };
+		BF1F29B4170761D400A83FE3 /* GIItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIItemViewController.h; sourceTree = "<group>"; };
+		BF1F29B5170761D400A83FE3 /* GIItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIItemViewController.m; sourceTree = "<group>"; };
+		BF1F29B7170766B800A83FE3 /* ico_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_more.png; sourceTree = "<group>"; };
+		BF1F29B8170766B800A83FE3 /* ico_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_more@2x.png"; sourceTree = "<group>"; };
 		BFAD126316F136A100F6D429 /* GuessItBSI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessItBSI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAD126616F136A100F6D429 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BFAD126816F136A100F6D429 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,10 +96,6 @@
 		BFAD12AB16F1376600F6D429 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFBDD2101701092000F5698E /* GIMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIMainViewController.h; sourceTree = "<group>"; };
 		BFBDD2111701092000F5698E /* GIMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIMainViewController.m; sourceTree = "<group>"; };
-		BFBDD2131701201200F5698E /* ico_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_settings.png; sourceTree = "<group>"; };
-		BFBDD2141701201200F5698E /* ico_settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_settings@2x.png"; sourceTree = "<group>"; };
-		BFBDD2171701215700F5698E /* ico_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_info.png; sourceTree = "<group>"; };
-		BFBDD2181701215700F5698E /* ico_info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_info@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,10 +200,14 @@
 		BFAD12A116F1376600F6D429 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BF1F29B4170761D400A83FE3 /* GIItemViewController.h */,
+				BF1F29B5170761D400A83FE3 /* GIItemViewController.m */,
 				BF1F29991702477000A83FE3 /* GILevelsViewController.h */,
 				BF1F299A1702477000A83FE3 /* GILevelsViewController.m */,
 				BFBDD2101701092000F5698E /* GIMainViewController.h */,
 				BFBDD2111701092000F5698E /* GIMainViewController.m */,
+				BF1F29B11707617700A83FE3 /* GIViewController.h */,
+				BF1F29B21707617700A83FE3 /* GIViewController.m */,
 			);
 			name = Controller;
 			path = controller;
@@ -214,10 +223,8 @@
 				BF1F29A717072A2C00A83FE3 /* ico_accessory_view@2x.png */,
 				BF1F29AA17072D0900A83FE3 /* ico_back.png */,
 				BF1F29AB17072D0900A83FE3 /* ico_back@2x.png */,
-				BFBDD2171701215700F5698E /* ico_info.png */,
-				BFBDD2181701215700F5698E /* ico_info@2x.png */,
-				BFBDD2131701201200F5698E /* ico_settings.png */,
-				BFBDD2141701201200F5698E /* ico_settings@2x.png */,
+				BF1F29B7170766B800A83FE3 /* ico_more.png */,
+				BF1F29B8170766B800A83FE3 /* ico_more@2x.png */,
 				BF1F29A1170633FF00A83FE3 /* navbar_background.png */,
 			);
 			name = Images;
@@ -227,6 +234,8 @@
 		BFAD12A616F1376600F6D429 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BF1F29AE1707347800A83FE3 /* GIItem.h */,
+				BF1F29AF1707347800A83FE3 /* GIItem.m */,
 				BF1F2996170246F800A83FE3 /* GILevel.h */,
 				BF1F2997170246F800A83FE3 /* GILevel.m */,
 			);
@@ -336,15 +345,13 @@
 				BFAD12AD16F1376600F6D429 /* Default-568h@2x.png in Resources */,
 				BFAD12AE16F1376600F6D429 /* Default.png in Resources */,
 				BFAD12AF16F1376600F6D429 /* Default@2x.png in Resources */,
-				BFBDD2151701201200F5698E /* ico_settings.png in Resources */,
-				BFBDD2161701201200F5698E /* ico_settings@2x.png in Resources */,
-				BFBDD2191701215700F5698E /* ico_info.png in Resources */,
-				BFBDD21A1701215700F5698E /* ico_info@2x.png in Resources */,
 				BF1F29A2170633FF00A83FE3 /* navbar_background.png in Resources */,
 				BF1F29A817072A2C00A83FE3 /* ico_accessory_view.png in Resources */,
 				BF1F29A917072A2C00A83FE3 /* ico_accessory_view@2x.png in Resources */,
 				BF1F29AC17072D0900A83FE3 /* ico_back.png in Resources */,
 				BF1F29AD17072D0900A83FE3 /* ico_back@2x.png in Resources */,
+				BF1F29B9170766B800A83FE3 /* ico_more.png in Resources */,
+				BF1F29BA170766B800A83FE3 /* ico_more@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +407,9 @@
 				BF1F299B1702477000A83FE3 /* GILevelsViewController.m in Sources */,
 				BF1F299E170249D300A83FE3 /* GIUserInterfaceCustomizations.m in Sources */,
 				BF1F29A5170634BB00A83FE3 /* GILevelCell.m in Sources */,
+				BF1F29B01707347900A83FE3 /* GIItem.m in Sources */,
+				BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */,
+				BF1F29B6170761D400A83FE3 /* GIItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

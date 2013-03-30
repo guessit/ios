@@ -16,8 +16,6 @@
 
 @property (nonatomic, strong) NSArray *bsiLevels;
 
-- (void)_backButtonTouched:(id)sender;
-
 @end
 
 @implementation GILevelsViewController
@@ -26,37 +24,19 @@
 
 - (NSArray *)bsiLevels {
     if (!_bsiLevels) {
+        GILevel *algoritmos = [GILevel levelWithName:@"Algoritmos"];
+        GILevel *bancoDados = [GILevel levelWithName:@"Banco de Dados"];
+        GILevel *linguagensProgramacao = [GILevel levelWithName:@"Linguagens de Programação"];
+        GILevel *padroesProjeto = [GILevel levelWithName:@"Padrões de Projeto"];
+
         _bsiLevels = @[
-            [GILevel levelWithName:@"Algoritmos"],
-            [GILevel levelWithName:@"Banco de Dados"],
-            [GILevel levelWithName:@"Linguagens de Programação"],
-            [GILevel levelWithName:@"Padrões de Projeto"],
-            [GILevel levelWithName:@"UML"]
+            algoritmos,
+            bancoDados,
+            linguagensProgramacao,
+            padroesProjeto
         ];
     }
     return _bsiLevels;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [backButton setImage:[UIImage imageNamed:@"ico_back"] forState:UIControlStateNormal];
-    backButton.imageEdgeInsets = UIEdgeInsetsMake(3.f, 0.f, 0.f, 40.f);
-
-    backButton.frame = CGRectMake(0.f, 0.f, 70.f, 40.f);
-    [backButton addTarget:self
-                   action:@selector(_backButtonTouched:)
-         forControlEvents:UIControlEventTouchUpInside];
-
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithCustomView:backButton];
-    self.navigationItem.hidesBackButton = YES;
-}
-
-#pragma mark - Private Interface
-
-- (void)_backButtonTouched:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - UITableViewDataSource Methods
