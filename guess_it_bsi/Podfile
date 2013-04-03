@@ -1,4 +1,4 @@
 platform :ios, '5.0'
 
 pod 'SSToolkit'
-pod 'MALazykit', :podspec => 'https://raw.github.com/marlonandrade/Specs/master/MALazykit/0.1.2/MALazykit.podspec'
+pod 'MALazykit', :podspec => 'https://raw.github.com/marlonandrade/Specs/master/MALazykit/0.1.5/MALazykit.podspec'

@@ -151,15 +151,15 @@
             <objects>
                 <viewController id="oV3-2S-Fu9" customClass="GIItemViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nC2-Wt-x7i">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="rMK-fA-SeN">
-                                <rect key="frame" x="20" y="20" width="280" height="324"/>
+                                <rect key="frame" x="20" y="20" width="280" height="280"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" id="rF2-IB-Whu">
-                                <rect key="frame" x="0.0" y="412" width="320" height="136"/>
+                                <rect key="frame" x="0.0" y="368" width="320" height="136"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>

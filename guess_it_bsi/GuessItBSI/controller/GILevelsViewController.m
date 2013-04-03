@@ -9,8 +9,10 @@
 #import "GILevelsViewController.h"
 
 #import "GILevel.h"
+#import "GILevel+Factory.h"
 #import "GILevelCell.h"
 #import "GIUserInterfaceCustomizations.h"
+#import "GIItem.h"
 
 @interface GILevelsViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -25,16 +27,12 @@
 
 - (NSArray *)bsiLevels {
     if (!_bsiLevels) {
-        GILevel *algoritmos = [GILevel levelWithName:@"Algoritmos"];
-        GILevel *bancoDados = [GILevel levelWithName:@"Banco de Dados"];
-        GILevel *linguagensProgramacao = [GILevel levelWithName:@"Linguagens de Programação"];
-        GILevel *padroesProjeto = [GILevel levelWithName:@"Padrões de Projeto"];
-
         _bsiLevels = @[
-            algoritmos,
-            bancoDados,
-            linguagensProgramacao,
-            padroesProjeto
+            [GILevel bancoDados],
+            [GILevel frameworks],
+            [GILevel ides],
+            [GILevel linguagensProgramacao],
+            [GILevel ferramentas]
         ];
     }
     return _bsiLevels;
