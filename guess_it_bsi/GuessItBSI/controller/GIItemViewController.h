@@ -8,6 +8,10 @@
 
 #import "GIViewController.h"
 
+#import "GILevel.h"
+
 @interface GIItemViewController : GIViewController
+
+@property (nonatomic, strong) GILevel *level;
 
 @end

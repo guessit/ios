@@ -8,6 +8,7 @@
 
 #import "GIItemViewController.h"
 
+#import "GIItem.h"
 #import "GIUserInterfaceCustomizations.h"
 
 @interface GIItemViewController()
@@ -22,6 +23,17 @@
     [super viewDidLoad];
 
     self.view.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    NSLog(@"   Total items: %d", self.level.items.count);
+    NSLog(@"    Todo items: %d", self.level.todoItems.count);
+    NSLog(@"Finished items: %d", self.level.finishedItems.count);
+
+    GIItem *item = [self.level.items randomObject];
+    NSLog(@"%@", item.answer);
 }
 
 @end

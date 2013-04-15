@@ -55,6 +55,8 @@
 		BF41EA8F170BB27B006540E7 /* 030.png in Resources */ = {isa = PBXBuildFile; fileRef = BF41EA81170BB27B006540E7 /* 030.png */; };
 		BF41EA90170BB27B006540E7 /* 031.png in Resources */ = {isa = PBXBuildFile; fileRef = BF41EA82170BB27B006540E7 /* 031.png */; };
 		BF41EA94170BB4A0006540E7 /* GILevel+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BF41EA93170BB4A0006540E7 /* GILevel+Factory.m */; };
+		BF6943BB171CA244000F74E0 /* GIItem+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BA171CA244000F74E0 /* GIItem+PrettyDescription.m */; };
+		BF6943BE171CA2AD000F74E0 /* GILevel+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BD171CA2AD000F74E0 /* GILevel+PrettyDescription.m */; };
 		BFAD126716F136A100F6D429 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126616F136A100F6D429 /* UIKit.framework */; };
 		BFAD126916F136A100F6D429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126816F136A100F6D429 /* Foundation.framework */; };
 		BFAD126B16F136A100F6D429 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126A16F136A100F6D429 /* CoreGraphics.framework */; };
@@ -141,6 +143,10 @@
 		BF41EA82170BB27B006540E7 /* 031.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 031.png; sourceTree = "<group>"; };
 		BF41EA92170BB4A0006540E7 /* GILevel+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GILevel+Factory.h"; sourceTree = "<group>"; };
 		BF41EA93170BB4A0006540E7 /* GILevel+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GILevel+Factory.m"; sourceTree = "<group>"; };
+		BF6943B9171CA244000F74E0 /* GIItem+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GIItem+PrettyDescription.h"; sourceTree = "<group>"; };
+		BF6943BA171CA244000F74E0 /* GIItem+PrettyDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GIItem+PrettyDescription.m"; sourceTree = "<group>"; };
+		BF6943BC171CA2AD000F74E0 /* GILevel+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GILevel+PrettyDescription.h"; sourceTree = "<group>"; };
+		BF6943BD171CA2AD000F74E0 /* GILevel+PrettyDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GILevel+PrettyDescription.m"; sourceTree = "<group>"; };
 		BFAD126316F136A100F6D429 /* GuessItBSI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessItBSI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAD126616F136A100F6D429 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BFAD126816F136A100F6D429 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -272,8 +278,12 @@
 		BF41EA91170BB48D006540E7 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				BF6943B9171CA244000F74E0 /* GIItem+PrettyDescription.h */,
+				BF6943BA171CA244000F74E0 /* GIItem+PrettyDescription.m */,
 				BF41EA92170BB4A0006540E7 /* GILevel+Factory.h */,
 				BF41EA93170BB4A0006540E7 /* GILevel+Factory.m */,
+				BF6943BC171CA2AD000F74E0 /* GILevel+PrettyDescription.h */,
+				BF6943BD171CA2AD000F74E0 /* GILevel+PrettyDescription.m */,
 			);
 			name = Categories;
 			path = categories;
@@ -601,6 +611,8 @@
 				BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */,
 				BF1F29B6170761D400A83FE3 /* GIItemViewController.m in Sources */,
 				BF41EA94170BB4A0006540E7 /* GILevel+Factory.m in Sources */,
+				BF6943BB171CA244000F74E0 /* GIItem+PrettyDescription.m in Sources */,
+				BF6943BE171CA2AD000F74E0 /* GILevel+PrettyDescription.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

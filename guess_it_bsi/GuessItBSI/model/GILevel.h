@@ -11,7 +11,10 @@
 @interface GILevel : NSObject
 
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, strong) NSArray *guessingItems;
+@property (nonatomic, strong) NSArray *items;
+
+@property (nonatomic, strong, readonly) NSArray *todoItems;
+@property (nonatomic, strong, readonly) NSArray *finishedItems;
 
 + (instancetype)levelWithName:(NSString *)name;
 - (id)initWithName:(NSString *)name;

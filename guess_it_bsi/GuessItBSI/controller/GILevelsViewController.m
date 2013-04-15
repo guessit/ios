@@ -8,11 +8,12 @@
 
 #import "GILevelsViewController.h"
 
+#import "GIItem.h"
+#import "GIItemViewController.h"
 #import "GILevel.h"
 #import "GILevel+Factory.h"
 #import "GILevelCell.h"
 #import "GIUserInterfaceCustomizations.h"
-#import "GIItem.h"
 
 @interface GILevelsViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -44,6 +45,11 @@
     [super viewDidLoad];
 
     self.tableView.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    GIItemViewController *itemViewController = segue.destinationViewController;
+    itemViewController.level = self.bsiLevels[self.tableView.indexPathForSelectedRow.row];
 }
 
 #pragma mark - UITableViewDataSource Methods

@@ -10,6 +10,20 @@
 
 @implementation GILevel
 
+#pragma mark - Getter
+
+- (NSArray *)finishedItems {
+    NSArray *finishedItemsImages = [[NSUserDefaults standardUserDefaults] arrayForKey:self.name];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"imageName in %@", finishedItemsImages];
+    return [self.items filteredArrayUsingPredicate:predicate];
+}
+
+- (NSArray *)todoItems {
+    NSArray *finishedItemsImages = [[NSUserDefaults standardUserDefaults] arrayForKey:self.name];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"not (imageName in %@)", finishedItemsImages];
+    return [self.items filteredArrayUsingPredicate:predicate];
+}
+
 #pragma mark - Public Interface
 
 + (instancetype)levelWithName:(NSString *)name {

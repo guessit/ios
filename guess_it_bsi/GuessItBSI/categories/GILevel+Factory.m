@@ -14,7 +14,7 @@
 
 + (GILevel *)bancoDados {
     GILevel *bancoDados = [GILevel levelWithName:@"Banco de Dados"];
-    bancoDados.guessingItems = @[
+    bancoDados.items = @[
         [GIItem itemWithImageNamed:@"001" anwser:@"firebird" hints:nil],
         [GIItem itemWithImageNamed:@"002" anwser:@"mysql" hints:nil],
         [GIItem itemWithImageNamed:@"003" anwser:@"oracle" hints:nil],
@@ -28,7 +28,7 @@
 
 + (GILevel *)frameworks {
     GILevel *frameworks = [GILevel levelWithName:@"Frameworks"];
-    frameworks.guessingItems = @[
+    frameworks.items = @[
         [GIItem itemWithImageNamed:@"007" anwser:@"drupal" hints:nil],
         [GIItem itemWithImageNamed:@"008" anwser:@"rails" hints:nil],
         [GIItem itemWithImageNamed:@"009" anwser:@"wordpress" hints:nil],
@@ -43,7 +43,7 @@
 
 + (GILevel *)ides {
     GILevel *ides = [GILevel levelWithName:@"IDEs & Editores de Texto"];
-    ides.guessingItems = @[
+    ides.items = @[
         [GIItem itemWithImageNamed:@"014" anwser:@"eclipse" hints:nil],
         [GIItem itemWithImageNamed:@"015" anwser:@"mono develop" hints:nil],
         [GIItem itemWithImageNamed:@"016" anwser:@"netbeans" hints:nil],
@@ -59,7 +59,7 @@
 
 + (GILevel *)linguagensProgramacao {
     GILevel *linguagensProgramacao = [GILevel levelWithName:@"Linguagens de Programação"];
-    linguagensProgramacao.guessingItems = @[
+    linguagensProgramacao.items = @[
         [GIItem itemWithImageNamed:@"019" anwser:@"java" hints:nil],
         [GIItem itemWithImageNamed:@"020" anwser:@"php" hints:nil],
         [GIItem itemWithImageNamed:@"021" anwser:@"python" hints:nil],
@@ -71,7 +71,7 @@
 
 + (GILevel *)ferramentas {
     GILevel *ferramentas = [GILevel levelWithName:@"Ferramentas"];
-    ferramentas.guessingItems = @[
+    ferramentas.items = @[
         [GIItem itemWithImageNamed:@"026" anwser:@"apache" hints:nil],
         [GIItem itemWithImageNamed:@"027" anwser:@"git" hints:nil],
         [GIItem itemWithImageNamed:@"028" anwser:@"subversion" hints:nil],
