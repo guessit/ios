@@ -10,6 +10,8 @@
 
 #import "GIItem.h"
 #import "GIUserInterfaceCustomizations.h"
+#import "GIItem+PrettyDescription.h"
+#import "GILevel+PrettyDescription.h"
 
 @interface GIItemViewController()
 
@@ -31,9 +33,10 @@
     NSLog(@"   Total items: %d", self.level.items.count);
     NSLog(@"    Todo items: %d", self.level.todoItems.count);
     NSLog(@"Finished items: %d", self.level.finishedItems.count);
+    NSLog(@"         Items: %@", self.level.prettyDescription);
 
     GIItem *item = [self.level.items randomObject];
-    NSLog(@"%@", item.answer);
+    NSLog(@"%@", item.prettyDescription);
 }
 
 @end
