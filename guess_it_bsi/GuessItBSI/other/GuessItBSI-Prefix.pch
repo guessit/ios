@@ -16,3 +16,5 @@
 #import "MALazykit.h"
 #import <SSToolkit/SSToolkit.h>
 #import <SSToolkit/SSCategories.h>
+
+#import "GIDefinitions.h"

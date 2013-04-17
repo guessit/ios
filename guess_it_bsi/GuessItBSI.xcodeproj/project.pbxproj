@@ -169,6 +169,7 @@
 		BFAD12AB16F1376600F6D429 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFBDD2101701092000F5698E /* GIMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIMainViewController.h; sourceTree = "<group>"; };
 		BFBDD2111701092000F5698E /* GIMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIMainViewController.m; sourceTree = "<group>"; };
+		BFF5A2E4171EB74E00F401B3 /* GIDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIDefinitions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -416,6 +417,7 @@
 			children = (
 				BFAD12A816F1376600F6D429 /* GIAppDelegate.h */,
 				BFAD12A916F1376600F6D429 /* GIAppDelegate.m */,
+				BFF5A2E4171EB74E00F401B3 /* GIDefinitions.h */,
 				BF1F299C170249D300A83FE3 /* GIUserInterfaceCustomizations.h */,
 				BF1F299D170249D300A83FE3 /* GIUserInterfaceCustomizations.m */,
 				BFAD12AA16F1376600F6D429 /* GuessItBSI-Prefix.pch */,

@@ -8,18 +8,20 @@
 
 #import "GILevel.h"
 
+#import "GIItem.h"
+
 @implementation GILevel
 
 #pragma mark - Getter
 
 - (NSArray *)finishedItems {
-    NSArray *finishedItemsImages = [[NSUserDefaults standardUserDefaults] arrayForKey:self.name];
+    NSArray *finishedItemsImages = [GIItem finishedItems];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"imageName in %@", finishedItemsImages];
     return [self.items filteredArrayUsingPredicate:predicate];
 }
 
 - (NSArray *)todoItems {
-    NSArray *finishedItemsImages = [[NSUserDefaults standardUserDefaults] arrayForKey:self.name];
+    NSArray *finishedItemsImages = [GIItem finishedItems];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"not (imageName in %@)", finishedItemsImages];
     return [self.items filteredArrayUsingPredicate:predicate];
 }

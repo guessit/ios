@@ -30,13 +30,15 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
+    GIItem *item = [self.level.items randomObject];
+    NSLog(@"%@", item.prettyDescription);
+
+    [item guessWithAnwser:item.answer];
+
     NSLog(@"   Total items: %d", self.level.items.count);
     NSLog(@"    Todo items: %d", self.level.todoItems.count);
     NSLog(@"Finished items: %d", self.level.finishedItems.count);
     NSLog(@"         Items: %@", self.level.prettyDescription);
-
-    GIItem *item = [self.level.items randomObject];
-    NSLog(@"%@", item.prettyDescription);
 }
 
 @end
