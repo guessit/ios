@@ -10,6 +10,8 @@
 
 @interface GIItem()
 
+@property (nonatomic, strong, readwrite) UIImage *image;
+
 - (id)initWithImageNamed:(NSString *)imageName
                   answer:(NSString *)answer
                    hints:(NSArray *)hints;
@@ -18,6 +20,15 @@
 @end
 
 @implementation GIItem
+
+#pragma mark - Getter
+
+- (UIImage *)image {
+    if (!_image) {
+        _image = [UIImage imageNamed:self.imageName];
+    }
+    return _image;
+}
 
 #pragma mark - Public Interface
 

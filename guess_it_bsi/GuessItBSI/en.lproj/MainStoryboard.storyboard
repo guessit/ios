@@ -154,19 +154,31 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="rMK-fA-SeN">
-                                <rect key="frame" x="20" y="20" width="280" height="280"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
                             <view contentMode="scaleToFill" id="rF2-IB-Whu">
                                 <rect key="frame" x="0.0" y="368" width="320" height="136"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" id="bHb-6y-JL9">
+                                <rect key="frame" x="20" y="20" width="280" height="280"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="rMK-fA-SeN">
+                                        <rect key="frame" x="4" y="4" width="272" height="272"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Item" id="PFi-yw-zpR"/>
+                    <connections>
+                        <outlet property="imageFrameView" destination="bHb-6y-JL9" id="sRU-TK-aD9"/>
+                        <outlet property="imageView" destination="rMK-fA-SeN" id="gD6-S9-5qu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7E9-Xd-9ZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,6 +223,10 @@
     <classes>
         <class className="GIItemViewController" superclassName="GIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GIItemViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageFrameView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+            </relationships>
         </class>
         <class className="GILevelCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GILevelCell.h"/>

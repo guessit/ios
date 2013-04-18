@@ -12,6 +12,7 @@
 #import "GIUserInterfaceCustomizations.h"
 #import "GIItem+PrettyDescription.h"
 #import "GILevel+PrettyDescription.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface GIItemViewController()
 
@@ -31,6 +32,7 @@
     _item = item;
 
     if (item) {
+        self.imageView.image = item.image;
         // exibir item
         // reload word view
         // reload letters
@@ -63,6 +65,9 @@
     [super viewDidLoad];
 
     self.view.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
+    self.imageFrameView.layer.cornerRadius = 8.f;
+    self.imageView.layer.cornerRadius = 8.f;
+    self.imageView.layer.shadowRadius = 5.f;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -83,7 +88,7 @@
     [self.item guessWithAnwser:self.item.answer];
 
     UIBarButtonItem *rightBarButtonItem = nil;
-    if (self.level.todoItems.count > 1) {
+    if (self.level.todoItems.count > 0) {
         rightBarButtonItem = self.reloadBarButtonItem;
     }
 

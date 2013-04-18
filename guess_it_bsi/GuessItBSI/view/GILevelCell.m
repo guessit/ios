@@ -19,12 +19,10 @@
 #pragma mark - Setter
 
 - (void)setLevel:(GILevel *)level {
-    if (_level != level) {
-        _level = level;
+    _level = level;
 
-        self.nameLabel.text = level.name;
-        self.progressLabel.text = level.progress;
-    }
+    self.nameLabel.text = level.name;
+    self.progressLabel.text = level.progress;
 }
 
 #pragma mark - Designated Initializer

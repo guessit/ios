@@ -35,6 +35,10 @@
             [GILevel linguagensProgramacao],
             [GILevel ferramentas]
         ];
+
+        #warning TODO: BROWSER
+        #warning TODO: SISTEMAS OPERACIONAIS
+
     }
     return _bsiLevels;
 }
@@ -45,6 +49,14 @@
     [super viewDidLoad];
 
     self.tableView.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    NSLog(@"Index paths: %@", self.tableView.indexPathsForSelectedRows);
+    [self.tableView reloadRowsAtIndexPaths:self.tableView.indexPathsForSelectedRows
+                          withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
