@@ -36,8 +36,9 @@
             [GILevel ferramentas]
         ];
 
-        #warning TODO: BROWSER
-        #warning TODO: SISTEMAS OPERACIONAIS
+        #warning TODO: BROWSER - chrome, ie, firefox, safari, opera, etc
+        #warning TODO: SISTEMAS OPERACIONAIS - windows, ubuntu, osx, ios, android, etc
+        #warning TODO: MARCAS - apple, google, microsoft, hp, cisco, etc
 
     }
     return _bsiLevels;
