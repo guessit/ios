@@ -12,6 +12,7 @@
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) NSArray *items;
+@property (nonatomic, strong, readonly) NSString *progress;
 
 @property (nonatomic, strong, readonly) NSArray *todoItems;
 @property (nonatomic, strong, readonly) NSArray *finishedItems;

@@ -14,6 +14,10 @@
 
 #pragma mark - Getter
 
+- (NSString *)progress {
+    return [NSString stringWithFormat:@"%02d/%02d", self.finishedItems.count + 1, self.items.count + 1];
+}
+
 - (NSArray *)finishedItems {
     NSArray *finishedItemsImages = [GIItem finishedItems];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"imageName in %@", finishedItemsImages];

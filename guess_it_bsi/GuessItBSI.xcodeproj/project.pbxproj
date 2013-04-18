@@ -73,6 +73,8 @@
 		BFAD12B016F1376600F6D429 /* GIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12A916F1376600F6D429 /* GIAppDelegate.m */; };
 		BFAD12B116F1376600F6D429 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12AB16F1376600F6D429 /* main.m */; };
 		BFBDD2121701092000F5698E /* GIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBDD2111701092000F5698E /* GIMainViewController.m */; };
+		BFCB7DB8171F737600F8994B /* ico_reload.png in Resources */ = {isa = PBXBuildFile; fileRef = BFCB7DB6171F737600F8994B /* ico_reload.png */; };
+		BFCB7DB9171F737600F8994B /* ico_reload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFCB7DB7171F737600F8994B /* ico_reload@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +171,8 @@
 		BFAD12AB16F1376600F6D429 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFBDD2101701092000F5698E /* GIMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIMainViewController.h; sourceTree = "<group>"; };
 		BFBDD2111701092000F5698E /* GIMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIMainViewController.m; sourceTree = "<group>"; };
+		BFCB7DB6171F737600F8994B /* ico_reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_reload.png; sourceTree = "<group>"; };
+		BFCB7DB7171F737600F8994B /* ico_reload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_reload@2x.png"; sourceTree = "<group>"; };
 		BFF5A2E4171EB74E00F401B3 /* GIDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIDefinitions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -393,6 +397,8 @@
 				BF1F29AB17072D0900A83FE3 /* ico_back@2x.png */,
 				BF1F29B7170766B800A83FE3 /* ico_more.png */,
 				BF1F29B8170766B800A83FE3 /* ico_more@2x.png */,
+				BFCB7DB6171F737600F8994B /* ico_reload.png */,
+				BFCB7DB7171F737600F8994B /* ico_reload@2x.png */,
 				BF1F29D01707817200A83FE3 /* navbar_background.png */,
 				BF41EA29170BB0B3006540E7 /* guessing items */,
 			);
@@ -554,6 +560,8 @@
 				BF41EA8E170BB27B006540E7 /* 029.png in Resources */,
 				BF41EA8F170BB27B006540E7 /* 030.png in Resources */,
 				BF41EA90170BB27B006540E7 /* 031.png in Resources */,
+				BFCB7DB8171F737600F8994B /* ico_reload.png in Resources */,
+				BFCB7DB9171F737600F8994B /* ico_reload@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

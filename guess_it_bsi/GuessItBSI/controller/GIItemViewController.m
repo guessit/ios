@@ -15,9 +15,47 @@
 
 @interface GIItemViewController()
 
+@property (nonatomic, strong) GIItem *item;
+@property (nonatomic, strong) UIBarButtonItem *reloadBarButtonItem;
+
+- (void)_loadRandomItem;
+- (void)_reloadTouched:(id)sender;
+
 @end
 
 @implementation GIItemViewController
+
+#pragma mark - Setter
+
+- (void)setItem:(GIItem *)item {
+    _item = item;
+
+    if (item) {
+        // exibir item
+        // reload word view
+        // reload letters
+    } else {
+        // show congrats view and say no more items on this level
+    }
+}
+
+#pragma mark - Getter
+
+- (UIBarButtonItem *)reloadBarButtonItem {
+    if (!_reloadBarButtonItem) {
+        UIButton *reloadButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [reloadButton addTarget:self
+                         action:@selector(_reloadTouched:)
+               forControlEvents:UIControlEventTouchUpInside];
+        [reloadButton setImage:[UIImage imageNamed:@"ico_reload"]
+                      forState:UIControlStateNormal];
+        reloadButton.frame = CGRectMake(0.f, 0.f, 70.f, 70.f);
+        reloadButton.imageEdgeInsets = UIEdgeInsetsMake(3.f, 40.f, 0.f, 0.f);
+
+        _reloadBarButtonItem = [UIBarButtonItem barButtonItemWithCustomView:reloadButton];
+    }
+    return _reloadBarButtonItem;
+}
 
 #pragma mark - UIViewController Methods
 
@@ -30,15 +68,30 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    GIItem *item = [self.level.items randomObject];
-    NSLog(@"%@", item.prettyDescription);
+    [self _loadRandomItem];
 
-    [item guessWithAnwser:item.answer];
-
-    NSLog(@"   Total items: %d", self.level.items.count);
-    NSLog(@"    Todo items: %d", self.level.todoItems.count);
-    NSLog(@"Finished items: %d", self.level.finishedItems.count);
     NSLog(@"         Items: %@", self.level.prettyDescription);
+}
+
+#pragma mark - Private Interface
+
+- (void)_loadRandomItem {
+    self.item = self.level.todoItems.randomObject;
+
+    NSLog(@"%@", self.item.prettyDescription);
+
+    [self.item guessWithAnwser:self.item.answer];
+
+    UIBarButtonItem *rightBarButtonItem = nil;
+    if (self.level.todoItems.count > 1) {
+        rightBarButtonItem = self.reloadBarButtonItem;
+    }
+
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+}
+
+- (void)_reloadTouched:(id)sender {
+    [self _loadRandomItem];
 }
 
 @end

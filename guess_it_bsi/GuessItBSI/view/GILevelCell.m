@@ -23,7 +23,7 @@
         _level = level;
 
         self.nameLabel.text = level.name;
-        self.progressLabel.text = [NSString stringWithFormat:@"%02d/%02d", 0, level.items.count];
+        self.progressLabel.text = level.progress;
     }
 }
 
