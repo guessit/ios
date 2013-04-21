@@ -38,6 +38,7 @@
         // reload letters
     } else {
         // show congrats view and say no more items on this level
+        self.imageView.alpha = 0.f;
     }
 }
 
@@ -65,17 +66,15 @@
     [super viewDidLoad];
 
     self.view.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
-    self.imageFrameView.layer.cornerRadius = 8.f;
-    self.imageView.layer.cornerRadius = 8.f;
-    self.imageView.layer.shadowRadius = 5.f;
+    self.imageView.layer.cornerRadius = 1.f;
+    self.imageView.layer.borderColor = [GI_BACKGROUND_MAIN_DARKER_COLOR CGColor];
+    self.imageView.layer.borderWidth = 5.f;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
     [self _loadRandomItem];
-
-    NSLog(@"         Items: %@", self.level.prettyDescription);
 }
 
 #pragma mark - Private Interface
@@ -84,8 +83,6 @@
     self.item = self.level.todoItems.randomObject;
 
     NSLog(@"%@", self.item.prettyDescription);
-
-    [self.item guessWithAnwser:self.item.answer];
 
     UIBarButtonItem *rightBarButtonItem = nil;
     if (self.level.todoItems.count > 0) {

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GIShineLabel.h"
 
 @interface GIMainViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet GIShineLabel *titleLabel;
 
 @end

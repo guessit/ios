@@ -51,6 +51,7 @@
     [super viewDidLoad];
 
     self.tableView.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
+    self.tableView.separatorColor = GI_BACKGROUND_MAIN_DARKER_COLOR;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
