@@ -66,9 +66,19 @@
     [super viewDidLoad];
 
     self.view.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
-    self.imageView.layer.cornerRadius = 1.f;
-    self.imageView.layer.borderColor = [GI_BACKGROUND_MAIN_DARKER_COLOR CGColor];
-    self.imageView.layer.borderWidth = 5.f;
+    self.imageViewFrame.layer.cornerRadius = 1.f;
+    self.imageViewFrame.layer.borderColor = [GI_BACKGROUND_MAIN_DARKER_COLOR CGColor];
+    self.imageViewFrame.layer.borderWidth = 5.f;
+
+    self.imageViewFrame.translatesAutoresizingMaskIntoConstraints = NO;
+    NSLayoutConstraint *squared = [NSLayoutConstraint constraintWithItem:self.imageViewFrame
+                                                               attribute:NSLayoutAttributeWidth
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:self.imageViewFrame
+                                                               attribute:NSLayoutAttributeHeight
+                                                              multiplier:1.f
+                                                                constant:0.f];
+    [self.imageViewFrame addConstraint:squared];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

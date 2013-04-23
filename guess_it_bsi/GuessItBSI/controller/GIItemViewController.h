@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) GILevel *level;
 
+@property (weak, nonatomic) IBOutlet UIView *imageViewFrame;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

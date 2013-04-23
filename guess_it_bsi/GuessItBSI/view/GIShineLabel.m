@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) UILabel *shineLabel;
 @property (nonatomic, strong) CALayer *maskLayer;
+@property (nonatomic, strong) CABasicAnimation *animation;
 
 @end
 
@@ -35,6 +36,8 @@
         _shineLabel.textAlignment = self.textAlignment;
         _shineLabel.backgroundColor = [UIColor clearColor];
         _shineLabel.layer.mask = self.maskLayer;
+
+        [self.layer addSublayer:self.shineLabel.layer];
     }
     return _shineLabel;
 }
@@ -45,13 +48,28 @@
         _maskLayer.backgroundColor = [UIColor clearColor].CGColor;
         _maskLayer.contents = (id)[UIImage imageNamed:@"shine_mask"].CGImage;
         _maskLayer.contentsGravity = kCAGravityCenter;
+        [_maskLayer addAnimation:self.animation forKey:@"shine"];
     }
     return _maskLayer;
 }
 
-#pragma mark - Public Interface
+- (CABasicAnimation *)animation {
+    if (!_animation) {
+        _animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
+        _animation.duration = 3.f;
+        _animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        _animation.delegate = self;
+        _animation.repeatCount = HUGE_VALF;
+        _animation.removedOnCompletion = NO;
+    }
+    return _animation;
+}
 
-- (void)flash {
+#pragma mark - UIView Methods
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+
     CGFloat width = self.bounds.size.width;
     CGFloat height = self.bounds.size.height;
 
@@ -60,23 +78,15 @@
     self.shineLabel.textColor = self.shineColor;
 
     self.maskLayer.frame = CGRectMake(-width, 0, width * 1.25f, height);
-
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
-    animation.byValue = @(width * 2.f);
-    animation.duration = 3.f;
-    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    animation.delegate = self;
-
-    [self.layer addSublayer:self.shineLabel.layer];
-
-    [self.maskLayer addAnimation:animation forKey:@"shine"];
 }
 
-#pragma mark - CAAnimation Delegate
+#pragma mark - Public Interface
 
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    [self.maskLayer removeAllAnimations];
-    [self.shineLabel.layer removeFromSuperlayer];
+- (void)flash {
+    CGFloat width = self.bounds.size.width;
+
+    self.animation.fromValue = @(-width * 0.25f);
+    self.animation.toValue = @(width * 1.25f);
 }
 
 @end
