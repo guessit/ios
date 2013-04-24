@@ -85,6 +85,11 @@
 		BFF9297017243E1900F230C6 /* Lobster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF9296F17243E1900F230C6 /* Lobster.ttf */; };
 		BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */; };
 		BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF92975172443AC00F230C6 /* GIShineLabel.m */; };
+		BFF9E72D1727F44A003B4385 /* GIOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E72C1727F44A003B4385 /* GIOptionsViewController.m */; };
+		BFF9E7301727F580003B4385 /* GIWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E72F1727F580003B4385 /* GIWordView.m */; };
+		BFF9E7331727F599003B4385 /* GIKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7321727F599003B4385 /* GIKeypadView.m */; };
+		BFF9E7361727F5AD003B4385 /* GILetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7351727F5AD003B4385 /* GILetterView.m */; };
+		BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7381727F815003B4385 /* NSString+RandomString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +201,16 @@
 		BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+GuessItFonts.m"; sourceTree = "<group>"; };
 		BFF92974172443AC00F230C6 /* GIShineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIShineLabel.h; sourceTree = "<group>"; };
 		BFF92975172443AC00F230C6 /* GIShineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIShineLabel.m; sourceTree = "<group>"; };
+		BFF9E72B1727F44A003B4385 /* GIOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIOptionsViewController.h; sourceTree = "<group>"; };
+		BFF9E72C1727F44A003B4385 /* GIOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIOptionsViewController.m; sourceTree = "<group>"; };
+		BFF9E72E1727F580003B4385 /* GIWordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIWordView.h; sourceTree = "<group>"; };
+		BFF9E72F1727F580003B4385 /* GIWordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIWordView.m; sourceTree = "<group>"; };
+		BFF9E7311727F599003B4385 /* GIKeypadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKeypadView.h; sourceTree = "<group>"; };
+		BFF9E7321727F599003B4385 /* GIKeypadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKeypadView.m; sourceTree = "<group>"; };
+		BFF9E7341727F5AD003B4385 /* GILetterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILetterView.h; sourceTree = "<group>"; };
+		BFF9E7351727F5AD003B4385 /* GILetterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILetterView.m; sourceTree = "<group>"; };
+		BFF9E7371727F815003B4385 /* NSString+RandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RandomString.h"; sourceTree = "<group>"; };
+		BFF9E7381727F815003B4385 /* NSString+RandomString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RandomString.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +247,8 @@
 				BF41EA93170BB4A0006540E7 /* GILevel+Factory.m */,
 				BF6943BC171CA2AD000F74E0 /* GILevel+PrettyDescription.h */,
 				BF6943BD171CA2AD000F74E0 /* GILevel+PrettyDescription.m */,
+				BFF9E7371727F815003B4385 /* NSString+RandomString.h */,
+				BFF9E7381727F815003B4385 /* NSString+RandomString.m */,
 				BFF9297117243EF900F230C6 /* UIFont+GuessItFonts.h */,
 				BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */,
 			);
@@ -336,6 +353,8 @@
 				BF1F299A1702477000A83FE3 /* GILevelsViewController.m */,
 				BFBDD2101701092000F5698E /* GIMainViewController.h */,
 				BFBDD2111701092000F5698E /* GIMainViewController.m */,
+				BFF9E72B1727F44A003B4385 /* GIOptionsViewController.h */,
+				BFF9E72C1727F44A003B4385 /* GIOptionsViewController.m */,
 				BF1F29B11707617700A83FE3 /* GIViewController.h */,
 				BF1F29B21707617700A83FE3 /* GIViewController.m */,
 			);
@@ -375,8 +394,14 @@
 			children = (
 				BF1F29A3170634BB00A83FE3 /* GILevelCell.h */,
 				BF1F29A4170634BB00A83FE3 /* GILevelCell.m */,
+				BFF9E7341727F5AD003B4385 /* GILetterView.h */,
+				BFF9E7351727F5AD003B4385 /* GILetterView.m */,
+				BFF9E7311727F599003B4385 /* GIKeypadView.h */,
+				BFF9E7321727F599003B4385 /* GIKeypadView.m */,
 				BFF92974172443AC00F230C6 /* GIShineLabel.h */,
 				BFF92975172443AC00F230C6 /* GIShineLabel.m */,
+				BFF9E72E1727F580003B4385 /* GIWordView.h */,
+				BFF9E72F1727F580003B4385 /* GIWordView.m */,
 			);
 			name = View;
 			path = view;
@@ -690,6 +715,11 @@
 				BF6943BE171CA2AD000F74E0 /* GILevel+PrettyDescription.m in Sources */,
 				BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */,
 				BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */,
+				BFF9E72D1727F44A003B4385 /* GIOptionsViewController.m in Sources */,
+				BFF9E7301727F580003B4385 /* GIWordView.m in Sources */,
+				BFF9E7331727F599003B4385 /* GIKeypadView.m in Sources */,
+				BFF9E7361727F5AD003B4385 /* GILetterView.m in Sources */,
+				BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

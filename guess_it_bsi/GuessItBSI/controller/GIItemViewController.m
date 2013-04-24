@@ -36,6 +36,7 @@
         // exibir item
         // reload word view
         // reload letters
+        self.keypadView.answer = item.answer;
     } else {
         // show congrats view and say no more items on this level
         self.imageView.alpha = 0.f;
@@ -69,16 +70,6 @@
     self.imageViewFrame.layer.cornerRadius = 1.f;
     self.imageViewFrame.layer.borderColor = [GI_BACKGROUND_MAIN_DARKER_COLOR CGColor];
     self.imageViewFrame.layer.borderWidth = 5.f;
-
-    self.imageViewFrame.translatesAutoresizingMaskIntoConstraints = NO;
-    NSLayoutConstraint *squared = [NSLayoutConstraint constraintWithItem:self.imageViewFrame
-                                                               attribute:NSLayoutAttributeWidth
-                                                               relatedBy:NSLayoutRelationEqual
-                                                                  toItem:self.imageViewFrame
-                                                               attribute:NSLayoutAttributeHeight
-                                                              multiplier:1.f
-                                                                constant:0.f];
-    [self.imageViewFrame addConstraint:squared];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
