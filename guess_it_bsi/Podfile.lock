@@ -1,18 +1,13 @@
-
 PODS:
-- MALazykit (0.1.5)
-- SSToolkit (1.0.3)
+  - MALazykit (HEAD based on 0.1.10)
+  - SSToolkit (1.0.4)
 
 DEPENDENCIES:
-- MALazykit (from `https://raw.github.com/marlonandrade/Specs/master/MALazykit/0.1.5/MALazykit.podspec')
-- SSToolkit
-
-EXTERNAL SOURCES:
-  MALazykit:
-    :podspec: https://raw.github.com/marlonandrade/Specs/master/MALazykit/0.1.5/MALazykit.podspec
+  - MALazykit (HEAD)
+  - SSToolkit
 
 SPEC CHECKSUMS:
-  MALazykit: ecb8540677bb9f65f6c0f27135c89809b7d893f9
-  SSToolkit: fcf7d81b20f92158c78d474f53665813a518e243
+  MALazykit: 7a3c9c4004f85f8db26962c4b041e18f4f64b9dc
+  SSToolkit: 689acaedac79c2079e492e528a55bcb5db9d98c4
 
-COCOAPODS: 0.16.4
+COCOAPODS: 0.18.1
