@@ -10,7 +10,7 @@
 #import "GILetterView.h"
 #import "NSString+RandomString.h"
 
-#define GI_KEYPAD_NUMBER_OF_ROWS 3
+#define GI_KEYPAD_NUMBER_OF_ROWS 2
 #define GI_KEYPAD_NUMBER_OF_COLUMNS 7
 
 @interface GIKeypadView ()
@@ -75,11 +75,12 @@
 #pragma mark - Private Methods
 
 - (void)_generateKeypad {
+    NSString *sanitizedAnswer = [self.answer stringByReplacingOccurrencesOfString:@" " withString:@""];
     __block NSString *letters = @"";
     [self.letterViews enumerateObjectsUsingBlock:^(GILetterView *letterView, NSUInteger idx, BOOL *stop) {
         NSString *letter = @"";
-        if (idx < self.answer.length) {
-            letter = [self.answer substringWithRange:NSMakeRange(idx, 1)];
+        if (idx < sanitizedAnswer.length) {
+            letter = [sanitizedAnswer substringWithRange:NSMakeRange(idx, 1)];
         } else {
             if (idx % 2 == 0) {
                 letter = [NSString randomVowel];
