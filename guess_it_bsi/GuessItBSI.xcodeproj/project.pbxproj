@@ -90,6 +90,7 @@
 		BFF9E7331727F599003B4385 /* GIKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7321727F599003B4385 /* GIKeypadView.m */; };
 		BFF9E7361727F5AD003B4385 /* GILetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7351727F5AD003B4385 /* GILetterView.m */; };
 		BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7381727F815003B4385 /* NSString+RandomString.m */; };
+		BFFC5013172A9ACD008DC742 /* UIView+SizingAndPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFC5012172A9ACD008DC742 /* UIView+SizingAndPositioning.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +212,8 @@
 		BFF9E7351727F5AD003B4385 /* GILetterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILetterView.m; sourceTree = "<group>"; };
 		BFF9E7371727F815003B4385 /* NSString+RandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RandomString.h"; sourceTree = "<group>"; };
 		BFF9E7381727F815003B4385 /* NSString+RandomString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RandomString.m"; sourceTree = "<group>"; };
+		BFFC5011172A9ACD008DC742 /* UIView+SizingAndPositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SizingAndPositioning.h"; sourceTree = "<group>"; };
+		BFFC5012172A9ACD008DC742 /* UIView+SizingAndPositioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SizingAndPositioning.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +254,8 @@
 				BFF9E7381727F815003B4385 /* NSString+RandomString.m */,
 				BFF9297117243EF900F230C6 /* UIFont+GuessItFonts.h */,
 				BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */,
+				BFFC5011172A9ACD008DC742 /* UIView+SizingAndPositioning.h */,
+				BFFC5012172A9ACD008DC742 /* UIView+SizingAndPositioning.m */,
 			);
 			name = Categories;
 			path = categories;
@@ -720,6 +725,7 @@
 				BFF9E7331727F599003B4385 /* GIKeypadView.m in Sources */,
 				BFF9E7361727F5AD003B4385 /* GILetterView.m in Sources */,
 				BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */,
+				BFFC5013172A9ACD008DC742 /* UIView+SizingAndPositioning.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

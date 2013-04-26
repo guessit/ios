@@ -14,4 +14,8 @@
     return [UIFont fontWithName:@"Lobster" size:70.f];
 }
 
++ (UIFont *)keypadLetterFont {
+    return [UIFont fontWithName:@"GillSans" size:17.f];
+}
+
 @end

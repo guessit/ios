@@ -11,5 +11,6 @@
 @interface UIFont (GuessItFonts)
 
 + (UIFont *)guessItTitleFont;
++ (UIFont *)keypadLetterFont;;
 
 @end
