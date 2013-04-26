@@ -15,7 +15,8 @@
 
 @interface GIKeypadView ()
 
-@property (nonatomic, strong) NSArray *letterViews;
+@property (nonatomic, strong) NSMutableArray *letterViews;
+@property (nonatomic, strong, readonly) NSString *letters;
 
 - (void)_generateKeypad;
 
@@ -25,7 +26,7 @@
 
 #pragma mark - Getter
 
-- (NSArray *)letterViews {
+- (NSMutableArray *)letterViews {
     if (!_letterViews) {
         NSInteger numberOfKeys = GI_KEYPAD_NUMBER_OF_ROWS * GI_KEYPAD_NUMBER_OF_COLUMNS;
         NSMutableArray *views = [NSMutableArray arrayWithCapacity:numberOfKeys];
@@ -37,6 +38,16 @@
         _letterViews = views;
     }
     return _letterViews;
+}
+
+- (NSString *)letters {
+    NSString *letters = @"";
+
+    for (GILetterView *letterView in self.letterViews) {
+        letters = [letters stringByAppendingString:letterView.letter];
+    }
+
+    return letters;
 }
 
 #pragma mark - Setter
@@ -76,7 +87,6 @@
 
 - (void)_generateKeypad {
     NSString *sanitizedAnswer = [self.answer stringByReplacingOccurrencesOfString:@" " withString:@""];
-    __block NSString *letters = @"";
     [self.letterViews enumerateObjectsUsingBlock:^(GILetterView *letterView, NSUInteger idx, BOOL *stop) {
         NSString *letter = @"";
         if (idx < sanitizedAnswer.length) {
@@ -89,12 +99,12 @@
             }
         }
 
-        letters = [letters stringByAppendingString:letter];
-
         letterView.letter = letter;
     }];
 
-    NSLog(@"%@", letters);
+    [self.letterViews shuffle];
+
+    NSLog(@"Letters: %@", self.letters);
 
     [self setNeedsLayout];
 }
