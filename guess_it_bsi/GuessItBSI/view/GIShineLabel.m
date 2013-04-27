@@ -56,7 +56,6 @@
 - (CABasicAnimation *)animation {
     if (!_animation) {
         _animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
-        _animation.duration = 3.f;
         _animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
         _animation.delegate = self;
         _animation.repeatCount = HUGE_VALF;
@@ -85,6 +84,7 @@
 - (void)flash {
     CGFloat width = self.bounds.size.width;
 
+    self.animation.duration = self.shineDuration > 0.f ? self.shineDuration : 3.f;
     self.animation.fromValue = @(-width * 0.25f);
     self.animation.toValue = @(width * 1.25f);
 }

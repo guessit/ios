@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		22089BA97554462C80199B37 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62620204B775499F949AB190 /* libPods.a */; };
+		BF1835D5172C3D1D00E2CB5F /* GINavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */; };
+		BF1835D7172C426300E2CB5F /* transparent_pixel.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1835D6172C426300E2CB5F /* transparent_pixel.png */; };
 		BF1F2998170246F800A83FE3 /* GILevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F2997170246F800A83FE3 /* GILevel.m */; };
 		BF1F299B1702477000A83FE3 /* GILevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F299A1702477000A83FE3 /* GILevelsViewController.m */; };
 		BF1F299E170249D300A83FE3 /* GIUserInterfaceCustomizations.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F299D170249D300A83FE3 /* GIUserInterfaceCustomizations.m */; };
@@ -106,6 +108,9 @@
 /* Begin PBXFileReference section */
 		62620204B775499F949AB190 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD30177A3D9541AEB54F865D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		BF1835D3172C3D1D00E2CB5F /* GINavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GINavigationBar.h; sourceTree = "<group>"; };
+		BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GINavigationBar.m; sourceTree = "<group>"; };
+		BF1835D6172C426300E2CB5F /* transparent_pixel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparent_pixel.png; sourceTree = "<group>"; };
 		BF1F2996170246F800A83FE3 /* GILevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevel.h; sourceTree = "<group>"; };
 		BF1F2997170246F800A83FE3 /* GILevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevel.m; sourceTree = "<group>"; };
 		BF1F29991702477000A83FE3 /* GILevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelsViewController.h; sourceTree = "<group>"; };
@@ -407,6 +412,8 @@
 				BFF92975172443AC00F230C6 /* GIShineLabel.m */,
 				BFF9E72E1727F580003B4385 /* GIWordView.h */,
 				BFF9E72F1727F580003B4385 /* GIWordView.m */,
+				BF1835D3172C3D1D00E2CB5F /* GINavigationBar.h */,
+				BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */,
 			);
 			name = View;
 			path = view;
@@ -439,6 +446,7 @@
 				BFF9293F17243E0300F230C6 /* ico_reload.png */,
 				BFF9294017243E0300F230C6 /* ico_reload@2x.png */,
 				BFF9294117243E0300F230C6 /* navbar_background.png */,
+				BF1835D6172C426300E2CB5F /* transparent_pixel.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -657,6 +665,7 @@
 				BF91796D1724716D00B136E2 /* Icon@2x.png in Resources */,
 				BF91796E1724716D00B136E2 /* iTunesArtwork.png in Resources */,
 				BF91796F1724716D00B136E2 /* iTunesArtwork@2x.png in Resources */,
+				BF1835D7172C426300E2CB5F /* transparent_pixel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +735,7 @@
 				BFF9E7361727F5AD003B4385 /* GILetterView.m in Sources */,
 				BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */,
 				BFFC5013172A9ACD008DC742 /* UIView+SizingAndPositioning.m in Sources */,
+				BF1835D5172C3D1D00E2CB5F /* GINavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

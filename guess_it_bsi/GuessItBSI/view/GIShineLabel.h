@@ -11,6 +11,7 @@
 @interface GIShineLabel : UILabel
 
 @property (nonatomic, strong) UIColor *shineColor;
+@property (nonatomic, assign) CGFloat shineDuration;
 
 - (void)flash;
 

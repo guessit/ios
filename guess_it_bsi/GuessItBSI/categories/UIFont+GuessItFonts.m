@@ -14,8 +14,12 @@
     return [UIFont fontWithName:@"Lobster" size:70.f];
 }
 
-+ (UIFont *)keypadLetterFont {
-    return [UIFont fontWithName:@"GillSans" size:17.f];
++ (UIFont *)guessItNavigationTitleFont {
+    return [UIFont fontWithName:@"Lobster" size:26.f];
+}
+
++ (UIFont *)guessItKeypadLetterFont {
+    return [UIFont fontWithName:@"GillSans" size:18.f];
 }
 
 @end

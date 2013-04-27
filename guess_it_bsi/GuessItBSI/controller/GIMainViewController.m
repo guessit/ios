@@ -24,7 +24,7 @@
     [super viewDidLoad];
 
     self.titleLabel.font = [UIFont guessItTitleFont];
-    self.titleLabel.shineColor = [UIColor colorWithRed:0.980 green:0.984 blue:0.843 alpha:1.000];
+    self.titleLabel.shineColor = GI_TITLE_SHINE_COLOR;
 
     self.view.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
 

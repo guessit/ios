@@ -8,9 +8,9 @@
 
 #import "GIUserInterfaceCustomizations.h"
 
-@interface GIUserInterfaceCustomizations()
+#import "UIFont+GuessItFonts.h"
 
-- (void)_customizeNavigationBar;
+@interface GIUserInterfaceCustomizations()
 
 @end
 
@@ -23,19 +23,9 @@
 }
 
 - (void)customizeUserInterface {
-    [self _customizeNavigationBar];
+    #warning TODO: verificar se há necessidade dessa classe de customizacao através de UIAppearance
 }
 
 #pragma mark - Private Interface
-
-- (void)_customizeNavigationBar {
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navbar_background"]
-                                       forBarMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance] setTintColor:GI_BACKGROUND_MAIN_COLOR];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{
-        UITextAttributeFont: [UIFont fontWithName:@"GillSans-Bold" size:22.f],
-        UITextAttributeTextColor: GI_FONT_MAIN_COLOR
-    }];
-}
 
 @end
