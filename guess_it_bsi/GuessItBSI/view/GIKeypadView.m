@@ -13,10 +13,10 @@
 #import "NSString+RandomString.h"
 #import "UIView+SizingAndPositioning.h"
 
-#define GI_KEYPAD_NUMBER_OF_ROWS 2
-#define GI_KEYPAD_NUMBER_OF_COLUMNS 7
-#define GI_KEYPAD_SPACING 2.f
-#define GI_KEYPAD_SPECIAL_ITEM_WIDTH 40.f
+#define GI_KEYPAD_NO_ROWS 2
+#define GI_KEYPAD_NO_COLUMNS 7
+#define GI_KEYPAD_PADDING 3.f
+#define GI_KEYPAD_ACTION_WIDTH 50.f
 
 @interface GIKeypadView ()
 
@@ -36,7 +36,8 @@
 - (UIView *)lettersContainer {
     if (!_lettersContainer) {
         _lettersContainer = [UIView view];
-        _lettersContainer.backgroundColor = [UIColor clearColor];
+//        _lettersContainer.backgroundColor = [UIColor clearColor];
+        _lettersContainer.backgroundColor = [UIColor greenColor];
 
         [self addSubview:_lettersContainer];
     }
@@ -45,11 +46,12 @@
 
 - (NSMutableArray *)letterViews {
     if (!_letterViews) {
-        NSInteger numberOfKeys = GI_KEYPAD_NUMBER_OF_ROWS * GI_KEYPAD_NUMBER_OF_COLUMNS;
+        NSInteger numberOfKeys = GI_KEYPAD_NO_ROWS * GI_KEYPAD_NO_COLUMNS;
         NSMutableArray *views = [NSMutableArray arrayWithCapacity:numberOfKeys];
 
         for (NSInteger i = 0; i < numberOfKeys; i++) {
             GILetterView *letterView = [GILetterView view];
+            letterView.backgroundColor = [UIColor redColor];
             [self.lettersContainer addSubview:letterView];
             [views addObject:letterView];
         }
@@ -101,24 +103,22 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
 
-    CGFloat columnsSpacing = (GI_KEYPAD_NUMBER_OF_COLUMNS - 1) * GI_KEYPAD_SPACING;
-    CGFloat rowsSpacing = (GI_KEYPAD_NUMBER_OF_ROWS - 1) * GI_KEYPAD_SPACING;
+    CGFloat containerWidth = self.width - GI_KEYPAD_ACTION_WIDTH;
+    CGFloat containerHeight = self.height;
 
-    CGFloat containerWidth = self.width - 2 * GI_KEYPAD_SPACING - GI_KEYPAD_SPECIAL_ITEM_WIDTH;
-    CGFloat containerHeight = self.height - 2 * GI_KEYPAD_SPACING;
+    self.lettersContainer.frame = CGRectMake(0.f, 0.f, containerWidth, containerHeight);
 
-    CGFloat letterWidth = floorf((containerWidth - columnsSpacing) / GI_KEYPAD_NUMBER_OF_COLUMNS);
-    CGFloat letterHeight = floorf((containerHeight - rowsSpacing) / GI_KEYPAD_NUMBER_OF_ROWS);
-
-    self.lettersContainer.frame = CGRectMake(GI_KEYPAD_SPACING, GI_KEYPAD_SPACING, containerWidth, containerHeight);
+    CGFloat letterWidth = (containerWidth - (GI_KEYPAD_NO_COLUMNS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_COLUMNS;
+    CGFloat letterHeight = (containerHeight - (GI_KEYPAD_NO_ROWS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_ROWS;
 
     [self.letterViews enumerateObjectsUsingBlock:^(GILetterView *view, NSUInteger idx, BOOL *stop) {
-        NSUInteger column = idx % GI_KEYPAD_NUMBER_OF_COLUMNS;
-        NSUInteger row = idx / GI_KEYPAD_NUMBER_OF_COLUMNS;
+        NSUInteger xIdx = idx % GI_KEYPAD_NO_COLUMNS;
+        NSUInteger yIdx = idx / GI_KEYPAD_NO_COLUMNS;
 
-        view.frame = CGRectMake((letterWidth + GI_KEYPAD_SPACING) * column,
-                                (letterHeight + GI_KEYPAD_SPACING) * row,
-                                letterWidth, letterHeight);
+        CGFloat xOffset = xIdx * letterWidth + (xIdx + 1) * GI_KEYPAD_PADDING;
+        CGFloat yOffset = yIdx * letterHeight + (yIdx + 1) * GI_KEYPAD_PADDING;
+
+        view.frame = CGRectMake(xOffset, yOffset, letterWidth, letterHeight);
     }];
 }
 
@@ -126,6 +126,7 @@
 
 - (void)_initialize {
     self.backgroundColor = GI_BACKGROUND_MAIN_DARKER_COLOR;
+    self.backgroundColor = [UIColor yellowColor];
 }
 
 - (void)_generateKeypad {
@@ -146,8 +147,6 @@
     }];
 
     [self.letterViews shuffle];
-
-    NSLog(@"Letters: %@", self.letters);
 
     [self setNeedsLayout];
 }
