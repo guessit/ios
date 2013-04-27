@@ -24,6 +24,8 @@
 @property (nonatomic, strong) NSMutableArray *letterViews;
 @property (nonatomic, strong, readonly) NSString *letters;
 
+@property (nonatomic, weak) GILetterView *zoomedInLetter;
+
 - (void)_initialize;
 - (void)_generateKeypad;
 
@@ -36,8 +38,7 @@
 - (UIView *)lettersContainer {
     if (!_lettersContainer) {
         _lettersContainer = [UIView view];
-//        _lettersContainer.backgroundColor = [UIColor clearColor];
-        _lettersContainer.backgroundColor = [UIColor greenColor];
+        _lettersContainer.backgroundColor = [UIColor clearColor];
 
         [self addSubview:_lettersContainer];
     }
@@ -51,7 +52,6 @@
 
         for (NSInteger i = 0; i < numberOfKeys; i++) {
             GILetterView *letterView = [GILetterView view];
-            letterView.backgroundColor = [UIColor redColor];
             [self.lettersContainer addSubview:letterView];
             [views addObject:letterView];
         }
@@ -122,11 +122,54 @@
     }];
 }
 
+#pragma mark - UIResponder Methods
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = touches.anyObject;
+    if ([touch.view isKindOfClass:[GILetterView class]]) {
+        self.zoomedInLetter = (GILetterView *)touch.view;
+        [self.lettersContainer bringSubviewToFront:self.zoomedInLetter];
+        [self.zoomedInLetter zoomIn];
+    }
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = touches.anyObject;
+    CGPoint point = [touch locationInView:self.zoomedInLetter];
+    if (![self.zoomedInLetter pointInside:point withEvent:event]) {
+        if (self.zoomedInLetter) {
+            [self.zoomedInLetter zoomOut];
+            self.zoomedInLetter = nil;
+        }
+
+        for (GILetterView *letterView in self.letterViews) {
+            point = [touch locationInView:letterView];
+            if ([letterView pointInside:point withEvent:event]) {
+                self.zoomedInLetter = letterView;
+                [self.lettersContainer bringSubviewToFront:self.zoomedInLetter];
+                [self.zoomedInLetter zoomIn];
+                break;
+            }
+        }
+    }
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (self.zoomedInLetter) {
+        [self.zoomedInLetter zoomOut];
+    }
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (self.zoomedInLetter) {
+        [self.zoomedInLetter zoomOut];
+    }
+}
+
 #pragma mark - Private Methods
 
 - (void)_initialize {
     self.backgroundColor = GI_BACKGROUND_MAIN_DARKER_COLOR;
-    self.backgroundColor = [UIColor yellowColor];
 }
 
 - (void)_generateKeypad {

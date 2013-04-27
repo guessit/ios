@@ -11,6 +11,11 @@
 #import "GIUserInterfaceCustomizations.h"
 #import "UIFont+GuessItFonts.h"
 
+#define GI_LETTER_ZOOMED_SCALE 1.35f
+#define GI_LETTER_ZOOMED_COLOR GI_BACKGROUND_MAIN_LIGHTER_COLOR
+
+#define GI_LETTER_COLOR GI_BACKGROUND_MAIN_COLOR
+
 @interface GILetterView ()
 
 @property (nonatomic, strong) UILabel *label;
@@ -67,10 +72,22 @@
     return self;
 }
 
+#pragma mark - Public Interface
+
+- (void)zoomIn {
+    self.transform = CGAffineTransformMakeScale(GI_LETTER_ZOOMED_SCALE, GI_LETTER_ZOOMED_SCALE);
+    self.backgroundColor = GI_LETTER_ZOOMED_COLOR;
+}
+
+- (void)zoomOut {
+    self.transform = CGAffineTransformIdentity;
+    self.backgroundColor = GI_LETTER_COLOR;
+}
+
 #pragma mark - Private Interface
 
 - (void)_initialize {
-    self.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
+    self.backgroundColor = GI_LETTER_COLOR;
 }
 
 @end

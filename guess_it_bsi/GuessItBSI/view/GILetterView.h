@@ -12,4 +12,7 @@
 
 @property (nonatomic, strong) NSString *letter;
 
+- (void)zoomIn;
+- (void)zoomOut;
+
 @end
