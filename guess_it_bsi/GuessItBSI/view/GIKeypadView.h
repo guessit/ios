@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GIKeypadView : UIView
+@interface GIKeypadView : UIView <UIInputViewAudioFeedback>
 
 @property (nonatomic, strong) NSString *answer;
 

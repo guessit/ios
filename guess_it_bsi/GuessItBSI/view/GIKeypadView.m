@@ -129,6 +129,9 @@
     if ([touch.view isKindOfClass:[GILetterView class]]) {
         self.zoomedInLetter = (GILetterView *)touch.view;
         [self.lettersContainer bringSubviewToFront:self.zoomedInLetter];
+
+        [[UIDevice currentDevice] playInputClick];
+
         [self.zoomedInLetter zoomIn];
     }
 }
@@ -192,6 +195,12 @@
     [self.letterViews shuffle];
 
     [self setNeedsLayout];
+}
+
+#pragma mark - UIInputViewAudioFeedback Methods
+
+- (BOOL)enableInputClicksWhenVisible {
+    return YES;
 }
 
 @end

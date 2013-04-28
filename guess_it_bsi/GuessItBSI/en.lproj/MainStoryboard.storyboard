@@ -155,7 +155,7 @@
         <scene sceneID="xQY-Ml-PuI">
             <objects>
                 <viewController id="oV3-2S-Fu9" customClass="GIItemViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nC2-Wt-x7i">
+                    <view key="view" contentMode="scaleToFill" id="nC2-Wt-x7i" customClass="GIItemView">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -176,11 +176,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" id="rF2-IB-Whu" customClass="GIKeypadView">
-                                <rect key="frame" x="0.0" y="328" width="320" height="88"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -189,7 +184,6 @@
                     <connections>
                         <outlet property="imageView" destination="rMK-fA-SeN" id="gD6-S9-5qu"/>
                         <outlet property="imageViewFrame" destination="5dm-M0-uZo" id="kwY-4V-uy5"/>
-                        <outlet property="keypadView" destination="rF2-IB-Whu" id="2WQ-In-Fqt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7E9-Xd-9ZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -250,6 +244,9 @@
         <image name="ico_more.png" width="19" height="19"/>
     </resources>
     <classes>
+        <class className="GIItemView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GIItemView.h"/>
+        </class>
         <class className="GIItemViewController" superclassName="GIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GIItemViewController.h"/>
             <relationships>

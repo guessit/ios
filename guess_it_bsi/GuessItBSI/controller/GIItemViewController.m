@@ -9,14 +9,17 @@
 #import "GIItemViewController.h"
 
 #import "GIItem.h"
+#import "GIItemView.h"
 #import "GIUserInterfaceCustomizations.h"
 #import "GIItem+PrettyDescription.h"
 #import "GILevel+PrettyDescription.h"
+#import "UIView+SizingAndPositioning.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface GIItemViewController()
 
 @property (nonatomic, strong) GIItem *item;
+@property (nonatomic, strong, readonly) GIItemView *itemView;
 @property (nonatomic, strong) UIBarButtonItem *reloadBarButtonItem;
 
 - (void)_loadRandomItem;
@@ -45,6 +48,10 @@
 
 #pragma mark - Getter
 
+- (GIItemView *)itemView {
+    return (GIItemView *)self.view;
+}
+
 - (UIBarButtonItem *)reloadBarButtonItem {
     if (!_reloadBarButtonItem) {
         UIButton *reloadButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -70,6 +77,11 @@
     self.imageViewFrame.layer.cornerRadius = 1.f;
     self.imageViewFrame.layer.borderColor = [GI_BACKGROUND_MAIN_DARKER_COLOR CGColor];
     self.imageViewFrame.layer.borderWidth = 5.f;
+
+    self.keypadView = [GIKeypadView viewWithFrame:CGRectMake(0.f, 0.f, self.view.width, 88.f)];
+
+    self.itemView.inputView = self.keypadView;
+    [self.itemView becomeFirstResponder];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
