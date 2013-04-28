@@ -11,6 +11,8 @@
 		BF1835D5172C3D1D00E2CB5F /* GINavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */; };
 		BF1835D7172C426300E2CB5F /* transparent_pixel.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1835D6172C426300E2CB5F /* transparent_pixel.png */; };
 		BF1835DC172CB0E500E2CB5F /* GIItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835DB172CB0E500E2CB5F /* GIItemView.m */; };
+		BF1835DF172D3E9E00E2CB5F /* GIInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835DE172D3E9E00E2CB5F /* GIInputView.m */; };
+		BF1835E2172D439000E2CB5F /* GIAnswerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835E1172D439000E2CB5F /* GIAnswerView.m */; };
 		BF1F2998170246F800A83FE3 /* GILevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F2997170246F800A83FE3 /* GILevel.m */; };
 		BF1F299B1702477000A83FE3 /* GILevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F299A1702477000A83FE3 /* GILevelsViewController.m */; };
 		BF1F299E170249D300A83FE3 /* GIUserInterfaceCustomizations.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F299D170249D300A83FE3 /* GIUserInterfaceCustomizations.m */; };
@@ -114,6 +116,10 @@
 		BF1835D6172C426300E2CB5F /* transparent_pixel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparent_pixel.png; sourceTree = "<group>"; };
 		BF1835DA172CB0E500E2CB5F /* GIItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIItemView.h; sourceTree = "<group>"; };
 		BF1835DB172CB0E500E2CB5F /* GIItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIItemView.m; sourceTree = "<group>"; };
+		BF1835DD172D3E9E00E2CB5F /* GIInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIInputView.h; sourceTree = "<group>"; };
+		BF1835DE172D3E9E00E2CB5F /* GIInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIInputView.m; sourceTree = "<group>"; };
+		BF1835E0172D439000E2CB5F /* GIAnswerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIAnswerView.h; sourceTree = "<group>"; };
+		BF1835E1172D439000E2CB5F /* GIAnswerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIAnswerView.m; sourceTree = "<group>"; };
 		BF1F2996170246F800A83FE3 /* GILevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevel.h; sourceTree = "<group>"; };
 		BF1F2997170246F800A83FE3 /* GILevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevel.m; sourceTree = "<group>"; };
 		BF1F29991702477000A83FE3 /* GILevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelsViewController.h; sourceTree = "<group>"; };
@@ -405,6 +411,10 @@
 		BFAD12AC16F1376600F6D429 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BF1835E0172D439000E2CB5F /* GIAnswerView.h */,
+				BF1835E1172D439000E2CB5F /* GIAnswerView.m */,
+				BF1835DD172D3E9E00E2CB5F /* GIInputView.h */,
+				BF1835DE172D3E9E00E2CB5F /* GIInputView.m */,
 				BF1835DA172CB0E500E2CB5F /* GIItemView.h */,
 				BF1835DB172CB0E500E2CB5F /* GIItemView.m */,
 				BF1F29A3170634BB00A83FE3 /* GILevelCell.h */,
@@ -742,6 +752,8 @@
 				BFFC5013172A9ACD008DC742 /* UIView+SizingAndPositioning.m in Sources */,
 				BF1835D5172C3D1D00E2CB5F /* GINavigationBar.m in Sources */,
 				BF1835DC172CB0E500E2CB5F /* GIItemView.m in Sources */,
+				BF1835DF172D3E9E00E2CB5F /* GIInputView.m in Sources */,
+				BF1835E2172D439000E2CB5F /* GIAnswerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

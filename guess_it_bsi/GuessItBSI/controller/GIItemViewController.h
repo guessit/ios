@@ -9,7 +9,6 @@
 #import "GIViewController.h"
 
 #import "GILevel.h"
-#import "GIKeypadView.h"
 
 @interface GIItemViewController : GIViewController
 
@@ -17,6 +16,5 @@
 
 @property (weak, nonatomic) IBOutlet UIView *imageViewFrame;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet GIKeypadView *keypadView;
 
 @end

@@ -57,7 +57,6 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    NSLog(@"Index paths: %@", self.tableView.indexPathsForSelectedRows);
     [self.tableView reloadRowsAtIndexPaths:self.tableView.indexPathsForSelectedRows
                           withRowAnimation:UITableViewRowAnimationAutomatic];
 }

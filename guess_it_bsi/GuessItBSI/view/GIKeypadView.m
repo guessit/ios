@@ -197,10 +197,4 @@
     [self setNeedsLayout];
 }
 
-#pragma mark - UIInputViewAudioFeedback Methods
-
-- (BOOL)enableInputClicksWhenVisible {
-    return YES;
-}
-
 @end

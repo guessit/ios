@@ -158,33 +158,10 @@
                     <view key="view" contentMode="scaleToFill" id="nC2-Wt-x7i" customClass="GIItemView">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" id="5dm-M0-uZo">
-                                <rect key="frame" x="50" y="13" width="220" height="220"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="rMK-fA-SeN">
-                                        <rect key="frame" x="10" y="10" width="200" height="200"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="FKY-DL-nWv">
-                                <rect key="frame" x="20" y="234" width="280" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="PFi-yw-zpR"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <connections>
-                        <outlet property="imageView" destination="rMK-fA-SeN" id="gD6-S9-5qu"/>
-                        <outlet property="imageViewFrame" destination="5dm-M0-uZo" id="kwY-4V-uy5"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7E9-Xd-9ZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -252,11 +229,7 @@
             <relationships>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="imageViewFrame" candidateClass="UIView"/>
-                <relationship kind="outlet" name="keypadView" candidateClass="GIKeypadView"/>
             </relationships>
-        </class>
-        <class className="GIKeypadView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GIKeypadView.h"/>
         </class>
         <class className="GILevelCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GILevelCell.h"/>

@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "GIItem.h"
+
 @interface GIItemView : UIView
 
-@property (nonatomic, readwrite, strong) UIView *inputView;
+@property (nonatomic, strong) GIItem *item;
 
 @end
