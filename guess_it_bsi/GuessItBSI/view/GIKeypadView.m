@@ -12,11 +12,6 @@
 #import "NSString+RandomString.h"
 #import "UIView+SizingAndPositioning.h"
 
-#define GI_KEYPAD_NO_ROWS 2
-#define GI_KEYPAD_NO_COLUMNS 7
-#define GI_KEYPAD_PADDING 2.f
-#define GI_KEYPAD_ACTION_WIDTH 50.f
-
 @interface GIKeypadView ()
 
 @property (nonatomic, strong) UIView *lettersContainer;

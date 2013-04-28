@@ -10,9 +10,6 @@
 
 #import "GIItem.h"
 
-#define GI_INPUT_VIEW_HEIGHT 182.f
-#define GI_KEYPAD_HEIGHT 88.f
-
 @interface GIInputView : UIView <UIInputViewAudioFeedback>
 
 @property (nonatomic, strong) GIItem *item;

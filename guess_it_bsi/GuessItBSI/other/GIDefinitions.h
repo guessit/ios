@@ -12,18 +12,36 @@
 
 #pragma mark - NSNotification Names
 
-#pragma mark - User Interface
+#pragma mark - Background Colors
 
 #define GI_BACKGROUND_MAIN_COLOR [UIColor colorWithWhite:0.200 alpha:1.000]
 #define GI_BACKGROUND_MAIN_DARKER_COLOR [UIColor colorWithWhite:0.170 alpha:1.000]
 #define GI_BACKGROUND_MAIN_LIGHTER_COLOR [UIColor colorWithWhite:0.230 alpha:1.000]
+
+#pragma mark - Title
 
 #define GI_TITLE_COLOR [UIColor colorWithRed:1.000 green:0.800 blue:0.000 alpha:1.000]
 #define GI_TITLE_SHINE_COLOR [UIColor colorWithRed:0.980 green:0.984 blue:0.843 alpha:1.000]
 #define GI_TITLE_SHADOW_COLOR [UIColor blackColor]
 #define GI_TITLE_SHADOW_OFFSET CGSizeMake(0.f, -1.f)
 
+#pragma mark - Font Color
+
 #define GI_FONT_MAIN_COLOR [UIColor colorWithWhite:0.65f alpha:1.f]
+
+#pragma mark - Input View
+
+#define GI_INPUT_VIEW_HEIGHT 182.f
+
+#pragma mark - Keypad
+
+#define GI_KEYPAD_HEIGHT 88.f
+#define GI_KEYPAD_NO_ROWS 2
+#define GI_KEYPAD_NO_COLUMNS 7
+#define GI_KEYPAD_PADDING 2.f
+#define GI_KEYPAD_ACTION_WIDTH 50.f
+
+#pragma mark - Letters
 
 #define GI_LETTER_COLOR GI_BACKGROUND_MAIN_COLOR
 #define GI_LETTER_SHADOW_COLOR [UIColor colorWithWhite:0.38f alpha:1.f]
@@ -31,4 +49,3 @@
 #define GI_LETTER_ZOOMED_SCALE 1.15f
 #define GI_LETTER_ZOOMED_COLOR [UIColor colorWithWhite:0.25 alpha:1.f]
 #define GI_LETTER_ZOOMED_TEXT_COLOR [UIColor colorWithWhite:0.95 alpha:1.f]
-
