@@ -49,3 +49,10 @@
 #define GI_LETTER_ZOOMED_SCALE 1.15f
 #define GI_LETTER_ZOOMED_COLOR [UIColor colorWithWhite:0.25 alpha:1.f]
 #define GI_LETTER_ZOOMED_TEXT_COLOR [UIColor colorWithWhite:0.95 alpha:1.f]
+
+#pragma mark - Answer Letter Placeholder
+
+#define GI_ANSWER_PLACEHOLDER_COLOR GI_BACKGROUND_MAIN_DARKER_COLOR
+#define GI_ANSWER_PLACEHOLDER_WIDTH 40.f
+#define GI_ANSWER_PLACEHOLDER_HEIGHT 60.f
+#define GI_ANSWER_PLACEHOLDER_PADDING 10.f

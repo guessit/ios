@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		22089BA97554462C80199B37 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62620204B775499F949AB190 /* libPods.a */; };
 		BF1835D5172C3D1D00E2CB5F /* GINavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */; };
-		BF1835D7172C426300E2CB5F /* transparent_pixel.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1835D6172C426300E2CB5F /* transparent_pixel.png */; };
 		BF1835DC172CB0E500E2CB5F /* GIItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835DB172CB0E500E2CB5F /* GIItemView.m */; };
 		BF1835DF172D3E9E00E2CB5F /* GIInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835DE172D3E9E00E2CB5F /* GIInputView.m */; };
 		BF1835E2172D439000E2CB5F /* GIAnswerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835E1172D439000E2CB5F /* GIAnswerView.m */; };
 		BF1835E8172DB8F600E2CB5F /* GILetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835E7172DB8F600E2CB5F /* GILetterView.m */; };
+		BF1835EB172DC49D00E2CB5F /* UIImage+FromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835EA172DC49D00E2CB5F /* UIImage+FromColor.m */; };
 		BF1F2998170246F800A83FE3 /* GILevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F2997170246F800A83FE3 /* GILevel.m */; };
 		BF1F299B1702477000A83FE3 /* GILevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F299A1702477000A83FE3 /* GILevelsViewController.m */; };
 		BF1F29A5170634BB00A83FE3 /* GILevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29A4170634BB00A83FE3 /* GILevelCell.m */; };
@@ -86,7 +86,6 @@
 		BFF9296A17243E0300F230C6 /* ico_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9293E17243E0300F230C6 /* ico_more@2x.png */; };
 		BFF9296B17243E0300F230C6 /* ico_reload.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9293F17243E0300F230C6 /* ico_reload.png */; };
 		BFF9296C17243E0300F230C6 /* ico_reload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9294017243E0300F230C6 /* ico_reload@2x.png */; };
-		BFF9296D17243E0300F230C6 /* navbar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9294117243E0300F230C6 /* navbar_background.png */; };
 		BFF9297017243E1900F230C6 /* Lobster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF9296F17243E1900F230C6 /* Lobster.ttf */; };
 		BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */; };
 		BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF92975172443AC00F230C6 /* GIShineLabel.m */; };
@@ -111,7 +110,6 @@
 		BD30177A3D9541AEB54F865D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		BF1835D3172C3D1D00E2CB5F /* GINavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GINavigationBar.h; sourceTree = "<group>"; };
 		BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GINavigationBar.m; sourceTree = "<group>"; };
-		BF1835D6172C426300E2CB5F /* transparent_pixel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transparent_pixel.png; sourceTree = "<group>"; };
 		BF1835DA172CB0E500E2CB5F /* GIItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIItemView.h; sourceTree = "<group>"; };
 		BF1835DB172CB0E500E2CB5F /* GIItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIItemView.m; sourceTree = "<group>"; };
 		BF1835DD172D3E9E00E2CB5F /* GIInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIInputView.h; sourceTree = "<group>"; };
@@ -120,6 +118,8 @@
 		BF1835E1172D439000E2CB5F /* GIAnswerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIAnswerView.m; sourceTree = "<group>"; };
 		BF1835E6172DB8F600E2CB5F /* GILetterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILetterView.h; sourceTree = "<group>"; };
 		BF1835E7172DB8F600E2CB5F /* GILetterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILetterView.m; sourceTree = "<group>"; };
+		BF1835E9172DC49D00E2CB5F /* UIImage+FromColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FromColor.h"; sourceTree = "<group>"; };
+		BF1835EA172DC49D00E2CB5F /* UIImage+FromColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FromColor.m"; sourceTree = "<group>"; };
 		BF1F2996170246F800A83FE3 /* GILevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevel.h; sourceTree = "<group>"; };
 		BF1F2997170246F800A83FE3 /* GILevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevel.m; sourceTree = "<group>"; };
 		BF1F29991702477000A83FE3 /* GILevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelsViewController.h; sourceTree = "<group>"; };
@@ -208,7 +208,6 @@
 		BFF9293E17243E0300F230C6 /* ico_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_more@2x.png"; sourceTree = "<group>"; };
 		BFF9293F17243E0300F230C6 /* ico_reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_reload.png; sourceTree = "<group>"; };
 		BFF9294017243E0300F230C6 /* ico_reload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_reload@2x.png"; sourceTree = "<group>"; };
-		BFF9294117243E0300F230C6 /* navbar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar_background.png; sourceTree = "<group>"; };
 		BFF9296F17243E1900F230C6 /* Lobster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lobster.ttf; sourceTree = "<group>"; };
 		BFF9297117243EF900F230C6 /* UIFont+GuessItFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+GuessItFonts.h"; sourceTree = "<group>"; };
 		BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+GuessItFonts.m"; sourceTree = "<group>"; };
@@ -264,6 +263,8 @@
 				BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */,
 				BFFC5011172A9ACD008DC742 /* UIView+SizingAndPositioning.h */,
 				BFFC5012172A9ACD008DC742 /* UIView+SizingAndPositioning.m */,
+				BF1835E9172DC49D00E2CB5F /* UIImage+FromColor.h */,
+				BF1835EA172DC49D00E2CB5F /* UIImage+FromColor.m */,
 			);
 			name = Categories;
 			path = categories;
@@ -450,8 +451,6 @@
 				BFF9293E17243E0300F230C6 /* ico_more@2x.png */,
 				BFF9293F17243E0300F230C6 /* ico_reload.png */,
 				BFF9294017243E0300F230C6 /* ico_reload@2x.png */,
-				BFF9294117243E0300F230C6 /* navbar_background.png */,
-				BF1835D6172C426300E2CB5F /* transparent_pixel.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -661,7 +660,6 @@
 				BFF9296A17243E0300F230C6 /* ico_more@2x.png in Resources */,
 				BFF9296B17243E0300F230C6 /* ico_reload.png in Resources */,
 				BFF9296C17243E0300F230C6 /* ico_reload@2x.png in Resources */,
-				BFF9296D17243E0300F230C6 /* navbar_background.png in Resources */,
 				BFF9297017243E1900F230C6 /* Lobster.ttf in Resources */,
 				BF91795817244A8200B136E2 /* shine_mask@2x.png in Resources */,
 				BF91796A1724716D00B136E2 /* Icon-Small.png in Resources */,
@@ -670,7 +668,6 @@
 				BF91796D1724716D00B136E2 /* Icon@2x.png in Resources */,
 				BF91796E1724716D00B136E2 /* iTunesArtwork.png in Resources */,
 				BF91796F1724716D00B136E2 /* iTunesArtwork@2x.png in Resources */,
-				BF1835D7172C426300E2CB5F /* transparent_pixel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +739,7 @@
 				BF1835DF172D3E9E00E2CB5F /* GIInputView.m in Sources */,
 				BF1835E2172D439000E2CB5F /* GIAnswerView.m in Sources */,
 				BF1835E8172DB8F600E2CB5F /* GILetterView.m in Sources */,
+				BF1835EB172DC49D00E2CB5F /* UIImage+FromColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

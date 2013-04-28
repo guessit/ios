@@ -9,6 +9,7 @@
 #import "GINavigationBar.h"
 
 #import "UIFont+GuessItFonts.h"
+#import "UIImage+FromColor.h"
 
 @interface GINavigationBar ()
 
@@ -53,7 +54,7 @@
 
     [self addSubview:label];
 
-    [self setBackgroundImage:[UIImage imageNamed:@"navbar_background"]
+    [self setBackgroundImage:[UIImage imageWithColor:GI_BACKGROUND_MAIN_DARKER_COLOR]
                forBarMetrics:UIBarMetricsDefault];
 }
 
