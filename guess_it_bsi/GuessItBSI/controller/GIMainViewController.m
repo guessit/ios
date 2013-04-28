@@ -7,7 +7,6 @@
 //
 
 #import "GIMainViewController.h"
-#import "GIUserInterfaceCustomizations.h"
 #import "UIFont+GuessItFonts.h"
 
 @interface GIMainViewController ()

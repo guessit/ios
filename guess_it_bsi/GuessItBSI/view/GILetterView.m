@@ -8,12 +8,11 @@
 
 #import "GILetterView.h"
 
-#import "GIUserInterfaceCustomizations.h"
 #import "UIFont+GuessItFonts.h"
 
 @interface GILetterView ()
 
-@property (nonatomic, strong, readwrite) UILabel *label;
+@property (nonatomic, strong) UILabel *label;
 
 - (void)_initialize;
 
@@ -69,7 +68,26 @@
 #pragma mark - Private Interface
 
 - (void)_initialize {
+    self.backgroundColor = GI_LETTER_COLOR;
     [self addSubview:self.label];
+}
+
+#pragma mark - Public Interface
+
+- (void)zoomIn {
+    [UIView animateWithDuration:0.2f animations:^{
+        self.transform = CGAffineTransformMakeScale(GI_LETTER_ZOOMED_SCALE, GI_LETTER_ZOOMED_SCALE);
+        self.backgroundColor = GI_LETTER_ZOOMED_COLOR;
+        self.label.textColor = GI_LETTER_ZOOMED_TEXT_COLOR;
+    }];
+}
+
+- (void)zoomOut {
+    [UIView animateWithDuration:0.2f animations:^{
+        self.transform = CGAffineTransformIdentity;
+        self.backgroundColor = GI_LETTER_COLOR;
+        self.label.textColor = GI_LETTER_TEXT_COLOR;
+    }];
 }
 
 @end

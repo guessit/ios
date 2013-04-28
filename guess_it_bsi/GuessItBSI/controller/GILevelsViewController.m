@@ -13,7 +13,6 @@
 #import "GILevel.h"
 #import "GILevel+Factory.h"
 #import "GILevelCell.h"
-#import "GIUserInterfaceCustomizations.h"
 
 @interface GILevelsViewController () <UITableViewDataSource, UITableViewDelegate>
 

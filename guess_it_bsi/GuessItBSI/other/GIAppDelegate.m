@@ -7,14 +7,11 @@
 //
 
 #import "GIAppDelegate.h"
-#import "GIUserInterfaceCustomizations.h"
 
 @implementation GIAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSLog(@"Bundle: %@", [NSBundle mainBundle]);
-
-    [[GIUserInterfaceCustomizations userInterfaceCustomizations] customizeUserInterface];
 
     return YES;
 }

@@ -9,7 +9,6 @@
 #import "GIItemView.h"
 
 #import "GIInputView.h"
-#import "GIUserInterfaceCustomizations.h"
 #import "UIView+SizingAndPositioning.h"
 #import <QuartzCore/QuartzCore.h>
 

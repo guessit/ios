@@ -8,7 +8,6 @@
 
 #import "GINavigationBar.h"
 
-#import "GIUserInterfaceCustomizations.h"
 #import "UIFont+GuessItFonts.h"
 
 @interface GINavigationBar ()
