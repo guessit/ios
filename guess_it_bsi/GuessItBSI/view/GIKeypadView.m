@@ -8,7 +8,7 @@
 
 #import "GIKeypadView.h"
 
-#import "GILetterView.h"
+#import "GIKeypadLetterView.h"
 #import "GIUserInterfaceCustomizations.h"
 #import "NSString+RandomString.h"
 #import "UIView+SizingAndPositioning.h"
@@ -24,7 +24,7 @@
 @property (nonatomic, strong) NSMutableArray *letterViews;
 @property (nonatomic, strong, readonly) NSString *letters;
 
-@property (nonatomic, weak) GILetterView *zoomedInLetter;
+@property (nonatomic, weak) GIKeypadLetterView *zoomedInLetter;
 
 - (void)_initialize;
 - (void)_generateKeypad;
@@ -51,7 +51,7 @@
         NSMutableArray *views = [NSMutableArray arrayWithCapacity:numberOfKeys];
 
         for (NSInteger i = 0; i < numberOfKeys; i++) {
-            GILetterView *letterView = [GILetterView view];
+            GIKeypadLetterView *letterView = [GIKeypadLetterView view];
             [self.lettersContainer addSubview:letterView];
             [views addObject:letterView];
         }
@@ -64,7 +64,7 @@
 - (NSString *)letters {
     NSString *letters = @"";
 
-    for (GILetterView *letterView in self.letterViews) {
+    for (GIKeypadLetterView *letterView in self.letterViews) {
         letters = [letters stringByAppendingString:letterView.letter];
     }
 
@@ -111,7 +111,7 @@
     CGFloat letterWidth = (containerWidth - (GI_KEYPAD_NO_COLUMNS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_COLUMNS;
     CGFloat letterHeight = (containerHeight - (GI_KEYPAD_NO_ROWS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_ROWS;
 
-    [self.letterViews enumerateObjectsUsingBlock:^(GILetterView *view, NSUInteger idx, BOOL *stop) {
+    [self.letterViews enumerateObjectsUsingBlock:^(GIKeypadLetterView *view, NSUInteger idx, BOOL *stop) {
         NSUInteger xIdx = idx % GI_KEYPAD_NO_COLUMNS;
         NSUInteger yIdx = idx / GI_KEYPAD_NO_COLUMNS;
 
@@ -126,8 +126,8 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = touches.anyObject;
-    if ([touch.view isKindOfClass:[GILetterView class]]) {
-        self.zoomedInLetter = (GILetterView *)touch.view;
+    if ([touch.view isKindOfClass:[GIKeypadLetterView class]]) {
+        self.zoomedInLetter = (GIKeypadLetterView *)touch.view;
         [self.lettersContainer bringSubviewToFront:self.zoomedInLetter];
 
         [[UIDevice currentDevice] playInputClick];
@@ -145,7 +145,7 @@
             self.zoomedInLetter = nil;
         }
 
-        for (GILetterView *letterView in self.letterViews) {
+        for (GIKeypadLetterView *letterView in self.letterViews) {
             point = [touch locationInView:letterView];
             if ([letterView pointInside:point withEvent:event]) {
                 self.zoomedInLetter = letterView;
@@ -177,7 +177,7 @@
 
 - (void)_generateKeypad {
     NSString *sanitizedAnswer = [self.answer stringByReplacingOccurrencesOfString:@" " withString:@""];
-    [self.letterViews enumerateObjectsUsingBlock:^(GILetterView *letterView, NSUInteger idx, BOOL *stop) {
+    [self.letterViews enumerateObjectsUsingBlock:^(GIKeypadLetterView *letterView, NSUInteger idx, BOOL *stop) {
         NSString *letter = @"";
         if (idx < sanitizedAnswer.length) {
             letter = [sanitizedAnswer substringWithRange:NSMakeRange(idx, 1)];

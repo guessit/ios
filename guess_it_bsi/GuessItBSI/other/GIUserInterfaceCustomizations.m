@@ -8,9 +8,12 @@
 
 #import "GIUserInterfaceCustomizations.h"
 
+#import "GIKeypadLetterView.h"
 #import "UIFont+GuessItFonts.h"
 
 @interface GIUserInterfaceCustomizations()
+
+- (void)_customizeLetterViews;
 
 @end
 
@@ -23,9 +26,13 @@
 }
 
 - (void)customizeUserInterface {
-    #warning TODO: verificar se há necessidade dessa classe de customizacao através de UIAppearance
+    [self _customizeLetterViews];
 }
 
 #pragma mark - Private Interface
+
+- (void)_customizeLetterViews {
+    [[GIKeypadLetterView appearance] setBackgroundColor:GI_KEYPAD_LETTER_COLOR];
+}
 
 @end

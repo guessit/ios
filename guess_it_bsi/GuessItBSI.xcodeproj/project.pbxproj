@@ -13,6 +13,8 @@
 		BF1835DC172CB0E500E2CB5F /* GIItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835DB172CB0E500E2CB5F /* GIItemView.m */; };
 		BF1835DF172D3E9E00E2CB5F /* GIInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835DE172D3E9E00E2CB5F /* GIInputView.m */; };
 		BF1835E2172D439000E2CB5F /* GIAnswerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835E1172D439000E2CB5F /* GIAnswerView.m */; };
+		BF1835E5172DB8B900E2CB5F /* GIAnswerLetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835E4172DB8B800E2CB5F /* GIAnswerLetterView.m */; };
+		BF1835E8172DB8F600E2CB5F /* GILetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835E7172DB8F600E2CB5F /* GILetterView.m */; };
 		BF1F2998170246F800A83FE3 /* GILevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F2997170246F800A83FE3 /* GILevel.m */; };
 		BF1F299B1702477000A83FE3 /* GILevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F299A1702477000A83FE3 /* GILevelsViewController.m */; };
 		BF1F299E170249D300A83FE3 /* GIUserInterfaceCustomizations.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F299D170249D300A83FE3 /* GIUserInterfaceCustomizations.m */; };
@@ -92,7 +94,7 @@
 		BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF92975172443AC00F230C6 /* GIShineLabel.m */; };
 		BFF9E72D1727F44A003B4385 /* GIOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E72C1727F44A003B4385 /* GIOptionsViewController.m */; };
 		BFF9E7331727F599003B4385 /* GIKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7321727F599003B4385 /* GIKeypadView.m */; };
-		BFF9E7361727F5AD003B4385 /* GILetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7351727F5AD003B4385 /* GILetterView.m */; };
+		BFF9E7361727F5AD003B4385 /* GIKeypadLetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7351727F5AD003B4385 /* GIKeypadLetterView.m */; };
 		BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7381727F815003B4385 /* NSString+RandomString.m */; };
 		BFFC5013172A9ACD008DC742 /* UIView+SizingAndPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFC5012172A9ACD008DC742 /* UIView+SizingAndPositioning.m */; };
 /* End PBXBuildFile section */
@@ -119,6 +121,10 @@
 		BF1835DE172D3E9E00E2CB5F /* GIInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIInputView.m; sourceTree = "<group>"; };
 		BF1835E0172D439000E2CB5F /* GIAnswerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIAnswerView.h; sourceTree = "<group>"; };
 		BF1835E1172D439000E2CB5F /* GIAnswerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIAnswerView.m; sourceTree = "<group>"; };
+		BF1835E3172DB8B800E2CB5F /* GIAnswerLetterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIAnswerLetterView.h; sourceTree = "<group>"; };
+		BF1835E4172DB8B800E2CB5F /* GIAnswerLetterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIAnswerLetterView.m; sourceTree = "<group>"; };
+		BF1835E6172DB8F600E2CB5F /* GILetterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILetterView.h; sourceTree = "<group>"; };
+		BF1835E7172DB8F600E2CB5F /* GILetterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILetterView.m; sourceTree = "<group>"; };
 		BF1F2996170246F800A83FE3 /* GILevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevel.h; sourceTree = "<group>"; };
 		BF1F2997170246F800A83FE3 /* GILevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevel.m; sourceTree = "<group>"; };
 		BF1F29991702477000A83FE3 /* GILevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelsViewController.h; sourceTree = "<group>"; };
@@ -219,8 +225,8 @@
 		BFF9E72C1727F44A003B4385 /* GIOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIOptionsViewController.m; sourceTree = "<group>"; };
 		BFF9E7311727F599003B4385 /* GIKeypadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKeypadView.h; sourceTree = "<group>"; };
 		BFF9E7321727F599003B4385 /* GIKeypadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKeypadView.m; sourceTree = "<group>"; };
-		BFF9E7341727F5AD003B4385 /* GILetterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILetterView.h; sourceTree = "<group>"; };
-		BFF9E7351727F5AD003B4385 /* GILetterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILetterView.m; sourceTree = "<group>"; };
+		BFF9E7341727F5AD003B4385 /* GIKeypadLetterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKeypadLetterView.h; sourceTree = "<group>"; };
+		BFF9E7351727F5AD003B4385 /* GIKeypadLetterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKeypadLetterView.m; sourceTree = "<group>"; };
 		BFF9E7371727F815003B4385 /* NSString+RandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RandomString.h"; sourceTree = "<group>"; };
 		BFF9E7381727F815003B4385 /* NSString+RandomString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RandomString.m"; sourceTree = "<group>"; };
 		BFFC5011172A9ACD008DC742 /* UIView+SizingAndPositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SizingAndPositioning.h"; sourceTree = "<group>"; };
@@ -408,6 +414,8 @@
 		BFAD12AC16F1376600F6D429 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BF1835E3172DB8B800E2CB5F /* GIAnswerLetterView.h */,
+				BF1835E4172DB8B800E2CB5F /* GIAnswerLetterView.m */,
 				BF1835E0172D439000E2CB5F /* GIAnswerView.h */,
 				BF1835E1172D439000E2CB5F /* GIAnswerView.m */,
 				BF1835DD172D3E9E00E2CB5F /* GIInputView.h */,
@@ -416,8 +424,10 @@
 				BF1835DB172CB0E500E2CB5F /* GIItemView.m */,
 				BF1F29A3170634BB00A83FE3 /* GILevelCell.h */,
 				BF1F29A4170634BB00A83FE3 /* GILevelCell.m */,
-				BFF9E7341727F5AD003B4385 /* GILetterView.h */,
-				BFF9E7351727F5AD003B4385 /* GILetterView.m */,
+				BF1835E6172DB8F600E2CB5F /* GILetterView.h */,
+				BF1835E7172DB8F600E2CB5F /* GILetterView.m */,
+				BFF9E7341727F5AD003B4385 /* GIKeypadLetterView.h */,
+				BFF9E7351727F5AD003B4385 /* GIKeypadLetterView.m */,
 				BFF9E7311727F599003B4385 /* GIKeypadView.h */,
 				BFF9E7321727F599003B4385 /* GIKeypadView.m */,
 				BFF92974172443AC00F230C6 /* GIShineLabel.h */,
@@ -741,13 +751,15 @@
 				BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */,
 				BFF9E72D1727F44A003B4385 /* GIOptionsViewController.m in Sources */,
 				BFF9E7331727F599003B4385 /* GIKeypadView.m in Sources */,
-				BFF9E7361727F5AD003B4385 /* GILetterView.m in Sources */,
+				BFF9E7361727F5AD003B4385 /* GIKeypadLetterView.m in Sources */,
 				BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */,
 				BFFC5013172A9ACD008DC742 /* UIView+SizingAndPositioning.m in Sources */,
 				BF1835D5172C3D1D00E2CB5F /* GINavigationBar.m in Sources */,
 				BF1835DC172CB0E500E2CB5F /* GIItemView.m in Sources */,
 				BF1835DF172D3E9E00E2CB5F /* GIInputView.m in Sources */,
 				BF1835E2172D439000E2CB5F /* GIAnswerView.m in Sources */,
+				BF1835E5172DB8B900E2CB5F /* GIAnswerLetterView.m in Sources */,
+				BF1835E8172DB8F600E2CB5F /* GILetterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
