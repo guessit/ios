@@ -39,10 +39,11 @@
 #pragma mark - Private Interface
 
 - (void)_initialize {
-    self.backgroundColor = GI_BACKGROUND_MAIN_DARKER_COLOR;
+    self.backgroundColor = GI_ANSWER_PLACEHOLDER_COLOR;
     self.layer.cornerRadius = 3.f;
     self.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.layer.shadowOffset = CGSizeMake(0.f, 1.f);
+    self.layer.shadowOffset = CGSizeMake(1.f, 1.f);
+    self.layer.shadowOpacity = 0.05f;
 }
 
 @end

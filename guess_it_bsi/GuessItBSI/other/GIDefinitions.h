@@ -31,7 +31,7 @@
 
 #pragma mark - Input View
 
-#define GI_INPUT_VIEW_HEIGHT 182.f
+#define GI_INPUT_VIEW_HEIGHT 150.f
 
 #pragma mark - Keypad
 
@@ -52,8 +52,8 @@
 
 #pragma mark - Answer Letter Placeholder
 
-#define GI_ANSWER_PLACEHOLDER_COLOR GI_BACKGROUND_MAIN_DARKER_COLOR
+#define GI_ANSWER_PLACEHOLDER_COLOR [UIColor colorWithWhite:0.13 alpha:1.f]
 #define GI_ANSWER_PLACEHOLDER_MAX_WIDTH 40.f
 #define GI_ANSWER_PLACEHOLDER_MAX_HEIGHT 45.f
-#define GI_ANSWER_PLACEHOLDER_PADDING 3.f
-#define GI_ANSWER_PLACEHOLDER_SPACE_WIDTH 10.f
+#define GI_ANSWER_PLACEHOLDER_PADDING 2.f
+#define GI_ANSWER_PLACEHOLDER_SPACE_WIDTH 8.f
