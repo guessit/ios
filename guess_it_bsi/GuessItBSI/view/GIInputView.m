@@ -28,7 +28,6 @@
 - (GIAnswerView *)answerView {
     if (!_answerView) {
         _answerView = [GIAnswerView viewWithFrame:CGRectMake(0.f, 0.f, self.width, self.height - GI_KEYPAD_HEIGHT)];
-        _answerView.backgroundColor = [UIColor yellowColor];
     }
     return _answerView;
 }
@@ -45,6 +44,7 @@
 - (void)setItem:(GIItem *)item {
     _item = item;
 
+    self.answerView.answer = item.answer;
     self.keypadView.answer = item.answer;
 }
 

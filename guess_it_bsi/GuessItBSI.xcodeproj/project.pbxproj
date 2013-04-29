@@ -14,6 +14,7 @@
 		BF1835E2172D439000E2CB5F /* GIAnswerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835E1172D439000E2CB5F /* GIAnswerView.m */; };
 		BF1835E8172DB8F600E2CB5F /* GILetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835E7172DB8F600E2CB5F /* GILetterView.m */; };
 		BF1835EB172DC49D00E2CB5F /* UIImage+FromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835EA172DC49D00E2CB5F /* UIImage+FromColor.m */; };
+		BF1835EE172DEA1200E2CB5F /* GIPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835ED172DEA1200E2CB5F /* GIPlaceholderView.m */; };
 		BF1F2998170246F800A83FE3 /* GILevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F2997170246F800A83FE3 /* GILevel.m */; };
 		BF1F299B1702477000A83FE3 /* GILevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F299A1702477000A83FE3 /* GILevelsViewController.m */; };
 		BF1F29A5170634BB00A83FE3 /* GILevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29A4170634BB00A83FE3 /* GILevelCell.m */; };
@@ -120,6 +121,8 @@
 		BF1835E7172DB8F600E2CB5F /* GILetterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILetterView.m; sourceTree = "<group>"; };
 		BF1835E9172DC49D00E2CB5F /* UIImage+FromColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FromColor.h"; sourceTree = "<group>"; };
 		BF1835EA172DC49D00E2CB5F /* UIImage+FromColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FromColor.m"; sourceTree = "<group>"; };
+		BF1835EC172DEA1100E2CB5F /* GIPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIPlaceholderView.h; sourceTree = "<group>"; };
+		BF1835ED172DEA1200E2CB5F /* GIPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIPlaceholderView.m; sourceTree = "<group>"; };
 		BF1F2996170246F800A83FE3 /* GILevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevel.h; sourceTree = "<group>"; };
 		BF1F2997170246F800A83FE3 /* GILevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevel.m; sourceTree = "<group>"; };
 		BF1F29991702477000A83FE3 /* GILevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelsViewController.h; sourceTree = "<group>"; };
@@ -416,6 +419,8 @@
 				BF1835E7172DB8F600E2CB5F /* GILetterView.m */,
 				BFF9E7311727F599003B4385 /* GIKeypadView.h */,
 				BFF9E7321727F599003B4385 /* GIKeypadView.m */,
+				BF1835EC172DEA1100E2CB5F /* GIPlaceholderView.h */,
+				BF1835ED172DEA1200E2CB5F /* GIPlaceholderView.m */,
 				BFF92974172443AC00F230C6 /* GIShineLabel.h */,
 				BFF92975172443AC00F230C6 /* GIShineLabel.m */,
 				BF1835D3172C3D1D00E2CB5F /* GINavigationBar.h */,
@@ -740,6 +745,7 @@
 				BF1835E2172D439000E2CB5F /* GIAnswerView.m in Sources */,
 				BF1835E8172DB8F600E2CB5F /* GILetterView.m in Sources */,
 				BF1835EB172DC49D00E2CB5F /* UIImage+FromColor.m in Sources */,
+				BF1835EE172DEA1200E2CB5F /* GIPlaceholderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
