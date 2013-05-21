@@ -10,4 +10,6 @@
 
 @interface GIPlaceholderView : UIView
 
+@property (nonatomic, strong, readonly) NSString *letter;
+
 @end

@@ -16,7 +16,9 @@
 
 #define GI_BACKGROUND_MAIN_COLOR [UIColor colorWithWhite:0.200 alpha:1.000]
 #define GI_BACKGROUND_MAIN_DARKER_COLOR [UIColor colorWithWhite:0.170 alpha:1.000]
+#define GI_BACKGROUND_MAIN_DARKEST_COLOR [UIColor colorWithWhite:0.145 alpha:1.000]
 #define GI_BACKGROUND_MAIN_LIGHTER_COLOR [UIColor colorWithWhite:0.230 alpha:1.000]
+#define GI_BACKGROUND_MAIN_LIGHTEST_COLOR [UIColor colorWithWhite:0.255 alpha:1.000]
 
 #pragma mark - Title
 
@@ -47,12 +49,13 @@
 #define GI_LETTER_SHADOW_COLOR [UIColor colorWithWhite:0.38f alpha:1.f]
 #define GI_LETTER_TEXT_COLOR [UIColor colorWithWhite:0.88f alpha:1.f]
 #define GI_LETTER_ZOOMED_SCALE 1.15f
+#define GI_LETTER_MINIMIZED_SCALE 0.f
 #define GI_LETTER_ZOOMED_COLOR [UIColor colorWithWhite:0.25 alpha:1.f]
 #define GI_LETTER_ZOOMED_TEXT_COLOR [UIColor colorWithWhite:0.95 alpha:1.f]
 
 #pragma mark - Answer Letter Placeholder
 
-#define GI_ANSWER_PLACEHOLDER_COLOR [UIColor colorWithWhite:0.13 alpha:1.f]
+#define GI_ANSWER_PLACEHOLDER_COLOR [UIColor colorWithWhite:0.2 alpha:1.f]
 #define GI_ANSWER_PLACEHOLDER_MAX_WIDTH 40.f
 #define GI_ANSWER_PLACEHOLDER_MAX_HEIGHT 45.f
 #define GI_ANSWER_PLACEHOLDER_PADDING 2.f

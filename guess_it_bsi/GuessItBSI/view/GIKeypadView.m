@@ -75,6 +75,14 @@
     }
 }
 
+- (void)setZoomedInLetter:(GILetterView *)zoomedInLetter {
+    if (zoomedInLetter != _zoomedInLetter) {
+        [self.lettersContainer sendSubviewToBack:_zoomedInLetter];
+        _zoomedInLetter = zoomedInLetter;
+        [self.lettersContainer bringSubviewToFront:_zoomedInLetter];
+    }
+}
+
 #pragma mark - UIView Methods
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -121,8 +129,8 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = touches.anyObject;
     if ([touch.view isKindOfClass:[GILetterView class]]) {
-        self.zoomedInLetter = (GILetterView *)touch.view;
-        [self.lettersContainer bringSubviewToFront:self.zoomedInLetter];
+        GILetterView *letterView = (GILetterView *)touch.view;
+        self.zoomedInLetter = letterView;
 
         [[UIDevice currentDevice] playInputClick];
 
@@ -143,7 +151,6 @@
             point = [touch locationInView:letterView];
             if ([letterView pointInside:point withEvent:event]) {
                 self.zoomedInLetter = letterView;
-                [self.lettersContainer bringSubviewToFront:self.zoomedInLetter];
                 [self.zoomedInLetter zoomIn];
                 break;
             }
@@ -153,14 +160,24 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     if (self.zoomedInLetter) {
-        [self.zoomedInLetter zoomOut];
+        if ([self.inputViewDelegate keypadView:self canAddLetter:self.zoomedInLetter.letter]) {
+            [self.inputViewDelegate keypadView:self didAddLetter:self.zoomedInLetter.letter];
+            [self.zoomedInLetter minimize];
+        } else {
+            #warning TODO: make PANNNNNN sound
+            [self.zoomedInLetter zoomOut];
+        }
     }
+
+    self.zoomedInLetter = nil;
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
     if (self.zoomedInLetter) {
         [self.zoomedInLetter zoomOut];
     }
+
+    self.zoomedInLetter = nil;
 }
 
 #pragma mark - Private Methods
@@ -184,6 +201,11 @@
         }
 
         letterView.letter = letter;
+        if (!letterView.superview) {
+            [self.lettersContainer addSubview:letterView];
+        }
+
+        [letterView reset];
     }];
 
     [self.letterViews shuffle];

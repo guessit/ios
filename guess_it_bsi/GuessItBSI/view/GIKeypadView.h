@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "GIInputViewDelegate.h"
+
 @interface GIKeypadView : UIView 
 
+@property (nonatomic, weak) id<GIInputViewDelegate> inputViewDelegate;
 @property (nonatomic, strong) NSString *answer;
 
 @end

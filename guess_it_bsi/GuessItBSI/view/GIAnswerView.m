@@ -13,6 +13,7 @@
 
 @interface GIAnswerView ()
 
+@property (nonatomic, strong) NSString *currentAnswer;
 @property (nonatomic, strong) UIView *containerView;
 @property (nonatomic, strong) NSMutableArray *placeholderViews;
 
@@ -30,6 +31,7 @@
 - (void)setAnswer:(NSString *)answer {
     if (answer != _answer) {
         _answer = answer;
+        _currentAnswer = [NSString stringWithFormat:@"%*@", self.answer.length, @" "];
 
         [self _generateAnswerPlaceholder];
     }
@@ -114,6 +116,32 @@
     }
 
     [self setNeedsLayout];
+}
+
+#pragma mark - Public Interface
+
+- (BOOL)canAddLetter {
+    BOOL canAddLetter = NO;
+
+    for (GIPlaceholderView *placeholderView in self.placeholderViews) {
+        canAddLetter = placeholderView.subviews.count == 0;
+        if (canAddLetter) break;
+    }
+
+    return canAddLetter;
+}
+
+- (void)addLetter:(NSString *)letter {
+    for (GIPlaceholderView *placeholderView in self.placeholderViews) {
+        if (placeholderView.subviews.count == 0) {
+            UILabel *letterLabel = [UILabel labelWithFrame:CGRectInset(placeholderView.bounds, 3.f, .3f)];
+            letterLabel.textAlignment = NSTextAlignmentCenter;
+            letterLabel.text = letter;
+
+            [placeholderView addSubview:letterLabel];
+            break;
+        }
+    }
 }
 
 @end

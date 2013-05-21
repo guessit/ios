@@ -68,11 +68,16 @@
 #pragma mark - Private Interface
 
 - (void)_initialize {
-    self.backgroundColor = GI_LETTER_COLOR;
+    [self reset];
     [self addSubview:self.label];
 }
 
 #pragma mark - Public Interface
+
+- (void)reset {
+    self.backgroundColor = GI_LETTER_COLOR;
+    self.transform = CGAffineTransformIdentity;
+}
 
 - (void)zoomIn {
     [UIView animateWithDuration:0.2f animations:^{
@@ -87,6 +92,14 @@
         self.transform = CGAffineTransformIdentity;
         self.backgroundColor = GI_LETTER_COLOR;
         self.label.textColor = GI_LETTER_TEXT_COLOR;
+    }];
+}
+
+- (void)minimize {
+    [UIView animateWithDuration:0.3f animations:^{
+        self.transform = CGAffineTransformMakeScale(GI_LETTER_MINIMIZED_SCALE, GI_LETTER_MINIMIZED_SCALE);
+    } completion:^(BOOL finished) {
+        [self removeFromSuperview];
     }];
 }
 
