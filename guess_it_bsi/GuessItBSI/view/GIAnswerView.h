@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "GIInputViewDelegate.h"
+#import "GILetterView.h"
+
 @interface GIAnswerView : UIView
 
+@property (nonatomic, weak) id<GIInputViewDelegate> inputViewDelegate;
 @property (nonatomic, copy) NSString *answer;
 
 - (BOOL)canAddLetter;
-- (void)addLetter:(NSString *)letter;
+- (void)addLetter:(NSString *)letter fromLetterView:(GILetterView *)letterView;
 
 @end

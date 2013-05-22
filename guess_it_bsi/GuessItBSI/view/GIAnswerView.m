@@ -17,6 +17,7 @@
 @property (nonatomic, strong, readonly) NSString *currentAnswer;
 @property (nonatomic, strong) UIView *containerView;
 @property (nonatomic, strong) NSMutableArray *placeholderViews;
+@property (nonatomic, strong) GILetterView *zoomedInLetter;
 
 - (void)_initialize;
 - (void)_generateAnswerPlaceholder;
@@ -145,10 +146,11 @@
     return canAddLetter;
 }
 
-- (void)addLetter:(NSString *)letter {
+- (void)addLetter:(NSString *)letter fromLetterView:(GILetterView *)letterView {
     for (GIPlaceholderView *placeholderView in self.placeholderViews) {
         if (!placeholderView.letter) {
             placeholderView.letter = letter;
+            placeholderView.originalLetterView = letterView;
             break;
         }
     }
@@ -163,6 +165,63 @@
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:nil] show];
     }
+}
+
+#pragma mark - UIResponder Methods
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = touches.anyObject;
+    if ([touch.view isKindOfClass:[GILetterView class]]) {
+        GILetterView *letterView = (GILetterView *)touch.view;
+        self.zoomedInLetter = letterView;
+
+        [[UIDevice currentDevice] playInputClick];
+
+        [self.zoomedInLetter zoomIn];
+    }
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = touches.anyObject;
+    CGPoint point = [touch locationInView:self.zoomedInLetter];
+    if (![self.zoomedInLetter pointInside:point withEvent:event]) {
+        if (self.zoomedInLetter) {
+            [self.zoomedInLetter zoomOut];
+            self.zoomedInLetter = nil;
+        }
+
+//        for (GILetterView *letterView in self.letterViews) {
+//            point = [touch locationInView:letterView];
+//            if ([letterView pointInside:point withEvent:event]) {
+//                self.zoomedInLetter = letterView;
+//                [self.zoomedInLetter zoomIn];
+//                break;
+//            }
+//        }
+    }
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (self.zoomedInLetter) {
+        GIPlaceholderView *placeholderView = (GIPlaceholderView *)self.zoomedInLetter.superview;
+        placeholderView.letter = nil;
+
+        GILetterView *originalView = placeholderView.originalLetterView;
+
+        [self.inputViewDelegate answerView:self didRemoveLetter:self.zoomedInLetter.letter withLetterView:originalView];
+
+        [self.zoomedInLetter minimize];
+    }
+
+    self.zoomedInLetter = nil;
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (self.zoomedInLetter) {
+        [self.zoomedInLetter zoomOut];
+    }
+
+    self.zoomedInLetter = nil;
 }
 
 @end

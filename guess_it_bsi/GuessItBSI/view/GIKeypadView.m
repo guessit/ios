@@ -161,7 +161,7 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     if (self.zoomedInLetter) {
         if ([self.inputViewDelegate keypadView:self canAddLetter:self.zoomedInLetter.letter]) {
-            [self.inputViewDelegate keypadView:self didAddLetter:self.zoomedInLetter.letter];
+            [self.inputViewDelegate keypadView:self didAddLetter:self.zoomedInLetter.letter fromLetterView:self.zoomedInLetter];
             [self.zoomedInLetter minimize];
         } else {
             #warning TODO: make PANNNNNN sound

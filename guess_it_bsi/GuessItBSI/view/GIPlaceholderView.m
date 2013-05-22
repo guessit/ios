@@ -8,8 +8,6 @@
 
 #import "GIPlaceholderView.h"
 
-#import "GILetterView.h"
-
 #import <QuartzCore/QuartzCore.h>
 
 @interface GIPlaceholderView ()

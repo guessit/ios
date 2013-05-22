@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class GIAnswerView;
 @class GIKeypadView;
+@class GILetterView;
 
 @protocol GIInputViewDelegate <NSObject>
 
 - (BOOL)keypadView:(GIKeypadView *)keypadView canAddLetter:(NSString *)letter;
-- (void)keypadView:(GIKeypadView *)keyPadView didAddLetter:(NSString *)letter;
+- (void)keypadView:(GIKeypadView *)keyPadView didAddLetter:(NSString *)letter fromLetterView:(GILetterView *)letterView;
+- (void)answerView:(GIAnswerView *)answerView didRemoveLetter:(NSString *)letter withLetterView:(GILetterView *)letterView;
 
 @end

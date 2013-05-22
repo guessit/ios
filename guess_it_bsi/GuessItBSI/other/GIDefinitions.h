@@ -49,7 +49,7 @@
 #define GI_LETTER_SHADOW_COLOR [UIColor colorWithWhite:0.38f alpha:1.f]
 #define GI_LETTER_TEXT_COLOR [UIColor colorWithWhite:0.88f alpha:1.f]
 #define GI_LETTER_ZOOMED_SCALE 1.15f
-#define GI_LETTER_MINIMIZED_SCALE 0.f
+#define GI_LETTER_MINIMIZED_SCALE 0.3f
 #define GI_LETTER_ZOOMED_COLOR [UIColor colorWithWhite:0.25 alpha:1.f]
 #define GI_LETTER_ZOOMED_TEXT_COLOR [UIColor colorWithWhite:0.95 alpha:1.f]
 

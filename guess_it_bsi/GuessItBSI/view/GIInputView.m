@@ -29,6 +29,7 @@
 - (GIAnswerView *)answerView {
     if (!_answerView) {
         _answerView = [GIAnswerView viewWithFrame:CGRectMake(0.f, 0.f, self.width, self.height - GI_KEYPAD_HEIGHT)];
+        _answerView.inputViewDelegate = self;
         _answerView.backgroundColor = GI_BACKGROUND_MAIN_DARKEST_COLOR;
     }
     return _answerView;
@@ -90,8 +91,12 @@
     return self.answerView.canAddLetter;
 }
 
-- (void)keypadView:(GIKeypadView *)keyPadView didAddLetter:(NSString *)letter {
-    [self.answerView addLetter:letter];
+- (void)keypadView:(GIKeypadView *)keyPadView didAddLetter:(NSString *)letter fromLetterView:(GILetterView *)letterView {
+    [self.answerView addLetter:letter fromLetterView:letterView];
+}
+
+- (void)answerView:(GIAnswerView *)answerView didRemoveLetter:(NSString *)letter withLetterView:(GILetterView *)letterView {
+    [letterView restore];
 }
 
 @end

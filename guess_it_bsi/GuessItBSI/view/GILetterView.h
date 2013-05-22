@@ -18,5 +18,6 @@
 - (void)zoomOut;
 
 - (void)minimize;
+- (void)restore;
 
 @end

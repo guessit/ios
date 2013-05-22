@@ -96,10 +96,21 @@
 }
 
 - (void)minimize {
+    self.transform = CGAffineTransformIdentity;
     [UIView animateWithDuration:0.3f animations:^{
         self.transform = CGAffineTransformMakeScale(GI_LETTER_MINIMIZED_SCALE, GI_LETTER_MINIMIZED_SCALE);
+        self.backgroundColor = GI_LETTER_COLOR;
+        self.label.textColor = GI_LETTER_TEXT_COLOR;
+        self.alpha = 0.f;
     } completion:^(BOOL finished) {
-        [self removeFromSuperview];
+//        [self removeFromSuperview];
+    }];
+}
+
+- (void)restore {
+    [UIView animateWithDuration:0.3f animations:^{
+        self.transform = CGAffineTransformIdentity;
+        self.alpha = 1.f;
     }];
 }
 
