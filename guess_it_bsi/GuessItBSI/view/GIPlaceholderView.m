@@ -8,15 +8,60 @@
 
 #import "GIPlaceholderView.h"
 
+#import "GILetterView.h"
+
 #import <QuartzCore/QuartzCore.h>
 
 @interface GIPlaceholderView ()
+
+@property (nonatomic, strong) GILetterView *letterView;
 
 - (void)_initialize;
 
 @end
 
 @implementation GIPlaceholderView
+
+#pragma mark - Getter
+
+- (NSString *)letter {
+    return self.letterView.letter;
+}
+
+- (GILetterView *)letterView {
+    if (!_letterView) {
+        _letterView = [GILetterView viewWithFrame:self.bounds];
+        _letterView.transform = CGAffineTransformMakeScale(0.01f, 0.01f);
+    }
+    return _letterView;
+}
+
+#pragma mark - Setter
+
+- (void)setLetter:(NSString *)letter {
+    if (letter) {
+        self.letterView.letter = letter;
+
+        [UIView animateWithDuration:0.1f animations:^{
+            self.letterView.transform = CGAffineTransformMakeScale(1.1f, 1.1f);
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.05f animations:^{
+                self.letterView.transform = CGAffineTransformIdentity;
+            }];
+        }];
+    } else {
+        [UIView animateWithDuration:0.05f animations:^{
+            self.letterView.transform = CGAffineTransformMakeScale(1.1f, 1.1f);
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.1f animations:^{
+                self.letterView.transform = CGAffineTransformMakeScale(0.01f, 0.01f);
+            } completion:^(BOOL finished) {
+                self.letterView.letter = letter;
+            }];
+        }];
+
+    }
+}
 
 #pragma mark - UIView Methods
 
@@ -36,6 +81,12 @@
     return self;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+
+    self.letterView.frame = CGRectInset(self.bounds, 2.f, 2.f);
+}
+
 #pragma mark - Private Interface
 
 - (void)_initialize {
@@ -44,6 +95,8 @@
     self.layer.shadowColor = [UIColor blackColor].CGColor;
     self.layer.shadowOffset = CGSizeMake(1.f, 1.f);
     self.layer.shadowOpacity = 0.05f;
+
+    [self addSubview:self.letterView];
 }
 
 @end

@@ -16,9 +16,9 @@
 
 #define GI_BACKGROUND_MAIN_COLOR [UIColor colorWithWhite:0.200 alpha:1.000]
 #define GI_BACKGROUND_MAIN_DARKER_COLOR [UIColor colorWithWhite:0.170 alpha:1.000]
-#define GI_BACKGROUND_MAIN_DARKEST_COLOR [UIColor colorWithWhite:0.145 alpha:1.000]
+#define GI_BACKGROUND_MAIN_DARKEST_COLOR [UIColor colorWithWhite:0.135 alpha:1.000]
 #define GI_BACKGROUND_MAIN_LIGHTER_COLOR [UIColor colorWithWhite:0.230 alpha:1.000]
-#define GI_BACKGROUND_MAIN_LIGHTEST_COLOR [UIColor colorWithWhite:0.255 alpha:1.000]
+#define GI_BACKGROUND_MAIN_LIGHTEST_COLOR [UIColor colorWithWhite:0.265 alpha:1.000]
 
 #pragma mark - Title
 
