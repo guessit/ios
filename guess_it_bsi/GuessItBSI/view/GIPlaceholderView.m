@@ -59,7 +59,6 @@
                 self.letterView.letter = letter;
             }];
         }];
-
     }
 }
 
