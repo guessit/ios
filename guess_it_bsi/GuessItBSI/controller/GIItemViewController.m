@@ -11,7 +11,7 @@
 #import "GIItem.h"
 #import "GIItemView.h"
 
-@interface GIItemViewController()
+@interface GIItemViewController() <UIAlertViewDelegate>
 
 @property (nonatomic, strong) GIItem *item;
 @property (nonatomic, strong, readonly) GIItemView *itemView;
@@ -19,6 +19,8 @@
 
 - (void)_loadRandomItem;
 - (void)_reloadTouched:(id)sender;
+
+- (void)_playerGuessedCorrectAnswer:(NSNotification *)notification;
 
 @end
 
@@ -56,6 +58,15 @@
 
 #pragma mark - UIViewController Methods
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(_playerGuessedCorrectAnswer:)
+                                                 name:GIPlayerGuessedCorrectAnswer
+                                               object:nil];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
@@ -76,6 +87,23 @@
 }
 
 - (void)_reloadTouched:(id)sender {
+    [self _loadRandomItem];
+}
+
+- (void)_playerGuessedCorrectAnswer:(NSNotification *)notification {
+    [[[UIAlertView alloc] initWithTitle:@"YAY"
+                                message:@"YAYYYYYYYY"
+                               delegate:self
+                      cancelButtonTitle:@"Ok"
+                      otherButtonTitles:nil] show];
+}
+
+#pragma mark - UIAlertViewDelegate Methods
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    #warning TODO: AJUSTAR! UGLYNESS!@!!!!!!!!
+    [self.item guessWithAnwser:self.item.answer];
+
     [self _loadRandomItem];
 }
 

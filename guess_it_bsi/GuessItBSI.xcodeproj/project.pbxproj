@@ -21,6 +21,7 @@
 		BF1F29B01707347900A83FE3 /* GIItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29AF1707347800A83FE3 /* GIItem.m */; };
 		BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B21707617700A83FE3 /* GIViewController.m */; };
 		BF1F29B6170761D400A83FE3 /* GIItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B5170761D400A83FE3 /* GIItemViewController.m */; };
+		BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF291E8B174ECA320066D5EF /* GIDefinitions.m */; };
 		BF41EA94170BB4A0006540E7 /* GILevel+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BF41EA93170BB4A0006540E7 /* GILevel+Factory.m */; };
 		BF6943BB171CA244000F74E0 /* GIItem+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BA171CA244000F74E0 /* GIItem+PrettyDescription.m */; };
 		BF6943BE171CA2AD000F74E0 /* GILevel+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BD171CA2AD000F74E0 /* GILevel+PrettyDescription.m */; };
@@ -135,6 +136,7 @@
 		BF1F29B21707617700A83FE3 /* GIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIViewController.m; sourceTree = "<group>"; };
 		BF1F29B4170761D400A83FE3 /* GIItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIItemViewController.h; sourceTree = "<group>"; };
 		BF1F29B5170761D400A83FE3 /* GIItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIItemViewController.m; sourceTree = "<group>"; };
+		BF291E8B174ECA320066D5EF /* GIDefinitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIDefinitions.m; sourceTree = "<group>"; };
 		BF41EA92170BB4A0006540E7 /* GILevel+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GILevel+Factory.h"; sourceTree = "<group>"; };
 		BF41EA93170BB4A0006540E7 /* GILevel+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GILevel+Factory.m"; sourceTree = "<group>"; };
 		BF6943B9171CA244000F74E0 /* GIItem+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GIItem+PrettyDescription.h"; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 				BFAD12A816F1376600F6D429 /* GIAppDelegate.h */,
 				BFAD12A916F1376600F6D429 /* GIAppDelegate.m */,
 				BFF5A2E4171EB74E00F401B3 /* GIDefinitions.h */,
+				BF291E8B174ECA320066D5EF /* GIDefinitions.m */,
 				BFAD12AA16F1376600F6D429 /* GuessItBSI-Prefix.pch */,
 				BFAD12AB16F1376600F6D429 /* main.m */,
 			);
@@ -757,6 +760,7 @@
 				BF1835E8172DB8F600E2CB5F /* GILetterView.m in Sources */,
 				BF1835EB172DC49D00E2CB5F /* UIImage+FromColor.m in Sources */,
 				BF1835EE172DEA1200E2CB5F /* GIPlaceholderView.m in Sources */,
+				BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

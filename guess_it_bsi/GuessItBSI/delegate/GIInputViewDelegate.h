@@ -17,5 +17,6 @@
 - (BOOL)keypadView:(GIKeypadView *)keypadView canAddLetterView:(GILetterView *)letterView;
 - (void)keypadView:(GIKeypadView *)keypadView didAddLetterView:(GILetterView *)letterView;
 - (void)answerView:(GIAnswerView *)answerView didRemoveLetterView:(GILetterView *)letterView;
+- (void)userGuessedCorrectAnswer:(GIAnswerView *)answerView;
 
 @end

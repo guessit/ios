@@ -156,13 +156,7 @@
 
     NSString *trimmedAnswer = [self.answer stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     if ([trimmedAnswer localizedCaseInsensitiveCompare:self.currentAnswer] == NSOrderedSame) {
-        NSLog(@"YAY!");
-        #warning TODO: implementar win
-        [[[UIAlertView alloc] initWithTitle:@"YAY"
-                                    message:@"Win!"
-                                   delegate:nil
-                          cancelButtonTitle:@"OK"
-                          otherButtonTitles:nil] show];
+        [self.inputViewDelegate userGuessedCorrectAnswer:self];
     }
 }
 

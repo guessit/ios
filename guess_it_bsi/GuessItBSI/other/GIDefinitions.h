@@ -60,3 +60,8 @@
 #define GI_ANSWER_PLACEHOLDER_MAX_HEIGHT 45.f
 #define GI_ANSWER_PLACEHOLDER_PADDING 2.f
 #define GI_ANSWER_PLACEHOLDER_SPACE_WIDTH 8.f
+
+
+#pragma mark - Notifications
+
+extern NSString *const GIPlayerGuessedCorrectAnswer;

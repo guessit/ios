@@ -99,4 +99,8 @@
     [self.keypadView addLetterView:letterView];
 }
 
+- (void)userGuessedCorrectAnswer:(GIAnswerView *)answerView {
+    [[NSNotificationCenter defaultCenter] postNotificationName:GIPlayerGuessedCorrectAnswer object:self.item];
+}
+
 @end
