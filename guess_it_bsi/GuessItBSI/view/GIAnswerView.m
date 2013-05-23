@@ -137,7 +137,7 @@
     BOOL canAddLetter = NO;
 
     for (GIPlaceholderView *placeholderView in self.placeholderViews) {
-        if (!placeholderView.letter) {
+        if (placeholderView.canDisplayLetterView) {
             canAddLetter = YES;
             break;
         }
@@ -146,11 +146,10 @@
     return canAddLetter;
 }
 
-- (void)addLetter:(NSString *)letter fromLetterView:(GILetterView *)letterView {
+- (void)addLetterView:(GILetterView *)letterView {
     for (GIPlaceholderView *placeholderView in self.placeholderViews) {
-        if (!placeholderView.letter) {
-            placeholderView.letter = letter;
-            placeholderView.originalLetterView = letterView;
+        if (placeholderView.canDisplayLetterView) {
+            [placeholderView displayLetterView:letterView];
             break;
         }
     }
@@ -203,14 +202,7 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     if (self.zoomedInLetter) {
-        GIPlaceholderView *placeholderView = (GIPlaceholderView *)self.zoomedInLetter.superview;
-        placeholderView.letter = nil;
-
-        GILetterView *originalView = placeholderView.originalLetterView;
-
-        [self.inputViewDelegate answerView:self didRemoveLetter:self.zoomedInLetter.letter withLetterView:originalView];
-
-        [self.zoomedInLetter minimize];
+        [self.inputViewDelegate answerView:self didRemoveLetterView:self.zoomedInLetter];
     }
 
     self.zoomedInLetter = nil;

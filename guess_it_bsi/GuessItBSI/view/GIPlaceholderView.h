@@ -12,7 +12,9 @@
 
 @interface GIPlaceholderView : UIView
 
-@property (nonatomic, strong) NSString *letter;
-@property (nonatomic, weak) GILetterView *originalLetterView;
+@property (nonatomic, strong, readonly) NSString *letter;
+
+- (BOOL)canDisplayLetterView;
+- (void)displayLetterView:(GILetterView *)letterView;
 
 @end

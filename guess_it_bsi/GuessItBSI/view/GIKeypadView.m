@@ -20,6 +20,8 @@
 
 @property (nonatomic, weak) GILetterView *zoomedInLetter;
 
+@property (nonatomic, assign) BOOL initialized;
+
 - (void)_initialize;
 - (void)_generateKeypad;
 
@@ -105,23 +107,27 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
 
-    CGFloat containerWidth = self.width - GI_KEYPAD_ACTION_WIDTH;
-    CGFloat containerHeight = self.height;
+    if (!self.initialized) {
+        CGFloat containerWidth = self.width - GI_KEYPAD_ACTION_WIDTH;
+        CGFloat containerHeight = self.height;
 
-    self.lettersContainer.frame = CGRectMake(0.f, 0.f, containerWidth, containerHeight);
+        self.lettersContainer.frame = CGRectMake(0.f, 0.f, containerWidth, containerHeight);
 
-    CGFloat letterWidth = (containerWidth - (GI_KEYPAD_NO_COLUMNS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_COLUMNS;
-    CGFloat letterHeight = (containerHeight - (GI_KEYPAD_NO_ROWS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_ROWS;
+        CGFloat letterWidth = (containerWidth - (GI_KEYPAD_NO_COLUMNS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_COLUMNS;
+        CGFloat letterHeight = (containerHeight - (GI_KEYPAD_NO_ROWS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_ROWS;
 
-    [self.letterViews enumerateObjectsUsingBlock:^(GILetterView *view, NSUInteger idx, BOOL *stop) {
-        NSUInteger xIdx = idx % GI_KEYPAD_NO_COLUMNS;
-        NSUInteger yIdx = idx / GI_KEYPAD_NO_COLUMNS;
+        [self.letterViews enumerateObjectsUsingBlock:^(GILetterView *view, NSUInteger idx, BOOL *stop) {
+            NSUInteger xIdx = idx % GI_KEYPAD_NO_COLUMNS;
+            NSUInteger yIdx = idx / GI_KEYPAD_NO_COLUMNS;
 
-        CGFloat xOffset = xIdx * letterWidth + (xIdx + 1) * GI_KEYPAD_PADDING;
-        CGFloat yOffset = yIdx * letterHeight + (yIdx + 1) * GI_KEYPAD_PADDING;
+            CGFloat xOffset = xIdx * letterWidth + (xIdx + 1) * GI_KEYPAD_PADDING;
+            CGFloat yOffset = yIdx * letterHeight + (yIdx + 1) * GI_KEYPAD_PADDING;
 
-        view.frame = CGRectMake(xOffset, yOffset, letterWidth, letterHeight);
-    }];
+            view.frame = CGRectMake(xOffset, yOffset, letterWidth, letterHeight);
+        }];
+
+        self.initialized = YES;
+    }
 }
 
 #pragma mark - UIResponder Methods
@@ -160,9 +166,8 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     if (self.zoomedInLetter) {
-        if ([self.inputViewDelegate keypadView:self canAddLetter:self.zoomedInLetter.letter]) {
-            [self.inputViewDelegate keypadView:self didAddLetter:self.zoomedInLetter.letter fromLetterView:self.zoomedInLetter];
-            [self.zoomedInLetter minimize];
+        if ([self.inputViewDelegate keypadView:self canAddLetterView:self.zoomedInLetter]) {
+            [self.inputViewDelegate keypadView:self didAddLetterView:self.zoomedInLetter];
         } else {
             #warning TODO: make PANNNNNN sound
             [self.zoomedInLetter zoomOut];
@@ -210,7 +215,31 @@
 
     [self.letterViews shuffle];
 
+    self.initialized = NO;
     [self setNeedsLayout];
+}
+
+#pragma mark - Public Methods
+
+- (void)addLetterView:(GILetterView *)letterView {
+    letterView.transform = CGAffineTransformIdentity;
+    letterView.frame = letterView.oldFrame;
+    letterView.alpha = 0.f;
+
+    [self addSubview:letterView];
+
+    letterView.transform = CGAffineTransformMakeScale(GI_LETTER_MINIMIZED_SCALE, GI_LETTER_MINIMIZED_SCALE);
+
+    [UIView animateWithDuration:0.2f animations:^{
+        letterView.alpha = 1.f;
+        letterView.transform = CGAffineTransformMakeScale(GI_LETTER_ZOOMED_SCALE, GI_LETTER_ZOOMED_SCALE);
+        letterView.backgroundColor = GI_LETTER_ZOOMED_COLOR;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.1f animations:^{
+            letterView.transform = CGAffineTransformIdentity;
+            letterView.backgroundColor = GI_LETTER_COLOR;
+        }];
+    }];
 }
 
 @end

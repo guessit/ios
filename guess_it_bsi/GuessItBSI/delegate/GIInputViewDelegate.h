@@ -14,8 +14,8 @@
 
 @protocol GIInputViewDelegate <NSObject>
 
-- (BOOL)keypadView:(GIKeypadView *)keypadView canAddLetter:(NSString *)letter;
-- (void)keypadView:(GIKeypadView *)keyPadView didAddLetter:(NSString *)letter fromLetterView:(GILetterView *)letterView;
-- (void)answerView:(GIAnswerView *)answerView didRemoveLetter:(NSString *)letter withLetterView:(GILetterView *)letterView;
+- (BOOL)keypadView:(GIKeypadView *)keypadView canAddLetterView:(GILetterView *)letterView;
+- (void)keypadView:(GIKeypadView *)keypadView didAddLetterView:(GILetterView *)letterView;
+- (void)answerView:(GIAnswerView *)answerView didRemoveLetterView:(GILetterView *)letterView;
 
 @end

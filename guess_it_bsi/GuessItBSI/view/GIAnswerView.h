@@ -17,6 +17,6 @@
 @property (nonatomic, copy) NSString *answer;
 
 - (BOOL)canAddLetter;
-- (void)addLetter:(NSString *)letter fromLetterView:(GILetterView *)letterView;
+- (void)addLetterView:(GILetterView *)letterView;
 
 @end

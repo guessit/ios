@@ -23,42 +23,16 @@
 #pragma mark - Getter
 
 - (NSString *)letter {
-    return self.letterView.letter;
-}
+    NSString *letter = nil;
 
-- (GILetterView *)letterView {
-    if (!_letterView) {
-        _letterView = [GILetterView viewWithFrame:self.bounds];
-        _letterView.transform = CGAffineTransformMakeScale(0.01f, 0.01f);
+    if (self.subviews.count > 0) {
+        letter = self.letterView.letter;
     }
-    return _letterView;
+
+    return letter;
 }
 
 #pragma mark - Setter
-
-- (void)setLetter:(NSString *)letter {
-    if (letter) {
-        self.letterView.letter = letter;
-
-        [UIView animateWithDuration:0.1f animations:^{
-            self.letterView.transform = CGAffineTransformMakeScale(1.1f, 1.1f);
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:0.05f animations:^{
-                self.letterView.transform = CGAffineTransformIdentity;
-            }];
-        }];
-    } else {
-        [UIView animateWithDuration:0.05f animations:^{
-            self.letterView.transform = CGAffineTransformMakeScale(1.1f, 1.1f);
-        } completion:^(BOOL finished) {
-            [UIView animateWithDuration:0.1f animations:^{
-                self.letterView.transform = CGAffineTransformMakeScale(0.01f, 0.01f);
-            } completion:^(BOOL finished) {
-                self.letterView.letter = letter;
-            }];
-        }];
-    }
-}
 
 #pragma mark - UIView Methods
 
@@ -78,12 +52,6 @@
     return self;
 }
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-
-    self.letterView.frame = CGRectInset(self.bounds, 2.f, 2.f);
-}
-
 #pragma mark - Private Interface
 
 - (void)_initialize {
@@ -92,8 +60,37 @@
     self.layer.shadowColor = [UIColor blackColor].CGColor;
     self.layer.shadowOffset = CGSizeMake(1.f, 1.f);
     self.layer.shadowOpacity = 0.05f;
+}
 
+#pragma mark - Public Interface
+
+- (BOOL)canDisplayLetterView {
+    return self.subviews.count == 0;
+}
+
+- (void)displayLetterView:(GILetterView *)letterView {
+    self.letterView = letterView;
+
+    self.letterView.transform = CGAffineTransformIdentity;
+    self.letterView.oldFrame = self.letterView.frame;
+    self.letterView.frame = CGRectInset(self.bounds, 2.f, 2.f);
+    self.letterView.alpha = 0.f;
+
+    [self.letterView removeFromSuperview];
     [self addSubview:self.letterView];
+
+    self.letterView.transform = CGAffineTransformMakeScale(GI_LETTER_MINIMIZED_SCALE, GI_LETTER_MINIMIZED_SCALE);
+
+    [UIView animateWithDuration:0.2f animations:^{
+        self.letterView.alpha = 1.f;
+        self.letterView.transform = CGAffineTransformMakeScale(GI_LETTER_ZOOMED_SCALE, GI_LETTER_ZOOMED_SCALE);
+        self.letterView.backgroundColor = GI_LETTER_ZOOMED_COLOR;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.1f animations:^{
+            self.letterView.transform = CGAffineTransformIdentity;
+            self.letterView.backgroundColor = GI_LETTER_COLOR;
+        }];
+    }];
 }
 
 @end

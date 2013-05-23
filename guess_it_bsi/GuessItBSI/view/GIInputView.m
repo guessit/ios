@@ -87,16 +87,16 @@
 
 #pragma mark - GIInputViewDelegate Methods
 
-- (BOOL)keypadView:(GIKeypadView *)keypadView canAddLetter:(NSString *)letter {
+- (BOOL)keypadView:(GIKeypadView *)keypadView canAddLetterView:(GILetterView *)letterView {
     return self.answerView.canAddLetter;
 }
 
-- (void)keypadView:(GIKeypadView *)keyPadView didAddLetter:(NSString *)letter fromLetterView:(GILetterView *)letterView {
-    [self.answerView addLetter:letter fromLetterView:letterView];
+- (void)keypadView:(GIKeypadView *)keypadView didAddLetterView:(GILetterView *)letterView {
+    [self.answerView addLetterView:letterView];
 }
 
-- (void)answerView:(GIAnswerView *)answerView didRemoveLetter:(NSString *)letter withLetterView:(GILetterView *)letterView {
-    [letterView restore];
+- (void)answerView:(GIAnswerView *)answerView didRemoveLetterView:(GILetterView *)letterView {
+    [self.keypadView addLetterView:letterView];
 }
 
 @end

@@ -15,4 +15,6 @@
 @property (nonatomic, weak) id<GIInputViewDelegate> inputViewDelegate;
 @property (nonatomic, strong) NSString *answer;
 
+- (void)addLetterView:(GILetterView *)letterView;
+
 @end

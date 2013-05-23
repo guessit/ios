@@ -11,6 +11,7 @@
 @interface GILetterView : UIView
 
 @property (nonatomic, strong) NSString *letter;
+@property (nonatomic, assign) CGRect oldFrame;
 
 - (void)reset;
 
