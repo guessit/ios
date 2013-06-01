@@ -8,6 +8,7 @@
 
 #import "GILevelsViewController.h"
 
+#import "GIDataSource.h"
 #import "GIItem.h"
 #import "GIItemViewController.h"
 #import "GILevel.h"
@@ -27,19 +28,7 @@
 
 - (NSArray *)bsiLevels {
     if (!_bsiLevels) {
-        _bsiLevels = @[
-            [GILevel bancoDados],
-            [GILevel frameworks],
-            [GILevel ides],
-            [GILevel linguagensProgramacao],
-            [GILevel ferramentas]
-        ];
-
-        #warning TODO: BROWSER - chrome, ie, firefox, safari, opera, etc
-        #warning TODO: SISTEMAS OPERACIONAIS - windows, ubuntu, osx, ios, android, etc
-        #warning TODO: MARCAS - apple, google, microsoft, hp, cisco, etc
-        #warning TODO: PERSONALIDADES - steve jobs, bill gates, etc
-
+        _bsiLevels = [GIDataSource dataSource].levels;
     }
     return _bsiLevels;
 }

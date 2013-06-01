@@ -32,6 +32,7 @@
 		BF91796D1724716D00B136E2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9179631724716D00B136E2 /* Icon@2x.png */; };
 		BF91796E1724716D00B136E2 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9179641724716D00B136E2 /* iTunesArtwork.png */; };
 		BF91796F1724716D00B136E2 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9179651724716D00B136E2 /* iTunesArtwork@2x.png */; };
+		BFA44032175A1D8700D4B8E5 /* GIDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA44031175A1D8700D4B8E5 /* GIDataSource.m */; };
 		BFAD126716F136A100F6D429 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126616F136A100F6D429 /* UIKit.framework */; };
 		BFAD126916F136A100F6D429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126816F136A100F6D429 /* Foundation.framework */; };
 		BFAD126B16F136A100F6D429 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126A16F136A100F6D429 /* CoreGraphics.framework */; };
@@ -151,6 +152,8 @@
 		BF9179631724716D00B136E2 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		BF9179641724716D00B136E2 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		BF9179651724716D00B136E2 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		BFA44030175A1D8700D4B8E5 /* GIDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIDataSource.h; sourceTree = "<group>"; };
+		BFA44031175A1D8700D4B8E5 /* GIDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIDataSource.m; sourceTree = "<group>"; };
 		BFAD126316F136A100F6D429 /* GuessItBSI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessItBSI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAD126616F136A100F6D429 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BFAD126816F136A100F6D429 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -409,6 +412,8 @@
 			children = (
 				BFAD12A816F1376600F6D429 /* GIAppDelegate.h */,
 				BFAD12A916F1376600F6D429 /* GIAppDelegate.m */,
+				BFA44030175A1D8700D4B8E5 /* GIDataSource.h */,
+				BFA44031175A1D8700D4B8E5 /* GIDataSource.m */,
 				BFF5A2E4171EB74E00F401B3 /* GIDefinitions.h */,
 				BF291E8B174ECA320066D5EF /* GIDefinitions.m */,
 				BFAD12AA16F1376600F6D429 /* GuessItBSI-Prefix.pch */,
@@ -761,6 +766,7 @@
 				BF1835EB172DC49D00E2CB5F /* UIImage+FromColor.m in Sources */,
 				BF1835EE172DEA1200E2CB5F /* GIPlaceholderView.m in Sources */,
 				BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */,
+				BFA44032175A1D8700D4B8E5 /* GIDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
