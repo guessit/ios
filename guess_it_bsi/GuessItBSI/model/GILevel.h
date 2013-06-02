@@ -2,22 +2,31 @@
 //  GILevel.h
 //  GuessItBSI
 //
-//  Created by Marlon Andrade on 26/03/13.
+//  Created by Marlon Andrade on 30/03/13.
 //  Copyright (c) 2013 Marlon Andrade. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    GIGuessingResultWrong,
+    GIGuessingResultCorrect
+} GIGuessingResult;
+
 @interface GILevel : NSObject
 
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, strong) NSArray *items;
-@property (nonatomic, strong, readonly) NSString *progress;
+@property (nonatomic, strong, readonly) UIImage *image;
+@property (nonatomic, copy) NSString *imageName;
+@property (nonatomic, copy) NSString *answer;
+@property (nonatomic, copy) NSString *category;
+@property (nonatomic, strong) NSArray *hints;
 
-@property (nonatomic, strong, readonly) NSArray *todoItems;
-@property (nonatomic, strong, readonly) NSArray *finishedItems;
++ (instancetype)levelWithImageNamed:(NSString *)imageName
+                             anwser:(NSString *)answer
+                           category:(NSString *)category
+                              hints:(NSArray *)hints;
 
-+ (instancetype)levelWithName:(NSString *)name;
-- (id)initWithName:(NSString *)name;
+- (GIGuessingResult)guessWithAnwser:(NSString *)guessingAnwser;
+- (BOOL)isFinished;
 
 @end

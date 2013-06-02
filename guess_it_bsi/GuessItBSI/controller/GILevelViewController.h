@@ -1,5 +1,5 @@
 //
-//  GIItemViewController.h
+//  GILevelViewController.h
 //  GuessItBSI
 //
 //  Created by Marlon Andrade on 30/03/13.
@@ -10,7 +10,7 @@
 
 #import "GILevel.h"
 
-@interface GIItemViewController : GIViewController
+@interface GILevelViewController : GIViewController
 
 @property (nonatomic, strong) GILevel *level;
 

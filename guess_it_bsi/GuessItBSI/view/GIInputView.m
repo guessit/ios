@@ -46,11 +46,11 @@
 
 #pragma mark - Setter
 
-- (void)setItem:(GIItem *)item {
-    _item = item;
+- (void)setLevel:(GILevel *)level {
+    _level = level;
 
-    self.answerView.answer = item.answer;
-    self.keypadView.answer = item.answer;
+    self.answerView.answer = level.answer;
+    self.keypadView.answer = level.answer;
 }
 
 #pragma mark - UIView Methods
@@ -100,7 +100,7 @@
 }
 
 - (void)userGuessedCorrectAnswer:(GIAnswerView *)answerView {
-    [[NSNotificationCenter defaultCenter] postNotificationName:GIPlayerGuessedCorrectAnswer object:self.item];
+    [[NSNotificationCenter defaultCenter] postNotificationName:GIPlayerGuessedCorrectAnswer object:self.level];
 }
 
 @end

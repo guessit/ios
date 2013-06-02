@@ -10,8 +10,7 @@
 
 @interface GIDataSource : NSObject
 
-@property (nonatomic, strong, readonly) NSArray *levels;
-
 + (instancetype)dataSource;
+- (NSArray *)loadLevels;
 
 @end

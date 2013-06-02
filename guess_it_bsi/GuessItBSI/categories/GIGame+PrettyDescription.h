@@ -1,14 +1,14 @@
 //
-//  GIItem+PrettyDescription.h
+//  GIGame+PrettyDescription.h
 //  GuessItBSI
 //
 //  Created by Marlon Andrade on 04/15/2013.
 //  Copyright (c) 2013 Marlon Andrade. All rights reserved.
 //
 
-#import "GIItem.h"
+#import "GIGame.h"
 
-@interface GIItem (PrettyDescription)
+@interface GIGame (PrettyDescription)
 
 - (NSString *)prettyDescription;
 

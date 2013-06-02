@@ -8,7 +8,7 @@
 
 #pragma mark - NSUserDefaults Keys
 
-#define GI_FINISHED_ITEMS @"GuessItFinishedItems"
+#define GI_FINISHED_LEVELS @"GuessItFinishedLevels"
 
 #pragma mark - NSNotification Names
 
@@ -26,6 +26,13 @@
 #define GI_TITLE_SHINE_COLOR [UIColor colorWithRed:0.980 green:0.984 blue:0.843 alpha:1.000]
 #define GI_TITLE_SHADOW_COLOR [UIColor blackColor]
 #define GI_TITLE_SHADOW_OFFSET CGSizeMake(0.f, -1.f)
+
+#pragma mark - Tap To Play
+
+#define GI_TAP_TO_PLAY_COLOR [UIColor whiteColor]
+#define GI_TAP_TO_PLAY_FONT [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:20.f];
+#define GI_TAP_TO_PLAY_SHADOW_COLOR [UIColor colorWithWhite:0.4f alpha:1.f];
+#define GI_TAP_TO_PLAY_SHADOW_OFFSET CGSizeMake(0.f, -1.f);
 
 #pragma mark - Font Color
 

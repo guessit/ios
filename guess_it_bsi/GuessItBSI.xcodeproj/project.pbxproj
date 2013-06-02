@@ -9,22 +9,18 @@
 /* Begin PBXBuildFile section */
 		22089BA97554462C80199B37 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62620204B775499F949AB190 /* libPods.a */; };
 		BF1835D5172C3D1D00E2CB5F /* GINavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */; };
-		BF1835DC172CB0E500E2CB5F /* GIItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835DB172CB0E500E2CB5F /* GIItemView.m */; };
+		BF1835DC172CB0E500E2CB5F /* GILevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835DB172CB0E500E2CB5F /* GILevelView.m */; };
 		BF1835DF172D3E9E00E2CB5F /* GIInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835DE172D3E9E00E2CB5F /* GIInputView.m */; };
 		BF1835E2172D439000E2CB5F /* GIAnswerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835E1172D439000E2CB5F /* GIAnswerView.m */; };
 		BF1835E8172DB8F600E2CB5F /* GILetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835E7172DB8F600E2CB5F /* GILetterView.m */; };
 		BF1835EB172DC49D00E2CB5F /* UIImage+FromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835EA172DC49D00E2CB5F /* UIImage+FromColor.m */; };
 		BF1835EE172DEA1200E2CB5F /* GIPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835ED172DEA1200E2CB5F /* GIPlaceholderView.m */; };
-		BF1F2998170246F800A83FE3 /* GILevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F2997170246F800A83FE3 /* GILevel.m */; };
-		BF1F299B1702477000A83FE3 /* GILevelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F299A1702477000A83FE3 /* GILevelsViewController.m */; };
-		BF1F29A5170634BB00A83FE3 /* GILevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29A4170634BB00A83FE3 /* GILevelCell.m */; };
-		BF1F29B01707347900A83FE3 /* GIItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29AF1707347800A83FE3 /* GIItem.m */; };
+		BF1F29B01707347900A83FE3 /* GILevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29AF1707347800A83FE3 /* GILevel.m */; };
 		BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B21707617700A83FE3 /* GIViewController.m */; };
-		BF1F29B6170761D400A83FE3 /* GIItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B5170761D400A83FE3 /* GIItemViewController.m */; };
+		BF1F29B6170761D400A83FE3 /* GILevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B5170761D400A83FE3 /* GILevelViewController.m */; };
 		BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF291E8B174ECA320066D5EF /* GIDefinitions.m */; };
-		BF41EA94170BB4A0006540E7 /* GILevel+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BF41EA93170BB4A0006540E7 /* GILevel+Factory.m */; };
-		BF6943BB171CA244000F74E0 /* GIItem+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BA171CA244000F74E0 /* GIItem+PrettyDescription.m */; };
-		BF6943BE171CA2AD000F74E0 /* GILevel+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BD171CA2AD000F74E0 /* GILevel+PrettyDescription.m */; };
+		BF6943BB171CA244000F74E0 /* GILevel+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */; };
+		BF6943BE171CA2AD000F74E0 /* GIGame+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BD171CA2AD000F74E0 /* GIGame+PrettyDescription.m */; };
 		BF91795817244A8200B136E2 /* shine_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF91795717244A8200B136E2 /* shine_mask@2x.png */; };
 		BF91796A1724716D00B136E2 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9179601724716D00B136E2 /* Icon-Small.png */; };
 		BF91796B1724716D00B136E2 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9179611724716D00B136E2 /* Icon-Small@2x.png */; };
@@ -33,11 +29,11 @@
 		BF91796E1724716D00B136E2 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9179641724716D00B136E2 /* iTunesArtwork.png */; };
 		BF91796F1724716D00B136E2 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9179651724716D00B136E2 /* iTunesArtwork@2x.png */; };
 		BFA44032175A1D8700D4B8E5 /* GIDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA44031175A1D8700D4B8E5 /* GIDataSource.m */; };
+		BFA44034175A1EFD00D4B8E5 /* game.json in Resources */ = {isa = PBXBuildFile; fileRef = BFA44033175A1EFD00D4B8E5 /* game.json */; };
 		BFAD126716F136A100F6D429 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126616F136A100F6D429 /* UIKit.framework */; };
 		BFAD126916F136A100F6D429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126816F136A100F6D429 /* Foundation.framework */; };
 		BFAD126B16F136A100F6D429 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126A16F136A100F6D429 /* CoreGraphics.framework */; };
 		BFAD127116F136A100F6D429 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFAD126F16F136A100F6D429 /* InfoPlist.strings */; };
-		BFAD128016F136A200F6D429 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAD127E16F136A200F6D429 /* MainStoryboard.storyboard */; };
 		BFAD128B16F136A200F6D429 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD128A16F136A200F6D429 /* SenTestingKit.framework */; };
 		BFAD128C16F136A200F6D429 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126616F136A100F6D429 /* UIKit.framework */; };
 		BFAD128D16F136A200F6D429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126816F136A100F6D429 /* Foundation.framework */; };
@@ -45,6 +41,8 @@
 		BFAD129816F136A200F6D429 /* GuessItBSITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD129716F136A200F6D429 /* GuessItBSITests.m */; };
 		BFAD12B016F1376600F6D429 /* GIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12A916F1376600F6D429 /* GIAppDelegate.m */; };
 		BFAD12B116F1376600F6D429 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12AB16F1376600F6D429 /* main.m */; };
+		BFB7CC93175B737B0055DBF0 /* GIGame.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB7CC92175B737B0055DBF0 /* GIGame.m */; };
+		BFB7CC97175B7D480055DBF0 /* GINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB7CC96175B7D480055DBF0 /* GINavigationController.m */; };
 		BFBDD2121701092000F5698E /* GIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBDD2111701092000F5698E /* GIMainViewController.m */; };
 		BFF9294217243E0300F230C6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9291017243E0300F230C6 /* Default-568h@2x.png */; };
 		BFF9294317243E0300F230C6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9291117243E0300F230C6 /* Default.png */; };
@@ -113,8 +111,8 @@
 		BD30177A3D9541AEB54F865D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		BF1835D3172C3D1D00E2CB5F /* GINavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GINavigationBar.h; sourceTree = "<group>"; };
 		BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GINavigationBar.m; sourceTree = "<group>"; };
-		BF1835DA172CB0E500E2CB5F /* GIItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIItemView.h; sourceTree = "<group>"; };
-		BF1835DB172CB0E500E2CB5F /* GIItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIItemView.m; sourceTree = "<group>"; };
+		BF1835DA172CB0E500E2CB5F /* GILevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelView.h; sourceTree = "<group>"; };
+		BF1835DB172CB0E500E2CB5F /* GILevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelView.m; sourceTree = "<group>"; };
 		BF1835DD172D3E9E00E2CB5F /* GIInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIInputView.h; sourceTree = "<group>"; };
 		BF1835DE172D3E9E00E2CB5F /* GIInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIInputView.m; sourceTree = "<group>"; };
 		BF1835E0172D439000E2CB5F /* GIAnswerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIAnswerView.h; sourceTree = "<group>"; };
@@ -125,25 +123,17 @@
 		BF1835EA172DC49D00E2CB5F /* UIImage+FromColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FromColor.m"; sourceTree = "<group>"; };
 		BF1835EC172DEA1100E2CB5F /* GIPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIPlaceholderView.h; sourceTree = "<group>"; };
 		BF1835ED172DEA1200E2CB5F /* GIPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIPlaceholderView.m; sourceTree = "<group>"; };
-		BF1F2996170246F800A83FE3 /* GILevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevel.h; sourceTree = "<group>"; };
-		BF1F2997170246F800A83FE3 /* GILevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevel.m; sourceTree = "<group>"; };
-		BF1F29991702477000A83FE3 /* GILevelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelsViewController.h; sourceTree = "<group>"; };
-		BF1F299A1702477000A83FE3 /* GILevelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelsViewController.m; sourceTree = "<group>"; };
-		BF1F29A3170634BB00A83FE3 /* GILevelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelCell.h; sourceTree = "<group>"; };
-		BF1F29A4170634BB00A83FE3 /* GILevelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelCell.m; sourceTree = "<group>"; };
-		BF1F29AE1707347800A83FE3 /* GIItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIItem.h; sourceTree = "<group>"; };
-		BF1F29AF1707347800A83FE3 /* GIItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIItem.m; sourceTree = "<group>"; };
+		BF1F29AE1707347800A83FE3 /* GILevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevel.h; sourceTree = "<group>"; };
+		BF1F29AF1707347800A83FE3 /* GILevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevel.m; sourceTree = "<group>"; };
 		BF1F29B11707617700A83FE3 /* GIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIViewController.h; sourceTree = "<group>"; };
 		BF1F29B21707617700A83FE3 /* GIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIViewController.m; sourceTree = "<group>"; };
-		BF1F29B4170761D400A83FE3 /* GIItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIItemViewController.h; sourceTree = "<group>"; };
-		BF1F29B5170761D400A83FE3 /* GIItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIItemViewController.m; sourceTree = "<group>"; };
+		BF1F29B4170761D400A83FE3 /* GILevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelViewController.h; sourceTree = "<group>"; };
+		BF1F29B5170761D400A83FE3 /* GILevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelViewController.m; sourceTree = "<group>"; };
 		BF291E8B174ECA320066D5EF /* GIDefinitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIDefinitions.m; sourceTree = "<group>"; };
-		BF41EA92170BB4A0006540E7 /* GILevel+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GILevel+Factory.h"; sourceTree = "<group>"; };
-		BF41EA93170BB4A0006540E7 /* GILevel+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GILevel+Factory.m"; sourceTree = "<group>"; };
-		BF6943B9171CA244000F74E0 /* GIItem+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GIItem+PrettyDescription.h"; sourceTree = "<group>"; };
-		BF6943BA171CA244000F74E0 /* GIItem+PrettyDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GIItem+PrettyDescription.m"; sourceTree = "<group>"; };
-		BF6943BC171CA2AD000F74E0 /* GILevel+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GILevel+PrettyDescription.h"; sourceTree = "<group>"; };
-		BF6943BD171CA2AD000F74E0 /* GILevel+PrettyDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GILevel+PrettyDescription.m"; sourceTree = "<group>"; };
+		BF6943B9171CA244000F74E0 /* GILevel+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GILevel+PrettyDescription.h"; sourceTree = "<group>"; };
+		BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GILevel+PrettyDescription.m"; sourceTree = "<group>"; };
+		BF6943BC171CA2AD000F74E0 /* GIGame+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GIGame+PrettyDescription.h"; sourceTree = "<group>"; };
+		BF6943BD171CA2AD000F74E0 /* GIGame+PrettyDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GIGame+PrettyDescription.m"; sourceTree = "<group>"; };
 		BF86A52D174B06A1002A0FBD /* GIInputViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIInputViewDelegate.h; sourceTree = "<group>"; };
 		BF91795717244A8200B136E2 /* shine_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shine_mask@2x.png"; sourceTree = "<group>"; };
 		BF9179601724716D00B136E2 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
@@ -154,13 +144,13 @@
 		BF9179651724716D00B136E2 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		BFA44030175A1D8700D4B8E5 /* GIDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIDataSource.h; sourceTree = "<group>"; };
 		BFA44031175A1D8700D4B8E5 /* GIDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIDataSource.m; sourceTree = "<group>"; };
+		BFA44033175A1EFD00D4B8E5 /* game.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game.json; sourceTree = "<group>"; };
 		BFAD126316F136A100F6D429 /* GuessItBSI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessItBSI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAD126616F136A100F6D429 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BFAD126816F136A100F6D429 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BFAD126A16F136A100F6D429 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BFAD126E16F136A100F6D429 /* GuessItBSI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GuessItBSI-Info.plist"; sourceTree = "<group>"; };
 		BFAD127016F136A100F6D429 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BFAD127F16F136A200F6D429 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BFAD128916F136A200F6D429 /* GuessItBSITests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessItBSITests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAD128A16F136A200F6D429 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		BFAD129216F136A200F6D429 /* GuessItBSITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GuessItBSITests-Info.plist"; sourceTree = "<group>"; };
@@ -171,6 +161,10 @@
 		BFAD12A916F1376600F6D429 /* GIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIAppDelegate.m; sourceTree = "<group>"; };
 		BFAD12AA16F1376600F6D429 /* GuessItBSI-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GuessItBSI-Prefix.pch"; sourceTree = "<group>"; };
 		BFAD12AB16F1376600F6D429 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BFB7CC91175B737B0055DBF0 /* GIGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGame.h; sourceTree = "<group>"; };
+		BFB7CC92175B737B0055DBF0 /* GIGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGame.m; sourceTree = "<group>"; };
+		BFB7CC95175B7D480055DBF0 /* GINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GINavigationController.h; sourceTree = "<group>"; };
+		BFB7CC96175B7D480055DBF0 /* GINavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GINavigationController.m; sourceTree = "<group>"; };
 		BFBDD2101701092000F5698E /* GIMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIMainViewController.h; sourceTree = "<group>"; };
 		BFBDD2111701092000F5698E /* GIMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIMainViewController.m; sourceTree = "<group>"; };
 		BFF5A2E4171EB74E00F401B3 /* GIDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIDefinitions.h; sourceTree = "<group>"; };
@@ -260,12 +254,10 @@
 		BF41EA91170BB48D006540E7 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				BF6943B9171CA244000F74E0 /* GIItem+PrettyDescription.h */,
-				BF6943BA171CA244000F74E0 /* GIItem+PrettyDescription.m */,
-				BF41EA92170BB4A0006540E7 /* GILevel+Factory.h */,
-				BF41EA93170BB4A0006540E7 /* GILevel+Factory.m */,
-				BF6943BC171CA2AD000F74E0 /* GILevel+PrettyDescription.h */,
-				BF6943BD171CA2AD000F74E0 /* GILevel+PrettyDescription.m */,
+				BF6943B9171CA244000F74E0 /* GILevel+PrettyDescription.h */,
+				BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */,
+				BF6943BC171CA2AD000F74E0 /* GIGame+PrettyDescription.h */,
+				BF6943BD171CA2AD000F74E0 /* GIGame+PrettyDescription.m */,
 				BFF9E7371727F815003B4385 /* NSString+RandomString.h */,
 				BFF9E7381727F815003B4385 /* NSString+RandomString.m */,
 				BFF9297117243EF900F230C6 /* UIFont+GuessItFonts.h */,
@@ -343,7 +335,6 @@
 				BF86A52C174B068A002A0FBD /* Delegate */,
 				BF41EA91170BB48D006540E7 /* Categories */,
 				BFAD12A716F1376600F6D429 /* Other */,
-				BFAD127E16F136A200F6D429 /* MainStoryboard.storyboard */,
 				BFAD126D16F136A100F6D429 /* Supporting Files */,
 			);
 			path = GuessItBSI;
@@ -380,12 +371,12 @@
 		BFAD12A116F1376600F6D429 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BF1F29B4170761D400A83FE3 /* GIItemViewController.h */,
-				BF1F29B5170761D400A83FE3 /* GIItemViewController.m */,
-				BF1F29991702477000A83FE3 /* GILevelsViewController.h */,
-				BF1F299A1702477000A83FE3 /* GILevelsViewController.m */,
+				BF1F29B4170761D400A83FE3 /* GILevelViewController.h */,
+				BF1F29B5170761D400A83FE3 /* GILevelViewController.m */,
 				BFBDD2101701092000F5698E /* GIMainViewController.h */,
 				BFBDD2111701092000F5698E /* GIMainViewController.m */,
+				BFB7CC95175B7D480055DBF0 /* GINavigationController.h */,
+				BFB7CC96175B7D480055DBF0 /* GINavigationController.m */,
 				BFF9E72B1727F44A003B4385 /* GIOptionsViewController.h */,
 				BFF9E72C1727F44A003B4385 /* GIOptionsViewController.m */,
 				BF1F29B11707617700A83FE3 /* GIViewController.h */,
@@ -398,10 +389,10 @@
 		BFAD12A616F1376600F6D429 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BF1F29AE1707347800A83FE3 /* GIItem.h */,
-				BF1F29AF1707347800A83FE3 /* GIItem.m */,
-				BF1F2996170246F800A83FE3 /* GILevel.h */,
-				BF1F2997170246F800A83FE3 /* GILevel.m */,
+				BF1F29AE1707347800A83FE3 /* GILevel.h */,
+				BF1F29AF1707347800A83FE3 /* GILevel.m */,
+				BFB7CC91175B737B0055DBF0 /* GIGame.h */,
+				BFB7CC92175B737B0055DBF0 /* GIGame.m */,
 			);
 			name = Model;
 			path = model;
@@ -426,20 +417,9 @@
 		BFAD12AC16F1376600F6D429 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BF1835E0172D439000E2CB5F /* GIAnswerView.h */,
-				BF1835E1172D439000E2CB5F /* GIAnswerView.m */,
-				BF1835DD172D3E9E00E2CB5F /* GIInputView.h */,
-				BF1835DE172D3E9E00E2CB5F /* GIInputView.m */,
-				BF1835DA172CB0E500E2CB5F /* GIItemView.h */,
-				BF1835DB172CB0E500E2CB5F /* GIItemView.m */,
-				BF1F29A3170634BB00A83FE3 /* GILevelCell.h */,
-				BF1F29A4170634BB00A83FE3 /* GILevelCell.m */,
-				BF1835E6172DB8F600E2CB5F /* GILetterView.h */,
-				BF1835E7172DB8F600E2CB5F /* GILetterView.m */,
-				BFF9E7311727F599003B4385 /* GIKeypadView.h */,
-				BFF9E7321727F599003B4385 /* GIKeypadView.m */,
-				BF1835EC172DEA1100E2CB5F /* GIPlaceholderView.h */,
-				BF1835ED172DEA1200E2CB5F /* GIPlaceholderView.m */,
+				BFB7CC94175B75FA0055DBF0 /* Keyboard */,
+				BF1835DA172CB0E500E2CB5F /* GILevelView.h */,
+				BF1835DB172CB0E500E2CB5F /* GILevelView.m */,
 				BFF92974172443AC00F230C6 /* GIShineLabel.h */,
 				BFF92975172443AC00F230C6 /* GIShineLabel.m */,
 				BF1835D3172C3D1D00E2CB5F /* GINavigationBar.h */,
@@ -449,9 +429,27 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		BFB7CC94175B75FA0055DBF0 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BF1835E0172D439000E2CB5F /* GIAnswerView.h */,
+				BF1835E1172D439000E2CB5F /* GIAnswerView.m */,
+				BF1835DD172D3E9E00E2CB5F /* GIInputView.h */,
+				BF1835DE172D3E9E00E2CB5F /* GIInputView.m */,
+				BFF9E7311727F599003B4385 /* GIKeypadView.h */,
+				BFF9E7321727F599003B4385 /* GIKeypadView.m */,
+				BF1835E6172DB8F600E2CB5F /* GILetterView.h */,
+				BF1835E7172DB8F600E2CB5F /* GILetterView.m */,
+				BF1835EC172DEA1100E2CB5F /* GIPlaceholderView.h */,
+				BF1835ED172DEA1200E2CB5F /* GIPlaceholderView.m */,
+			);
+			name = Keyboard;
+			sourceTree = "<group>";
+		};
 		BFF9290E17243E0300F230C6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BFA44033175A1EFD00D4B8E5 /* game.json */,
 				BFF9296E17243E1900F230C6 /* fonts */,
 				BFF9290F17243E0300F230C6 /* images */,
 			);
@@ -640,7 +638,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFAD127116F136A100F6D429 /* InfoPlist.strings in Resources */,
-				BFAD128016F136A200F6D429 /* MainStoryboard.storyboard in Resources */,
 				BFF9294217243E0300F230C6 /* Default-568h@2x.png in Resources */,
 				BFF9294317243E0300F230C6 /* Default.png in Resources */,
 				BFF9294417243E0300F230C6 /* Default@2x.png in Resources */,
@@ -692,6 +689,7 @@
 				BF91796D1724716D00B136E2 /* Icon@2x.png in Resources */,
 				BF91796E1724716D00B136E2 /* iTunesArtwork.png in Resources */,
 				BF91796F1724716D00B136E2 /* iTunesArtwork@2x.png in Resources */,
+				BFA44034175A1EFD00D4B8E5 /* game.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,15 +741,11 @@
 				BFAD12B016F1376600F6D429 /* GIAppDelegate.m in Sources */,
 				BFAD12B116F1376600F6D429 /* main.m in Sources */,
 				BFBDD2121701092000F5698E /* GIMainViewController.m in Sources */,
-				BF1F2998170246F800A83FE3 /* GILevel.m in Sources */,
-				BF1F299B1702477000A83FE3 /* GILevelsViewController.m in Sources */,
-				BF1F29A5170634BB00A83FE3 /* GILevelCell.m in Sources */,
-				BF1F29B01707347900A83FE3 /* GIItem.m in Sources */,
+				BF1F29B01707347900A83FE3 /* GILevel.m in Sources */,
 				BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */,
-				BF1F29B6170761D400A83FE3 /* GIItemViewController.m in Sources */,
-				BF41EA94170BB4A0006540E7 /* GILevel+Factory.m in Sources */,
-				BF6943BB171CA244000F74E0 /* GIItem+PrettyDescription.m in Sources */,
-				BF6943BE171CA2AD000F74E0 /* GILevel+PrettyDescription.m in Sources */,
+				BF1F29B6170761D400A83FE3 /* GILevelViewController.m in Sources */,
+				BF6943BB171CA244000F74E0 /* GILevel+PrettyDescription.m in Sources */,
+				BF6943BE171CA2AD000F74E0 /* GIGame+PrettyDescription.m in Sources */,
 				BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */,
 				BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */,
 				BFF9E72D1727F44A003B4385 /* GIOptionsViewController.m in Sources */,
@@ -759,7 +753,7 @@
 				BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */,
 				BFFC5013172A9ACD008DC742 /* UIView+SizingAndPositioning.m in Sources */,
 				BF1835D5172C3D1D00E2CB5F /* GINavigationBar.m in Sources */,
-				BF1835DC172CB0E500E2CB5F /* GIItemView.m in Sources */,
+				BF1835DC172CB0E500E2CB5F /* GILevelView.m in Sources */,
 				BF1835DF172D3E9E00E2CB5F /* GIInputView.m in Sources */,
 				BF1835E2172D439000E2CB5F /* GIAnswerView.m in Sources */,
 				BF1835E8172DB8F600E2CB5F /* GILetterView.m in Sources */,
@@ -767,6 +761,8 @@
 				BF1835EE172DEA1200E2CB5F /* GIPlaceholderView.m in Sources */,
 				BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */,
 				BFA44032175A1D8700D4B8E5 /* GIDataSource.m in Sources */,
+				BFB7CC93175B737B0055DBF0 /* GIGame.m in Sources */,
+				BFB7CC97175B7D480055DBF0 /* GINavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,14 +791,6 @@
 				BFAD127016F136A100F6D429 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		BFAD127E16F136A200F6D429 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BFAD127F16F136A200F6D429 /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		BFAD129316F136A200F6D429 /* InfoPlist.strings */ = {

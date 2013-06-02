@@ -1,18 +1,18 @@
 //
-//  GIItemView.m
+//  GILevelView.m
 //  GuessItBSI
 //
 //  Created by Marlon Andrade on 27/04/13.
 //  Copyright (c) 2013 Marlon Andrade. All rights reserved.
 //
 
-#import "GIItemView.h"
+#import "GILevelView.h"
 
 #import "GIInputView.h"
 #import "UIView+SizingAndPositioning.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface GIItemView ()
+@interface GILevelView ()
 
 @property (nonatomic, strong) UIView *imageViewFrame;
 @property (nonatomic, strong) UIImageView *imageView;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation GIItemView
+@implementation GILevelView
 
 #pragma mark - Getter
 
@@ -47,12 +47,12 @@
 
 #pragma mark - Setter
 
-- (void)setItem:(GIItem *)item {
-    _item = item;
+- (void)setLevel:(GILevel *)level {
+    _level = level;
 
-    if (item) {
-        self.imageView.image = item.image;
-        self.inputView.item = item;
+    if (level) {
+        self.imageView.image = level.image;
+        self.inputView.level = level;
         [self becomeFirstResponder];
     } else {
         self.imageView.alpha = 0.f;

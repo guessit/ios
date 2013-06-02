@@ -1,5 +1,5 @@
 //
-//  GIItemView.h
+//  GILevelView.h
 //  GuessItBSI
 //
 //  Created by Marlon Andrade on 27/04/13.
@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GIItem.h"
+#import "GILevel.h"
 
-@interface GIItemView : UIView
+@interface GILevelView : UIView
 
-@property (nonatomic, strong) GIItem *item;
+@property (nonatomic, strong) GILevel *level;
 
 @end

@@ -11,6 +11,4 @@
 
 @interface GIMainViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet GIShineLabel *titleLabel;
-
 @end

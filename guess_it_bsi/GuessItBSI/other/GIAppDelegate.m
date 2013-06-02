@@ -8,10 +8,21 @@
 
 #import "GIAppDelegate.h"
 
+#import "GIMainViewController.h"
+#import "GINavigationBar.h"
+#import "GINavigationController.h"
+
 @implementation GIAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSLog(@"Bundle: %@", [NSBundle mainBundle]);
+
+    GIMainViewController *main = [GIMainViewController viewController];
+    GINavigationController *nav = [GINavigationController navigationControllerWithRootViewController:main];
+
+    self.window = [UIWindow viewWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
 
     return YES;
 }

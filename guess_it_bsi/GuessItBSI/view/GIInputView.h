@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GIItem.h"
+#import "GILevel.h"
 
 @interface GIInputView : UIView <UIInputViewAudioFeedback>
 
-@property (nonatomic, strong) GIItem *item;
+@property (nonatomic, strong) GILevel *level;
 
 @end

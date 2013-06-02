@@ -27,7 +27,7 @@
 #pragma mark - Private Interface
 
 - (void)_resetGameProgress {
-    [[NSUserDefaults standardUserDefaults] setObject:@[] forKey:GI_FINISHED_ITEMS];
+    [[NSUserDefaults standardUserDefaults] setObject:@[] forKey:GI_FINISHED_LEVELS];
 }
 
 #pragma mark - IBActions

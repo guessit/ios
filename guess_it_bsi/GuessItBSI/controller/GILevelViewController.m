@@ -1,43 +1,43 @@
 //
-//  GIItemViewController.m
+//  GILevelViewController.m
 //  GuessItBSI
 //
 //  Created by Marlon Andrade on 30/03/13.
 //  Copyright (c) 2013 Marlon Andrade. All rights reserved.
 //
 
-#import "GIItemViewController.h"
+#import "GILevelViewController.h"
 
-#import "GIItem.h"
-#import "GIItemView.h"
+#import "GIGame.h"
+#import "GILevel.h"
+#import "GILevelView.h"
 
-@interface GIItemViewController() <UIAlertViewDelegate>
+@interface GILevelViewController() <UIAlertViewDelegate>
 
-@property (nonatomic, strong) GIItem *item;
-@property (nonatomic, strong, readonly) GIItemView *itemView;
+@property (nonatomic, strong, readonly) GILevelView *levelView;
 @property (nonatomic, strong) UIBarButtonItem *reloadBarButtonItem;
 
-- (void)_loadRandomItem;
+- (void)_loadRandomLevel;
 - (void)_reloadTouched:(id)sender;
 
 - (void)_playerGuessedCorrectAnswer:(NSNotification *)notification;
 
 @end
 
-@implementation GIItemViewController
+@implementation GILevelViewController
 
 #pragma mark - Setter
 
-- (void)setItem:(GIItem *)item {
-    _item = item;
+- (void)setLevel:(GILevel *)level {
+    _level = level;
 
-    self.itemView.item = item;
+    self.levelView.level = level;
 }
 
 #pragma mark - Getter
 
-- (GIItemView *)itemView {
-    return (GIItemView *)self.view;
+- (GILevelView *)levelView {
+    return (GILevelView *)self.view;
 }
 
 - (UIBarButtonItem *)reloadBarButtonItem {
@@ -61,6 +61,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.view = [GILevelView view];
+
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(_playerGuessedCorrectAnswer:)
                                                  name:GIPlayerGuessedCorrectAnswer
@@ -70,16 +72,16 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    [self _loadRandomItem];
+    [self _loadRandomLevel];
 }
 
 #pragma mark - Private Interface
 
-- (void)_loadRandomItem {
-    self.item = self.level.todoItems.randomObject;
+- (void)_loadRandomLevel {
+    self.level = [GIGame game].todoLevels.randomObject;
 
     UIBarButtonItem *rightBarButtonItem = nil;
-    if (self.level.todoItems.count > 0) {
+    if ([GIGame game].todoLevels.count > 0) {
         rightBarButtonItem = self.reloadBarButtonItem;
     }
 
@@ -87,7 +89,7 @@
 }
 
 - (void)_reloadTouched:(id)sender {
-    [self _loadRandomItem];
+    [self _loadRandomLevel];
 }
 
 - (void)_playerGuessedCorrectAnswer:(NSNotification *)notification {
@@ -102,9 +104,9 @@
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     #warning TODO: AJUSTAR! UGLYNESS!@!!!!!!!!
-    [self.item guessWithAnwser:self.item.answer];
+    [self.level guessWithAnwser:self.level.answer];
 
-    [self _loadRandomItem];
+    [self _loadRandomLevel];
 }
 
 @end
