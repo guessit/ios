@@ -8,6 +8,8 @@
 
 #import "GIAppDelegate.h"
 
+#import "GIConfiguration.h"
+#import "GIGame+PrettyDescription.h"
 #import "GIMainViewController.h"
 #import "GINavigationBar.h"
 #import "GINavigationController.h"
@@ -16,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSLog(@"Bundle: %@", [NSBundle mainBundle]);
+    NSLog(@"Game: %@", [[GIConfiguration sharedInstance].game prettyDescription]);
 
     GIMainViewController *main = [GIMainViewController viewController];
     GINavigationController *nav = [GINavigationController navigationControllerWithRootViewController:main];

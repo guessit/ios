@@ -8,6 +8,7 @@
 
 #import "GILevelViewController.h"
 
+#import "GIConfiguration.h"
 #import "GIGame.h"
 #import "GILevel.h"
 #import "GILevelView.h"
@@ -78,10 +79,12 @@
 #pragma mark - Private Interface
 
 - (void)_loadRandomLevel {
-    self.level = [GIGame game].todoLevels.randomObject;
+    NSArray *todoLevels = [GIConfiguration sharedInstance].game.todoLevels;
+
+    self.level = todoLevels.randomObject;
 
     UIBarButtonItem *rightBarButtonItem = nil;
-    if ([GIGame game].todoLevels.count > 0) {
+    if (todoLevels.count > 0) {
         rightBarButtonItem = self.reloadBarButtonItem;
     }
 

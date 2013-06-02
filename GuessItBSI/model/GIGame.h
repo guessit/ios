@@ -10,12 +10,11 @@
 
 @interface GIGame : NSObject
 
+@property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSArray *levels;
+
 @property (nonatomic, strong, readonly) NSArray *todoLevels;
 @property (nonatomic, strong, readonly) NSArray *finishedLevels;
 
-+ (GIGame *)game;
-
-+ (NSArray *)finishedLevelsName;
 
 @end

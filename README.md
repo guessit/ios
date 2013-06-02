@@ -1,4 +1,4 @@
-tcc
-===
+GuessIt!
+========
 
-Projeto do Trabalho de Conclusão de Curso
+Guessing game framework

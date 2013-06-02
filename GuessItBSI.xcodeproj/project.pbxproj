@@ -28,7 +28,7 @@
 		BF91796D1724716D00B136E2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9179631724716D00B136E2 /* Icon@2x.png */; };
 		BF91796E1724716D00B136E2 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9179641724716D00B136E2 /* iTunesArtwork.png */; };
 		BF91796F1724716D00B136E2 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9179651724716D00B136E2 /* iTunesArtwork@2x.png */; };
-		BFA44032175A1D8700D4B8E5 /* GIDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA44031175A1D8700D4B8E5 /* GIDataSource.m */; };
+		BFA44032175A1D8700D4B8E5 /* GIConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA44031175A1D8700D4B8E5 /* GIConfiguration.m */; };
 		BFA44034175A1EFD00D4B8E5 /* game.json in Resources */ = {isa = PBXBuildFile; fileRef = BFA44033175A1EFD00D4B8E5 /* game.json */; };
 		BFAD126716F136A100F6D429 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126616F136A100F6D429 /* UIKit.framework */; };
 		BFAD126916F136A100F6D429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126816F136A100F6D429 /* Foundation.framework */; };
@@ -43,6 +43,8 @@
 		BFAD12B116F1376600F6D429 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12AB16F1376600F6D429 /* main.m */; };
 		BFB7CC93175B737B0055DBF0 /* GIGame.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB7CC92175B737B0055DBF0 /* GIGame.m */; };
 		BFB7CC97175B7D480055DBF0 /* GINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB7CC96175B7D480055DBF0 /* GINavigationController.m */; };
+		BFBAF9F1175B881400AA0AE1 /* GIGame+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBAF9F0175B881400AA0AE1 /* GIGame+Factory.m */; };
+		BFBAF9F4175B892500AA0AE1 /* GILevel+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBAF9F3175B892400AA0AE1 /* GILevel+Factory.m */; };
 		BFBDD2121701092000F5698E /* GIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBDD2111701092000F5698E /* GIMainViewController.m */; };
 		BFF9294217243E0300F230C6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9291017243E0300F230C6 /* Default-568h@2x.png */; };
 		BFF9294317243E0300F230C6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9291117243E0300F230C6 /* Default.png */; };
@@ -142,8 +144,8 @@
 		BF9179631724716D00B136E2 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		BF9179641724716D00B136E2 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		BF9179651724716D00B136E2 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		BFA44030175A1D8700D4B8E5 /* GIDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIDataSource.h; sourceTree = "<group>"; };
-		BFA44031175A1D8700D4B8E5 /* GIDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIDataSource.m; sourceTree = "<group>"; };
+		BFA44030175A1D8700D4B8E5 /* GIConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIConfiguration.h; sourceTree = "<group>"; };
+		BFA44031175A1D8700D4B8E5 /* GIConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIConfiguration.m; sourceTree = "<group>"; };
 		BFA44033175A1EFD00D4B8E5 /* game.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game.json; sourceTree = "<group>"; };
 		BFAD126316F136A100F6D429 /* GuessItBSI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessItBSI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAD126616F136A100F6D429 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -165,6 +167,10 @@
 		BFB7CC92175B737B0055DBF0 /* GIGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGame.m; sourceTree = "<group>"; };
 		BFB7CC95175B7D480055DBF0 /* GINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GINavigationController.h; sourceTree = "<group>"; };
 		BFB7CC96175B7D480055DBF0 /* GINavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GINavigationController.m; sourceTree = "<group>"; };
+		BFBAF9EF175B881400AA0AE1 /* GIGame+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GIGame+Factory.h"; sourceTree = "<group>"; };
+		BFBAF9F0175B881400AA0AE1 /* GIGame+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GIGame+Factory.m"; sourceTree = "<group>"; };
+		BFBAF9F2175B892400AA0AE1 /* GILevel+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GILevel+Factory.h"; sourceTree = "<group>"; };
+		BFBAF9F3175B892400AA0AE1 /* GILevel+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GILevel+Factory.m"; sourceTree = "<group>"; };
 		BFBDD2101701092000F5698E /* GIMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIMainViewController.h; sourceTree = "<group>"; };
 		BFBDD2111701092000F5698E /* GIMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIMainViewController.m; sourceTree = "<group>"; };
 		BFF5A2E4171EB74E00F401B3 /* GIDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIDefinitions.h; sourceTree = "<group>"; };
@@ -254,10 +260,14 @@
 		BF41EA91170BB48D006540E7 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				BF6943B9171CA244000F74E0 /* GILevel+PrettyDescription.h */,
-				BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */,
+				BFBAF9EF175B881400AA0AE1 /* GIGame+Factory.h */,
+				BFBAF9F0175B881400AA0AE1 /* GIGame+Factory.m */,
 				BF6943BC171CA2AD000F74E0 /* GIGame+PrettyDescription.h */,
 				BF6943BD171CA2AD000F74E0 /* GIGame+PrettyDescription.m */,
+				BFBAF9F2175B892400AA0AE1 /* GILevel+Factory.h */,
+				BFBAF9F3175B892400AA0AE1 /* GILevel+Factory.m */,
+				BF6943B9171CA244000F74E0 /* GILevel+PrettyDescription.h */,
+				BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */,
 				BFF9E7371727F815003B4385 /* NSString+RandomString.h */,
 				BFF9E7381727F815003B4385 /* NSString+RandomString.m */,
 				BFF9297117243EF900F230C6 /* UIFont+GuessItFonts.h */,
@@ -403,8 +413,8 @@
 			children = (
 				BFAD12A816F1376600F6D429 /* GIAppDelegate.h */,
 				BFAD12A916F1376600F6D429 /* GIAppDelegate.m */,
-				BFA44030175A1D8700D4B8E5 /* GIDataSource.h */,
-				BFA44031175A1D8700D4B8E5 /* GIDataSource.m */,
+				BFA44030175A1D8700D4B8E5 /* GIConfiguration.h */,
+				BFA44031175A1D8700D4B8E5 /* GIConfiguration.m */,
 				BFF5A2E4171EB74E00F401B3 /* GIDefinitions.h */,
 				BF291E8B174ECA320066D5EF /* GIDefinitions.m */,
 				BFAD12AA16F1376600F6D429 /* GuessItBSI-Prefix.pch */,
@@ -760,9 +770,11 @@
 				BF1835EB172DC49D00E2CB5F /* UIImage+FromColor.m in Sources */,
 				BF1835EE172DEA1200E2CB5F /* GIPlaceholderView.m in Sources */,
 				BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */,
-				BFA44032175A1D8700D4B8E5 /* GIDataSource.m in Sources */,
+				BFA44032175A1D8700D4B8E5 /* GIConfiguration.m in Sources */,
 				BFB7CC93175B737B0055DBF0 /* GIGame.m in Sources */,
 				BFB7CC97175B7D480055DBF0 /* GINavigationController.m in Sources */,
+				BFBAF9F1175B881400AA0AE1 /* GIGame+Factory.m in Sources */,
+				BFBAF9F4175B892500AA0AE1 /* GILevel+Factory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

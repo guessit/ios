@@ -1,0 +1,191 @@
+{
+  "name": "GuessIt!",
+  "levels": [
+    {
+      "image": "001",
+      "answer": "firebird",
+      "hints": [],
+      "category": "Banco de Dados"
+    },
+    {
+      "image": "002",
+      "answer": "mysql",
+      "hints": [],
+      "category": "Banco de Dados"
+    },
+    {
+      "image": "003",
+      "answer": "oracle",
+      "hints": [],
+      "category": "Banco de Dados"
+    },
+    {
+      "image": "004",
+      "answer": "postgresql",
+      "hints": [],
+      "category": "Banco de Dados"
+    },
+    {
+      "image": "005",
+      "answer": "sqlite",
+      "hints": [],
+      "category": "Banco de Dados"
+    },
+    {
+      "image": "006",
+      "answer": "sql server",
+      "hints": [],
+      "category": "Banco de Dados"
+    },
+    {
+      "image": "007",
+      "answer": "drupal",
+      "hints": [],
+      "category": "Framework"
+    },
+    {
+      "image": "008",
+      "answer": "rails",
+      "hints": [],
+      "category": "Framework"
+    },
+    {
+      "image": "009",
+      "answer": "wordpress",
+      "hints": [],
+      "category": "Framework"
+    },
+    {
+      "image": "010",
+      "answer": "zend",
+      "hints": [],
+      "category": "Framework"
+    },
+    {
+      "image": "011",
+      "answer": "coffeescript",
+      "hints": [],
+      "category": "Linguagem de Programação"
+    },
+    {
+      "image": "012",
+      "answer": "jquery",
+      "hints": [],
+      "category": "Framework"
+    },
+    {
+      "image": "013",
+      "answer": "sinatra",
+      "hints": [],
+      "category": "Framework"
+    },
+    {
+      "image": "014",
+      "answer": "eclipse",
+      "hints": [],
+      "category": "IDE"
+    },
+    {
+      "image": "015",
+      "answer": "mono develop",
+      "hints": [],
+      "category": "IDE"
+    },
+    {
+      "image": "016",
+      "answer": "netbeans",
+      "hints": [],
+      "category": "IDE"
+    },
+    {
+      "image": "017",
+      "answer": "visual studio",
+      "hints": [],
+      "category": "IDE"
+    },
+    {
+      "image": "018",
+      "answer": "xcode",
+      "hints": [],
+      "category": "IDE"
+    },
+    {
+      "image": "019",
+      "answer": "java",
+      "hints": [],
+      "category": "Linguagem de Programação"
+    },
+    {
+      "image": "020",
+      "answer": "php",
+      "hints": [],
+      "category": "Linguagem de Programação"
+    },
+    {
+      "image": "021",
+      "answer": "python",
+      "hints": [],
+      "category": "Linguagem de Programação"
+    },
+    {
+      "image": "022",
+      "answer": "ruby",
+      "hints": [],
+      "category": "Linguagem de Programação"
+    },
+    {
+      "image": "023",
+      "answer": "emacs",
+      "hints": [],
+      "category": "Editor de Texto"
+    },
+    {
+      "image": "024",
+      "answer": "sublime text",
+      "hints": [],
+      "category": "Editor de Texto"
+    },
+    {
+      "image": "025",
+      "answer": "vim",
+      "hints": [],
+      "category": "Editor de Texto"
+    },
+    {
+      "image": "026",
+      "answer": "apache",
+      "hints": [],
+      "category": "Ferramenta"
+    },
+    {
+      "image": "027",
+      "answer": "git",
+      "hints": [],
+      "category": "Ferramenta"
+    },
+    {
+      "image": "028",
+      "answer": "subversion",
+      "hints": [],
+      "category": "Ferramenta"
+    },
+    {
+      "image": "029",
+      "answer": "azure",
+      "hints": [],
+      "category": "Ferramenta"
+    },
+    {
+      "image": "030",
+      "answer": "github",
+      "hints": [],
+      "category": "Ferramenta"
+    },
+    {
+      "image": "031",
+      "answer": "heroku",
+      "hints": [],
+      "category": "Ferramenta"
+    }
+  ]
+}

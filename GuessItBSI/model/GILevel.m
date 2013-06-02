@@ -8,7 +8,7 @@
 
 #import "GILevel.h"
 
-#import "GIGame.h"
+#import "GIConfiguration.h"
 
 @interface GILevel()
 
@@ -58,7 +58,7 @@
 }
 
 - (BOOL)isFinished {
-    return [[GIGame finishedLevelsName] containsObject:self.imageName];
+    return [[GIConfiguration sharedInstance].finishedLevelsName containsObject:self.imageName];
 }
 
 #pragma mark - Private Interface
@@ -78,7 +78,8 @@
 }
 
 - (void)_markFinished {
-    NSMutableArray *correctItems = [NSMutableArray arrayWithArray:[GIGame finishedLevelsName]];
+    NSArray *finishedLevels = [GIConfiguration sharedInstance].finishedLevelsName;
+    NSMutableArray *correctItems = [NSMutableArray arrayWithArray:finishedLevels];
     [correctItems addObject:self.imageName];
 
     [[NSUserDefaults standardUserDefaults] setObject:correctItems forKey:GI_FINISHED_LEVELS];
