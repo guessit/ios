@@ -90,7 +90,6 @@
 		BFF9297017243E1900F230C6 /* Lobster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF9296F17243E1900F230C6 /* Lobster.ttf */; };
 		BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */; };
 		BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF92975172443AC00F230C6 /* GIShineLabel.m */; };
-		BFF9E72D1727F44A003B4385 /* GIOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E72C1727F44A003B4385 /* GIOptionsViewController.m */; };
 		BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7381727F815003B4385 /* NSString+RandomString.m */; };
 		BFFC5013172A9ACD008DC742 /* UIView+SizingAndPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFC5012172A9ACD008DC742 /* UIView+SizingAndPositioning.m */; };
 /* End PBXBuildFile section */
@@ -221,8 +220,6 @@
 		BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+GuessItFonts.m"; sourceTree = "<group>"; };
 		BFF92974172443AC00F230C6 /* GIShineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIShineLabel.h; sourceTree = "<group>"; };
 		BFF92975172443AC00F230C6 /* GIShineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIShineLabel.m; sourceTree = "<group>"; };
-		BFF9E72B1727F44A003B4385 /* GIOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIOptionsViewController.h; sourceTree = "<group>"; };
-		BFF9E72C1727F44A003B4385 /* GIOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIOptionsViewController.m; sourceTree = "<group>"; };
 		BFF9E7371727F815003B4385 /* NSString+RandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RandomString.h"; sourceTree = "<group>"; };
 		BFF9E7381727F815003B4385 /* NSString+RandomString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RandomString.m"; sourceTree = "<group>"; };
 		BFFC5011172A9ACD008DC742 /* UIView+SizingAndPositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SizingAndPositioning.h"; sourceTree = "<group>"; };
@@ -424,8 +421,6 @@
 				BFBDD2111701092000F5698E /* GIMainViewController.m */,
 				BFB7CC95175B7D480055DBF0 /* GINavigationController.h */,
 				BFB7CC96175B7D480055DBF0 /* GINavigationController.m */,
-				BFF9E72B1727F44A003B4385 /* GIOptionsViewController.h */,
-				BFF9E72C1727F44A003B4385 /* GIOptionsViewController.m */,
 				BF1F29B11707617700A83FE3 /* GIViewController.h */,
 				BF1F29B21707617700A83FE3 /* GIViewController.m */,
 			);
@@ -731,7 +726,6 @@
 				BF6943BE171CA2AD000F74E0 /* GIGame+PrettyDescription.m in Sources */,
 				BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */,
 				BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */,
-				BFF9E72D1727F44A003B4385 /* GIOptionsViewController.m in Sources */,
 				BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */,
 				BFFC5013172A9ACD008DC742 /* UIView+SizingAndPositioning.m in Sources */,
 				BF1835D5172C3D1D00E2CB5F /* GINavigationBar.m in Sources */,

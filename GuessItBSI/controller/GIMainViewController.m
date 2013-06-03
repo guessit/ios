@@ -58,6 +58,10 @@
 
 #pragma mark - UIViewController Methods
 
+- (void)_resetTouched:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setObject:@[] forKey:GI_FINISHED_LEVELS];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -65,6 +69,14 @@
     [self.view addSubview:self.tapToPlayLabel];
 
     self.view.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
+
+    UIButton *resetButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [resetButton addTarget:self action:@selector(_resetTouched:) forControlEvents:UIControlEventTouchUpInside];
+    [resetButton setTitle:@"Reset" forState:UIControlStateNormal];
+    resetButton.frame = CGRectMake(self.view.center.x - 50.f, self.view.bounds.size.height - 60.f, 100.f, 40.f);
+
+    [self.view addSubview:resetButton];
+
 
     UITapGestureRecognizer *tapGesture = [UITapGestureRecognizer gestureRecognizerWithTarget:self
                                                                                       action:@selector(_tapRecognized:)];
