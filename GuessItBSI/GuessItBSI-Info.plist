@@ -38,6 +38,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Lobster.ttf</string>
+		<string>JotiOne-Regular.ttf</string>
 	</array>
 	<key>UIPrerenderedIcon</key>
 	<true/>
