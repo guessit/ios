@@ -14,7 +14,6 @@
 
 @interface GIAnswerView ()
 
-@property (nonatomic, strong, readonly) NSString *currentAnswer;
 @property (nonatomic, strong) UIView *containerView;
 @property (nonatomic, strong) NSMutableArray *placeholderViews;
 @property (nonatomic, strong) GILetterView *zoomedInLetter;
@@ -28,23 +27,26 @@
 
 #pragma mark - Getter
 
-- (NSString *)currentAnswer {
-    NSMutableString *currentAnswer = [NSMutableString stringWithCapacity:self.placeholderViews.count];
+- (NSString *)answer {
+    NSMutableString *answer = [NSMutableString stringWithCapacity:self.correctAnswer.length];
     for (GIPlaceholderView *placeholder in self.placeholderViews) {
         NSString *letter = @" ";
         if (placeholder.letter) letter = placeholder.letter;
+        if (placeholder.placedAfterSpace) [answer appendString:@" "];
 
-        [currentAnswer appendString:letter];
+        [answer appendString:letter];
     }
 
-    return currentAnswer;
+    NSLog(@"Current Answer: %@", answer);
+
+    return answer;
 }
 
 #pragma mark - Setter
 
-- (void)setAnswer:(NSString *)answer {
-    if (answer != _answer) {
-        _answer = answer;
+- (void)setCorrectAnswer:(NSString *)correctAnswer {
+    if (correctAnswer != _correctAnswer) {
+        _correctAnswer = correctAnswer;
 
         [self _generateAnswerPlaceholder];
     }
@@ -73,9 +75,9 @@
 
     GIPlaceholderView *placeholderView = self.placeholderViews.firstObject;
 
-    NSInteger noSpaces = [self.answer componentsSeparatedByString:@" "].count - 1;
+    NSInteger noSpaces = [self.correctAnswer componentsSeparatedByString:@" "].count - 1;
 
-    CGFloat width = (2 + noSpaces) * GI_ANSWER_PLACEHOLDER_SPACE_WIDTH + (self.answer.length - noSpaces - 1) * GI_ANSWER_PLACEHOLDER_PADDING + self.placeholderViews.count * placeholderView.width;
+    CGFloat width = (2 + noSpaces) * GI_ANSWER_PLACEHOLDER_SPACE_WIDTH + (self.correctAnswer.length - noSpaces - 1) * GI_ANSWER_PLACEHOLDER_PADDING + self.placeholderViews.count * placeholderView.width;
     CGFloat height = placeholderView.height;
 
     self.containerView.frame = CGRectMake(0.f, 0.f, width, height);
@@ -83,8 +85,8 @@
 
     CGFloat xOffset = GI_ANSWER_PLACEHOLDER_SPACE_WIDTH;
     NSInteger spaces = 0;
-    for (NSInteger i = 0; i < self.answer.length; i++) {
-        NSString *letter = [self.answer substringWithRange:NSMakeRange(i, 1)];
+    for (NSInteger i = 0; i < self.correctAnswer.length; i++) {
+        NSString *letter = [self.correctAnswer substringWithRange:NSMakeRange(i, 1)];
 
         GIPlaceholderView *view = [self.placeholderViews objectAtIndex:i - spaces];
         CGRect frame = view.frame;
@@ -92,6 +94,7 @@
         view.frame = frame;
 
         if ([letter isEqualToString:@" "]) {
+            view.placedAfterSpace = YES;
             xOffset += GI_ANSWER_PLACEHOLDER_SPACE_WIDTH;
             spaces++;
         } else {
@@ -110,17 +113,17 @@
 - (void)_generateAnswerPlaceholder {
     [self.placeholderViews makeObjectsPerformSelector:@selector(removeFromSuperview)];
 
-    NSInteger noSpaces = [self.answer componentsSeparatedByString:@" "].count - 1;
-    CGFloat totalPadding = (2 + noSpaces) * GI_ANSWER_PLACEHOLDER_SPACE_WIDTH + (self.answer.length - noSpaces - 1) * GI_ANSWER_PLACEHOLDER_PADDING;
+    NSInteger noSpaces = [self.correctAnswer componentsSeparatedByString:@" "].count - 1;
+    CGFloat totalPadding = (2 + noSpaces) * GI_ANSWER_PLACEHOLDER_SPACE_WIDTH + (self.correctAnswer.length - noSpaces - 1) * GI_ANSWER_PLACEHOLDER_PADDING;
 
-    CGFloat width = (self.width - totalPadding) / self.answer.length;
+    CGFloat width = (self.width - totalPadding) / self.correctAnswer.length;
     if (width > GI_ANSWER_PLACEHOLDER_MAX_WIDTH) {
         width = GI_ANSWER_PLACEHOLDER_MAX_WIDTH;
     }
 
     CGFloat height = GI_ANSWER_PLACEHOLDER_MAX_WIDTH / GI_ANSWER_PLACEHOLDER_MAX_HEIGHT * width;
 
-    NSInteger noLetters = self.answer.length - noSpaces;
+    NSInteger noLetters = self.correctAnswer.length - noSpaces;
     self.placeholderViews = [NSMutableArray arrayWithCapacity:noLetters];
     for (NSInteger idx = 0; idx < noLetters; idx++) {
         GIPlaceholderView *placeholder = [GIPlaceholderView viewWithFrame:CGRectMake(0.f, 0.f, width, height)];
@@ -153,11 +156,6 @@
             break;
         }
     }
-
-    NSString *trimmedAnswer = [self.answer stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    if ([trimmedAnswer localizedCaseInsensitiveCompare:self.currentAnswer] == NSOrderedSame) {
-        [self.inputViewDelegate userGuessedCorrectAnswer:self];
-    }
 }
 
 #pragma mark - UIResponder Methods
@@ -182,21 +180,20 @@
             [self.zoomedInLetter zoomOut];
             self.zoomedInLetter = nil;
         }
-
-//        for (GILetterView *letterView in self.letterViews) {
-//            point = [touch locationInView:letterView];
-//            if ([letterView pointInside:point withEvent:event]) {
-//                self.zoomedInLetter = letterView;
-//                [self.zoomedInLetter zoomIn];
-//                break;
-//            }
-//        }
     }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     if (self.zoomedInLetter) {
-        [self.inputViewDelegate answerView:self didRemoveLetterView:self.zoomedInLetter];
+        BOOL canRemove = YES;
+
+        if ([self.delegate respondsToSelector:@selector(answerView:canRemoveLetterView:)]) {
+            canRemove = [self.delegate answerView:self canRemoveLetterView:self.zoomedInLetter];
+        }
+
+        if (canRemove) {
+            [self.delegate answerView:self didRemoveLetterView:self.zoomedInLetter];
+        }
     }
 
     self.zoomedInLetter = nil;

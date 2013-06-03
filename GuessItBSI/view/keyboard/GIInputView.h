@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 
 #import "GILevel.h"
+#import "GIInputViewDelegate.h"
 
 @interface GIInputView : UIView <UIInputViewAudioFeedback>
 
+@property (nonatomic, weak) id<GIInputViewDelegate> delegate;
 @property (nonatomic, strong) GILevel *level;
 
 @end

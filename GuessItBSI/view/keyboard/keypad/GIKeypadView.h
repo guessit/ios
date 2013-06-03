@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GIInputViewDelegate.h"
+#import "GIKeypadViewDelegate.h"
 
 @interface GIKeypadView : UIView 
 
-@property (nonatomic, weak) id<GIInputViewDelegate> inputViewDelegate;
-@property (nonatomic, strong) NSString *answer;
+@property (nonatomic, weak) id<GIKeypadViewDelegate> delegate;
+@property (nonatomic, copy) NSString *correctAnswer;
 
 - (void)addLetterView:(GILetterView *)letterView;
 

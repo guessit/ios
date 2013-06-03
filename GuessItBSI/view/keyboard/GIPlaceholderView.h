@@ -13,6 +13,7 @@
 @interface GIPlaceholderView : UIView
 
 @property (nonatomic, strong, readonly) NSString *letter;
+@property (nonatomic, assign) BOOL placedAfterSpace;
 
 - (BOOL)canDisplayLetterView;
 - (void)displayLetterView:(GILetterView *)letterView;

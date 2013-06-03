@@ -69,9 +69,9 @@
 
 #pragma mark - Setter
 
-- (void)setAnswer:(NSString *)answer {
-    if (answer != _answer) {
-        _answer = answer;
+- (void)setCorrectAnswer:(NSString *)correctAnswer {
+    if (correctAnswer != _correctAnswer) {
+        _correctAnswer = correctAnswer;
 
         [self _generateKeypad];
     }
@@ -166,10 +166,16 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     if (self.zoomedInLetter) {
-        if ([self.inputViewDelegate keypadView:self canAddLetterView:self.zoomedInLetter]) {
-            [self.inputViewDelegate keypadView:self didAddLetterView:self.zoomedInLetter];
+        BOOL canAdd = YES;
+
+        if ([self.delegate respondsToSelector:@selector(keypadView:canAddLetterView:)]) {
+            canAdd = [self.delegate keypadView:self canAddLetterView:self.zoomedInLetter];
+        }
+
+        if (canAdd) {
+            [self.delegate keypadView:self didAddLetterView:self.zoomedInLetter];
         } else {
-            #warning TODO: make PANNNNNN sound
+            #warning TODO: MAKE PANNNNN sound
             [self.zoomedInLetter zoomOut];
         }
     }
@@ -192,7 +198,7 @@
 }
 
 - (void)_generateKeypad {
-    NSString *sanitizedAnswer = [self.answer stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSString *sanitizedAnswer = [self.correctAnswer stringByReplacingOccurrencesOfString:@" " withString:@""];
     [self.letterViews enumerateObjectsUsingBlock:^(GILetterView *letterView, NSUInteger idx, BOOL *stop) {
         NSString *letter = @"";
         if (idx < sanitizedAnswer.length) {

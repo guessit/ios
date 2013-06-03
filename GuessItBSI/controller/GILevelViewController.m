@@ -12,16 +12,15 @@
 #import "GIGame.h"
 #import "GILevel.h"
 #import "GILevelView.h"
+#import "GILevelViewDelegate.h"
 
-@interface GILevelViewController() <UIAlertViewDelegate>
+@interface GILevelViewController() <GILevelViewDelegate, UIAlertViewDelegate>
 
-@property (nonatomic, strong, readonly) GILevelView *levelView;
+@property (nonatomic, strong) GILevelView *levelView;
 @property (nonatomic, strong) UIBarButtonItem *reloadBarButtonItem;
 
 - (void)_loadRandomLevel;
 - (void)_reloadTouched:(id)sender;
-
-- (void)_playerGuessedCorrectAnswer:(NSNotification *)notification;
 
 @end
 
@@ -38,7 +37,11 @@
 #pragma mark - Getter
 
 - (GILevelView *)levelView {
-    return (GILevelView *)self.view;
+    if (!_levelView) {
+        _levelView = [GILevelView view];
+        _levelView.levelDelegate = self;
+    }
+    return _levelView;
 }
 
 - (UIBarButtonItem *)reloadBarButtonItem {
@@ -62,12 +65,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view = [GILevelView view];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(_playerGuessedCorrectAnswer:)
-                                                 name:GIPlayerGuessedCorrectAnswer
-                                               object:nil];
+    self.view = self.levelView;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -95,12 +93,18 @@
     [self _loadRandomLevel];
 }
 
-- (void)_playerGuessedCorrectAnswer:(NSNotification *)notification {
-    [[[UIAlertView alloc] initWithTitle:@"YAY"
-                                message:@"YAYYYYYYYY"
-                               delegate:self
-                      cancelButtonTitle:@"Ok"
-                      otherButtonTitles:nil] show];
+#pragma mark - GILevelViewDelegate Methods
+
+- (void)levelView:(GILevelView *)levelView didFinishGuessingLevel:(GILevel *)level withResult:(GIGuessingResult)guessingResult {
+    if (guessingResult == GIGuessingResultCorrect) {
+        [[[UIAlertView alloc] initWithTitle:@"YAY"
+                                    message:@"YAYYYYYYYY"
+                                   delegate:self
+                          cancelButtonTitle:@"Ok"
+                          otherButtonTitles:nil] show];
+    } else {
+
+    }
 }
 
 #pragma mark - UIAlertViewDelegate Methods

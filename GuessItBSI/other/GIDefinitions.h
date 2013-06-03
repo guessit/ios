@@ -10,8 +10,6 @@
 
 #define GI_FINISHED_LEVELS @"GuessItFinishedLevels"
 
-#pragma mark - NSNotification Names
-
 #pragma mark - Background Colors
 
 #define GI_BACKGROUND_MAIN_COLOR [UIColor colorWithWhite:0.200 alpha:1.000]
@@ -67,8 +65,3 @@
 #define GI_ANSWER_PLACEHOLDER_MAX_HEIGHT 45.f
 #define GI_ANSWER_PLACEHOLDER_PADDING 2.f
 #define GI_ANSWER_PLACEHOLDER_SPACE_WIDTH 8.f
-
-
-#pragma mark - Notifications
-
-extern NSString *const GIPlayerGuessedCorrectAnswer;

@@ -7,5 +7,3 @@
 //
 
 #import "GIDefinitions.h"
-
-NSString *const GIPlayerGuessedCorrectAnswer = @"GIPlayerGuessedCorrectAnswer";

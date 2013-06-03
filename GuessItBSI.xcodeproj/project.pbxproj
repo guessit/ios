@@ -9,12 +9,7 @@
 /* Begin PBXBuildFile section */
 		22089BA97554462C80199B37 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62620204B775499F949AB190 /* libPods.a */; };
 		BF1835D5172C3D1D00E2CB5F /* GINavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */; };
-		BF1835DC172CB0E500E2CB5F /* GILevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835DB172CB0E500E2CB5F /* GILevelView.m */; };
-		BF1835DF172D3E9E00E2CB5F /* GIInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835DE172D3E9E00E2CB5F /* GIInputView.m */; };
-		BF1835E2172D439000E2CB5F /* GIAnswerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835E1172D439000E2CB5F /* GIAnswerView.m */; };
-		BF1835E8172DB8F600E2CB5F /* GILetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835E7172DB8F600E2CB5F /* GILetterView.m */; };
 		BF1835EB172DC49D00E2CB5F /* UIImage+FromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835EA172DC49D00E2CB5F /* UIImage+FromColor.m */; };
-		BF1835EE172DEA1200E2CB5F /* GIPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835ED172DEA1200E2CB5F /* GIPlaceholderView.m */; };
 		BF1F29B01707347900A83FE3 /* GILevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29AF1707347800A83FE3 /* GILevel.m */; };
 		BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B21707617700A83FE3 /* GIViewController.m */; };
 		BF1F29B6170761D400A83FE3 /* GILevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B5170761D400A83FE3 /* GILevelViewController.m */; };
@@ -52,6 +47,12 @@
 		BF71256A175D3B05007F99EB /* 029.png in Resources */ = {isa = PBXBuildFile; fileRef = BF71254B175D3B05007F99EB /* 029.png */; };
 		BF71256B175D3B05007F99EB /* 030.png in Resources */ = {isa = PBXBuildFile; fileRef = BF71254C175D3B05007F99EB /* 030.png */; };
 		BF71256C175D3B05007F99EB /* 031.png in Resources */ = {isa = PBXBuildFile; fileRef = BF71254D175D3B05007F99EB /* 031.png */; };
+		BF71257B175D40D2007F99EB /* GIAnswerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712575175D40D2007F99EB /* GIAnswerView.m */; };
+		BF71257C175D40D2007F99EB /* GIKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712579175D40D2007F99EB /* GIKeypadView.m */; };
+		BF712583175D40F0007F99EB /* GIInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF71257E175D40F0007F99EB /* GIInputView.m */; };
+		BF712584175D40F0007F99EB /* GILetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712580175D40F0007F99EB /* GILetterView.m */; };
+		BF712585175D40F0007F99EB /* GIPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712582175D40F0007F99EB /* GIPlaceholderView.m */; };
+		BF71258B175D4238007F99EB /* GILevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712589175D4238007F99EB /* GILevelView.m */; };
 		BF91795817244A8200B136E2 /* shine_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF91795717244A8200B136E2 /* shine_mask@2x.png */; };
 		BF91796A1724716D00B136E2 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9179601724716D00B136E2 /* Icon-Small.png */; };
 		BF91796B1724716D00B136E2 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9179611724716D00B136E2 /* Icon-Small@2x.png */; };
@@ -90,7 +91,6 @@
 		BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */; };
 		BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF92975172443AC00F230C6 /* GIShineLabel.m */; };
 		BFF9E72D1727F44A003B4385 /* GIOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E72C1727F44A003B4385 /* GIOptionsViewController.m */; };
-		BFF9E7331727F599003B4385 /* GIKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7321727F599003B4385 /* GIKeypadView.m */; };
 		BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7381727F815003B4385 /* NSString+RandomString.m */; };
 		BFFC5013172A9ACD008DC742 /* UIView+SizingAndPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFC5012172A9ACD008DC742 /* UIView+SizingAndPositioning.m */; };
 /* End PBXBuildFile section */
@@ -110,18 +110,8 @@
 		BD30177A3D9541AEB54F865D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		BF1835D3172C3D1D00E2CB5F /* GINavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GINavigationBar.h; sourceTree = "<group>"; };
 		BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GINavigationBar.m; sourceTree = "<group>"; };
-		BF1835DA172CB0E500E2CB5F /* GILevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelView.h; sourceTree = "<group>"; };
-		BF1835DB172CB0E500E2CB5F /* GILevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelView.m; sourceTree = "<group>"; };
-		BF1835DD172D3E9E00E2CB5F /* GIInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIInputView.h; sourceTree = "<group>"; };
-		BF1835DE172D3E9E00E2CB5F /* GIInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIInputView.m; sourceTree = "<group>"; };
-		BF1835E0172D439000E2CB5F /* GIAnswerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIAnswerView.h; sourceTree = "<group>"; };
-		BF1835E1172D439000E2CB5F /* GIAnswerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIAnswerView.m; sourceTree = "<group>"; };
-		BF1835E6172DB8F600E2CB5F /* GILetterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILetterView.h; sourceTree = "<group>"; };
-		BF1835E7172DB8F600E2CB5F /* GILetterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILetterView.m; sourceTree = "<group>"; };
 		BF1835E9172DC49D00E2CB5F /* UIImage+FromColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FromColor.h"; sourceTree = "<group>"; };
 		BF1835EA172DC49D00E2CB5F /* UIImage+FromColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FromColor.m"; sourceTree = "<group>"; };
-		BF1835EC172DEA1100E2CB5F /* GIPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIPlaceholderView.h; sourceTree = "<group>"; };
-		BF1835ED172DEA1200E2CB5F /* GIPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIPlaceholderView.m; sourceTree = "<group>"; };
 		BF1F29AE1707347800A83FE3 /* GILevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevel.h; sourceTree = "<group>"; };
 		BF1F29AF1707347800A83FE3 /* GILevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevel.m; sourceTree = "<group>"; };
 		BF1F29B11707617700A83FE3 /* GIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIViewController.h; sourceTree = "<group>"; };
@@ -164,7 +154,22 @@
 		BF71254B175D3B05007F99EB /* 029.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 029.png; sourceTree = "<group>"; };
 		BF71254C175D3B05007F99EB /* 030.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 030.png; sourceTree = "<group>"; };
 		BF71254D175D3B05007F99EB /* 031.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 031.png; sourceTree = "<group>"; };
-		BF86A52D174B06A1002A0FBD /* GIInputViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIInputViewDelegate.h; sourceTree = "<group>"; };
+		BF712574175D40D2007F99EB /* GIAnswerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIAnswerView.h; sourceTree = "<group>"; };
+		BF712575175D40D2007F99EB /* GIAnswerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIAnswerView.m; sourceTree = "<group>"; };
+		BF712576175D40D2007F99EB /* GIAnswerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIAnswerViewDelegate.h; sourceTree = "<group>"; };
+		BF712578175D40D2007F99EB /* GIKeypadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKeypadView.h; sourceTree = "<group>"; };
+		BF712579175D40D2007F99EB /* GIKeypadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKeypadView.m; sourceTree = "<group>"; };
+		BF71257A175D40D2007F99EB /* GIKeypadViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKeypadViewDelegate.h; sourceTree = "<group>"; };
+		BF71257D175D40F0007F99EB /* GIInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIInputView.h; sourceTree = "<group>"; };
+		BF71257E175D40F0007F99EB /* GIInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIInputView.m; sourceTree = "<group>"; };
+		BF71257F175D40F0007F99EB /* GILetterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILetterView.h; sourceTree = "<group>"; };
+		BF712580175D40F0007F99EB /* GILetterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILetterView.m; sourceTree = "<group>"; };
+		BF712581175D40F0007F99EB /* GIPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIPlaceholderView.h; sourceTree = "<group>"; };
+		BF712582175D40F0007F99EB /* GIPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIPlaceholderView.m; sourceTree = "<group>"; };
+		BF712586175D4104007F99EB /* GIInputViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIInputViewDelegate.h; sourceTree = "<group>"; };
+		BF712588175D4238007F99EB /* GILevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelView.h; sourceTree = "<group>"; };
+		BF712589175D4238007F99EB /* GILevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelView.m; sourceTree = "<group>"; };
+		BF71258A175D4238007F99EB /* GILevelViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelViewDelegate.h; sourceTree = "<group>"; };
 		BF91795717244A8200B136E2 /* shine_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shine_mask@2x.png"; sourceTree = "<group>"; };
 		BF9179601724716D00B136E2 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		BF9179611724716D00B136E2 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
@@ -218,8 +223,6 @@
 		BFF92975172443AC00F230C6 /* GIShineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIShineLabel.m; sourceTree = "<group>"; };
 		BFF9E72B1727F44A003B4385 /* GIOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIOptionsViewController.h; sourceTree = "<group>"; };
 		BFF9E72C1727F44A003B4385 /* GIOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIOptionsViewController.m; sourceTree = "<group>"; };
-		BFF9E7311727F599003B4385 /* GIKeypadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKeypadView.h; sourceTree = "<group>"; };
-		BFF9E7321727F599003B4385 /* GIKeypadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKeypadView.m; sourceTree = "<group>"; };
 		BFF9E7371727F815003B4385 /* NSString+RandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RandomString.h"; sourceTree = "<group>"; };
 		BFF9E7381727F815003B4385 /* NSString+RandomString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RandomString.m"; sourceTree = "<group>"; };
 		BFFC5011172A9ACD008DC742 /* UIView+SizingAndPositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SizingAndPositioning.h"; sourceTree = "<group>"; };
@@ -275,13 +278,54 @@
 			path = categories;
 			sourceTree = "<group>";
 		};
-		BF86A52C174B068A002A0FBD /* Delegate */ = {
+		BF712572175D40D2007F99EB /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				BF86A52D174B06A1002A0FBD /* GIInputViewDelegate.h */,
+				BF71257D175D40F0007F99EB /* GIInputView.h */,
+				BF71257E175D40F0007F99EB /* GIInputView.m */,
+				BF712586175D4104007F99EB /* GIInputViewDelegate.h */,
+				BF71257F175D40F0007F99EB /* GILetterView.h */,
+				BF712580175D40F0007F99EB /* GILetterView.m */,
+				BF712581175D40F0007F99EB /* GIPlaceholderView.h */,
+				BF712582175D40F0007F99EB /* GIPlaceholderView.m */,
+				BF712573175D40D2007F99EB /* Answer */,
+				BF712577175D40D2007F99EB /* Keypad */,
 			);
-			name = Delegate;
-			path = delegate;
+			name = Keyboard;
+			path = keyboard;
+			sourceTree = "<group>";
+		};
+		BF712573175D40D2007F99EB /* Answer */ = {
+			isa = PBXGroup;
+			children = (
+				BF712574175D40D2007F99EB /* GIAnswerView.h */,
+				BF712575175D40D2007F99EB /* GIAnswerView.m */,
+				BF712576175D40D2007F99EB /* GIAnswerViewDelegate.h */,
+			);
+			name = Answer;
+			path = answer;
+			sourceTree = "<group>";
+		};
+		BF712577175D40D2007F99EB /* Keypad */ = {
+			isa = PBXGroup;
+			children = (
+				BF712578175D40D2007F99EB /* GIKeypadView.h */,
+				BF712579175D40D2007F99EB /* GIKeypadView.m */,
+				BF71257A175D40D2007F99EB /* GIKeypadViewDelegate.h */,
+			);
+			name = Keypad;
+			path = keypad;
+			sourceTree = "<group>";
+		};
+		BF712587175D4238007F99EB /* Level */ = {
+			isa = PBXGroup;
+			children = (
+				BF712588175D4238007F99EB /* GILevelView.h */,
+				BF712589175D4238007F99EB /* GILevelView.m */,
+				BF71258A175D4238007F99EB /* GILevelViewDelegate.h */,
+			);
+			name = Level;
+			path = level;
 			sourceTree = "<group>";
 		};
 		BF91795B1724716D00B136E2 /* icons */ = {
@@ -336,7 +380,6 @@
 				BFAD12A116F1376600F6D429 /* Controller */,
 				BFAD12A616F1376600F6D429 /* Model */,
 				BFAD12AC16F1376600F6D429 /* View */,
-				BF86A52C174B068A002A0FBD /* Delegate */,
 				BF41EA91170BB48D006540E7 /* Categories */,
 				BFAD12A716F1376600F6D429 /* Other */,
 				BFAD126D16F136A100F6D429 /* Supporting Files */,
@@ -421,9 +464,8 @@
 		BFAD12AC16F1376600F6D429 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BFB7CC94175B75FA0055DBF0 /* Keyboard */,
-				BF1835DA172CB0E500E2CB5F /* GILevelView.h */,
-				BF1835DB172CB0E500E2CB5F /* GILevelView.m */,
+				BF712572175D40D2007F99EB /* Keyboard */,
+				BF712587175D4238007F99EB /* Level */,
 				BFF92974172443AC00F230C6 /* GIShineLabel.h */,
 				BFF92975172443AC00F230C6 /* GIShineLabel.m */,
 				BF1835D3172C3D1D00E2CB5F /* GINavigationBar.h */,
@@ -431,23 +473,6 @@
 			);
 			name = View;
 			path = view;
-			sourceTree = "<group>";
-		};
-		BFB7CC94175B75FA0055DBF0 /* Keyboard */ = {
-			isa = PBXGroup;
-			children = (
-				BF1835E0172D439000E2CB5F /* GIAnswerView.h */,
-				BF1835E1172D439000E2CB5F /* GIAnswerView.m */,
-				BF1835DD172D3E9E00E2CB5F /* GIInputView.h */,
-				BF1835DE172D3E9E00E2CB5F /* GIInputView.m */,
-				BFF9E7311727F599003B4385 /* GIKeypadView.h */,
-				BFF9E7321727F599003B4385 /* GIKeypadView.m */,
-				BF1835E6172DB8F600E2CB5F /* GILetterView.h */,
-				BF1835E7172DB8F600E2CB5F /* GILetterView.m */,
-				BF1835EC172DEA1100E2CB5F /* GIPlaceholderView.h */,
-				BF1835ED172DEA1200E2CB5F /* GIPlaceholderView.m */,
-			);
-			name = Keyboard;
 			sourceTree = "<group>";
 		};
 		BFF9290E17243E0300F230C6 /* Resources */ = {
@@ -707,22 +732,22 @@
 				BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */,
 				BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */,
 				BFF9E72D1727F44A003B4385 /* GIOptionsViewController.m in Sources */,
-				BFF9E7331727F599003B4385 /* GIKeypadView.m in Sources */,
 				BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */,
 				BFFC5013172A9ACD008DC742 /* UIView+SizingAndPositioning.m in Sources */,
 				BF1835D5172C3D1D00E2CB5F /* GINavigationBar.m in Sources */,
-				BF1835DC172CB0E500E2CB5F /* GILevelView.m in Sources */,
-				BF1835DF172D3E9E00E2CB5F /* GIInputView.m in Sources */,
-				BF1835E2172D439000E2CB5F /* GIAnswerView.m in Sources */,
-				BF1835E8172DB8F600E2CB5F /* GILetterView.m in Sources */,
 				BF1835EB172DC49D00E2CB5F /* UIImage+FromColor.m in Sources */,
-				BF1835EE172DEA1200E2CB5F /* GIPlaceholderView.m in Sources */,
 				BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */,
 				BFA44032175A1D8700D4B8E5 /* GIConfiguration.m in Sources */,
 				BFB7CC93175B737B0055DBF0 /* GIGame.m in Sources */,
 				BFB7CC97175B7D480055DBF0 /* GINavigationController.m in Sources */,
 				BFBAF9F1175B881400AA0AE1 /* GIGame+Factory.m in Sources */,
 				BFBAF9F4175B892500AA0AE1 /* GILevel+Factory.m in Sources */,
+				BF71257B175D40D2007F99EB /* GIAnswerView.m in Sources */,
+				BF71257C175D40D2007F99EB /* GIKeypadView.m in Sources */,
+				BF712583175D40F0007F99EB /* GIInputView.m in Sources */,
+				BF712584175D40F0007F99EB /* GILetterView.m in Sources */,
+				BF712585175D40F0007F99EB /* GIPlaceholderView.m in Sources */,
+				BF71258B175D4238007F99EB /* GILevelView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

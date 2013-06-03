@@ -9,11 +9,12 @@
 #import "GIInputView.h"
 
 #import "GIAnswerView.h"
-#import "GIInputViewDelegate.h"
+#import "GIAnswerViewDelegate.h"
 #import "GIKeypadView.h"
+#import "GIKeypadViewDelegate.h"
 #import "UIView+SizingAndPositioning.h"
 
-@interface GIInputView () <GIInputViewDelegate>
+@interface GIInputView () <GIAnswerViewDelegate, GIKeypadViewDelegate>
 
 @property (nonatomic, strong) GIAnswerView *answerView;
 @property (nonatomic, strong) GIKeypadView *keypadView;
@@ -29,7 +30,7 @@
 - (GIAnswerView *)answerView {
     if (!_answerView) {
         _answerView = [GIAnswerView viewWithFrame:CGRectMake(0.f, 0.f, self.width, self.height - GI_KEYPAD_HEIGHT)];
-        _answerView.inputViewDelegate = self;
+        _answerView.delegate = self;
         _answerView.backgroundColor = GI_BACKGROUND_MAIN_DARKEST_COLOR;
     }
     return _answerView;
@@ -38,7 +39,7 @@
 - (GIKeypadView *)keypadView {
     if (!_keypadView) {
         _keypadView = [GIKeypadView viewWithFrame:CGRectMake(0.f, self.height - GI_KEYPAD_HEIGHT, self.width, GI_KEYPAD_HEIGHT)];
-        _keypadView.inputViewDelegate = self;
+        _keypadView.delegate = self;
         _keypadView.backgroundColor = GI_BACKGROUND_MAIN_DARKER_COLOR;
     }
     return _keypadView;
@@ -49,8 +50,8 @@
 - (void)setLevel:(GILevel *)level {
     _level = level;
 
-    self.answerView.answer = level.answer;
-    self.keypadView.answer = level.answer;
+    self.answerView.correctAnswer = level.answer;
+    self.keypadView.correctAnswer = level.answer;
 }
 
 #pragma mark - UIView Methods
@@ -85,7 +86,13 @@
     [self addSubview:self.keypadView];
 }
 
-#pragma mark - GIInputViewDelegate Methods
+#pragma mark - GIAnswerViewDelegate Methods
+
+- (void)answerView:(GIAnswerView *)answerView didRemoveLetterView:(GILetterView *)letterView {
+    [self.keypadView addLetterView:letterView];
+}
+
+#pragma mark - GIKeypadViewDelegate Methods
 
 - (BOOL)keypadView:(GIKeypadView *)keypadView canAddLetterView:(GILetterView *)letterView {
     return self.answerView.canAddLetter;
@@ -93,14 +100,10 @@
 
 - (void)keypadView:(GIKeypadView *)keypadView didAddLetterView:(GILetterView *)letterView {
     [self.answerView addLetterView:letterView];
-}
 
-- (void)answerView:(GIAnswerView *)answerView didRemoveLetterView:(GILetterView *)letterView {
-    [self.keypadView addLetterView:letterView];
-}
-
-- (void)userGuessedCorrectAnswer:(GIAnswerView *)answerView {
-    [[NSNotificationCenter defaultCenter] postNotificationName:GIPlayerGuessedCorrectAnswer object:self.level];
+    if (!self.answerView.canAddLetter) {
+        [self.delegate inputView:self didFinishGuessingWithAnswer:self.answerView.answer];
+    }
 }
 
 @end

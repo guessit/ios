@@ -9,10 +9,11 @@
 #import "GILevelView.h"
 
 #import "GIInputView.h"
+#import "GIInputViewDelegate.h"
 #import "UIView+SizingAndPositioning.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface GILevelView ()
+@interface GILevelView () <GIInputViewDelegate>
 
 @property (nonatomic, strong) UIView *imageViewFrame;
 @property (nonatomic, strong) UIImageView *imageView;
@@ -92,6 +93,7 @@
 - (UIView *)inputView {
     if (!_inputView) {
         _inputView = [GIInputView viewWithFrame:CGRectMake(0.f, 0.f, self.width, GI_INPUT_VIEW_HEIGHT)];
+        _inputView.delegate = self;
     }
 
     return _inputView;
@@ -113,6 +115,13 @@
     self.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
 
     [self addSubview:self.imageViewFrame];
+}
+
+#pragma mark - GIInputViewDelegate Methods
+
+- (void)inputView:(GIInputView *)inputView didFinishGuessingWithAnswer:(NSString *)answer {
+    GIGuessingResult guessingResult = [self.level guessWithAnwser:answer];
+    [self.levelDelegate levelView:self didFinishGuessingLevel:self.level withResult:guessingResult];
 }
 
 @end
