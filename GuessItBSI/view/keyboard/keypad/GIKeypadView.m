@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) UIView *lettersContainer;
 @property (nonatomic, strong) NSMutableArray *letterViews;
+@property (nonatomic, strong) UIButton *actionButton;
+
 @property (nonatomic, strong, readonly) NSString *letters;
 
 @property (nonatomic, weak) GILetterView *zoomedInLetter;
@@ -33,7 +35,7 @@
 
 - (UIView *)lettersContainer {
     if (!_lettersContainer) {
-        _lettersContainer = [UIView view];
+        _lettersContainer = [UIView viewWithFrame:CGRectMake(0.f, 0.f, self.width - GI_KEYPAD_ACTION_WIDTH, self.height)];
         _lettersContainer.backgroundColor = [UIColor clearColor];
 
         [self addSubview:_lettersContainer];
@@ -46,8 +48,18 @@
         NSInteger numberOfKeys = GI_KEYPAD_NO_ROWS * GI_KEYPAD_NO_COLUMNS;
         NSMutableArray *views = [NSMutableArray arrayWithCapacity:numberOfKeys];
 
+        CGFloat letterWidth = (self.lettersContainer.width - (GI_KEYPAD_NO_COLUMNS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_COLUMNS;
+        CGFloat letterHeight = (self.lettersContainer.height - (GI_KEYPAD_NO_ROWS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_ROWS;
+
         for (NSInteger i = 0; i < numberOfKeys; i++) {
-            GILetterView *letterView = [GILetterView view];
+            NSUInteger xIdx = i % GI_KEYPAD_NO_COLUMNS;
+            NSUInteger yIdx = i / GI_KEYPAD_NO_COLUMNS;
+            
+            CGFloat xOffset = xIdx * letterWidth + (xIdx + 1) * GI_KEYPAD_PADDING;
+            CGFloat yOffset = yIdx * letterHeight + (yIdx + 1) * GI_KEYPAD_PADDING;
+
+            GILetterView *letterView = [GILetterView viewWithFrame:CGRectMake(xOffset, yOffset, letterWidth, letterHeight)];
+
             [self.lettersContainer addSubview:letterView];
             [views addObject:letterView];
         }
@@ -55,6 +67,14 @@
         _letterViews = views;
     }
     return _letterViews;
+}
+
+- (UIButton *)actionButton {
+    if (!_actionButton) {
+        _actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _actionButton.backgroundColor = [UIColor yellowColor];
+    }
+    return _actionButton;
 }
 
 - (NSString *)letters {
@@ -108,23 +128,6 @@
     [super layoutSubviews];
 
     if (!self.initialized) {
-        CGFloat containerWidth = self.width - GI_KEYPAD_ACTION_WIDTH;
-        CGFloat containerHeight = self.height;
-
-        self.lettersContainer.frame = CGRectMake(0.f, 0.f, containerWidth, containerHeight);
-
-        CGFloat letterWidth = (containerWidth - (GI_KEYPAD_NO_COLUMNS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_COLUMNS;
-        CGFloat letterHeight = (containerHeight - (GI_KEYPAD_NO_ROWS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_ROWS;
-
-        [self.letterViews enumerateObjectsUsingBlock:^(GILetterView *view, NSUInteger idx, BOOL *stop) {
-            NSUInteger xIdx = idx % GI_KEYPAD_NO_COLUMNS;
-            NSUInteger yIdx = idx / GI_KEYPAD_NO_COLUMNS;
-
-            CGFloat xOffset = xIdx * letterWidth + (xIdx + 1) * GI_KEYPAD_PADDING;
-            CGFloat yOffset = yIdx * letterHeight + (yIdx + 1) * GI_KEYPAD_PADDING;
-
-            view.frame = CGRectMake(xOffset, yOffset, letterWidth, letterHeight);
-        }];
 
         self.initialized = YES;
     }

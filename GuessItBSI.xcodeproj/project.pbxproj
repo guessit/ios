@@ -77,6 +77,7 @@
 		BFB7CC97175B7D480055DBF0 /* GINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB7CC96175B7D480055DBF0 /* GINavigationController.m */; };
 		BFBAF9F1175B881400AA0AE1 /* GIGame+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBAF9F0175B881400AA0AE1 /* GIGame+Factory.m */; };
 		BFBAF9F4175B892500AA0AE1 /* GILevel+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBAF9F3175B892400AA0AE1 /* GILevel+Factory.m */; };
+		BFBAF9F6175D5BE800AA0AE1 /* JotiOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFBAF9F5175D5BE800AA0AE1 /* JotiOne-Regular.ttf */; };
 		BFBDD2121701092000F5698E /* GIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBDD2111701092000F5698E /* GIMainViewController.m */; };
 		BFF9294217243E0300F230C6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9291017243E0300F230C6 /* Default-568h@2x.png */; };
 		BFF9294317243E0300F230C6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9291117243E0300F230C6 /* Default.png */; };
@@ -203,6 +204,7 @@
 		BFBAF9F0175B881400AA0AE1 /* GIGame+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GIGame+Factory.m"; sourceTree = "<group>"; };
 		BFBAF9F2175B892400AA0AE1 /* GILevel+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GILevel+Factory.h"; sourceTree = "<group>"; };
 		BFBAF9F3175B892400AA0AE1 /* GILevel+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GILevel+Factory.m"; sourceTree = "<group>"; };
+		BFBAF9F5175D5BE800AA0AE1 /* JotiOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JotiOne-Regular.ttf"; sourceTree = "<group>"; };
 		BFBDD2101701092000F5698E /* GIMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIMainViewController.h; sourceTree = "<group>"; };
 		BFBDD2111701092000F5698E /* GIMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIMainViewController.m; sourceTree = "<group>"; };
 		BFF5A2E4171EB74E00F401B3 /* GIDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIDefinitions.h; sourceTree = "<group>"; };
@@ -540,6 +542,7 @@
 		BFF9296E17243E1900F230C6 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				BFBAF9F5175D5BE800AA0AE1 /* JotiOne-Regular.ttf */,
 				BFF9296F17243E1900F230C6 /* Lobster.ttf */,
 			);
 			path = fonts;
@@ -668,6 +671,7 @@
 				BF71256A175D3B05007F99EB /* 029.png in Resources */,
 				BF71256B175D3B05007F99EB /* 030.png in Resources */,
 				BF71256C175D3B05007F99EB /* 031.png in Resources */,
+				BFBAF9F6175D5BE800AA0AE1 /* JotiOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
