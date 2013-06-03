@@ -48,18 +48,8 @@
         NSInteger numberOfKeys = GI_KEYPAD_NO_ROWS * GI_KEYPAD_NO_COLUMNS;
         NSMutableArray *views = [NSMutableArray arrayWithCapacity:numberOfKeys];
 
-        CGFloat letterWidth = (self.lettersContainer.width - (GI_KEYPAD_NO_COLUMNS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_COLUMNS;
-        CGFloat letterHeight = (self.lettersContainer.height - (GI_KEYPAD_NO_ROWS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_ROWS;
-
         for (NSInteger i = 0; i < numberOfKeys; i++) {
-            NSUInteger xIdx = i % GI_KEYPAD_NO_COLUMNS;
-            NSUInteger yIdx = i / GI_KEYPAD_NO_COLUMNS;
-            
-            CGFloat xOffset = xIdx * letterWidth + (xIdx + 1) * GI_KEYPAD_PADDING;
-            CGFloat yOffset = yIdx * letterHeight + (yIdx + 1) * GI_KEYPAD_PADDING;
-
-            GILetterView *letterView = [GILetterView viewWithFrame:CGRectMake(xOffset, yOffset, letterWidth, letterHeight)];
-
+            GILetterView *letterView = [GILetterView view];
             [self.lettersContainer addSubview:letterView];
             [views addObject:letterView];
         }
@@ -128,6 +118,18 @@
     [super layoutSubviews];
 
     if (!self.initialized) {
+        CGFloat letterWidth = (self.lettersContainer.width - (GI_KEYPAD_NO_COLUMNS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_COLUMNS;
+        CGFloat letterHeight = (self.lettersContainer.height - (GI_KEYPAD_NO_ROWS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_ROWS;
+
+        [self.letterViews enumerateObjectsUsingBlock:^(GILetterView *letterView, NSUInteger idx, BOOL *stop) {
+            NSUInteger xIdx = idx % GI_KEYPAD_NO_COLUMNS;
+            NSUInteger yIdx = idx / GI_KEYPAD_NO_COLUMNS;
+            
+            CGFloat xOffset = xIdx * letterWidth + (xIdx + 1) * GI_KEYPAD_PADDING;
+            CGFloat yOffset = yIdx * letterHeight + (yIdx + 1) * GI_KEYPAD_PADDING;
+
+            letterView.frame = CGRectMake(xOffset, yOffset, letterWidth, letterHeight);
+        }];
 
         self.initialized = YES;
     }
