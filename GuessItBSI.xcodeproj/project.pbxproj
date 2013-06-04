@@ -78,6 +78,7 @@
 		BFBAF9F1175B881400AA0AE1 /* GIGame+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBAF9F0175B881400AA0AE1 /* GIGame+Factory.m */; };
 		BFBAF9F4175B892500AA0AE1 /* GILevel+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBAF9F3175B892400AA0AE1 /* GILevel+Factory.m */; };
 		BFBAF9F6175D5BE800AA0AE1 /* JotiOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFBAF9F5175D5BE800AA0AE1 /* JotiOne-Regular.ttf */; };
+		BFBAF9F9175D773200AA0AE1 /* GIGlowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBAF9F8175D773200AA0AE1 /* GIGlowButton.m */; };
 		BFBDD2121701092000F5698E /* GIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBDD2111701092000F5698E /* GIMainViewController.m */; };
 		BFF9294217243E0300F230C6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9291017243E0300F230C6 /* Default-568h@2x.png */; };
 		BFF9294317243E0300F230C6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9291117243E0300F230C6 /* Default.png */; };
@@ -205,6 +206,8 @@
 		BFBAF9F2175B892400AA0AE1 /* GILevel+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GILevel+Factory.h"; sourceTree = "<group>"; };
 		BFBAF9F3175B892400AA0AE1 /* GILevel+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GILevel+Factory.m"; sourceTree = "<group>"; };
 		BFBAF9F5175D5BE800AA0AE1 /* JotiOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JotiOne-Regular.ttf"; sourceTree = "<group>"; };
+		BFBAF9F7175D773200AA0AE1 /* GIGlowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGlowButton.h; sourceTree = "<group>"; };
+		BFBAF9F8175D773200AA0AE1 /* GIGlowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGlowButton.m; sourceTree = "<group>"; };
 		BFBDD2101701092000F5698E /* GIMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIMainViewController.h; sourceTree = "<group>"; };
 		BFBDD2111701092000F5698E /* GIMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIMainViewController.m; sourceTree = "<group>"; };
 		BFF5A2E4171EB74E00F401B3 /* GIDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIDefinitions.h; sourceTree = "<group>"; };
@@ -463,6 +466,8 @@
 			children = (
 				BF712572175D40D2007F99EB /* Keyboard */,
 				BF712587175D4238007F99EB /* Level */,
+				BFBAF9F7175D773200AA0AE1 /* GIGlowButton.h */,
+				BFBAF9F8175D773200AA0AE1 /* GIGlowButton.m */,
 				BFF92974172443AC00F230C6 /* GIShineLabel.h */,
 				BFF92975172443AC00F230C6 /* GIShineLabel.m */,
 				BF1835D3172C3D1D00E2CB5F /* GINavigationBar.h */,
@@ -746,6 +751,7 @@
 				BF712584175D40F0007F99EB /* GILetterView.m in Sources */,
 				BF712585175D40F0007F99EB /* GIPlaceholderView.m in Sources */,
 				BF71258B175D4238007F99EB /* GILevelView.m in Sources */,
+				BFBAF9F9175D773200AA0AE1 /* GIGlowButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
