@@ -13,8 +13,6 @@
 @interface GIGlowButton ()
 
 @property (nonatomic, strong) UILabel *glowLabel;
-@property (nonatomic, strong) CALayer *maskLayer;
-@property (nonatomic, strong) CABasicAnimation *animation;
 
 @end
 
@@ -33,35 +31,13 @@
     if (!_glowLabel ) {
         _glowLabel = [UILabel label];
         _glowLabel.font = self.titleLabel.font;
-        _glowLabel.textAlignment = self.titleLabel.textAlignment;
+        _glowLabel.textAlignment = NSTextAlignmentCenter;
+        _glowLabel.contentMode = UIViewContentModeTop;
         _glowLabel.backgroundColor = [UIColor clearColor];
-        _glowLabel.layer.mask = self.maskLayer;
 
-        [self.titleLabel.layer addSublayer:self.glowLabel.layer];
+        [self.titleLabel addSubview:_glowLabel];
     }
     return _glowLabel;
-}
-
-- (CALayer *)maskLayer {
-    if (!_maskLayer) {
-        _maskLayer = [CALayer layer];
-        _maskLayer.backgroundColor = [UIColor clearColor].CGColor;
-        _maskLayer.backgroundColor = [UIColor cyanColor].CGColor;
-        _maskLayer.contents = (id)[UIImage imageNamed:@"shine_mask"].CGImage;
-        [_maskLayer addAnimation:self.animation forKey:@"glow"];
-    }
-    return _maskLayer;
-}
-
-- (CABasicAnimation *)animation {
-    if (!_animation) {
-        _animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-        _animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-        _animation.delegate = self;
-        _animation.repeatCount = HUGE_VALF;
-        _animation.removedOnCompletion = NO;
-    }
-    return _animation;
 }
 
 #pragma mark - UIView Methods
@@ -69,20 +45,21 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
 
-    self.glowLabel.frame = self.bounds;
+    self.glowLabel.frame = self.titleLabel.bounds;
     self.glowLabel.text = self.titleLabel.text;
     self.glowLabel.font = self.titleLabel.font;
     self.glowLabel.textColor = self.glowColor;
-
-    self.maskLayer.frame = self.bounds;
 }
 
 #pragma mark - Public Interface
 
 - (void)glow {
-    self.animation.duration = self.glowDuration > 0.f ? self.glowDuration : 3.f;
-    self.animation.fromValue = @(1.f);
-    self.animation.toValue = @(0.25f);
+    self.glowLabel.alpha = 0.f;
+
+    UIViewAnimationOptions animationOptions = UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse | UIViewAnimationOptionCurveEaseInOut;
+    [UIView animateWithDuration:1.f delay:0.f options:animationOptions animations:^{
+        self.glowLabel.alpha = 0.3f;
+    } completion:NULL];
 }
 
 @end

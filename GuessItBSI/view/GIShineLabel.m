@@ -57,7 +57,6 @@
     if (!_animation) {
         _animation = [CABasicAnimation animationWithKeyPath:@"position.x"];
         _animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-        _animation.delegate = self;
         _animation.repeatCount = HUGE_VALF;
         _animation.removedOnCompletion = NO;
     }

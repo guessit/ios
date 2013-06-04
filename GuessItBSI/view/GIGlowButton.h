@@ -11,7 +11,6 @@
 @interface GIGlowButton : UIButton
 
 @property (nonatomic, strong) UIColor *glowColor;
-@property (nonatomic, assign) CGFloat glowDuration;
 
 - (void)glow;
 

@@ -8,6 +8,7 @@
 
 #import "GIKeypadView.h"
 
+#import "GIGlowButton.h"
 #import "GILetterView.h"
 #import "NSString+RandomString.h"
 #import "UIFont+GuessItFonts.h"
@@ -17,7 +18,7 @@
 
 @property (nonatomic, strong) UIView *lettersContainer;
 @property (nonatomic, strong) NSMutableArray *letterViews;
-@property (nonatomic, strong) UIButton *actionButton;
+@property (nonatomic, strong) GIGlowButton *actionButton;
 
 @property (nonatomic, strong, readonly) NSString *letters;
 
@@ -58,18 +59,22 @@
     return _letterViews;
 }
 
-- (UIButton *)actionButton {
+- (GIGlowButton *)actionButton {
     if (!_actionButton) {
-        _actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _actionButton = [GIGlowButton buttonWithType:UIButtonTypeCustom];
         CGRect frame = CGRectMake(self.width - GI_KEYPAD_ACTION_WIDTH, GI_KEYPAD_PADDING,
                                   GI_KEYPAD_ACTION_WIDTH - GI_KEYPAD_PADDING, self.height - 2 * GI_KEYPAD_PADDING);
         _actionButton.frame = frame;
         _actionButton.backgroundColor = GI_ACTION_COLOR;
         _actionButton.titleLabel.font = [UIFont guessItActionFont];
         _actionButton.titleEdgeInsets = UIEdgeInsetsMake(0.f, 2.f, 0.f, 0.f);
+        _actionButton.titleLabel.shadowOffset = CGSizeMake(0.f, -1.f);
+        [_actionButton setTitleShadowColor:GI_ACTION_SHADOW_COLOR forState:UIControlStateNormal];
         [_actionButton setTitleColor:GI_ACTION_TEXT_COLOR forState:UIControlStateNormal];
         [_actionButton setTitleColor:GI_ACTION_SELECTED_TEXT_COLOR forState:UIControlStateHighlighted];
         [_actionButton setTitle:@"?" forState:UIControlStateNormal];
+
+        _actionButton.glowColor = GI_ACTION_SHINE_COLOR;
     }
     return _actionButton;
 }
@@ -210,6 +215,8 @@
 
     [self addSubview:self.lettersContainer];
     [self addSubview:self.actionButton];
+
+    [self.actionButton glow];
 }
 
 - (void)_generateKeypad {

@@ -77,7 +77,6 @@
 
     [self.view addSubview:resetButton];
 
-
     UITapGestureRecognizer *tapGesture = [UITapGestureRecognizer gestureRecognizerWithTarget:self
                                                                                       action:@selector(_tapRecognized:)];
     [self.view addGestureRecognizer:tapGesture];
