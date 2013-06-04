@@ -10,6 +10,7 @@
 
 #import "GILetterView.h"
 #import "NSString+RandomString.h"
+#import "UIFont+GuessItFonts.h"
 #import "UIView+SizingAndPositioning.h"
 
 @interface GIKeypadView ()
@@ -37,8 +38,6 @@
     if (!_lettersContainer) {
         _lettersContainer = [UIView viewWithFrame:CGRectMake(0.f, 0.f, self.width - GI_KEYPAD_ACTION_WIDTH, self.height)];
         _lettersContainer.backgroundColor = [UIColor clearColor];
-
-        [self addSubview:_lettersContainer];
     }
     return _lettersContainer;
 }
@@ -62,7 +61,16 @@
 - (UIButton *)actionButton {
     if (!_actionButton) {
         _actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _actionButton.backgroundColor = [UIColor yellowColor];
+
+        CGRect frame = CGRectMake(self.width - GI_KEYPAD_ACTION_WIDTH, GI_KEYPAD_PADDING,
+                                  GI_KEYPAD_ACTION_WIDTH - GI_KEYPAD_PADDING, self.height - 2 * GI_KEYPAD_PADDING);
+        _actionButton.frame = frame;
+        _actionButton.backgroundColor = GI_ACTION_COLOR;
+        _actionButton.titleLabel.font = [UIFont guessItActionFont];
+        _actionButton.titleEdgeInsets = UIEdgeInsetsMake(0.f, 2.f, 0.f, 0.f);
+        [_actionButton setTitleColor:GI_ACTION_TEXT_COLOR forState:UIControlStateNormal];
+        [_actionButton setTitleColor:GI_ACTION_SELECTED_TEXT_COLOR forState:UIControlStateHighlighted];
+        [_actionButton setTitle:@"?" forState:UIControlStateNormal];
     }
     return _actionButton;
 }
@@ -200,6 +208,9 @@
 
 - (void)_initialize {
     self.backgroundColor = GI_BACKGROUND_MAIN_DARKER_COLOR;
+
+    [self addSubview:self.lettersContainer];
+    [self addSubview:self.actionButton];
 }
 
 - (void)_generateKeypad {

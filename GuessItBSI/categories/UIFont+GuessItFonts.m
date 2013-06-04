@@ -22,4 +22,8 @@
     return [UIFont fontWithName:@"GillSans" size:18.f];
 }
 
++ (UIFont *)guessItActionFont {
+    return [UIFont fontWithName:@"JotiOne-Regular" size:55.f];
+}
+
 @end

@@ -58,6 +58,12 @@
 #define GI_LETTER_ZOOMED_COLOR [UIColor colorWithWhite:0.25 alpha:1.f]
 #define GI_LETTER_ZOOMED_TEXT_COLOR [UIColor colorWithWhite:0.95 alpha:1.f]
 
+#pragma mark - Action
+
+#define GI_ACTION_COLOR GI_BACKGROUND_MAIN_COLOR
+#define GI_ACTION_TEXT_COLOR [UIColor colorWithWhite:0.8f alpha:1.f]
+#define GI_ACTION_SELECTED_TEXT_COLOR [UIColor whiteColor]
+
 #pragma mark - Answer Letter Placeholder
 
 #define GI_ANSWER_PLACEHOLDER_COLOR [UIColor colorWithWhite:0.2 alpha:1.f]
