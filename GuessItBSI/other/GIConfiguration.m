@@ -71,8 +71,10 @@
 }
 
 - (void)loadNewRandomLevel {
-    #warning TODO: load new random level ignoring current level
-    self.currentLevel = self.game.todoLevels.randomObject;
+    NSMutableArray *todoLevels = [NSMutableArray arrayWithArray:self.game.todoLevels];
+    if (self.currentLevel) [todoLevels removeObject:self.currentLevel];
+
+    self.currentLevel = todoLevels.randomObject;
 }
 
 - (NSArray *)finishedLevelsName {
