@@ -15,6 +15,7 @@
 @interface GIConfiguration ()
 
 @property (nonatomic, strong) NSDictionary *gameData;
+@property (nonatomic, strong, readonly) NSString *currentLevelName;
 
 - (void)_initialize;
 
@@ -27,7 +28,7 @@
 - (GILevel *)currentLevel {
     GILevel *currentLevel = nil;
 
-    NSString *currentLevelName = [[NSUserDefaults standardUserDefaults] stringForKey:GI_CURRENT_LEVEL];
+    NSString *currentLevelName = self.currentLevelName;
     if (!currentLevelName) {
         [self loadNewRandomLevel];
     }
@@ -42,11 +43,14 @@
     return currentLevel;
 }
 
+- (NSString *)currentLevelName {
+    return [[NSUserDefaults standardUserDefaults] stringForKey:GI_CURRENT_LEVEL];
+}
+
 #pragma mark - Setter
 
 - (void)setCurrentLevel:(GILevel *)currentLevel {
     [[NSUserDefaults standardUserDefaults] setObject:currentLevel.imageName forKey:GI_CURRENT_LEVEL];
-    [[NSNotificationCenter defaultCenter] postNotificationName:GICurrentLevelDidChangeNotification object:currentLevel];
 }
 
 #pragma mark - NSObject Methods
@@ -71,8 +75,11 @@
 }
 
 - (void)loadNewRandomLevel {
-    NSMutableArray *todoLevels = [NSMutableArray arrayWithArray:self.game.todoLevels];
-    if (self.currentLevel) [todoLevels removeObject:self.currentLevel];
+    NSArray *todoLevels = self.game.todoLevels;
+    if (self.currentLevelName) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"imageName not eq %@", self.currentLevelName];
+        todoLevels = [todoLevels filteredArrayUsingPredicate:predicate];
+    }
 
     self.currentLevel = todoLevels.randomObject;
 }

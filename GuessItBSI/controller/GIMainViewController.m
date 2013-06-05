@@ -31,7 +31,7 @@
         _titleLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
         _titleLabel.backgroundColor = [UIColor clearColor];
         _titleLabel.font = [UIFont guessItTitleFont];
-        _titleLabel.text = @"GuessIt!";
+        _titleLabel.text = @"Guess It!";
         _titleLabel.textColor = GI_TITLE_COLOR;
         _titleLabel.shineColor = GI_TITLE_SHINE_COLOR;
         _titleLabel.textAlignment = NSTextAlignmentCenter;

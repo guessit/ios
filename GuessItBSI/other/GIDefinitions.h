@@ -8,8 +8,6 @@
 
 #pragma mark - NSNotification
 
-extern NSString *const GICurrentLevelDidChangeNotification;
-
 #pragma mark - NSUserDefaults Keys
 
 #define GI_CURRENT_LEVEL @"GuessItCurrentLevel"

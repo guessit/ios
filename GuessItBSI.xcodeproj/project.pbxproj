@@ -53,6 +53,9 @@
 		BF712584175D40F0007F99EB /* GILetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712580175D40F0007F99EB /* GILetterView.m */; };
 		BF712585175D40F0007F99EB /* GIPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712582175D40F0007F99EB /* GIPlaceholderView.m */; };
 		BF71258B175D4238007F99EB /* GILevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712589175D4238007F99EB /* GILevelView.m */; };
+		BF714A07175FE83D00DF6274 /* ico_guess_it.png in Resources */ = {isa = PBXBuildFile; fileRef = BF714A05175FE83D00DF6274 /* ico_guess_it.png */; };
+		BF714A08175FE83D00DF6274 /* ico_guess_it@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF714A06175FE83D00DF6274 /* ico_guess_it@2x.png */; };
+		BF714A0B175FE8F200DF6274 /* GIBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF714A0A175FE8F200DF6274 /* GIBuyViewController.m */; };
 		BF91795817244A8200B136E2 /* shine_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF91795717244A8200B136E2 /* shine_mask@2x.png */; };
 		BF91796A1724716D00B136E2 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9179601724716D00B136E2 /* Icon-Small.png */; };
 		BF91796B1724716D00B136E2 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF9179611724716D00B136E2 /* Icon-Small@2x.png */; };
@@ -87,8 +90,6 @@
 		BFF9296617243E0300F230C6 /* ico_accessory_view@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9293A17243E0300F230C6 /* ico_accessory_view@2x.png */; };
 		BFF9296717243E0300F230C6 /* ico_back.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9293B17243E0300F230C6 /* ico_back.png */; };
 		BFF9296817243E0300F230C6 /* ico_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9293C17243E0300F230C6 /* ico_back@2x.png */; };
-		BFF9296B17243E0300F230C6 /* ico_reload.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9293F17243E0300F230C6 /* ico_reload.png */; };
-		BFF9296C17243E0300F230C6 /* ico_reload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9294017243E0300F230C6 /* ico_reload@2x.png */; };
 		BFF9297017243E1900F230C6 /* Lobster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF9296F17243E1900F230C6 /* Lobster.ttf */; };
 		BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */; };
 		BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF92975172443AC00F230C6 /* GIShineLabel.m */; };
@@ -171,6 +172,10 @@
 		BF712588175D4238007F99EB /* GILevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelView.h; sourceTree = "<group>"; };
 		BF712589175D4238007F99EB /* GILevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelView.m; sourceTree = "<group>"; };
 		BF71258A175D4238007F99EB /* GILevelViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelViewDelegate.h; sourceTree = "<group>"; };
+		BF714A05175FE83D00DF6274 /* ico_guess_it.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_guess_it.png; sourceTree = "<group>"; };
+		BF714A06175FE83D00DF6274 /* ico_guess_it@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_guess_it@2x.png"; sourceTree = "<group>"; };
+		BF714A09175FE8F200DF6274 /* GIBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIBuyViewController.h; sourceTree = "<group>"; };
+		BF714A0A175FE8F200DF6274 /* GIBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIBuyViewController.m; sourceTree = "<group>"; };
 		BF91795717244A8200B136E2 /* shine_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shine_mask@2x.png"; sourceTree = "<group>"; };
 		BF9179601724716D00B136E2 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
 		BF9179611724716D00B136E2 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
@@ -218,8 +223,6 @@
 		BFF9293A17243E0300F230C6 /* ico_accessory_view@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_accessory_view@2x.png"; sourceTree = "<group>"; };
 		BFF9293B17243E0300F230C6 /* ico_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_back.png; sourceTree = "<group>"; };
 		BFF9293C17243E0300F230C6 /* ico_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_back@2x.png"; sourceTree = "<group>"; };
-		BFF9293F17243E0300F230C6 /* ico_reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_reload.png; sourceTree = "<group>"; };
-		BFF9294017243E0300F230C6 /* ico_reload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_reload@2x.png"; sourceTree = "<group>"; };
 		BFF9296F17243E1900F230C6 /* Lobster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lobster.ttf; sourceTree = "<group>"; };
 		BFF9297117243EF900F230C6 /* UIFont+GuessItFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+GuessItFonts.h"; sourceTree = "<group>"; };
 		BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+GuessItFonts.m"; sourceTree = "<group>"; };
@@ -420,6 +423,8 @@
 		BFAD12A116F1376600F6D429 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BF714A09175FE8F200DF6274 /* GIBuyViewController.h */,
+				BF714A0A175FE8F200DF6274 /* GIBuyViewController.m */,
 				BF1F29B4170761D400A83FE3 /* GILevelViewController.h */,
 				BF1F29B5170761D400A83FE3 /* GILevelViewController.m */,
 				BFBDD2101701092000F5698E /* GIMainViewController.h */,
@@ -499,8 +504,8 @@
 				BFF9293A17243E0300F230C6 /* ico_accessory_view@2x.png */,
 				BFF9293B17243E0300F230C6 /* ico_back.png */,
 				BFF9293C17243E0300F230C6 /* ico_back@2x.png */,
-				BFF9293F17243E0300F230C6 /* ico_reload.png */,
-				BFF9294017243E0300F230C6 /* ico_reload@2x.png */,
+				BF714A05175FE83D00DF6274 /* ico_guess_it.png */,
+				BF714A06175FE83D00DF6274 /* ico_guess_it@2x.png */,
 				BF91795717244A8200B136E2 /* shine_mask@2x.png */,
 			);
 			path = images;
@@ -634,8 +639,6 @@
 				BFF9296617243E0300F230C6 /* ico_accessory_view@2x.png in Resources */,
 				BFF9296717243E0300F230C6 /* ico_back.png in Resources */,
 				BFF9296817243E0300F230C6 /* ico_back@2x.png in Resources */,
-				BFF9296B17243E0300F230C6 /* ico_reload.png in Resources */,
-				BFF9296C17243E0300F230C6 /* ico_reload@2x.png in Resources */,
 				BFF9297017243E1900F230C6 /* Lobster.ttf in Resources */,
 				BF91795817244A8200B136E2 /* shine_mask@2x.png in Resources */,
 				BF91796A1724716D00B136E2 /* Icon-Small.png in Resources */,
@@ -677,6 +680,8 @@
 				BF71256B175D3B05007F99EB /* 030.png in Resources */,
 				BF71256C175D3B05007F99EB /* 031.png in Resources */,
 				BFBAF9F6175D5BE800AA0AE1 /* JotiOne-Regular.ttf in Resources */,
+				BF714A07175FE83D00DF6274 /* ico_guess_it.png in Resources */,
+				BF714A08175FE83D00DF6274 /* ico_guess_it@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,6 +757,7 @@
 				BF712585175D40F0007F99EB /* GIPlaceholderView.m in Sources */,
 				BF71258B175D4238007F99EB /* GILevelView.m in Sources */,
 				BFBAF9F9175D773200AA0AE1 /* GIGlowButton.m in Sources */,
+				BF714A0B175FE8F200DF6274 /* GIBuyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
