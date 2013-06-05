@@ -17,7 +17,6 @@
 @interface GILevelViewController() <GILevelViewDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) GILevelView *levelView;
-@property (nonatomic, strong) UIBarButtonItem *reloadBarButtonItem;
 
 - (void)_adjustForCurrentLevel;
 - (void)_reloadTouched:(id)sender;
@@ -37,21 +36,21 @@
     return _levelView;
 }
 
-- (UIBarButtonItem *)reloadBarButtonItem {
-    if (!_reloadBarButtonItem) {
-        UIButton *reloadButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [reloadButton addTarget:self
-                         action:@selector(_reloadTouched:)
-               forControlEvents:UIControlEventTouchUpInside];
-        [reloadButton setImage:[UIImage imageNamed:@"ico_reload"]
-                      forState:UIControlStateNormal];
-        reloadButton.frame = CGRectMake(0.f, 0.f, 70.f, 70.f);
-        reloadButton.imageEdgeInsets = UIEdgeInsetsMake(3.f, 40.f, 0.f, 0.f);
-
-        _reloadBarButtonItem = [UIBarButtonItem barButtonItemWithCustomView:reloadButton];
-    }
-    return _reloadBarButtonItem;
-}
+//- (UIBarButtonItem *)reloadBarButtonItem {
+//    if (!_reloadBarButtonItem) {
+//        UIButton *reloadButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//        [reloadButton addTarget:self
+//                         action:@selector(_reloadTouched:)
+//               forControlEvents:UIControlEventTouchUpInside];
+//        [reloadButton setImage:[UIImage imageNamed:@"ico_reload"]
+//                      forState:UIControlStateNormal];
+//        reloadButton.frame = CGRectMake(0.f, 0.f, 70.f, 70.f);
+//        reloadButton.imageEdgeInsets = UIEdgeInsetsMake(3.f, 40.f, 0.f, 0.f);
+//
+//        _reloadBarButtonItem = [UIBarButtonItem barButtonItemWithCustomView:reloadButton];
+//    }
+//    return _reloadBarButtonItem;
+//}
 
 #pragma mark - UIViewController Methods
 
@@ -81,13 +80,6 @@
 
 - (void)_adjustForCurrentLevel {
     self.levelView.currentLevel = [GIConfiguration sharedInstance].currentLevel;
-
-    UIBarButtonItem *rightBarButtonItem = nil;
-    if ([GIConfiguration sharedInstance].game.todoLevels.count > 0) {
-        rightBarButtonItem = self.reloadBarButtonItem;
-        #warning TODO: remover righ bar button
-    }
-    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
 }
 
 - (void)_reloadTouched:(id)sender {
