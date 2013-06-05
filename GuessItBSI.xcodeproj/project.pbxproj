@@ -14,7 +14,6 @@
 		BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B21707617700A83FE3 /* GIViewController.m */; };
 		BF1F29B6170761D400A83FE3 /* GILevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B5170761D400A83FE3 /* GILevelViewController.m */; };
 		BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF291E8B174ECA320066D5EF /* GIDefinitions.m */; };
-		BF5B8786175E0B2D00332777 /* grey_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5B8785175E0B2D00332777 /* grey_mask@2x.png */; };
 		BF6943BB171CA244000F74E0 /* GILevel+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */; };
 		BF6943BE171CA2AD000F74E0 /* GIGame+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BD171CA2AD000F74E0 /* GIGame+PrettyDescription.m */; };
 		BF71254E175D3B05007F99EB /* 001.png in Resources */ = {isa = PBXBuildFile; fileRef = BF71252F175D3B05007F99EB /* 001.png */; };
@@ -121,7 +120,6 @@
 		BF1F29B4170761D400A83FE3 /* GILevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelViewController.h; sourceTree = "<group>"; };
 		BF1F29B5170761D400A83FE3 /* GILevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelViewController.m; sourceTree = "<group>"; };
 		BF291E8B174ECA320066D5EF /* GIDefinitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIDefinitions.m; sourceTree = "<group>"; };
-		BF5B8785175E0B2D00332777 /* grey_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey_mask@2x.png"; sourceTree = "<group>"; };
 		BF6943B9171CA244000F74E0 /* GILevel+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GILevel+PrettyDescription.h"; sourceTree = "<group>"; };
 		BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GILevel+PrettyDescription.m"; sourceTree = "<group>"; };
 		BF6943BC171CA2AD000F74E0 /* GIGame+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GIGame+PrettyDescription.h"; sourceTree = "<group>"; };
@@ -503,7 +501,6 @@
 				BFF9293C17243E0300F230C6 /* ico_back@2x.png */,
 				BFF9293F17243E0300F230C6 /* ico_reload.png */,
 				BFF9294017243E0300F230C6 /* ico_reload@2x.png */,
-				BF5B8785175E0B2D00332777 /* grey_mask@2x.png */,
 				BF91795717244A8200B136E2 /* shine_mask@2x.png */,
 			);
 			path = images;
@@ -680,7 +677,6 @@
 				BF71256B175D3B05007F99EB /* 030.png in Resources */,
 				BF71256C175D3B05007F99EB /* 031.png in Resources */,
 				BFBAF9F6175D5BE800AA0AE1 /* JotiOne-Regular.ttf in Resources */,
-				BF5B8786175E0B2D00332777 /* grey_mask@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

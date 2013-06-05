@@ -24,8 +24,29 @@
 
 #pragma mark - Getter
 
-- (NSArray *)levels {
-    return @[];
+- (GILevel *)currentLevel {
+    GILevel *currentLevel = nil;
+
+    NSString *currentLevelName = [[NSUserDefaults standardUserDefaults] stringForKey:GI_CURRENT_LEVEL];
+    if (!currentLevelName) {
+        [self loadNewRandomLevel];
+    }
+
+    for (GILevel *level in self.game.todoLevels) {
+        if ([level.imageName isEqualToString:currentLevelName]) {
+            currentLevel = level;
+            break;
+        }
+    }
+
+    return currentLevel;
+}
+
+#pragma mark - Setter
+
+- (void)setCurrentLevel:(GILevel *)currentLevel {
+    [[NSUserDefaults standardUserDefaults] setObject:currentLevel.imageName forKey:GI_CURRENT_LEVEL];
+    [[NSNotificationCenter defaultCenter] postNotificationName:GICurrentLevelDidChangeNotification object:currentLevel];
 }
 
 #pragma mark - NSObject Methods
@@ -47,6 +68,11 @@
         __sharedInstance = [[GIConfiguration alloc] init];
     });
     return __sharedInstance;
+}
+
+- (void)loadNewRandomLevel {
+    #warning TODO: load new random level ignoring current level
+    self.currentLevel = self.game.todoLevels.randomObject;
 }
 
 - (NSArray *)finishedLevelsName {

@@ -6,8 +6,13 @@
 //  Copyright (c) 2013 Marlon Andrade. All rights reserved.
 //
 
+#pragma mark - NSNotification
+
+extern NSString *const GICurrentLevelDidChangeNotification;
+
 #pragma mark - NSUserDefaults Keys
 
+#define GI_CURRENT_LEVEL @"GuessItCurrentLevel"
 #define GI_FINISHED_LEVELS @"GuessItFinishedLevels"
 
 #pragma mark - Background Colors

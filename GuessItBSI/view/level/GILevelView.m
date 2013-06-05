@@ -8,6 +8,7 @@
 
 #import "GILevelView.h"
 
+#import "GIConfiguration.h"
 #import "GIInputView.h"
 #import "GIInputViewDelegate.h"
 #import "UIView+SizingAndPositioning.h"
@@ -48,12 +49,12 @@
 
 #pragma mark - Setter
 
-- (void)setLevel:(GILevel *)level {
-    _level = level;
+- (void)setCurrentLevel:(GILevel *)currentLevel {
+    _currentLevel = currentLevel;
 
-    if (level) {
-        self.imageView.image = level.image;
-        self.inputView.level = level;
+    if (_currentLevel) {
+        self.imageView.image = _currentLevel.image;
+        self.inputView.currentLevel = _currentLevel;
         [self becomeFirstResponder];
     } else {
         self.imageView.alpha = 0.f;
@@ -103,12 +104,6 @@
     return YES;
 }
 
-#pragma mark - NSObject Methods
-
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
 #pragma mark - Private Interface
 
 - (void)_initialize {
@@ -120,8 +115,8 @@
 #pragma mark - GIInputViewDelegate Methods
 
 - (void)inputView:(GIInputView *)inputView didFinishGuessingWithAnswer:(NSString *)answer {
-    GIGuessingResult guessingResult = [self.level guessWithAnwser:answer];
-    [self.levelDelegate levelView:self didFinishGuessingLevel:self.level withResult:guessingResult];
+    GIGuessingResult guessingResult = [self.currentLevel guessWithAnwser:answer];
+    [self.levelDelegate levelView:self didFinishGuessingLevel:self.currentLevel withResult:guessingResult];
 }
 
 @end

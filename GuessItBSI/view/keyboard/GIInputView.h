@@ -14,6 +14,6 @@
 @interface GIInputView : UIView <UIInputViewAudioFeedback>
 
 @property (nonatomic, weak) id<GIInputViewDelegate> delegate;
-@property (nonatomic, strong) GILevel *level;
+@property (nonatomic, strong) GILevel *currentLevel;
 
 @end

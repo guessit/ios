@@ -14,6 +14,6 @@
 @interface GILevelView : UIView
 
 @property (nonatomic, weak) id<GILevelViewDelegate> levelDelegate;
-@property (nonatomic, strong) GILevel *level;
+@property (nonatomic, strong) GILevel *currentLevel;
 
 @end

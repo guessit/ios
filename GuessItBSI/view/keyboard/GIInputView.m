@@ -47,11 +47,11 @@
 
 #pragma mark - Setter
 
-- (void)setLevel:(GILevel *)level {
-    _level = level;
+- (void)setCurrentLevel:(GILevel *)currentLevel {
+    _currentLevel = currentLevel;
 
-    self.answerView.correctAnswer = level.answer;
-    self.keypadView.correctAnswer = level.answer;
+    self.answerView.correctAnswer = currentLevel.answer;
+    self.keypadView.correctAnswer = currentLevel.answer;
 }
 
 #pragma mark - UIView Methods

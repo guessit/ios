@@ -9,12 +9,16 @@
 #import <Foundation/Foundation.h>
 
 #import "GIGame.h"
+#import "GILevel.h"
 
 @interface GIConfiguration : NSObject
 
 @property (nonatomic, strong) GIGame *game;
+@property (nonatomic, strong) GILevel *currentLevel;
 
 + (instancetype)sharedInstance;
+
+- (void)loadNewRandomLevel;
 - (NSArray *)finishedLevelsName;
 
 @end

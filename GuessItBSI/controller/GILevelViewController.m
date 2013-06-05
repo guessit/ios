@@ -19,20 +19,13 @@
 @property (nonatomic, strong) GILevelView *levelView;
 @property (nonatomic, strong) UIBarButtonItem *reloadBarButtonItem;
 
-- (void)_loadRandomLevel;
+- (void)_adjustForCurrentLevel;
 - (void)_reloadTouched:(id)sender;
+- (void)_currentLevelDidChange:(NSNotification *)notification;
 
 @end
 
 @implementation GILevelViewController
-
-#pragma mark - Setter
-
-- (void)setLevel:(GILevel *)level {
-    _level = level;
-
-    self.levelView.level = level;
-}
 
 #pragma mark - Getter
 
@@ -62,35 +55,47 @@
 
 #pragma mark - UIViewController Methods
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self _adjustForCurrentLevel];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     self.view = self.levelView;
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(_currentLevelDidChange:)
+                                                 name:GICurrentLevelDidChangeNotification
+                                               object:nil];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+#pragma mark - NSObject Methods
 
-    [self _loadRandomLevel];
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Private Interface
 
-- (void)_loadRandomLevel {
-    NSArray *todoLevels = [GIConfiguration sharedInstance].game.todoLevels;
-
-    self.level = todoLevels.randomObject;
+- (void)_adjustForCurrentLevel {
+    self.levelView.currentLevel = [GIConfiguration sharedInstance].currentLevel;
 
     UIBarButtonItem *rightBarButtonItem = nil;
-    if (todoLevels.count > 0) {
+    if ([GIConfiguration sharedInstance].game.todoLevels.count > 0) {
         rightBarButtonItem = self.reloadBarButtonItem;
+        #warning TODO: remover righ bar button
     }
-
     self.navigationItem.rightBarButtonItem = rightBarButtonItem;
 }
 
 - (void)_reloadTouched:(id)sender {
-    [self _loadRandomLevel];
+    [[GIConfiguration sharedInstance] loadNewRandomLevel];
+}
+
+- (void)_currentLevelDidChange:(NSNotification *)notification {
+    [self _adjustForCurrentLevel];
 }
 
 #pragma mark - GILevelViewDelegate Methods
@@ -110,10 +115,7 @@
 #pragma mark - UIAlertViewDelegate Methods
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    #warning TODO: AJUSTAR! UGLYNESS!@!!!!!!!!
-    [self.level guessWithAnwser:self.level.answer];
-
-    [self _loadRandomLevel];
+    [[GIConfiguration sharedInstance] loadNewRandomLevel];
 }
 
 @end
