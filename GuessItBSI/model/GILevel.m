@@ -83,6 +83,7 @@
     [correctItems addObject:self.imageName];
 
     [[NSUserDefaults standardUserDefaults] setObject:correctItems forKey:GI_FINISHED_LEVELS];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 @end

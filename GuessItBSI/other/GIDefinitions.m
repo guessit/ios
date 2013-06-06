@@ -7,3 +7,5 @@
 //
 
 #import "GIDefinitions.h"
+
+NSString * const GICurrentLevelDidChangeNotification = @"GICurrentLevelDidChangeNotification";

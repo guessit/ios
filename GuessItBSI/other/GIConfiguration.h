@@ -18,7 +18,7 @@
 
 + (instancetype)sharedInstance;
 
-- (void)loadNewRandomLevel;
+- (GILevel *)loadNewRandomLevel;
 - (NSArray *)finishedLevelsName;
 
 @end

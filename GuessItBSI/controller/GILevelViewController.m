@@ -21,6 +21,7 @@
 @property (nonatomic, strong) GILevelView *levelView;
 @property (nonatomic, strong) UIBarButtonItem *rightButtonItem;
 
+- (void)_adjustViewForCurrentLevel;
 - (void)_rightButtonTouched:(id)sender;
 
 @end
@@ -57,17 +58,24 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 
-    self.levelView.currentLevel = [GIConfiguration sharedInstance].currentLevel;
+    [self _adjustViewForCurrentLevel];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 
     self.view = self.levelView;
     self.navigationItem.rightBarButtonItem = self.rightButtonItem;
 }
+
 #pragma mark - Private Interface
+
+- (void)_adjustViewForCurrentLevel {
+    self.levelView.currentLevel = [GIConfiguration sharedInstance].currentLevel;
+}
 
 - (void)_rightButtonTouched:(id)sender {
     GIBuyViewController *buyViewController = [GIBuyViewController viewController];
@@ -93,6 +101,7 @@
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     [[GIConfiguration sharedInstance] loadNewRandomLevel];
+    [self _adjustViewForCurrentLevel];
 }
 
 @end

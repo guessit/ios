@@ -60,6 +60,8 @@
 
 - (void)_resetTouched:(id)sender {
     [[NSUserDefaults standardUserDefaults] setObject:@[] forKey:GI_FINISHED_LEVELS];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:GI_CURRENT_LEVEL];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)viewDidLoad {
