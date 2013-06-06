@@ -66,10 +66,10 @@ extern NSString * const GICurrentLevelDidChangeNotification;
 #pragma mark - Action
 
 #define GI_ACTION_COLOR GI_BACKGROUND_MAIN_COLOR
-#define GI_ACTION_TEXT_COLOR [UIColor colorWithWhite:0.8f alpha:1.f]
+#define GI_ACTION_TEXT_COLOR [UIColor colorWithWhite:0.6f alpha:1.f]
 #define GI_ACTION_SHADOW_COLOR [UIColor blackColor]
 #define GI_ACTION_SELECTED_TEXT_COLOR [UIColor whiteColor]
-#define GI_ACTION_SHINE_COLOR GI_TITLE_COLOR
+#define GI_ACTION_SHINE_COLOR [UIColor whiteColor]
 
 #pragma mark - Answer Letter Placeholder
 

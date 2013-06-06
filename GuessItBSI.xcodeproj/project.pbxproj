@@ -77,7 +77,6 @@
 		BFAD12B016F1376600F6D429 /* GIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12A916F1376600F6D429 /* GIAppDelegate.m */; };
 		BFAD12B116F1376600F6D429 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12AB16F1376600F6D429 /* main.m */; };
 		BFB7CC93175B737B0055DBF0 /* GIGame.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB7CC92175B737B0055DBF0 /* GIGame.m */; };
-		BFB7CC97175B7D480055DBF0 /* GINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB7CC96175B7D480055DBF0 /* GINavigationController.m */; };
 		BFBAF9F1175B881400AA0AE1 /* GIGame+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBAF9F0175B881400AA0AE1 /* GIGame+Factory.m */; };
 		BFBAF9F4175B892500AA0AE1 /* GILevel+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBAF9F3175B892400AA0AE1 /* GILevel+Factory.m */; };
 		BFBAF9F6175D5BE800AA0AE1 /* JotiOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFBAF9F5175D5BE800AA0AE1 /* JotiOne-Regular.ttf */; };
@@ -204,8 +203,6 @@
 		BFAD12AB16F1376600F6D429 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFB7CC91175B737B0055DBF0 /* GIGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGame.h; sourceTree = "<group>"; };
 		BFB7CC92175B737B0055DBF0 /* GIGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGame.m; sourceTree = "<group>"; };
-		BFB7CC95175B7D480055DBF0 /* GINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GINavigationController.h; sourceTree = "<group>"; };
-		BFB7CC96175B7D480055DBF0 /* GINavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GINavigationController.m; sourceTree = "<group>"; };
 		BFBAF9EF175B881400AA0AE1 /* GIGame+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GIGame+Factory.h"; sourceTree = "<group>"; };
 		BFBAF9F0175B881400AA0AE1 /* GIGame+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GIGame+Factory.m"; sourceTree = "<group>"; };
 		BFBAF9F2175B892400AA0AE1 /* GILevel+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GILevel+Factory.h"; sourceTree = "<group>"; };
@@ -429,8 +426,6 @@
 				BF1F29B5170761D400A83FE3 /* GILevelViewController.m */,
 				BFBDD2101701092000F5698E /* GIMainViewController.h */,
 				BFBDD2111701092000F5698E /* GIMainViewController.m */,
-				BFB7CC95175B7D480055DBF0 /* GINavigationController.h */,
-				BFB7CC96175B7D480055DBF0 /* GINavigationController.m */,
 				BF1F29B11707617700A83FE3 /* GIViewController.h */,
 				BF1F29B21707617700A83FE3 /* GIViewController.m */,
 			);
@@ -747,7 +742,6 @@
 				BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */,
 				BFA44032175A1D8700D4B8E5 /* GIConfiguration.m in Sources */,
 				BFB7CC93175B737B0055DBF0 /* GIGame.m in Sources */,
-				BFB7CC97175B7D480055DBF0 /* GINavigationController.m in Sources */,
 				BFBAF9F1175B881400AA0AE1 /* GIGame+Factory.m in Sources */,
 				BFBAF9F4175B892500AA0AE1 /* GILevel+Factory.m in Sources */,
 				BF71257B175D40D2007F99EB /* GIAnswerView.m in Sources */,

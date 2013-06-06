@@ -14,7 +14,7 @@
 #import "GILevel.h"
 #import "GILevelView.h"
 #import "GILevelViewDelegate.h"
-#import "GINavigationController.h"
+#import "GINavigationBar.h"
 
 @interface GILevelViewController() <GILevelViewDelegate, UIAlertViewDelegate>
 
@@ -79,7 +79,9 @@
 
 - (void)_rightButtonTouched:(id)sender {
     GIBuyViewController *buyViewController = [GIBuyViewController viewController];
-    GINavigationController *navController = [GINavigationController navigationControllerWithRootViewController:buyViewController];
+    UINavigationController *navController = [UINavigationController navigationControllerWithNavigationBarClass:[GINavigationBar class]
+                                                                                                  toolbarClass:nil];
+    navController.viewControllers = @[buyViewController];
     [self presentViewController:navController animated:YES completion:NULL];
 }
 

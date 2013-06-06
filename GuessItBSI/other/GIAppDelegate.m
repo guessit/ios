@@ -12,7 +12,6 @@
 #import "GIGame+PrettyDescription.h"
 #import "GIMainViewController.h"
 #import "GINavigationBar.h"
-#import "GINavigationController.h"
 
 @implementation GIAppDelegate
 
@@ -21,7 +20,9 @@
     NSLog(@"Game: %@", [[GIConfiguration sharedInstance].game prettyDescription]);
 
     GIMainViewController *main = [GIMainViewController viewController];
-    GINavigationController *nav = [GINavigationController navigationControllerWithRootViewController:main];
+    UINavigationController *nav = [UINavigationController navigationControllerWithNavigationBarClass:[GINavigationBar class]
+                                                                                        toolbarClass:nil];
+    nav.viewControllers = @[main];
 
     self.window = [UIWindow viewWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = nav;
