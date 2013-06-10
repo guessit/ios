@@ -18,8 +18,10 @@
 
 @property (nonatomic, strong) GIAnswerView *answerView;
 @property (nonatomic, strong) GIKeypadView *keypadView;
+@property (nonatomic, strong) UIButton *clearButton;
 
 - (void)_initialize;
+- (void)_clearTouched:(id)sender;
 
 @end
 
@@ -43,6 +45,17 @@
         _keypadView.backgroundColor = GI_BACKGROUND_MAIN_DARKER_COLOR;
     }
     return _keypadView;
+}
+
+- (UIButton *)clearButton {
+    if (!_clearButton) {
+        _clearButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _clearButton.frame = CGRectMake(self.width - 45.f, -20.f, 40.f, 40.f);
+        _clearButton.backgroundColor = [UIColor clearColor];
+        [_clearButton setImage:[UIImage imageNamed:@"clear"] forState:UIControlStateNormal];
+        [_clearButton addTarget:self action:@selector(_clearTouched:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _clearButton;
 }
 
 #pragma mark - Setter
@@ -84,6 +97,11 @@
 - (void)_initialize {
     [self addSubview:self.answerView];
     [self addSubview:self.keypadView];
+    [self addSubview:self.clearButton];
+}
+
+- (void)_clearTouched:(id)sender {
+    NSLog(@"Remove letter");
 }
 
 #pragma mark - GIAnswerViewDelegate Methods

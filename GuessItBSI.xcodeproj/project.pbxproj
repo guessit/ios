@@ -77,6 +77,8 @@
 		BFAD12B016F1376600F6D429 /* GIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12A916F1376600F6D429 /* GIAppDelegate.m */; };
 		BFAD12B116F1376600F6D429 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12AB16F1376600F6D429 /* main.m */; };
 		BFB7CC93175B737B0055DBF0 /* GIGame.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB7CC92175B737B0055DBF0 /* GIGame.m */; };
+		BFB9EE491765ED5E00319C1C /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB9EE471765ED5E00319C1C /* clear.png */; };
+		BFB9EE4A1765ED5E00319C1C /* clear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB9EE481765ED5E00319C1C /* clear@2x.png */; };
 		BFBAF9F1175B881400AA0AE1 /* GIGame+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBAF9F0175B881400AA0AE1 /* GIGame+Factory.m */; };
 		BFBAF9F4175B892500AA0AE1 /* GILevel+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBAF9F3175B892400AA0AE1 /* GILevel+Factory.m */; };
 		BFBAF9F6175D5BE800AA0AE1 /* JotiOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFBAF9F5175D5BE800AA0AE1 /* JotiOne-Regular.ttf */; };
@@ -203,6 +205,8 @@
 		BFAD12AB16F1376600F6D429 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFB7CC91175B737B0055DBF0 /* GIGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGame.h; sourceTree = "<group>"; };
 		BFB7CC92175B737B0055DBF0 /* GIGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGame.m; sourceTree = "<group>"; };
+		BFB9EE471765ED5E00319C1C /* clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear.png; sourceTree = "<group>"; };
+		BFB9EE481765ED5E00319C1C /* clear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clear@2x.png"; sourceTree = "<group>"; };
 		BFBAF9EF175B881400AA0AE1 /* GIGame+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GIGame+Factory.h"; sourceTree = "<group>"; };
 		BFBAF9F0175B881400AA0AE1 /* GIGame+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GIGame+Factory.m"; sourceTree = "<group>"; };
 		BFBAF9F2175B892400AA0AE1 /* GILevel+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GILevel+Factory.h"; sourceTree = "<group>"; };
@@ -495,6 +499,8 @@
 				BFF9291217243E0300F230C6 /* Default@2x.png */,
 				BFF9291317243E0300F230C6 /* guessing items */,
 				BF91795B1724716D00B136E2 /* icons */,
+				BFB9EE471765ED5E00319C1C /* clear.png */,
+				BFB9EE481765ED5E00319C1C /* clear@2x.png */,
 				BFF9293917243E0300F230C6 /* ico_accessory_view.png */,
 				BFF9293A17243E0300F230C6 /* ico_accessory_view@2x.png */,
 				BFF9293B17243E0300F230C6 /* ico_back.png */,
@@ -677,6 +683,8 @@
 				BFBAF9F6175D5BE800AA0AE1 /* JotiOne-Regular.ttf in Resources */,
 				BF714A07175FE83D00DF6274 /* ico_guess_it.png in Resources */,
 				BF714A08175FE83D00DF6274 /* ico_guess_it@2x.png in Resources */,
+				BFB9EE491765ED5E00319C1C /* clear.png in Resources */,
+				BFB9EE4A1765ED5E00319C1C /* clear@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

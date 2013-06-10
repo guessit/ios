@@ -52,6 +52,8 @@
 - (void)setCurrentLevel:(GILevel *)currentLevel {
     _currentLevel = currentLevel;
 
+    self.imageViewFrame.transform = CGAffineTransformMakeScale(0.05f, 0.05f);
+
     if (_currentLevel) {
         self.imageView.image = _currentLevel.image;
         self.inputView.currentLevel = _currentLevel;
@@ -60,6 +62,15 @@
         self.imageView.alpha = 0.f;
         [self resignFirstResponder];
     }
+
+    [UIView animateWithDuration:0.2f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.imageViewFrame.transform = CGAffineTransformMakeScale(1.1f, 1.1f);
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.1f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            self.imageViewFrame.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+        }];
+    }];
 }
 
 #pragma mark - UIView Methods
