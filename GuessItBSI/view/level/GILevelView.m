@@ -14,11 +14,13 @@
 #import "UIView+SizingAndPositioning.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface GILevelView () <GIInputViewDelegate>
+@interface GILevelView () <GIInputViewDelegate, UIActionSheetDelegate>
 
 @property (nonatomic, strong) UIView *imageViewFrame;
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong, readwrite) GIInputView *inputView;
+
+@property (nonatomic, strong) UIActionSheet *helpActionSheet;
 
 - (void)_initialize;
 
@@ -45,6 +47,19 @@
         [self.imageViewFrame addSubview:_imageView];
     }
     return _imageView;
+}
+
+- (UIActionSheet *)helpActionSheet {
+    if (!_helpActionSheet) {
+        _helpActionSheet = [[UIActionSheet alloc] initWithTitle:@"Help"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                         destructiveButtonTitle:nil
+                                              otherButtonTitles:@"Remove Letter", @"Add Letter", @"Hint", @"Random Level", nil];
+        _helpActionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+
+    }
+    return _helpActionSheet;
 }
 
 #pragma mark - Setter
@@ -128,6 +143,16 @@
 - (void)inputView:(GIInputView *)inputView didFinishGuessingWithAnswer:(NSString *)answer {
     GIGuessingResult guessingResult = [self.currentLevel guessWithAnwser:answer];
     [self.levelDelegate levelView:self didFinishGuessingLevel:self.currentLevel withResult:guessingResult];
+}
+
+- (void)helpRequestedFromInputView:(GIInputView *)inputView {
+    [self.helpActionSheet showInView:self.superview];
+}
+
+#pragma mark - UIActionSheetDelegate Methods
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    NSLog(@"Clicked: %d", buttonIndex);
 }
 
 @end

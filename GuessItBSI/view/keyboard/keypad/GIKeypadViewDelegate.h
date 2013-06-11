@@ -15,6 +15,7 @@
 
 @required
 - (void)keypadView:(GIKeypadView *)keypadView didAddLetterView:(GILetterView *)letterView;
+- (void)keypadView:(GIKeypadView *)keypadView actionButtonPressed:(id)sender;
 
 @optional
 - (BOOL)keypadView:(GIKeypadView *)keypadView canAddLetterView:(GILetterView *)letterView;

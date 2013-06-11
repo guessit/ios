@@ -28,6 +28,7 @@
 
 - (void)_initialize;
 - (void)_generateKeypad;
+- (void)_actionButtonTouched:(id)sender;
 
 @end
 
@@ -66,6 +67,7 @@
                                   GI_KEYPAD_ACTION_WIDTH - GI_KEYPAD_PADDING, self.height - 2 * GI_KEYPAD_PADDING);
         _actionButton.frame = frame;
         _actionButton.backgroundColor = GI_ACTION_COLOR;
+        _actionButton.glowColor = GI_ACTION_SHINE_COLOR;
         _actionButton.titleLabel.font = [UIFont guessItActionFont];
         _actionButton.titleEdgeInsets = UIEdgeInsetsMake(0.f, 2.f, 0.f, 0.f);
         _actionButton.titleLabel.shadowOffset = CGSizeMake(0.f, -1.f);
@@ -74,7 +76,9 @@
         [_actionButton setTitleColor:GI_ACTION_SELECTED_TEXT_COLOR forState:UIControlStateHighlighted];
         [_actionButton setTitle:@"?" forState:UIControlStateNormal];
 
-        _actionButton.glowColor = GI_ACTION_SHINE_COLOR;
+        [_actionButton addTarget:self
+                          action:@selector(_actionButtonTouched:)
+                forControlEvents:UIControlEventTouchUpInside];
     }
     return _actionButton;
 }
@@ -245,6 +249,10 @@
 
     self.initialized = NO;
     [self setNeedsLayout];
+}
+
+- (void)_actionButtonTouched:(id)sender {
+    [self.delegate keypadView:self actionButtonPressed:sender];
 }
 
 #pragma mark - Public Methods

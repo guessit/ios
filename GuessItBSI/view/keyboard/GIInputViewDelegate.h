@@ -13,5 +13,6 @@
 @protocol GIInputViewDelegate <NSObject>
 
 - (void)inputView:(GIInputView *)inputView didFinishGuessingWithAnswer:(NSString *)answer;
+- (void)helpRequestedFromInputView:(GIInputView *)inputView;
 
 @end

@@ -98,6 +98,10 @@
     return self.answerView.canAddLetter;
 }
 
+- (void)keypadView:(GIKeypadView *)keypadView actionButtonPressed:(id)sender {
+    [self.delegate helpRequestedFromInputView:self];
+}
+
 - (void)keypadView:(GIKeypadView *)keypadView didAddLetterView:(GILetterView *)letterView {
     [self.answerView addLetterView:letterView];
 
