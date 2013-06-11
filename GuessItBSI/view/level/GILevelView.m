@@ -44,6 +44,7 @@
 - (UIImageView *)imageView {
     if (!_imageView) {
         _imageView = [UIImageView viewWithFrame:CGRectInset(self.imageViewFrame.bounds, 10.f, 10.f)];
+        _imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [self.imageViewFrame addSubview:_imageView];
     }
     return _imageView;
