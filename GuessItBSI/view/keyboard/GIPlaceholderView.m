@@ -71,13 +71,13 @@
 - (void)displayLetterView:(GILetterView *)letterView {
     self.letterView = letterView;
 
+    [self.letterView removeFromSuperview];
+    [self addSubview:self.letterView];
+
     self.letterView.transform = CGAffineTransformIdentity;
     self.letterView.oldFrame = self.letterView.frame;
     self.letterView.frame = CGRectInset(self.bounds, 2.f, 2.f);
     self.letterView.alpha = 0.f;
-
-    [self.letterView removeFromSuperview];
-    [self addSubview:self.letterView];
 
     self.letterView.transform = CGAffineTransformMakeScale(GI_LETTER_MINIMIZED_SCALE, GI_LETTER_MINIMIZED_SCALE);
 

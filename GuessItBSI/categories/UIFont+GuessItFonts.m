@@ -19,7 +19,7 @@
 }
 
 + (UIFont *)guessItKeypadLetterFont {
-    return [UIFont fontWithName:@"AvenirNextCondensed-Medium" size:17.f];
+    return [UIFont fontWithName:@"AvenirNextCondensed-Medium" size:18.f];
 }
 
 + (UIFont *)guessItActionFont {

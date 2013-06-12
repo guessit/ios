@@ -30,7 +30,6 @@
         _label.textColor = GI_LETTER_TEXT_COLOR;
         _label.shadowColor = GI_LETTER_SHADOW_COLOR;
         _label.shadowOffset = CGSizeMake(0.f, -1.f);
-        _label.font = [UIFont guessItKeypadLetterFont];
         _label.textAlignment = NSTextAlignmentCenter;
     }
 
@@ -63,6 +62,24 @@
         [self _initialize];
     }
     return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+
+    CGFloat fontSize = self.label.font.pointSize;
+    CGSize size = [self.label.text sizeWithFont:self.label.font];
+    while (size.height > self.label.height) {
+        fontSize--;
+        size = [self.label.text sizeWithFont:[UIFont fontWithName:self.label.font.fontName size:fontSize]];
+    }
+
+    UIFont *font = [UIFont guessItKeypadLetterFont];
+    if (fontSize < self.label.font.pointSize) {
+        font = [UIFont fontWithName:font.fontName size:fontSize + 1];
+    }
+
+    self.label.font = font;
 }
 
 #pragma mark - Private Interface
@@ -102,8 +119,6 @@
         self.backgroundColor = GI_LETTER_COLOR;
         self.label.textColor = GI_LETTER_TEXT_COLOR;
         self.alpha = 0.f;
-    } completion:^(BOOL finished) {
-//        [self removeFromSuperview];
     }];
 }
 
