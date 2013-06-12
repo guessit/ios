@@ -18,3 +18,5 @@
 #import <SSToolkit/SSCategories.h>
 
 #import "GIDefinitions.h"
+
+#import "UIView+CBFrameHelpers.h"

@@ -16,6 +16,7 @@
 		BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF291E8B174ECA320066D5EF /* GIDefinitions.m */; };
 		BF6943BB171CA244000F74E0 /* GILevel+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */; };
 		BF6943BE171CA2AD000F74E0 /* GIGame+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BD171CA2AD000F74E0 /* GIGame+PrettyDescription.m */; };
+		BF6B70231767E7EB006BF650 /* GIHelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6B70221767E66C006BF650 /* GIHelpView.m */; };
 		BF71254E175D3B05007F99EB /* 001.png in Resources */ = {isa = PBXBuildFile; fileRef = BF71252F175D3B05007F99EB /* 001.png */; };
 		BF71254F175D3B05007F99EB /* 002.png in Resources */ = {isa = PBXBuildFile; fileRef = BF712530175D3B05007F99EB /* 002.png */; };
 		BF712550175D3B05007F99EB /* 003.png in Resources */ = {isa = PBXBuildFile; fileRef = BF712531175D3B05007F99EB /* 003.png */; };
@@ -93,7 +94,6 @@
 		BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */; };
 		BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF92975172443AC00F230C6 /* GIShineLabel.m */; };
 		BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7381727F815003B4385 /* NSString+RandomString.m */; };
-		BFFC5013172A9ACD008DC742 /* UIView+SizingAndPositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFC5012172A9ACD008DC742 /* UIView+SizingAndPositioning.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +124,8 @@
 		BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GILevel+PrettyDescription.m"; sourceTree = "<group>"; };
 		BF6943BC171CA2AD000F74E0 /* GIGame+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GIGame+PrettyDescription.h"; sourceTree = "<group>"; };
 		BF6943BD171CA2AD000F74E0 /* GIGame+PrettyDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GIGame+PrettyDescription.m"; sourceTree = "<group>"; };
+		BF6B70211767E66C006BF650 /* GIHelpView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIHelpView.h; sourceTree = "<group>"; };
+		BF6B70221767E66C006BF650 /* GIHelpView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIHelpView.m; sourceTree = "<group>"; };
 		BF71252F175D3B05007F99EB /* 001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 001.png; sourceTree = "<group>"; };
 		BF712530175D3B05007F99EB /* 002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 002.png; sourceTree = "<group>"; };
 		BF712531175D3B05007F99EB /* 003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 003.png; sourceTree = "<group>"; };
@@ -227,8 +229,6 @@
 		BFF92975172443AC00F230C6 /* GIShineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIShineLabel.m; sourceTree = "<group>"; };
 		BFF9E7371727F815003B4385 /* NSString+RandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RandomString.h"; sourceTree = "<group>"; };
 		BFF9E7381727F815003B4385 /* NSString+RandomString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RandomString.m"; sourceTree = "<group>"; };
-		BFFC5011172A9ACD008DC742 /* UIView+SizingAndPositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SizingAndPositioning.h"; sourceTree = "<group>"; };
-		BFFC5012172A9ACD008DC742 /* UIView+SizingAndPositioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SizingAndPositioning.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,8 +271,6 @@
 				BFF9E7381727F815003B4385 /* NSString+RandomString.m */,
 				BFF9297117243EF900F230C6 /* UIFont+GuessItFonts.h */,
 				BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */,
-				BFFC5011172A9ACD008DC742 /* UIView+SizingAndPositioning.h */,
-				BFFC5012172A9ACD008DC742 /* UIView+SizingAndPositioning.m */,
 				BF1835E9172DC49D00E2CB5F /* UIImage+FromColor.h */,
 				BF1835EA172DC49D00E2CB5F /* UIImage+FromColor.m */,
 			);
@@ -468,6 +466,8 @@
 				BF712587175D4238007F99EB /* Level */,
 				BFBAF9F7175D773200AA0AE1 /* GIGlowButton.h */,
 				BFBAF9F8175D773200AA0AE1 /* GIGlowButton.m */,
+				BF6B70211767E66C006BF650 /* GIHelpView.h */,
+				BF6B70221767E66C006BF650 /* GIHelpView.m */,
 				BFF92974172443AC00F230C6 /* GIShineLabel.h */,
 				BFF92975172443AC00F230C6 /* GIShineLabel.m */,
 				BF1835D3172C3D1D00E2CB5F /* GINavigationBar.h */,
@@ -732,11 +732,11 @@
 				BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */,
 				BF1F29B6170761D400A83FE3 /* GILevelViewController.m in Sources */,
 				BF6943BB171CA244000F74E0 /* GILevel+PrettyDescription.m in Sources */,
+				BF6B70231767E7EB006BF650 /* GIHelpView.m in Sources */,
 				BF6943BE171CA2AD000F74E0 /* GIGame+PrettyDescription.m in Sources */,
 				BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */,
 				BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */,
 				BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */,
-				BFFC5013172A9ACD008DC742 /* UIView+SizingAndPositioning.m in Sources */,
 				BF1835D5172C3D1D00E2CB5F /* GINavigationBar.m in Sources */,
 				BF1835EB172DC49D00E2CB5F /* UIImage+FromColor.m in Sources */,
 				BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */,

@@ -11,16 +11,13 @@
 #import "GIConfiguration.h"
 #import "GIInputView.h"
 #import "GIInputViewDelegate.h"
-#import "UIView+SizingAndPositioning.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface GILevelView () <GIInputViewDelegate, UIActionSheetDelegate>
+@interface GILevelView () <GIInputViewDelegate>
 
 @property (nonatomic, strong) UIView *imageViewFrame;
 @property (nonatomic, strong) UIImageView *imageView;
-@property (nonatomic, strong, readwrite) GIInputView *inputView;
-
-@property (nonatomic, strong) UIActionSheet *helpActionSheet;
+@property (nonatomic, strong) GIInputView *inputView;
 
 - (void)_initialize;
 
@@ -50,17 +47,14 @@
     return _imageView;
 }
 
-- (UIActionSheet *)helpActionSheet {
-    if (!_helpActionSheet) {
-        _helpActionSheet = [[UIActionSheet alloc] initWithTitle:@"Help"
-                                                       delegate:self
-                                              cancelButtonTitle:@"Cancel"
-                                         destructiveButtonTitle:nil
-                                              otherButtonTitles:@"Remove Letter", @"Add Letter", @"Hint", @"Random Level", nil];
-        _helpActionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
-
+- (GIInputView *)inputView {
+    if (!_inputView) {
+        _inputView = [GIInputView viewWithFrame:CGRectMake(0.f, self.height - GI_INPUT_VIEW_HEIGHT,
+                                                           self.width, GI_INPUT_VIEW_HEIGHT)];
+        _inputView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+        _inputView.delegate = self;
     }
-    return _helpActionSheet;
+    return _inputView;
 }
 
 #pragma mark - Setter
@@ -73,10 +67,9 @@
     if (_currentLevel) {
         self.imageView.image = _currentLevel.image;
         self.inputView.currentLevel = _currentLevel;
-        [self becomeFirstResponder];
     } else {
         self.imageView.alpha = 0.f;
-        [self resignFirstResponder];
+        self.inputView.alpha = 0.f;
     }
 
     [UIView animateWithDuration:0.2f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -116,27 +109,13 @@
     self.imageViewFrame.center = center;
 }
 
-#pragma mark - UIResponder Methods
-
-- (UIView *)inputView {
-    if (!_inputView) {
-        _inputView = [GIInputView viewWithFrame:CGRectMake(0.f, 0.f, self.width, GI_INPUT_VIEW_HEIGHT)];
-        _inputView.delegate = self;
-    }
-
-    return _inputView;
-}
-
-- (BOOL)canBecomeFirstResponder {
-    return YES;
-}
-
 #pragma mark - Private Interface
 
 - (void)_initialize {
     self.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
 
     [self addSubview:self.imageViewFrame];
+    [self addSubview:self.inputView];
 }
 
 #pragma mark - GIInputViewDelegate Methods
@@ -147,13 +126,7 @@
 }
 
 - (void)helpRequestedFromInputView:(GIInputView *)inputView {
-    [self.helpActionSheet showInView:self.superview];
-}
-
-#pragma mark - UIActionSheetDelegate Methods
-
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    NSLog(@"Clicked: %d", buttonIndex);
+    [self.levelDelegate didRequestHelpFromLevelView:self];
 }
 
 @end

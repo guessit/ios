@@ -1,13 +1,25 @@
 PODS:
+  - AHEasing (1.1)
+  - KNSemiModalViewController (0.3)
   - MALazykit (HEAD based on 0.1.10)
   - SSToolkit (1.0.4)
+  - UIView+EasingFunctions (0.0.1)
+  - uiview-frame-helpers (0.1.1)
 
 DEPENDENCIES:
+  - AHEasing (~> 1.1)
+  - KNSemiModalViewController
   - MALazykit (HEAD)
   - SSToolkit
+  - UIView+EasingFunctions (~> 0.0.1)
+  - uiview-frame-helpers
 
 SPEC CHECKSUMS:
+  AHEasing: b9a02ca67d0d663e2a8b83fd24fa8c2ecc5ddf9b
+  KNSemiModalViewController: 976b739f57aa595359a2cfdf6aadde991ada8f99
   MALazykit: 7a3c9c4004f85f8db26962c4b041e18f4f64b9dc
   SSToolkit: 689acaedac79c2079e492e528a55bcb5db9d98c4
+  UIView+EasingFunctions: b27927be096f11b2d9551cefd63c08683bbd2a9f
+  uiview-frame-helpers: d01c252e592b409a5b41332177e2a2da0a661390
 
 COCOAPODS: 0.20.2

@@ -10,7 +10,6 @@
 
 #import "GILetterView.h"
 #import "GIPlaceholderView.h"
-#import "UIView+SizingAndPositioning.h"
 
 @interface GIAnswerView ()
 

@@ -12,7 +12,6 @@
 #import "GIAnswerViewDelegate.h"
 #import "GIKeypadView.h"
 #import "GIKeypadViewDelegate.h"
-#import "UIView+SizingAndPositioning.h"
 
 @interface GIInputView () <GIAnswerViewDelegate, GIKeypadViewDelegate>
 
@@ -30,6 +29,7 @@
 - (GIAnswerView *)answerView {
     if (!_answerView) {
         _answerView = [GIAnswerView viewWithFrame:CGRectMake(0.f, 0.f, self.width, self.height - GI_KEYPAD_HEIGHT)];
+        _answerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         _answerView.delegate = self;
         _answerView.backgroundColor = GI_BACKGROUND_MAIN_DARKEST_COLOR;
     }
@@ -39,6 +39,7 @@
 - (GIKeypadView *)keypadView {
     if (!_keypadView) {
         _keypadView = [GIKeypadView viewWithFrame:CGRectMake(0.f, self.height - GI_KEYPAD_HEIGHT, self.width, GI_KEYPAD_HEIGHT)];
+        _keypadView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         _keypadView.delegate = self;
         _keypadView.backgroundColor = GI_BACKGROUND_MAIN_DARKER_COLOR;
     }

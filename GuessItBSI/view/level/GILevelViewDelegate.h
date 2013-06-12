@@ -14,5 +14,6 @@
 @protocol GILevelViewDelegate <NSObject>
 
 - (void)levelView:(GILevelView *)levelView didFinishGuessingLevel:(GILevel *)level withResult:(GIGuessingResult)guessingResult;
+- (void)didRequestHelpFromLevelView:(GILevelView *)levelView;
 
 @end

@@ -11,14 +11,17 @@
 #import "GIBuyViewController.h"
 #import "GIConfiguration.h"
 #import "GIGame.h"
+#import "GIHelpView.h"
 #import "GILevel.h"
 #import "GILevelView.h"
 #import "GILevelViewDelegate.h"
 #import "GINavigationBar.h"
+#import "UIViewController+KNSemiModal.h"
 
 @interface GILevelViewController() <GILevelViewDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) GILevelView *levelView;
+@property (nonatomic, strong) GIHelpView *helpView;
 @property (nonatomic, strong) UIBarButtonItem *rightButtonItem;
 
 - (void)_adjustViewForCurrentLevel;
@@ -36,6 +39,14 @@
         _levelView.levelDelegate = self;
     }
     return _levelView;
+}
+
+- (GIHelpView *)helpView {
+    if (!_helpView) {
+        _helpView = [GIHelpView viewWithFrame:CGRectMake(0.f, 0.f, 320.f, 200.f)];
+        _helpView.backgroundColor = [UIColor yellowColor];
+    }
+    return _helpView;
 }
 
 - (UIBarButtonItem *)rightButtonItem {
@@ -99,9 +110,14 @@
     }
 }
 
+- (void)didRequestHelpFromLevelView:(GILevelView *)levelView {
+    [self.levelView resignFirstResponder];
+    [self presentSemiView:self.helpView];
+}
+
 #pragma mark - UIAlertViewDelegate Methods
 
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex {
     [[GIConfiguration sharedInstance] loadNewRandomLevel];
     [self _adjustViewForCurrentLevel];
 }

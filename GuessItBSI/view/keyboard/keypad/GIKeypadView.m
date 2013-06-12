@@ -12,7 +12,8 @@
 #import "GILetterView.h"
 #import "NSString+RandomString.h"
 #import "UIFont+GuessItFonts.h"
-#import "UIView+SizingAndPositioning.h"
+#import "UIView+EasingFunctions/UIView+EasingFunctions.h"
+#import <AHEasing/easing.h>
 
 @interface GIKeypadView ()
 
@@ -38,7 +39,7 @@
 
 - (UIView *)lettersContainer {
     if (!_lettersContainer) {
-        _lettersContainer = [UIView viewWithFrame:CGRectMake(0.f, 0.f, self.width - GI_KEYPAD_ACTION_WIDTH, self.height)];
+        _lettersContainer = [UIView view];
         _lettersContainer.backgroundColor = [UIColor clearColor];
     }
     return _lettersContainer;
@@ -66,6 +67,7 @@
         CGRect frame = CGRectMake(self.width - GI_KEYPAD_ACTION_WIDTH, GI_KEYPAD_PADDING,
                                   GI_KEYPAD_ACTION_WIDTH - GI_KEYPAD_PADDING, self.height - 2 * GI_KEYPAD_PADDING);
         _actionButton.frame = frame;
+        _actionButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
         _actionButton.backgroundColor = GI_ACTION_COLOR;
         _actionButton.glowColor = GI_ACTION_SHINE_COLOR;
         _actionButton.titleLabel.font = [UIFont guessItActionFont];
@@ -133,6 +135,8 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
 
+    [self.lettersContainer setSizeFromSize:CGSizeMake(self.width - GI_KEYPAD_ACTION_WIDTH, self.height)];
+    
     if (!self.initialized) {
         CGFloat letterWidth = (self.lettersContainer.width - (GI_KEYPAD_NO_COLUMNS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_COLUMNS;
         CGFloat letterHeight = (self.lettersContainer.height - (GI_KEYPAD_NO_ROWS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_ROWS;
@@ -144,7 +148,27 @@
             CGFloat xOffset = xIdx * letterWidth + (xIdx + 1) * GI_KEYPAD_PADDING;
             CGFloat yOffset = yIdx * letterHeight + (yIdx + 1) * GI_KEYPAD_PADDING;
 
+            letterView.transform = CGAffineTransformIdentity;
             letterView.frame = CGRectMake(xOffset, yOffset, letterWidth, letterHeight);
+
+            letterView.transform = CGAffineTransformMakeScale(GI_LETTER_MINIMIZED_SCALE, GI_LETTER_MINIMIZED_SCALE);
+            letterView.alpha = 0.f;
+
+            CGFloat delay = ((double)arc4random() / 0x100000000) * 0.3f + 0.1f;
+            CGFloat duration = ((double)arc4random() / 0x100000000) * 0.3f + 0.05f;
+            [UIView animateWithDuration:duration delay:delay options:0 animations:^{
+                [letterView setEasingFunction:BounceEaseInOut forKeyPath:@"transform"];
+                [letterView setEasingFunction:QuadraticEaseInOut forKeyPath:@"alpha"];
+                letterView.alpha = 1.f;
+                letterView.transform = CGAffineTransformMakeScale(GI_LETTER_ZOOMED_SCALE, GI_LETTER_ZOOMED_SCALE);
+            } completion:^(BOOL finished) {
+                [UIView animateWithDuration:0.15f animations:^{
+                    letterView.transform = CGAffineTransformIdentity;
+                    [letterView removeEasingFunctionForKeyPath:@"transform"];
+                    [letterView removeEasingFunctionForKeyPath:@"alpha"];
+                }];
+            }];
+
         }];
 
         self.initialized = YES;
