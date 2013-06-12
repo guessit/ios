@@ -151,24 +151,24 @@
             letterView.transform = CGAffineTransformIdentity;
             letterView.frame = CGRectMake(xOffset, yOffset, letterWidth, letterHeight);
 
+            CGPoint center = letterView.center;
+
             letterView.transform = CGAffineTransformMakeScale(GI_LETTER_MINIMIZED_SCALE, GI_LETTER_MINIMIZED_SCALE);
             letterView.alpha = 0.f;
+            letterView.center = CGPointMake(self.center.x, self.height);
 
             CGFloat delay = ((double)arc4random() / 0x100000000) * 0.3f + 0.1f;
             CGFloat duration = ((double)arc4random() / 0x100000000) * 0.3f + 0.05f;
             [UIView animateWithDuration:duration delay:delay options:0 animations:^{
-                [letterView setEasingFunction:BounceEaseInOut forKeyPath:@"transform"];
+                [letterView setEasingFunction:BackEaseInOut forKeyPath:@"transform"];
                 [letterView setEasingFunction:QuadraticEaseInOut forKeyPath:@"alpha"];
                 letterView.alpha = 1.f;
-                letterView.transform = CGAffineTransformMakeScale(GI_LETTER_ZOOMED_SCALE, GI_LETTER_ZOOMED_SCALE);
+                letterView.center = center;
+                letterView.transform = CGAffineTransformIdentity;
             } completion:^(BOOL finished) {
-                [UIView animateWithDuration:0.05f animations:^{
-                    letterView.transform = CGAffineTransformIdentity;
-                    [letterView removeEasingFunctionForKeyPath:@"transform"];
-                    [letterView removeEasingFunctionForKeyPath:@"alpha"];
-                }];
+                [letterView removeEasingFunctionForKeyPath:@"transform"];
+                [letterView removeEasingFunctionForKeyPath:@"alpha"];
             }];
-
         }];
 
         self.initialized = YES;

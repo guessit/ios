@@ -76,13 +76,13 @@
 
     NSInteger noSpaces = [self.correctAnswer componentsSeparatedByString:@" "].count - 1;
 
-    CGFloat width = (2 + noSpaces) * GI_ANSWER_PLACEHOLDER_SPACE_WIDTH + (self.correctAnswer.length - noSpaces - 1) * GI_ANSWER_PLACEHOLDER_PADDING + self.placeholderViews.count * placeholderView.width;
+    CGFloat width = noSpaces * GI_ANSWER_PLACEHOLDER_SPACE_WIDTH + (self.correctAnswer.length - noSpaces - 1) * GI_ANSWER_PLACEHOLDER_PADDING + self.placeholderViews.count * placeholderView.width;
     CGFloat height = placeholderView.height;
 
     self.containerView.frame = CGRectMake(0.f, 0.f, width, height);
     self.containerView.center = self.center;
 
-    CGFloat xOffset = GI_ANSWER_PLACEHOLDER_SPACE_WIDTH;
+    CGFloat xOffset = 0.f;
     NSInteger spaces = 0;
     for (NSInteger i = 0; i < self.correctAnswer.length; i++) {
         NSString *letter = [self.correctAnswer substringWithRange:NSMakeRange(i, 1)];
@@ -113,7 +113,9 @@
     [self.placeholderViews makeObjectsPerformSelector:@selector(removeFromSuperview)];
 
     NSInteger noSpaces = [self.correctAnswer componentsSeparatedByString:@" "].count - 1;
-    CGFloat totalPadding = (2 + noSpaces) * GI_ANSWER_PLACEHOLDER_SPACE_WIDTH + (self.correctAnswer.length - noSpaces - 1) * GI_ANSWER_PLACEHOLDER_PADDING;
+    CGFloat totalPadding = noSpaces * GI_ANSWER_PLACEHOLDER_SPACE_WIDTH + (self.correctAnswer.length - noSpaces - 1) * GI_ANSWER_PLACEHOLDER_PADDING;
+
+    NSLog(@"Padding: %f", totalPadding);
 
     CGFloat width = (self.width - totalPadding) / self.correctAnswer.length;
     if (width > GI_ANSWER_PLACEHOLDER_MAX_WIDTH) {
