@@ -162,7 +162,7 @@
                 letterView.alpha = 1.f;
                 letterView.transform = CGAffineTransformMakeScale(GI_LETTER_ZOOMED_SCALE, GI_LETTER_ZOOMED_SCALE);
             } completion:^(BOOL finished) {
-                [UIView animateWithDuration:0.15f animations:^{
+                [UIView animateWithDuration:0.05f animations:^{
                     letterView.transform = CGAffineTransformIdentity;
                     [letterView removeEasingFunctionForKeyPath:@"transform"];
                     [letterView removeEasingFunctionForKeyPath:@"alpha"];

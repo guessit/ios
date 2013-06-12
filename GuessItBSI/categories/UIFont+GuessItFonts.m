@@ -19,11 +19,19 @@
 }
 
 + (UIFont *)guessItKeypadLetterFont {
-    return [UIFont fontWithName:@"GillSans" size:18.f];
+    return [UIFont fontWithName:@"AvenirNextCondensed-Medium" size:17.f];
 }
 
 + (UIFont *)guessItActionFont {
     return [UIFont fontWithName:@"JotiOne-Regular" size:55.f];
+}
+
++ (UIFont *)guessItTapToPlayFont {
+    return [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:20.f];
+}
+
++ (UIFont *)guessItCategoryFont {
+    return [UIFont fontWithName:@"AvenirNextCondensed-Bold" size:15.f];
 }
 
 @end

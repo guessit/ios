@@ -14,5 +14,7 @@
 + (UIFont *)guessItNavigationTitleFont;
 + (UIFont *)guessItKeypadLetterFont;
 + (UIFont *)guessItActionFont;
++ (UIFont *)guessItTapToPlayFont;
++ (UIFont *)guessItCategoryFont;
 
 @end

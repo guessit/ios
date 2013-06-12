@@ -33,13 +33,19 @@ extern NSString * const GICurrentLevelDidChangeNotification;
 #pragma mark - Tap To Play
 
 #define GI_TAP_TO_PLAY_COLOR [UIColor whiteColor]
-#define GI_TAP_TO_PLAY_FONT [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:20.f];
 #define GI_TAP_TO_PLAY_SHADOW_COLOR [UIColor colorWithWhite:0.4f alpha:1.f];
 #define GI_TAP_TO_PLAY_SHADOW_OFFSET CGSizeMake(0.f, -1.f);
 
 #pragma mark - Font Color
 
 #define GI_FONT_MAIN_COLOR [UIColor colorWithWhite:0.65f alpha:1.f]
+
+#pragma mark - Category
+
+#define GI_CATEGORY_HEIGHT 28.f
+#define GI_CATEGORY_BACKGROUND_COLOR [UIColor colorWithWhite:0.f alpha:0.25f]
+#define GI_CATEGORY_TEXT_COLOR [UIColor colorWithWhite:1.f alpha:0.85f]
+#define GI_CATEGORY_SHADOW_COLOR [UIColor blackColor]
 
 #pragma mark - Input View
 

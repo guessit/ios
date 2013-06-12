@@ -48,7 +48,7 @@
         _tapToPlayLabel.backgroundColor = [UIColor clearColor];
         _tapToPlayLabel.text = @"Tap to PLAY";
         _tapToPlayLabel.textColor = GI_TAP_TO_PLAY_COLOR;
-        _tapToPlayLabel.font = GI_TAP_TO_PLAY_FONT;
+        _tapToPlayLabel.font = [UIFont guessItTapToPlayFont];
         _tapToPlayLabel.textAlignment = NSTextAlignmentCenter;
         _tapToPlayLabel.shadowColor = GI_TAP_TO_PLAY_SHADOW_COLOR;
         _tapToPlayLabel.shadowOffset = GI_TAP_TO_PLAY_SHADOW_OFFSET;

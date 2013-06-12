@@ -11,10 +11,12 @@
 #import "GIConfiguration.h"
 #import "GIInputView.h"
 #import "GIInputViewDelegate.h"
+#import <UIFont+GuessItFonts.h>
 #import <QuartzCore/QuartzCore.h>
 
 @interface GILevelView () <GIInputViewDelegate>
 
+@property (nonatomic, strong) UILabel *categoryLabel;
 @property (nonatomic, strong) UIView *imageViewFrame;
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) GIInputView *inputView;
@@ -26,6 +28,21 @@
 @implementation GILevelView
 
 #pragma mark - Getter
+
+- (UILabel *)categoryLabel {
+    if (!_categoryLabel) {
+        _categoryLabel = [UILabel labelWithFrame:CGRectMake(0.f, 0.f, self.width, GI_CATEGORY_HEIGHT)];
+        _categoryLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        _categoryLabel.backgroundColor = GI_CATEGORY_BACKGROUND_COLOR;
+        _categoryLabel.textColor = GI_CATEGORY_TEXT_COLOR;
+        _categoryLabel.shadowOffset = CGSizeMake(0.f, -1.f);
+        _categoryLabel.shadowColor = GI_CATEGORY_SHADOW_COLOR;
+        _categoryLabel.text = @"Category";
+        _categoryLabel.textAlignment = NSTextAlignmentCenter;
+        _categoryLabel.font = [UIFont guessItCategoryFont];
+    }
+    return _categoryLabel;
+}
 
 - (UIView *)imageViewFrame {
     if (!_imageViewFrame) {
@@ -67,9 +84,11 @@
     if (_currentLevel) {
         self.imageView.image = _currentLevel.image;
         self.inputView.currentLevel = _currentLevel;
+        self.categoryLabel.text = _currentLevel.category;
     } else {
         self.imageView.alpha = 0.f;
         self.inputView.alpha = 0.f;
+        self.categoryLabel.alpha = 0.f;
     }
 
     [UIView animateWithDuration:0.2f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -104,7 +123,7 @@
     [super layoutSubviews];
 
     CGPoint center = self.center;
-    center.y = (self.height - self.inputView.height) / 2.f;
+    center.y = (self.height + GI_CATEGORY_HEIGHT - self.inputView.height) / 2.f;
 
     self.imageViewFrame.center = center;
 }
@@ -114,6 +133,7 @@
 - (void)_initialize {
     self.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
 
+    [self addSubview:self.categoryLabel];
     [self addSubview:self.imageViewFrame];
     [self addSubview:self.inputView];
 }
