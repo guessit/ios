@@ -54,7 +54,7 @@
 
     [self addSubview:label];
 
-    [self setBackgroundImage:[UIImage imageWithColor:GI_BACKGROUND_MAIN_DARKER_COLOR]
+    [self setBackgroundImage:[UIImage imageWithColor:GI_NAVIGATION_BACKGROUND_COLOR]
                forBarMetrics:UIBarMetricsDefault];
 }
 

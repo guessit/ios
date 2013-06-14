@@ -49,7 +49,7 @@
         _imageViewFrame = [UIView viewWithFrame:CGRectMake(0.f, 0.f, 220.f, 220.f)];
         _imageViewFrame.backgroundColor = [UIColor whiteColor];
         _imageViewFrame.layer.cornerRadius = 1.f;
-        _imageViewFrame.layer.borderColor = [GI_BACKGROUND_MAIN_DARKER_COLOR CGColor];
+        _imageViewFrame.layer.borderColor = [GI_LEVEL_FRAME_COLOR CGColor];
         _imageViewFrame.layer.borderWidth = 5.f;
     }
     return _imageViewFrame;

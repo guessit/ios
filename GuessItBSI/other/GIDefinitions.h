@@ -17,18 +17,18 @@ extern NSString * const GICurrentLevelDidChangeNotification;
 
 #pragma mark - Background Colors
 
+#define GI_MAIN_COLOR
 #define GI_BACKGROUND_MAIN_COLOR [UIColor colorWithWhite:0.200 alpha:1.000]
-#define GI_BACKGROUND_MAIN_DARKER_COLOR [UIColor colorWithWhite:0.170 alpha:1.000]
-#define GI_BACKGROUND_MAIN_DARKEST_COLOR [UIColor colorWithWhite:0.100 alpha:1.000]
-#define GI_BACKGROUND_MAIN_LIGHTER_COLOR [UIColor colorWithWhite:0.230 alpha:1.000]
-#define GI_BACKGROUND_MAIN_LIGHTEST_COLOR [UIColor colorWithWhite:0.300 alpha:1.000]
+
+#define GI_NAVIGATION_COLOR
+#define GI_NAVIGATION_BACKGROUND_COLOR [UIColor colorWithWhite:0.17 alpha:1.f]
 
 #pragma mark - Title
 
-#define GI_TITLE_COLOR [UIColor colorWithRed:1.000 green:0.800 blue:0.000 alpha:1.000]
 #define GI_TITLE_SHINE_COLOR [UIColor colorWithRed:0.980 green:0.984 blue:0.843 alpha:1.000]
 #define GI_TITLE_SHADOW_COLOR [UIColor blackColor]
 #define GI_TITLE_SHADOW_OFFSET CGSizeMake(0.f, -1.f)
+#define GI_TITLE_COLOR [UIColor colorWithRed:1.000 green:0.800 blue:0.000 alpha:1.000]
 
 #pragma mark - Tap To Play
 
@@ -36,30 +36,24 @@ extern NSString * const GICurrentLevelDidChangeNotification;
 #define GI_TAP_TO_PLAY_SHADOW_COLOR [UIColor colorWithWhite:0.4f alpha:1.f];
 #define GI_TAP_TO_PLAY_SHADOW_OFFSET CGSizeMake(0.f, -1.f);
 
-#pragma mark - Font Color
+#define GI_ANSWER_COLOR
+#define GI_ANSWER_BACKGROUND_COLOR [UIColor colorWithWhite:0.100 alpha:1.000]
 
-#define GI_FONT_MAIN_COLOR [UIColor colorWithWhite:0.65f alpha:1.f]
-
-#pragma mark - Category
-
-#define GI_CATEGORY_HEIGHT 28.f
-#define GI_CATEGORY_BACKGROUND_COLOR [UIColor colorWithWhite:0.f alpha:0.25f]
-#define GI_CATEGORY_TEXT_COLOR [UIColor colorWithWhite:1.f alpha:0.85f]
-#define GI_CATEGORY_SHADOW_COLOR [UIColor blackColor]
-
-#pragma mark - Input View
+#define GI_ANSWER_PLACEHOLDER_COLOR [UIColor colorWithWhite:0.2 alpha:1.f]
+#define GI_ANSWER_PLACEHOLDER_MAX_WIDTH 40.f
+#define GI_ANSWER_PLACEHOLDER_MAX_HEIGHT 45.f
+#define GI_ANSWER_PLACEHOLDER_PADDING 2.f
+#define GI_ANSWER_PLACEHOLDER_SPACE_WIDTH 6.f
 
 #define GI_INPUT_VIEW_HEIGHT 150.f
 
-#pragma mark - Keypad
-
+#define GI_KEYPAD_COLOR
+#define GI_KEYPAD_BACKGROUND_COLOR [UIColor colorWithWhite:0.17 alpha:1.f]
 #define GI_KEYPAD_HEIGHT 88.f
 #define GI_KEYPAD_NO_ROWS 2
 #define GI_KEYPAD_NO_COLUMNS 7
 #define GI_KEYPAD_PADDING 2.f
 #define GI_KEYPAD_ACTION_WIDTH 50.f
-
-#pragma mark - Letters
 
 #define GI_LETTER_COLOR GI_BACKGROUND_MAIN_COLOR
 #define GI_LETTER_SHADOW_COLOR [UIColor colorWithWhite:0.38f alpha:1.f]
@@ -69,7 +63,13 @@ extern NSString * const GICurrentLevelDidChangeNotification;
 #define GI_LETTER_ZOOMED_COLOR [UIColor colorWithWhite:0.25 alpha:1.f]
 #define GI_LETTER_ZOOMED_TEXT_COLOR [UIColor colorWithWhite:0.95 alpha:1.f]
 
-#pragma mark - Action
+#define GI_CATEGORY_BACKGROUND_COLOR [UIColor colorWithWhite:0.f alpha:0.25f]
+#define GI_CATEGORY_TEXT_COLOR [UIColor colorWithWhite:1.f alpha:0.85f]
+#define GI_CATEGORY_SHADOW_COLOR [UIColor blackColor]
+#define GI_CATEGORY_HEIGHT 28.f
+
+#define GI_LEVEL_FRAME_COLOR
+#define GI_LEVEL_FRAME_COLOR [UIColor colorWithWhite:0.17 alpha:1.f]
 
 #define GI_ACTION_COLOR GI_BACKGROUND_MAIN_COLOR
 #define GI_ACTION_TEXT_COLOR [UIColor colorWithWhite:0.6f alpha:1.f]
@@ -77,10 +77,13 @@ extern NSString * const GICurrentLevelDidChangeNotification;
 #define GI_ACTION_SELECTED_TEXT_COLOR [UIColor whiteColor]
 #define GI_ACTION_SHINE_COLOR [UIColor whiteColor]
 
+#pragma mark - Letters
+
+
+#pragma mark - Action
+
+
+
 #pragma mark - Answer Letter Placeholder
 
-#define GI_ANSWER_PLACEHOLDER_COLOR [UIColor colorWithWhite:0.2 alpha:1.f]
-#define GI_ANSWER_PLACEHOLDER_MAX_WIDTH 40.f
-#define GI_ANSWER_PLACEHOLDER_MAX_HEIGHT 45.f
-#define GI_ANSWER_PLACEHOLDER_PADDING 2.f
-#define GI_ANSWER_PLACEHOLDER_SPACE_WIDTH 6.f
+

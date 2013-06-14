@@ -105,6 +105,7 @@
 #pragma mark - Private Interface
 
 - (void)_initialize {
+    self.backgroundColor = GI_ANSWER_BACKGROUND_COLOR;
     self.containerView = [UIView view];
     [self addSubview:self.containerView];
 }

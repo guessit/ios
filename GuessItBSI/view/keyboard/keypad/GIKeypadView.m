@@ -155,7 +155,7 @@
 
             letterView.transform = CGAffineTransformMakeScale(GI_LETTER_MINIMIZED_SCALE, GI_LETTER_MINIMIZED_SCALE);
             letterView.alpha = 0.f;
-            letterView.center = CGPointMake(self.center.x, self.height);
+            letterView.center = CGPointMake(self.center.x, self.height + 10.f);
 
             CGFloat delay = ((double)arc4random() / 0x100000000) * 0.3f + 0.1f;
             CGFloat duration = ((double)arc4random() / 0x100000000) * 0.3f + 0.05f;
@@ -239,7 +239,7 @@
 #pragma mark - Private Methods
 
 - (void)_initialize {
-    self.backgroundColor = GI_BACKGROUND_MAIN_DARKER_COLOR;
+    self.backgroundColor = GI_KEYPAD_BACKGROUND_COLOR;
 
     [self addSubview:self.lettersContainer];
     [self addSubview:self.actionButton];
