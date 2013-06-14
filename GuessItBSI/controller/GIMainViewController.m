@@ -28,11 +28,12 @@
 
 - (GIShineLabel *)titleLabel {
     if (!_titleLabel) {
-        _titleLabel = [GIShineLabel labelWithFrame:CGRectMake(20.f, 138.f, 280.f, 100.f)];
+        _titleLabel = [GIShineLabel label];
         _titleLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
         _titleLabel.backgroundColor = [UIColor clearColor];
         _titleLabel.font = [UIFont guessItTitleFont];
         _titleLabel.text = @"Guess It!";
+        [_titleLabel sizeToFit];
         _titleLabel.textColor = [GIConfiguration sharedInstance].game.interface.titleColor;
         _titleLabel.shineColor = [GIConfiguration sharedInstance].game.interface.titleShineColor;
         _titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -44,12 +45,13 @@
 
 - (UILabel *)tapToPlayLabel {
     if (!_tapToPlayLabel) {
-        _tapToPlayLabel = [UILabel labelWithFrame:CGRectMake(108.f, 219.f, 105.f, 26.f)];
+        _tapToPlayLabel = [UILabel label];
         _tapToPlayLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
         _tapToPlayLabel.backgroundColor = [UIColor clearColor];
-        _tapToPlayLabel.text = @"Tap to PLAY";
-        _tapToPlayLabel.textColor = [GIConfiguration sharedInstance].game.interface.subtitleColor;
         _tapToPlayLabel.font = [UIFont guessItTapToPlayFont];
+        _tapToPlayLabel.text = @"Tap to PLAY";
+        [_tapToPlayLabel sizeToFit];
+        _tapToPlayLabel.textColor = [GIConfiguration sharedInstance].game.interface.subtitleColor;
         _tapToPlayLabel.textAlignment = NSTextAlignmentCenter;
         _tapToPlayLabel.shadowColor = [GIConfiguration sharedInstance].game.interface.subtitleShadowColor;
         _tapToPlayLabel.shadowOffset = CGSizeMake(0.f, -1.f);
@@ -70,6 +72,9 @@
 
     [self.view addSubview:self.titleLabel];
     [self.view addSubview:self.tapToPlayLabel];
+
+    self.titleLabel.center = CGPointMake(self.view.center.x, self.view.center.y - 50.f);
+    self.tapToPlayLabel.center = CGPointMake(self.view.center.x, self.titleLabel.center.y + 40.f);
 
     self.view.backgroundColor = [GIConfiguration sharedInstance].game.interface.backgroundColor;
 

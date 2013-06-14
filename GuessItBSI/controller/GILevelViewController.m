@@ -69,14 +69,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    NSLog(@"%@", NSStringFromSelector(_cmd));
 
     [self _adjustViewForCurrentLevel];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@", NSStringFromSelector(_cmd));
 
     self.view = self.levelView;
     self.navigationItem.rightBarButtonItem = self.rightButtonItem;
