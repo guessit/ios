@@ -8,6 +8,7 @@
 
 #import "GIGame+Factory.h"
 #import "GILevel+Factory.h"
+#import "GIUserInterface+Factory.h"
 
 @implementation GIGame (Factory)
 
@@ -22,6 +23,7 @@
         [gameLevels addObject:[GILevel levelWithDictionary:level]];
     }
 
+    game.interface = [GIUserInterface userInterfaceWithDictionary:dictionary[@"ui_colors"]];
     game.levels = gameLevels;
 
     return game;

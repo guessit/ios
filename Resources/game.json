@@ -1,6 +1,30 @@
 {
   "name": "GuessIt!",
-  "interface": {
+  "ui_colors": {
+    "background_color": "#333333ff",
+    "navigation_background_color": "#2b2b2bff",
+    "title_color": "#ffcc00ff",
+    "title_shadow_color": "#000000ff",
+    "title_shine_color": "#f9fad6ff",
+    "subtitle_color": "#ffffffff",
+    "subtitle_shadow_color": "#666666ff",
+    "answer_background_color": "#191919ff",
+    "placeholder_background_color": "#333333ff",
+    "category_background_color": "#0000003f",
+    "category_text_color": "#ffffffd8",
+    "category_shadow_color": "#000000ff",
+    "frame_color": "#2b2b2bff",
+    "keypad_background_color": "#2b2b2bff",
+    "letter_background_color": "#333333ff",
+    "letter_text_color": "#e0e0e0ff",
+    "letter_shadow_color": "#606060ff",
+    "letter_selected_color": "#3f3f3fff",
+    "letter_selected_text_color": "#f2f2f2ff",
+    "action_background_color": "#333333ff",
+    "action_text_color": "#999999ff",
+    "action_shadow_color": "#000000ff",
+    "action_selected_color": "#ffffffff",
+    "action_selected_text_color": "#ffffffff"
   },
   "levels": [
     {

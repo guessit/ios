@@ -33,10 +33,10 @@
     if (!_categoryLabel) {
         _categoryLabel = [UILabel labelWithFrame:CGRectMake(0.f, 0.f, self.width, GI_CATEGORY_HEIGHT)];
         _categoryLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        _categoryLabel.backgroundColor = GI_CATEGORY_BACKGROUND_COLOR;
-        _categoryLabel.textColor = GI_CATEGORY_TEXT_COLOR;
+        _categoryLabel.backgroundColor = [GIConfiguration sharedInstance].game.interface.categoryBackgroundColor;
+        _categoryLabel.textColor = [GIConfiguration sharedInstance].game.interface.categoryTextColor;
         _categoryLabel.shadowOffset = CGSizeMake(0.f, -1.f);
-        _categoryLabel.shadowColor = GI_CATEGORY_SHADOW_COLOR;
+        _categoryLabel.shadowColor = [GIConfiguration sharedInstance].game.interface.categoryShadowColor;
         _categoryLabel.text = @"Category";
         _categoryLabel.textAlignment = NSTextAlignmentCenter;
         _categoryLabel.font = [UIFont guessItCategoryFont];
@@ -49,7 +49,7 @@
         _imageViewFrame = [UIView viewWithFrame:CGRectMake(0.f, 0.f, 220.f, 220.f)];
         _imageViewFrame.backgroundColor = [UIColor whiteColor];
         _imageViewFrame.layer.cornerRadius = 1.f;
-        _imageViewFrame.layer.borderColor = [GI_LEVEL_FRAME_COLOR CGColor];
+        _imageViewFrame.layer.borderColor = [[GIConfiguration sharedInstance].game.interface.frameColor CGColor];
         _imageViewFrame.layer.borderWidth = 5.f;
     }
     return _imageViewFrame;
@@ -66,8 +66,8 @@
 
 - (GIInputView *)inputView {
     if (!_inputView) {
-        _inputView = [GIInputView viewWithFrame:CGRectMake(0.f, self.height - GI_INPUT_VIEW_HEIGHT,
-                                                           self.width, GI_INPUT_VIEW_HEIGHT)];
+        _inputView = [GIInputView viewWithFrame:CGRectMake(0.f, self.height - GI_INPUT_HEIGHT,
+                                                           self.width, GI_INPUT_HEIGHT)];
         _inputView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
         _inputView.delegate = self;
     }
@@ -131,7 +131,7 @@
 #pragma mark - Private Interface
 
 - (void)_initialize {
-    self.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
+    self.backgroundColor = [GIConfiguration sharedInstance].game.interface.backgroundColor;
 
     [self addSubview:self.categoryLabel];
     [self addSubview:self.imageViewFrame];

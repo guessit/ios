@@ -8,6 +8,7 @@
 
 #import "GIAnswerView.h"
 
+#import "GIConfiguration.h"
 #import "GILetterView.h"
 #import "GIPlaceholderView.h"
 
@@ -105,7 +106,7 @@
 #pragma mark - Private Interface
 
 - (void)_initialize {
-    self.backgroundColor = GI_ANSWER_BACKGROUND_COLOR;
+    self.backgroundColor = [GIConfiguration sharedInstance].game.interface.answerBackgroundColor;
     self.containerView = [UIView view];
     [self addSubview:self.containerView];
 }

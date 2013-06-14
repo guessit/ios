@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GIUserInterface.h"
 
 @interface GIGame : NSObject
 
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) GIUserInterface *interface;
 @property (nonatomic, strong) NSArray *levels;
 
 @property (nonatomic, strong, readonly) NSArray *todoLevels;

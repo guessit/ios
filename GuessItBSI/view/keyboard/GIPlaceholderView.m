@@ -8,6 +8,7 @@
 
 #import "GIPlaceholderView.h"
 
+#import "GIConfiguration.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface GIPlaceholderView ()
@@ -55,7 +56,7 @@
 #pragma mark - Private Interface
 
 - (void)_initialize {
-    self.backgroundColor = GI_ANSWER_PLACEHOLDER_COLOR;
+    self.backgroundColor = [GIConfiguration sharedInstance].game.interface.placeholderBackgroundColor;
     self.layer.cornerRadius = 3.f;
     self.layer.shadowColor = [UIColor blackColor].CGColor;
     self.layer.shadowOffset = CGSizeMake(1.f, 1.f);
@@ -84,11 +85,11 @@
     [UIView animateWithDuration:0.2f animations:^{
         self.letterView.alpha = 1.f;
         self.letterView.transform = CGAffineTransformMakeScale(GI_LETTER_ZOOMED_SCALE, GI_LETTER_ZOOMED_SCALE);
-        self.letterView.backgroundColor = GI_LETTER_ZOOMED_COLOR;
+        self.letterView.backgroundColor = [GIConfiguration sharedInstance].game.interface.letterSelectedColor;
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:0.1f animations:^{
             self.letterView.transform = CGAffineTransformIdentity;
-            self.letterView.backgroundColor = GI_LETTER_COLOR;
+            self.letterView.backgroundColor = [GIConfiguration sharedInstance].game.interface.letterBackgroundColor;
         }];
     }];
 }

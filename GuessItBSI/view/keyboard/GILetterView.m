@@ -8,6 +8,7 @@
 
 #import "GILetterView.h"
 
+#import "GIConfiguration.h"
 #import "UIFont+GuessItFonts.h"
 
 @interface GILetterView ()
@@ -27,8 +28,8 @@
         _label = [UILabel labelWithFrame:self.bounds];
         _label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _label.backgroundColor = [UIColor clearColor];
-        _label.textColor = GI_LETTER_TEXT_COLOR;
-        _label.shadowColor = GI_LETTER_SHADOW_COLOR;
+        _label.textColor = [GIConfiguration sharedInstance].game.interface.letterTextColor;
+        _label.shadowColor = [GIConfiguration sharedInstance].game.interface.letterShadowColor;
         _label.shadowOffset = CGSizeMake(0.f, -1.f);
         _label.textAlignment = NSTextAlignmentCenter;
     }
@@ -92,23 +93,23 @@
 #pragma mark - Public Interface
 
 - (void)reset {
-    self.backgroundColor = GI_LETTER_COLOR;
+    self.backgroundColor = [GIConfiguration sharedInstance].game.interface.letterBackgroundColor;
     self.transform = CGAffineTransformIdentity;
 }
 
 - (void)zoomIn {
     [UIView animateWithDuration:0.2f animations:^{
         self.transform = CGAffineTransformMakeScale(GI_LETTER_ZOOMED_SCALE, GI_LETTER_ZOOMED_SCALE);
-        self.backgroundColor = GI_LETTER_ZOOMED_COLOR;
-        self.label.textColor = GI_LETTER_ZOOMED_TEXT_COLOR;
+        self.backgroundColor = [GIConfiguration sharedInstance].game.interface.letterSelectedColor;
+        self.label.textColor = [GIConfiguration sharedInstance].game.interface.letterSelectedTextColor;
     }];
 }
 
 - (void)zoomOut {
     [UIView animateWithDuration:0.2f animations:^{
         self.transform = CGAffineTransformIdentity;
-        self.backgroundColor = GI_LETTER_COLOR;
-        self.label.textColor = GI_LETTER_TEXT_COLOR;
+        self.backgroundColor = [GIConfiguration sharedInstance].game.interface.letterBackgroundColor;
+        self.label.textColor = [GIConfiguration sharedInstance].game.interface.letterTextColor;
     }];
 }
 
@@ -116,8 +117,8 @@
     self.transform = CGAffineTransformIdentity;
     [UIView animateWithDuration:0.3f animations:^{
         self.transform = CGAffineTransformMakeScale(GI_LETTER_MINIMIZED_SCALE, GI_LETTER_MINIMIZED_SCALE);
-        self.backgroundColor = GI_LETTER_COLOR;
-        self.label.textColor = GI_LETTER_TEXT_COLOR;
+        self.backgroundColor = [GIConfiguration sharedInstance].game.interface.letterBackgroundColor;
+        self.label.textColor = [GIConfiguration sharedInstance].game.interface.letterTextColor;
         self.alpha = 0.f;
     }];
 }

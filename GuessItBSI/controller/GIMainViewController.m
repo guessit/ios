@@ -8,6 +8,7 @@
 
 #import "GIMainViewController.h"
 
+#import "GIConfiguration.h"
 #import "GILevelViewController.h"
 #import "UIFont+GuessItFonts.h"
 
@@ -32,11 +33,11 @@
         _titleLabel.backgroundColor = [UIColor clearColor];
         _titleLabel.font = [UIFont guessItTitleFont];
         _titleLabel.text = @"Guess It!";
-        _titleLabel.textColor = GI_TITLE_COLOR;
-        _titleLabel.shineColor = GI_TITLE_SHINE_COLOR;
+        _titleLabel.textColor = [GIConfiguration sharedInstance].game.interface.titleColor;
+        _titleLabel.shineColor = [GIConfiguration sharedInstance].game.interface.titleShineColor;
         _titleLabel.textAlignment = NSTextAlignmentCenter;
-        _titleLabel.shadowColor = GI_TITLE_SHADOW_COLOR;
-        _titleLabel.shadowOffset = GI_TITLE_SHADOW_OFFSET;
+        _titleLabel.shadowColor = [GIConfiguration sharedInstance].game.interface.titleShadowColor;
+        _titleLabel.shadowOffset = CGSizeMake(0.f, -1.f);
     }
     return _titleLabel;
 }
@@ -47,11 +48,11 @@
         _tapToPlayLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
         _tapToPlayLabel.backgroundColor = [UIColor clearColor];
         _tapToPlayLabel.text = @"Tap to PLAY";
-        _tapToPlayLabel.textColor = GI_TAP_TO_PLAY_COLOR;
+        _tapToPlayLabel.textColor = [GIConfiguration sharedInstance].game.interface.subtitleColor;
         _tapToPlayLabel.font = [UIFont guessItTapToPlayFont];
         _tapToPlayLabel.textAlignment = NSTextAlignmentCenter;
-        _tapToPlayLabel.shadowColor = GI_TAP_TO_PLAY_SHADOW_COLOR;
-        _tapToPlayLabel.shadowOffset = GI_TAP_TO_PLAY_SHADOW_OFFSET;
+        _tapToPlayLabel.shadowColor = [GIConfiguration sharedInstance].game.interface.subtitleShadowColor;
+        _tapToPlayLabel.shadowOffset = CGSizeMake(0.f, -1.f);
     }
     return _tapToPlayLabel;
 }
@@ -70,7 +71,7 @@
     [self.view addSubview:self.titleLabel];
     [self.view addSubview:self.tapToPlayLabel];
 
-    self.view.backgroundColor = GI_BACKGROUND_MAIN_COLOR;
+    self.view.backgroundColor = [GIConfiguration sharedInstance].game.interface.backgroundColor;
 
     UIButton *resetButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [resetButton addTarget:self action:@selector(_resetTouched:) forControlEvents:UIControlEventTouchUpInside];
