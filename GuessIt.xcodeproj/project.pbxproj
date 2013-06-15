@@ -76,7 +76,7 @@
 		BFAD128C16F136A200F6D429 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126616F136A100F6D429 /* UIKit.framework */; };
 		BFAD128D16F136A200F6D429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126816F136A100F6D429 /* Foundation.framework */; };
 		BFAD129516F136A200F6D429 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFAD129316F136A200F6D429 /* InfoPlist.strings */; };
-		BFAD129816F136A200F6D429 /* GuessItBSITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD129716F136A200F6D429 /* GuessItBSITests.m */; };
+		BFAD129816F136A200F6D429 /* GuessItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD129716F136A200F6D429 /* GuessItTests.m */; };
 		BFAD12B016F1376600F6D429 /* GIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12A916F1376600F6D429 /* GIAppDelegate.m */; };
 		BFAD12B116F1376600F6D429 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD12AB16F1376600F6D429 /* main.m */; };
 		BFB7CC93175B737B0055DBF0 /* GIGame.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB7CC92175B737B0055DBF0 /* GIGame.m */; };
@@ -104,7 +104,7 @@
 			containerPortal = BFAD125B16F136A100F6D429 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BFAD126216F136A100F6D429;
-			remoteInfo = GuessItBSI;
+			remoteInfo = GuessIt;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -193,21 +193,21 @@
 		BFA44030175A1D8700D4B8E5 /* GIConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIConfiguration.h; sourceTree = "<group>"; };
 		BFA44031175A1D8700D4B8E5 /* GIConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIConfiguration.m; sourceTree = "<group>"; };
 		BFA44033175A1EFD00D4B8E5 /* game.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game.json; sourceTree = "<group>"; };
-		BFAD126316F136A100F6D429 /* GuessItBSI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessItBSI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFAD126316F136A100F6D429 /* GuessIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAD126616F136A100F6D429 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BFAD126816F136A100F6D429 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BFAD126A16F136A100F6D429 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		BFAD126E16F136A100F6D429 /* GuessItBSI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GuessItBSI-Info.plist"; sourceTree = "<group>"; };
+		BFAD126E16F136A100F6D429 /* GuessIt-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GuessIt-Info.plist"; sourceTree = "<group>"; };
 		BFAD127016F136A100F6D429 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BFAD128916F136A200F6D429 /* GuessItBSITests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessItBSITests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFAD128916F136A200F6D429 /* GuessItTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessItTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAD128A16F136A200F6D429 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		BFAD129216F136A200F6D429 /* GuessItBSITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GuessItBSITests-Info.plist"; sourceTree = "<group>"; };
+		BFAD129216F136A200F6D429 /* GuessItTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GuessItTests-Info.plist"; sourceTree = "<group>"; };
 		BFAD129416F136A200F6D429 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BFAD129616F136A200F6D429 /* GuessItBSITests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuessItBSITests.h; sourceTree = "<group>"; };
-		BFAD129716F136A200F6D429 /* GuessItBSITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuessItBSITests.m; sourceTree = "<group>"; };
+		BFAD129616F136A200F6D429 /* GuessItTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuessItTests.h; sourceTree = "<group>"; };
+		BFAD129716F136A200F6D429 /* GuessItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuessItTests.m; sourceTree = "<group>"; };
 		BFAD12A816F1376600F6D429 /* GIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIAppDelegate.h; sourceTree = "<group>"; };
 		BFAD12A916F1376600F6D429 /* GIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIAppDelegate.m; sourceTree = "<group>"; };
-		BFAD12AA16F1376600F6D429 /* GuessItBSI-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GuessItBSI-Prefix.pch"; sourceTree = "<group>"; };
+		BFAD12AA16F1376600F6D429 /* GuessIt-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GuessIt-Prefix.pch"; sourceTree = "<group>"; };
 		BFAD12AB16F1376600F6D429 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFB7CC91175B737B0055DBF0 /* GIGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGame.h; sourceTree = "<group>"; };
 		BFB7CC92175B737B0055DBF0 /* GIGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGame.m; sourceTree = "<group>"; };
@@ -352,8 +352,8 @@
 		BFAD125A16F136A100F6D429 = {
 			isa = PBXGroup;
 			children = (
-				BFAD126C16F136A100F6D429 /* GuessItBSI */,
-				BFAD129016F136A200F6D429 /* GuessItBSITests */,
+				BFAD126C16F136A100F6D429 /* GuessIt */,
+				BFAD129016F136A200F6D429 /* GuessItTests */,
 				BFF9290E17243E0300F230C6 /* Resources */,
 				BFAD126516F136A100F6D429 /* Frameworks */,
 				BFAD126416F136A100F6D429 /* Products */,
@@ -364,8 +364,8 @@
 		BFAD126416F136A100F6D429 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BFAD126316F136A100F6D429 /* GuessItBSI.app */,
-				BFAD128916F136A200F6D429 /* GuessItBSITests.octest */,
+				BFAD126316F136A100F6D429 /* GuessIt.app */,
+				BFAD128916F136A200F6D429 /* GuessItTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -382,7 +382,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BFAD126C16F136A100F6D429 /* GuessItBSI */ = {
+		BFAD126C16F136A100F6D429 /* GuessIt */ = {
 			isa = PBXGroup;
 			children = (
 				BFAD12A116F1376600F6D429 /* Controller */,
@@ -392,32 +392,32 @@
 				BFAD12A716F1376600F6D429 /* Other */,
 				BFAD126D16F136A100F6D429 /* Supporting Files */,
 			);
-			path = GuessItBSI;
+			path = GuessIt;
 			sourceTree = "<group>";
 		};
 		BFAD126D16F136A100F6D429 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BFAD126E16F136A100F6D429 /* GuessItBSI-Info.plist */,
+				BFAD126E16F136A100F6D429 /* GuessIt-Info.plist */,
 				BFAD126F16F136A100F6D429 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BFAD129016F136A200F6D429 /* GuessItBSITests */ = {
+		BFAD129016F136A200F6D429 /* GuessItTests */ = {
 			isa = PBXGroup;
 			children = (
-				BFAD129616F136A200F6D429 /* GuessItBSITests.h */,
-				BFAD129716F136A200F6D429 /* GuessItBSITests.m */,
+				BFAD129616F136A200F6D429 /* GuessItTests.h */,
+				BFAD129716F136A200F6D429 /* GuessItTests.m */,
 				BFAD129116F136A200F6D429 /* Supporting Files */,
 			);
-			path = GuessItBSITests;
+			path = GuessItTests;
 			sourceTree = "<group>";
 		};
 		BFAD129116F136A200F6D429 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BFAD129216F136A200F6D429 /* GuessItBSITests-Info.plist */,
+				BFAD129216F136A200F6D429 /* GuessItTests-Info.plist */,
 				BFAD129316F136A200F6D429 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -462,7 +462,7 @@
 				BF291E8B174ECA320066D5EF /* GIDefinitions.m */,
 				BF0EFE72176BC3FB007CD06F /* GIUserInterface.h */,
 				BF0EFE73176BC3FB007CD06F /* GIUserInterface.m */,
-				BFAD12AA16F1376600F6D429 /* GuessItBSI-Prefix.pch */,
+				BFAD12AA16F1376600F6D429 /* GuessIt-Prefix.pch */,
 				BFAD12AB16F1376600F6D429 /* main.m */,
 			);
 			name = Other;
@@ -566,9 +566,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BFAD126216F136A100F6D429 /* GuessItBSI */ = {
+		BFAD126216F136A100F6D429 /* GuessIt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BFAD129B16F136A200F6D429 /* Build configuration list for PBXNativeTarget "GuessItBSI" */;
+			buildConfigurationList = BFAD129B16F136A200F6D429 /* Build configuration list for PBXNativeTarget "GuessIt" */;
 			buildPhases = (
 				BFAD125F16F136A100F6D429 /* Sources */,
 				BFAD126016F136A100F6D429 /* Frameworks */,
@@ -579,14 +579,14 @@
 			);
 			dependencies = (
 			);
-			name = GuessItBSI;
-			productName = GuessItBSI;
-			productReference = BFAD126316F136A100F6D429 /* GuessItBSI.app */;
+			name = GuessIt;
+			productName = GuessIt;
+			productReference = BFAD126316F136A100F6D429 /* GuessIt.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BFAD128816F136A200F6D429 /* GuessItBSITests */ = {
+		BFAD128816F136A200F6D429 /* GuessItTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BFAD129E16F136A200F6D429 /* Build configuration list for PBXNativeTarget "GuessItBSITests" */;
+			buildConfigurationList = BFAD129E16F136A200F6D429 /* Build configuration list for PBXNativeTarget "GuessItTests" */;
 			buildPhases = (
 				BFAD128416F136A200F6D429 /* Sources */,
 				BFAD128516F136A200F6D429 /* Frameworks */,
@@ -598,9 +598,9 @@
 			dependencies = (
 				BFAD128F16F136A200F6D429 /* PBXTargetDependency */,
 			);
-			name = GuessItBSITests;
-			productName = GuessItBSITests;
-			productReference = BFAD128916F136A200F6D429 /* GuessItBSITests.octest */;
+			name = GuessItTests;
+			productName = GuessItTests;
+			productReference = BFAD128916F136A200F6D429 /* GuessItTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -613,7 +613,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Marlon Andrade";
 			};
-			buildConfigurationList = BFAD125E16F136A100F6D429 /* Build configuration list for PBXProject "GuessItBSI" */;
+			buildConfigurationList = BFAD125E16F136A100F6D429 /* Build configuration list for PBXProject "GuessIt" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -625,8 +625,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BFAD126216F136A100F6D429 /* GuessItBSI */,
-				BFAD128816F136A200F6D429 /* GuessItBSITests */,
+				BFAD126216F136A100F6D429 /* GuessIt */,
+				BFAD128816F136A200F6D429 /* GuessItTests */,
 			);
 		};
 /* End PBXProject section */
@@ -771,7 +771,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFAD129816F136A200F6D429 /* GuessItBSITests.m in Sources */,
+				BFAD129816F136A200F6D429 /* GuessItTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,7 +780,7 @@
 /* Begin PBXTargetDependency section */
 		BFAD128F16F136A200F6D429 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BFAD126216F136A100F6D429 /* GuessItBSI */;
+			target = BFAD126216F136A100F6D429 /* GuessIt */;
 			targetProxy = BFAD128E16F136A200F6D429 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -866,8 +866,8 @@
 			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GuessItBSI/other/GuessItBSI-Prefix.pch";
-				INFOPLIST_FILE = "GuessItBSI/GuessItBSI-Info.plist";
+				GCC_PREFIX_HEADER = "GuessIt/other/GuessIt-Prefix.pch";
+				INFOPLIST_FILE = "GuessIt/GuessIt-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -879,8 +879,8 @@
 			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GuessItBSI/other/GuessItBSI-Prefix.pch";
-				INFOPLIST_FILE = "GuessItBSI/GuessItBSI-Info.plist";
+				GCC_PREFIX_HEADER = "GuessIt/other/GuessIt-Prefix.pch";
+				INFOPLIST_FILE = "GuessIt/GuessIt-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -890,14 +890,14 @@
 		BFAD129F16F136A200F6D429 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GuessItBSI.app/GuessItBSI";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GuessIt.app/GuessIt";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GuessItBSI/GuessItBSI-Prefix.pch";
-				INFOPLIST_FILE = "GuessItBSITests/GuessItBSITests-Info.plist";
+				GCC_PREFIX_HEADER = "GuessIt/GuessIt-Prefix.pch";
+				INFOPLIST_FILE = "GuessItTests/GuessItTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -907,14 +907,14 @@
 		BFAD12A016F136A200F6D429 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GuessItBSI.app/GuessItBSI";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GuessIt.app/GuessIt";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GuessItBSI/GuessItBSI-Prefix.pch";
-				INFOPLIST_FILE = "GuessItBSITests/GuessItBSITests-Info.plist";
+				GCC_PREFIX_HEADER = "GuessIt/GuessIt-Prefix.pch";
+				INFOPLIST_FILE = "GuessItTests/GuessItTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -924,7 +924,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BFAD125E16F136A100F6D429 /* Build configuration list for PBXProject "GuessItBSI" */ = {
+		BFAD125E16F136A100F6D429 /* Build configuration list for PBXProject "GuessIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BFAD129916F136A200F6D429 /* Debug */,
@@ -933,7 +933,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BFAD129B16F136A200F6D429 /* Build configuration list for PBXNativeTarget "GuessItBSI" */ = {
+		BFAD129B16F136A200F6D429 /* Build configuration list for PBXNativeTarget "GuessIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BFAD129C16F136A200F6D429 /* Debug */,
@@ -942,7 +942,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BFAD129E16F136A200F6D429 /* Build configuration list for PBXNativeTarget "GuessItBSITests" */ = {
+		BFAD129E16F136A200F6D429 /* Build configuration list for PBXNativeTarget "GuessItTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BFAD129F16F136A200F6D429 /* Debug */,
