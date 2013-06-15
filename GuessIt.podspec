@@ -3,7 +3,9 @@ Pod::Spec.new do |s|
   s.version      =  '0.1'
   s.summary      =  'GuessIt is a framework for creating guessing games'
   s.homepage     =  'http://github.com/marlonandrade/guess-it-framework'
-  s.author       =  { 'Marlon Andrade' => 'marlonmandrade@gmail.com' }
+  s.author       =  { 
+    'Marlon Andrade' => 'marlonmandrade@gmail.com' 
+  }
   s.source       =  { 
     :git => 'https://github.com/marlonandrade/guess-it-framework.git', 
     :branch => 'master' 
@@ -18,6 +20,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '6.0'
 
   s.source_files = 'GuessIt/**/*.{h,m}'
+  s.resources = 'Resources/**/*'
   
   s.dependency 'SSToolkit'
   s.dependency 'MALazykit', :head
