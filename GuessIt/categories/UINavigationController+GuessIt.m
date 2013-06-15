@@ -10,6 +10,7 @@
 
 #import "GIMainViewController.h"
 #import "GINavigationBar.h"
+#import "MALazykit.h"
 
 @implementation UINavigationController (GuessIt)
 

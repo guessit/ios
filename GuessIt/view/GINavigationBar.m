@@ -9,6 +9,7 @@
 #import "GINavigationBar.h"
 
 #import "GIConfiguration.h"
+#import "MALazykit.h"
 #import "UIFont+GuessItFonts.h"
 #import "UIImage+FromColor.h"
 

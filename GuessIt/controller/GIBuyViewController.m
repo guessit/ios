@@ -8,6 +8,8 @@
 
 #import "GIBuyViewController.h"
 
+#import "MALazykit.h"
+
 @interface GIBuyViewController ()
 
 - (void)_cancelTouched:(id)sender;

@@ -9,6 +9,7 @@
 #import "GILevel.h"
 
 #import "GIConfiguration.h"
+#import "GIDefinitions.h"
 
 @interface GILevel()
 

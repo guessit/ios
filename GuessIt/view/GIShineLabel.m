@@ -8,6 +8,7 @@
 
 #import "GIShineLabel.h"
 
+#import "MALazykit.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface GIShineLabel ()

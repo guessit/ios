@@ -16,6 +16,8 @@
 		BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B21707617700A83FE3 /* GIViewController.m */; };
 		BF1F29B6170761D400A83FE3 /* GILevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B5170761D400A83FE3 /* GILevelViewController.m */; };
 		BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF291E8B174ECA320066D5EF /* GIDefinitions.m */; };
+		BF3DDBA1176D070B0055A388 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3DDBA0176D070A0055A388 /* main.m */; };
+		BF3DDBA4176D07230055A388 /* GIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3DDBA3176D07230055A388 /* GIAppDelegate.m */; };
 		BF6943BB171CA244000F74E0 /* GILevel+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */; };
 		BF6943BE171CA2AD000F74E0 /* GIGame+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BD171CA2AD000F74E0 /* GIGame+PrettyDescription.m */; };
 		BF6B70231767E7EB006BF650 /* GIHelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6B70221767E66C006BF650 /* GIHelpView.m */; };
@@ -82,6 +84,9 @@
 		BF1F29B4170761D400A83FE3 /* GILevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelViewController.h; sourceTree = "<group>"; };
 		BF1F29B5170761D400A83FE3 /* GILevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelViewController.m; sourceTree = "<group>"; };
 		BF291E8B174ECA320066D5EF /* GIDefinitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIDefinitions.m; sourceTree = "<group>"; };
+		BF3DDBA0176D070A0055A388 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BF3DDBA2176D07230055A388 /* GIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIAppDelegate.h; sourceTree = "<group>"; };
+		BF3DDBA3176D07230055A388 /* GIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIAppDelegate.m; sourceTree = "<group>"; };
 		BF6943B9171CA244000F74E0 /* GILevel+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GILevel+PrettyDescription.h"; sourceTree = "<group>"; };
 		BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GILevel+PrettyDescription.m"; sourceTree = "<group>"; };
 		BF6943BC171CA2AD000F74E0 /* GIGame+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GIGame+PrettyDescription.h"; sourceTree = "<group>"; };
@@ -355,6 +360,8 @@
 		BFAD12A716F1376600F6D429 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				BF3DDBA2176D07230055A388 /* GIAppDelegate.h */,
+				BF3DDBA3176D07230055A388 /* GIAppDelegate.m */,
 				BFA44030175A1D8700D4B8E5 /* GIConfiguration.h */,
 				BFA44031175A1D8700D4B8E5 /* GIConfiguration.m */,
 				BFF5A2E4171EB74E00F401B3 /* GIDefinitions.h */,
@@ -362,6 +369,7 @@
 				BF0EFE72176BC3FB007CD06F /* GIUserInterface.h */,
 				BF0EFE73176BC3FB007CD06F /* GIUserInterface.m */,
 				BFAD12AA16F1376600F6D429 /* GuessIt-Prefix.pch */,
+				BF3DDBA0176D070A0055A388 /* main.m */,
 			);
 			name = Other;
 			path = other;
@@ -540,7 +548,9 @@
 				BF1F29B01707347900A83FE3 /* GILevel.m in Sources */,
 				BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */,
 				BF1F29B6170761D400A83FE3 /* GILevelViewController.m in Sources */,
+				BF3DDBA4176D07230055A388 /* GIAppDelegate.m in Sources */,
 				BF6943BB171CA244000F74E0 /* GILevel+PrettyDescription.m in Sources */,
+				BF3DDBA1176D070B0055A388 /* main.m in Sources */,
 				BF6B70231767E7EB006BF650 /* GIHelpView.m in Sources */,
 				BF6943BE171CA2AD000F74E0 /* GIGame+PrettyDescription.m in Sources */,
 				BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */,

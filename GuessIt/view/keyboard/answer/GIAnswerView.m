@@ -9,8 +9,11 @@
 #import "GIAnswerView.h"
 
 #import "GIConfiguration.h"
+#import "GIDefinitions.h"
 #import "GILetterView.h"
 #import "GIPlaceholderView.h"
+#import "MALazykit.h"
+#import "UIView+CBFrameHelpers.h"
 
 @interface GIAnswerView ()
 

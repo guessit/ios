@@ -8,9 +8,11 @@
 
 #import "GIConfiguration.h"
 
+#import "GIDefinitions.h"
 #import "GIGame.h"
 #import "GIGame+Factory.h"
 #import "GILevel.h"
+#import <SSToolkit/SSCategories.h>
 
 @interface GIConfiguration ()
 
@@ -115,10 +117,5 @@
         self.game = [GIGame gameWithDictionary:json];
     }
 }
-
-#warning TODO: BROWSER - chrome, ie, firefox, safari, opera, etc
-#warning TODO: SISTEMAS OPERACIONAIS - windows, ubuntu, osx, ios, android, etc
-#warning TODO: MARCAS - apple, google, microsoft, hp, cisco, etc
-#warning TODO: PERSONALIDADES - steve jobs, bill gates, etc
 
 @end

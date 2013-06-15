@@ -8,8 +8,11 @@
 
 #import "GILetterView.h"
 
+#import "GIDefinitions.h"
 #import "GIConfiguration.h"
+#import "MALazykit.h"
 #import "UIFont+GuessItFonts.h"
+#import "UIView+CBFrameHelpers.h"
 
 @interface GILetterView ()
 

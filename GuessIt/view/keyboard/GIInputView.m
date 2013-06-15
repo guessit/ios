@@ -10,8 +10,11 @@
 
 #import "GIAnswerView.h"
 #import "GIAnswerViewDelegate.h"
+#import "GIDefinitions.h"
 #import "GIKeypadView.h"
 #import "GIKeypadViewDelegate.h"
+#import "MALazykit.h"
+#import "UIView+CBFrameHelpers.h"
 
 @interface GIInputView () <GIAnswerViewDelegate, GIKeypadViewDelegate>
 

@@ -8,6 +8,8 @@
 
 #import "GIViewController.h"
 
+#import "MALazykit.h"
+
 @interface GIViewController()
 
 - (void)_backButtonTouched:(id)sender;

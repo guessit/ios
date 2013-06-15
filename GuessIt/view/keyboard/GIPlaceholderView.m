@@ -8,6 +8,7 @@
 
 #import "GIPlaceholderView.h"
 
+#import "GIDefinitions.h"
 #import "GIConfiguration.h"
 #import <QuartzCore/QuartzCore.h>
 

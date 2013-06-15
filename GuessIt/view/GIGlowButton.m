@@ -8,6 +8,7 @@
 
 #import "GIGlowButton.h"
 
+#import "MALazykit.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface GIGlowButton ()

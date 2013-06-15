@@ -9,8 +9,11 @@
 #import "GILevelView.h"
 
 #import "GIConfiguration.h"
+#import "GIDefinitions.h"
 #import "GIInputView.h"
 #import "GIInputViewDelegate.h"
+#import "MALazykit.h"
+#import "UIView+CBFrameHelpers.h"
 #import <UIFont+GuessItFonts.h>
 #import <QuartzCore/QuartzCore.h>
 

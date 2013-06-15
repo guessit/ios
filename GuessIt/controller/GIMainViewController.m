@@ -8,7 +8,9 @@
 
 #import "GIMainViewController.h"
 
+#import "MALazykit.h"
 #import "GIConfiguration.h"
+#import "GIDefinitions.h"
 #import "GIGame+PrettyDescription.h"
 #import "GILevelViewController.h"
 #import "UIFont+GuessItFonts.h"

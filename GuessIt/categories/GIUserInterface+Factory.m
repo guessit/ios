@@ -8,6 +8,8 @@
 
 #import "GIUserInterface+Factory.h"
 
+#import <SSToolkit/SSCategories.h>
+
 @implementation GIUserInterface (Factory)
 
 + (GIUserInterface *)userInterfaceWithDictionary:(NSDictionary *)dictionary {

@@ -16,6 +16,7 @@
 #import "GILevelView.h"
 #import "GILevelViewDelegate.h"
 #import "GINavigationBar.h"
+#import "MALazykit.h"
 #import "UIViewController+KNSemiModal.h"
 
 @interface GILevelViewController() <GILevelViewDelegate, UIAlertViewDelegate>
