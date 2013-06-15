@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.resources = 'Resources/**/*'
   
   s.dependency 'SSToolkit'
-  s.dependency 'MALazykit', :head
+  s.dependency 'MALazykit'
   s.dependency 'KNSemiModalViewController'
   s.dependency 'uiview-frame-helpers'
   s.dependency 'UIView+EasingFunctions', '~> 0.0.1'
