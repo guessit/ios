@@ -1,26 +1,26 @@
 //
-//  GIAppDelegate.m
+//  _GIAppDelegate.m
 //  GuessIt
 //
 //  Created by Marlon Andrade on 15/06/13.
 //  Copyright (c) 2013 GuessIt. All rights reserved.
 //
 
-#import "GIAppDelegate.h"
+#import "_GIAppDelegate.h"
 
 #import "MALazykit.h"
 #import "UINavigationController+GuessIt.h"
 
-@implementation GIAppDelegate
+@implementation _GIAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UIViewController *vc = [UIViewController viewController];
     vc.view.backgroundColor = [UIColor whiteColor];
 
     UILabel *label = [UILabel label];
-    label.text = @"GuessIt is a framework, create a new app and add it as a pod";
+    label.text = @"GuessIt is a framework,\ncreate a new app\nand add it as a pod";
     label.numberOfLines = 3;
-    label.font = [UIFont systemFontOfSize:26.f];
+    label.font = [UIFont systemFontOfSize:25.f];
     label.frame = CGRectInset(vc.view.bounds, 20.f, 20.f);
     label.textAlignment = NSTextAlignmentCenter;
 

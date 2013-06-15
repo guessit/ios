@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "GIAppDelegate.h"
+#import "_GIAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([GIAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([_GIAppDelegate class]));
     }
 }
