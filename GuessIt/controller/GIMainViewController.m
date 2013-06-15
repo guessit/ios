@@ -9,6 +9,7 @@
 #import "GIMainViewController.h"
 
 #import "GIConfiguration.h"
+#import "GIGame+PrettyDescription.h"
 #import "GILevelViewController.h"
 #import "UIFont+GuessItFonts.h"
 
@@ -69,6 +70,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    NSLog(@"Game: %@", [[GIConfiguration sharedInstance].game prettyDescription]);
 
     [self.view addSubview:self.titleLabel];
     [self.view addSubview:self.tapToPlayLabel];

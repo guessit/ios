@@ -85,6 +85,7 @@
 		BFBAF9F6175D5BE800AA0AE1 /* JotiOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFBAF9F5175D5BE800AA0AE1 /* JotiOne-Regular.ttf */; };
 		BFBAF9F9175D773200AA0AE1 /* GIGlowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBAF9F8175D773200AA0AE1 /* GIGlowButton.m */; };
 		BFBDD2121701092000F5698E /* GIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBDD2111701092000F5698E /* GIMainViewController.m */; };
+		BFDE0173176CFFBC00E704CF /* UINavigationController+GuessIt.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDE0172176CFFBC00E704CF /* UINavigationController+GuessIt.m */; };
 		BFF9294217243E0300F230C6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9291017243E0300F230C6 /* Default-568h@2x.png */; };
 		BFF9294317243E0300F230C6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9291117243E0300F230C6 /* Default.png */; };
 		BFF9294417243E0300F230C6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF9291217243E0300F230C6 /* Default@2x.png */; };
@@ -220,6 +221,8 @@
 		BFBAF9F8175D773200AA0AE1 /* GIGlowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGlowButton.m; sourceTree = "<group>"; };
 		BFBDD2101701092000F5698E /* GIMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIMainViewController.h; sourceTree = "<group>"; };
 		BFBDD2111701092000F5698E /* GIMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIMainViewController.m; sourceTree = "<group>"; };
+		BFDE0171176CFFBC00E704CF /* UINavigationController+GuessIt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+GuessIt.h"; sourceTree = "<group>"; };
+		BFDE0172176CFFBC00E704CF /* UINavigationController+GuessIt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GuessIt.m"; sourceTree = "<group>"; };
 		BFF5A2E4171EB74E00F401B3 /* GIDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIDefinitions.h; sourceTree = "<group>"; };
 		BFF9291017243E0300F230C6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BFF9291117243E0300F230C6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -319,6 +322,8 @@
 				BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */,
 				BF1835E9172DC49D00E2CB5F /* UIImage+FromColor.h */,
 				BF1835EA172DC49D00E2CB5F /* UIImage+FromColor.m */,
+				BFDE0171176CFFBC00E704CF /* UINavigationController+GuessIt.h */,
+				BFDE0172176CFFBC00E704CF /* UINavigationController+GuessIt.m */,
 			);
 			name = Categories;
 			path = categories;
@@ -745,6 +750,7 @@
 				BF6B70231767E7EB006BF650 /* GIHelpView.m in Sources */,
 				BF6943BE171CA2AD000F74E0 /* GIGame+PrettyDescription.m in Sources */,
 				BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */,
+				BFDE0173176CFFBC00E704CF /* UINavigationController+GuessIt.m in Sources */,
 				BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */,
 				BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */,
 				BF0EFE74176BC3FB007CD06F /* GIUserInterface.m in Sources */,

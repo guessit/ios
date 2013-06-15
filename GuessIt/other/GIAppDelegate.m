@@ -8,24 +8,13 @@
 
 #import "GIAppDelegate.h"
 
-#import "GIConfiguration.h"
-#import "GIGame+PrettyDescription.h"
-#import "GIMainViewController.h"
-#import "GINavigationBar.h"
+#import "UINavigationController+GuessIt.h"
 
 @implementation GIAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSLog(@"Bundle: %@", [NSBundle mainBundle]);
-    NSLog(@"Game: %@", [[GIConfiguration sharedInstance].game prettyDescription]);
-
-    GIMainViewController *main = [GIMainViewController viewController];
-    UINavigationController *nav = [UINavigationController navigationControllerWithNavigationBarClass:[GINavigationBar class]
-                                                                                        toolbarClass:nil];
-    nav.viewControllers = @[main];
-
     self.window = [UIWindow viewWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = nav;
+    self.window.rootViewController = [UINavigationController guessItGame];
     [self.window makeKeyAndVisible];
 
     return YES;
