@@ -28,6 +28,6 @@ Pod::Spec.new do |s|
   s.dependency 'uiview-frame-helpers'
   s.dependency 'UIView+EasingFunctions', '~> 0.0.1'
   s.dependency 'AHEasing', '~> 1.1'
-  s.dependency 'UAModalPanel.h'
+  s.dependency 'UAModalPanel'
   
 end
