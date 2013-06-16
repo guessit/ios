@@ -16,9 +16,9 @@
 #import "GILevel.h"
 #import "GILevelView.h"
 #import "GILevelViewDelegate.h"
+#import "GIModalPanel.h"
 #import "GINavigationBar.h"
 #import "MALazykit.h"
-#import "UAModalPanel.h"
 #import "UIViewController+KNSemiModal.h"
 
 @interface GILevelViewController() <GILevelViewDelegate, UAModalPanelDelegate>
@@ -103,20 +103,15 @@
     if (guessingResult == GIGuessingResultCorrect) {
         UIWindow *mainWindow = [UIApplication sharedApplication].keyWindow;
 
-        UAModalPanel *modalPanel = [UAModalPanel viewWithFrame:mainWindow.bounds];
-        modalPanel.margin = UIEdgeInsetsZero;
-        modalPanel.borderWidth = 0.f;
-        modalPanel.userInteractionEnabled = YES;
-
+        GIModalPanel *modalPanel = [GIModalPanel viewWithFrame:mainWindow.bounds];
         modalPanel.delegate = self;
 
         GICongratulationsView *congratsView = [GICongratulationsView view];
         congratsView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
-        modalPanel.contentView = congratsView;
+        [modalPanel.contentView addSubview:congratsView];
 
         [mainWindow addSubview:modalPanel];
-
         [modalPanel showFromPoint:mainWindow.center];
     } else {
 

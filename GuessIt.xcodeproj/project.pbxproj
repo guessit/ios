@@ -18,6 +18,9 @@
 		BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF291E8B174ECA320066D5EF /* GIDefinitions.m */; };
 		BF3DDBA1176D070B0055A388 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3DDBA0176D070A0055A388 /* main.m */; };
 		BF3DDBA4176D07230055A388 /* _GIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3DDBA3176D07230055A388 /* _GIAppDelegate.m */; };
+		BF56593B176E6D3800F5198A /* GIModalPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF56593A176E6D3800F5198A /* GIModalPanel.m */; };
+		BF565941176E721400F5198A /* JotiOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF56593F176E721400F5198A /* JotiOne-Regular.ttf */; };
+		BF565942176E721400F5198A /* Lobster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF565940176E721400F5198A /* Lobster.ttf */; };
 		BF6943BB171CA244000F74E0 /* GILevel+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */; };
 		BF6943BE171CA2AD000F74E0 /* GIGame+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BD171CA2AD000F74E0 /* GIGame+PrettyDescription.m */; };
 		BF6B70231767E7EB006BF650 /* GIHelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6B70221767E66C006BF650 /* GIHelpView.m */; };
@@ -87,6 +90,10 @@
 		BF3DDBA0176D070A0055A388 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF3DDBA2176D07230055A388 /* _GIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _GIAppDelegate.h; sourceTree = "<group>"; };
 		BF3DDBA3176D07230055A388 /* _GIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _GIAppDelegate.m; sourceTree = "<group>"; };
+		BF565939176E6D3800F5198A /* GIModalPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIModalPanel.h; sourceTree = "<group>"; };
+		BF56593A176E6D3800F5198A /* GIModalPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIModalPanel.m; sourceTree = "<group>"; };
+		BF56593F176E721400F5198A /* JotiOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JotiOne-Regular.ttf"; sourceTree = "<group>"; };
+		BF565940176E721400F5198A /* Lobster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lobster.ttf; sourceTree = "<group>"; };
 		BF6943B9171CA244000F74E0 /* GILevel+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GILevel+PrettyDescription.h"; sourceTree = "<group>"; };
 		BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GILevel+PrettyDescription.m"; sourceTree = "<group>"; };
 		BF6943BC171CA2AD000F74E0 /* GIGame+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GIGame+PrettyDescription.h"; sourceTree = "<group>"; };
@@ -205,6 +212,15 @@
 			);
 			name = Categories;
 			path = categories;
+			sourceTree = "<group>";
+		};
+		BF56593E176E721400F5198A /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BF56593F176E721400F5198A /* JotiOne-Regular.ttf */,
+				BF565940176E721400F5198A /* Lobster.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		BF712572175D40D2007F99EB /* Keyboard */ = {
@@ -388,10 +404,12 @@
 				BFBAF9F8175D773200AA0AE1 /* GIGlowButton.m */,
 				BF6B70211767E66C006BF650 /* GIHelpView.h */,
 				BF6B70221767E66C006BF650 /* GIHelpView.m */,
-				BFF92974172443AC00F230C6 /* GIShineLabel.h */,
-				BFF92975172443AC00F230C6 /* GIShineLabel.m */,
+				BF565939176E6D3800F5198A /* GIModalPanel.h */,
+				BF56593A176E6D3800F5198A /* GIModalPanel.m */,
 				BF1835D3172C3D1D00E2CB5F /* GINavigationBar.h */,
 				BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */,
+				BFF92974172443AC00F230C6 /* GIShineLabel.h */,
+				BFF92975172443AC00F230C6 /* GIShineLabel.m */,
 			);
 			name = View;
 			path = view;
@@ -400,6 +418,7 @@
 		BFF9290E17243E0300F230C6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BF56593E176E721400F5198A /* fonts */,
 				BFF9290F17243E0300F230C6 /* images */,
 			);
 			path = Resources;
@@ -498,6 +517,8 @@
 				BFF9296717243E0300F230C6 /* ico_back.png in Resources */,
 				BFF9296817243E0300F230C6 /* ico_back@2x.png in Resources */,
 				BF91795817244A8200B136E2 /* shine_mask@2x.png in Resources */,
+				BF565942176E721400F5198A /* Lobster.ttf in Resources */,
+				BF565941176E721400F5198A /* JotiOne-Regular.ttf in Resources */,
 				BF714A07175FE83D00DF6274 /* ico_guess_it.png in Resources */,
 				BF714A08175FE83D00DF6274 /* ico_guess_it@2x.png in Resources */,
 			);
@@ -577,6 +598,7 @@
 				BF71258B175D4238007F99EB /* GILevelView.m in Sources */,
 				BFBAF9F9175D773200AA0AE1 /* GIGlowButton.m in Sources */,
 				BF714A0B175FE8F200DF6274 /* GIBuyViewController.m in Sources */,
+				BF56593B176E6D3800F5198A /* GIModalPanel.m in Sources */,
 				BF0EFE77176BC929007CD06F /* GIUserInterface+Factory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

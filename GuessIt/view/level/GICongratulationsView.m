@@ -39,11 +39,10 @@
 #pragma mark - Private Methods
 
 - (void)_initialize {
-    self.backgroundColor = [UIColor magentaColor];
-
     UILabel *congratsLabel = [UILabel label];
     congratsLabel.text = @"Congratulations";
     [congratsLabel sizeToFit];
+    congratsLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
     congratsLabel.center = self.center;
 
     [self addSubview:congratsLabel];
