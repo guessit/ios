@@ -21,7 +21,7 @@
 #import "UAModalPanel.h"
 #import "UIViewController+KNSemiModal.h"
 
-@interface GILevelViewController() <GILevelViewDelegate, UIAlertViewDelegate>
+@interface GILevelViewController() <GILevelViewDelegate, UAModalPanelDelegate>
 
 @property (nonatomic, strong) GILevelView *levelView;
 @property (nonatomic, strong) GIHelpView *helpView;
@@ -101,8 +101,23 @@
 
 - (void)levelView:(GILevelView *)levelView didFinishGuessingLevel:(GILevel *)level withResult:(GIGuessingResult)guessingResult {
     if (guessingResult == GIGuessingResultCorrect) {
-        [[GIConfiguration sharedInstance] loadNewRandomLevel];
-        [self _adjustViewForCurrentLevel];
+        UIWindow *mainWindow = [UIApplication sharedApplication].keyWindow;
+
+        UAModalPanel *modalPanel = [UAModalPanel viewWithFrame:mainWindow.bounds];
+        modalPanel.margin = UIEdgeInsetsZero;
+        modalPanel.borderWidth = 0.f;
+        modalPanel.userInteractionEnabled = YES;
+
+        modalPanel.delegate = self;
+
+        GICongratulationsView *congratsView = [GICongratulationsView view];
+        congratsView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+
+        modalPanel.contentView = congratsView;
+
+        [mainWindow addSubview:modalPanel];
+
+        [modalPanel showFromPoint:mainWindow.center];
     } else {
 
     }
@@ -113,9 +128,9 @@
     [self presentSemiView:self.helpView];
 }
 
-#pragma mark - UIAlertViewDelegate Methods
+#pragma mark - UAModalPanelDelegate Methods
 
-- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex {
+- (void)didCloseModalPanel:(UAModalPanel *)modalPanel {
     [[GIConfiguration sharedInstance] loadNewRandomLevel];
     [self _adjustViewForCurrentLevel];
 }

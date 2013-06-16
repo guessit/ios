@@ -8,6 +8,8 @@
 
 #import "GICongratulationsView.h"
 
+#import "MALazykit.h"
+
 @interface GICongratulationsView ()
 
 - (void)_initialize;
@@ -38,6 +40,13 @@
 
 - (void)_initialize {
     self.backgroundColor = [UIColor magentaColor];
+
+    UILabel *congratsLabel = [UILabel label];
+    congratsLabel.text = @"Congratulations";
+    [congratsLabel sizeToFit];
+    congratsLabel.center = self.center;
+
+    [self addSubview:congratsLabel];
 }
 
 @end

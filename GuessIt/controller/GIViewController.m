@@ -31,7 +31,6 @@
          forControlEvents:UIControlEventTouchUpInside];
 
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithCustomView:backButton];
-    self.navigationItem.hidesBackButton = YES;
 }
 
 #pragma mark - Private Interface
