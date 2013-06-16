@@ -3,6 +3,7 @@ PODS:
   - KNSemiModalViewController (0.3)
   - MALazykit (HEAD based on 0.1.10)
   - SSToolkit (1.0.4)
+  - UAModalPanel (1.1.1)
   - UIView+EasingFunctions (0.0.1)
   - uiview-frame-helpers (0.1.1)
 
@@ -11,6 +12,7 @@ DEPENDENCIES:
   - KNSemiModalViewController
   - MALazykit (HEAD)
   - SSToolkit
+  - UAModalPanel
   - UIView+EasingFunctions (~> 0.0.1)
   - uiview-frame-helpers
 
@@ -19,6 +21,7 @@ SPEC CHECKSUMS:
   KNSemiModalViewController: 976b739f57aa595359a2cfdf6aadde991ada8f99
   MALazykit: 7a3c9c4004f85f8db26962c4b041e18f4f64b9dc
   SSToolkit: 689acaedac79c2079e492e528a55bcb5db9d98c4
+  UAModalPanel: e0f697b4d89ccf0f07c3dc2eb7d17d0e3cb7fe56
   UIView+EasingFunctions: b27927be096f11b2d9551cefd63c08683bbd2a9f
   uiview-frame-helpers: d01c252e592b409a5b41332177e2a2da0a661390
 

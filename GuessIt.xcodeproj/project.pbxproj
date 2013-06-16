@@ -114,6 +114,8 @@
 		BF714A09175FE8F200DF6274 /* GIBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIBuyViewController.h; sourceTree = "<group>"; };
 		BF714A0A175FE8F200DF6274 /* GIBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIBuyViewController.m; sourceTree = "<group>"; };
 		BF91795717244A8200B136E2 /* shine_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shine_mask@2x.png"; sourceTree = "<group>"; };
+		BF99CD44176E317300CA2650 /* GICongratulationsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GICongratulationsView.h; sourceTree = "<group>"; };
+		BF99CD45176E317300CA2650 /* GICongratulationsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GICongratulationsView.m; sourceTree = "<group>"; };
 		BFA44030175A1D8700D4B8E5 /* GIConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIConfiguration.h; sourceTree = "<group>"; };
 		BFA44031175A1D8700D4B8E5 /* GIConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIConfiguration.m; sourceTree = "<group>"; };
 		BFAD126316F136A100F6D429 /* GuessIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +252,8 @@
 				BF712588175D4238007F99EB /* GILevelView.h */,
 				BF712589175D4238007F99EB /* GILevelView.m */,
 				BF71258A175D4238007F99EB /* GILevelViewDelegate.h */,
+				BF99CD44176E317300CA2650 /* GICongratulationsView.h */,
+				BF99CD45176E317300CA2650 /* GICongratulationsView.m */,
 			);
 			name = Level;
 			path = level;

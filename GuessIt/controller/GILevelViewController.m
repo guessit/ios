@@ -10,6 +10,7 @@
 
 #import "GIBuyViewController.h"
 #import "GIConfiguration.h"
+#import "GICongratulationsView.h"
 #import "GIGame.h"
 #import "GIHelpView.h"
 #import "GILevel.h"
@@ -17,6 +18,7 @@
 #import "GILevelViewDelegate.h"
 #import "GINavigationBar.h"
 #import "MALazykit.h"
+#import "UAModalPanel.h"
 #import "UIViewController+KNSemiModal.h"
 
 @interface GILevelViewController() <GILevelViewDelegate, UIAlertViewDelegate>
@@ -99,11 +101,14 @@
 
 - (void)levelView:(GILevelView *)levelView didFinishGuessingLevel:(GILevel *)level withResult:(GIGuessingResult)guessingResult {
     if (guessingResult == GIGuessingResultCorrect) {
-        [[[UIAlertView alloc] initWithTitle:@"YAY"
-                                    message:@"YAYYYYYYYY"
-                                   delegate:self
-                          cancelButtonTitle:@"Ok"
-                          otherButtonTitles:nil] show];
+        UAModalPanel *modalPanel = [UAModalPanel viewWithFrame:self.view.bounds];
+        GICongratulationsView *congrats = [GICongratulationsView view];
+        congrats.level = [GIConfiguration sharedInstance].currentLevel;
+        [modalPanel.contentView addSubview:congrats];
+
+        [self.view addSubview:modalPanel];
+
+        [modalPanel showFromPoint:self.view.center];
     } else {
 
     }
