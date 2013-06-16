@@ -79,7 +79,7 @@
     [self.view addSubview:self.tapToPlayLabel];
 
     self.titleLabel.center = CGPointMake(self.view.center.x, self.view.center.y - 50.f);
-    self.tapToPlayLabel.center = CGPointMake(self.view.center.x, self.titleLabel.center.y + 40.f);
+    self.tapToPlayLabel.center = CGPointMake(self.view.center.x, self.titleLabel.center.y + 46.f);
 
     self.view.backgroundColor = [GIConfiguration sharedInstance].game.interface.backgroundColor;
 
@@ -105,7 +105,7 @@
 
     [self.navigationController setNavigationBarHidden:YES animated:animated];
 
-    [self.titleLabel flash];
+    [self.titleLabel shine];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -121,7 +121,7 @@
 #pragma mark - Private Interface
 
 - (void)_applicationDidBecomeActive:(NSNotification *)notification {
-    [self.titleLabel flash];
+    [self.titleLabel shine];
 }
 
 - (void)_tapRecognized:(UITapGestureRecognizer *)gesture {

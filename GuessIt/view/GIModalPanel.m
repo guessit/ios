@@ -48,7 +48,7 @@
     self.margin = UIEdgeInsetsZero;
     self.padding = UIEdgeInsetsZero;
     self.borderWidth = 0.f;
-    self.contentColor = [UIColor colorWithWhite:0.f alpha:0.5f];
+    self.contentColor = [UIColor colorWithWhite:0.f alpha:0.58f];
     self.shouldBounce = NO;
     self.gestureRecognizers = @[
         [UITapGestureRecognizer gestureRecognizerWithTarget:self

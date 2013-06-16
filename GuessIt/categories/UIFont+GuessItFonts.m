@@ -34,4 +34,20 @@
     return [UIFont fontWithName:@"AvenirNextCondensed-Bold" size:15.f];
 }
 
++ (UIFont *)guessItCongratulationTitleFont {
+    return [UIFont fontWithName:@"Lobster" size:40.f];
+}
+
++ (UIFont *)guessItCongratulationDescriptionFont {
+    return [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:18.f];
+}
+
++ (UIFont *)guessItCongratulationAnswerDescriptionFont {
+    return [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:15.f];
+}
+
++ (UIFont *)guessItCongratulationAnswerFont {
+    return [UIFont fontWithName:@"AvenirNextCondensed-Bold" size:35.f];
+}
+
 @end

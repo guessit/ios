@@ -10,6 +10,9 @@
 
 extern NSString * const GICurrentLevelDidChangeNotification;
 
+#define RADIANS_TO_DEGREES(radians) ((radians) * (180.f / M_PI))
+#define DEGREES_TO_RADIANS(angle) ((angle) / 180.f * M_PI)
+
 #pragma mark - NSUserDefaults Keys
 
 #define GI_CURRENT_LEVEL @"GuessItCurrentLevel"

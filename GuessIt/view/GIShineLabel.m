@@ -81,7 +81,7 @@
 
 #pragma mark - Public Interface
 
-- (void)flash {
+- (void)shine {
     CGFloat width = self.bounds.size.width;
 
     self.animation.duration = self.shineDuration > 0.f ? self.shineDuration : 3.f;

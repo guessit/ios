@@ -108,6 +108,7 @@
 
         GICongratulationsView *congratsView = [GICongratulationsView view];
         congratsView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        congratsView.level = level;
 
         [modalPanel.contentView addSubview:congratsView];
 

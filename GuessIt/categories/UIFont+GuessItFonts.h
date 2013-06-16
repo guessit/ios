@@ -17,4 +17,9 @@
 + (UIFont *)guessItTapToPlayFont;
 + (UIFont *)guessItCategoryFont;
 
++ (UIFont *)guessItCongratulationTitleFont;
++ (UIFont *)guessItCongratulationDescriptionFont;
++ (UIFont *)guessItCongratulationAnswerDescriptionFont;
++ (UIFont *)guessItCongratulationAnswerFont;
+
 @end
