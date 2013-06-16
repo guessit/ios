@@ -101,14 +101,8 @@
 
 - (void)levelView:(GILevelView *)levelView didFinishGuessingLevel:(GILevel *)level withResult:(GIGuessingResult)guessingResult {
     if (guessingResult == GIGuessingResultCorrect) {
-        UAModalPanel *modalPanel = [UAModalPanel viewWithFrame:self.view.bounds];
-        GICongratulationsView *congrats = [GICongratulationsView view];
-        congrats.level = [GIConfiguration sharedInstance].currentLevel;
-        [modalPanel.contentView addSubview:congrats];
-
-        [self.view addSubview:modalPanel];
-
-        [modalPanel showFromPoint:self.view.center];
+        [[GIConfiguration sharedInstance] loadNewRandomLevel];
+        [self _adjustViewForCurrentLevel];
     } else {
 
     }

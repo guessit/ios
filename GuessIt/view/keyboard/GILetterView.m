@@ -97,6 +97,8 @@
 
 - (void)reset {
     self.backgroundColor = [GIConfiguration sharedInstance].game.interface.letterBackgroundColor;
+    [self.layer removeAllAnimations];
+    self.frame = CGRectZero;
     self.transform = CGAffineTransformIdentity;
 }
 

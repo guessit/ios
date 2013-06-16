@@ -270,9 +270,9 @@
         }
 
         letterView.letter = letter;
-        if (!letterView.superview) {
-            [self.lettersContainer addSubview:letterView];
-        }
+
+        [letterView removeFromSuperview];
+        [self.lettersContainer addSubview:letterView];
 
         [letterView reset];
     }];
