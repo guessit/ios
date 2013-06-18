@@ -219,6 +219,8 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     if (self.zoomedInLetter) {
+        [self.zoomedInLetter zoomOut];
+
         BOOL canAdd = YES;
 
         if ([self.delegate respondsToSelector:@selector(keypadView:canAddLetterView:)]) {
@@ -229,7 +231,6 @@
             [self.delegate keypadView:self didAddLetterView:self.zoomedInLetter];
         } else {
             #warning TODO: MAKE PANNNNN sound
-            [self.zoomedInLetter zoomOut];
         }
     }
 
@@ -249,8 +250,8 @@
 - (void)_initialize {
     self.backgroundColor = [GIConfiguration sharedInstance].game.interface.keypadBackgroundColor;
 
-    [self addSubview:self.lettersContainer];
     [self addSubview:self.actionButton];
+    [self addSubview:self.lettersContainer];
 
     [self.actionButton glow];
 }

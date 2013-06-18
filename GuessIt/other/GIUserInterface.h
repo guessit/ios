@@ -17,11 +17,15 @@
 @property (nonatomic, strong) UIColor *titleShineColor;
 @property (nonatomic, strong) UIColor *subtitleColor;
 @property (nonatomic, strong) UIColor *subtitleShadowColor;
+@property (nonatomic, strong) UIColor *congratulationColor;
+@property (nonatomic, strong) UIColor *congratulationShadowColor;
+@property (nonatomic, strong) UIColor *congratulationShineColor;
 @property (nonatomic, strong) UIColor *answerBackgroundColor;
 @property (nonatomic, strong) UIColor *placeholderBackgroundColor;
 @property (nonatomic, strong) UIColor *categoryBackgroundColor;
 @property (nonatomic, strong) UIColor *categoryTextColor;
 @property (nonatomic, strong) UIColor *categoryShadowColor;
+@property (nonatomic, strong) UIColor *imageBackgroundColor;
 @property (nonatomic, strong) UIColor *frameColor;
 @property (nonatomic, strong) UIColor *keypadBackgroundColor;
 @property (nonatomic, strong) UIColor *letterBackgroundColor;

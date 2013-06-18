@@ -189,6 +189,8 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     if (self.zoomedInLetter) {
+        [self.zoomedInLetter zoomOut];
+
         BOOL canRemove = YES;
 
         if ([self.delegate respondsToSelector:@selector(answerView:canRemoveLetterView:)]) {

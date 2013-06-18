@@ -49,10 +49,12 @@
 
 - (UIView *)imageViewFrame {
     if (!_imageViewFrame) {
-        _imageViewFrame = [UIView viewWithFrame:CGRectMake(0.f, 0.f, 220.f, 220.f)];
-        _imageViewFrame.backgroundColor = [UIColor whiteColor];
+        GIUserInterface *interface = [GIConfiguration sharedInstance].game.interface;
+
+        _imageViewFrame = [UIView viewWithFrame:CGRectMake(0.f, 0.f, 280.f, 200.f)];
+        _imageViewFrame.backgroundColor = interface.imageBackgroundColor;
         _imageViewFrame.layer.cornerRadius = 1.f;
-        _imageViewFrame.layer.borderColor = [[GIConfiguration sharedInstance].game.interface.frameColor CGColor];
+        _imageViewFrame.layer.borderColor = [interface.frameColor CGColor];
         _imageViewFrame.layer.borderWidth = 5.f;
     }
     return _imageViewFrame;
@@ -62,6 +64,7 @@
     if (!_imageView) {
         _imageView = [UIImageView viewWithFrame:CGRectInset(self.imageViewFrame.bounds, 10.f, 10.f)];
         _imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        _imageView.contentMode = UIViewContentModeScaleAspectFit;
         [self.imageViewFrame addSubview:_imageView];
     }
     return _imageView;

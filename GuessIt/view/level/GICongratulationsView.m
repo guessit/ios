@@ -38,9 +38,9 @@
         _congratsLabel = [GIShineLabel label];
         _congratsLabel.font = [UIFont guessItCongratulationTitleFont];
         _congratsLabel.text = @"Congratulations";
-        _congratsLabel.textColor = interface.titleColor;
-        _congratsLabel.shineColor = interface.titleShineColor;
-        _congratsLabel.shadowColor = interface.titleShadowColor;
+        _congratsLabel.textColor = interface.congratulationColor;
+        _congratsLabel.shineColor = interface.congratulationShineColor;
+        _congratsLabel.shadowColor = interface.congratulationShadowColor;
         _congratsLabel.shadowOffset = CGSizeMake(0.f, -1.f);
         _congratsLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(-5.f));
         [_congratsLabel sizeToFit];
