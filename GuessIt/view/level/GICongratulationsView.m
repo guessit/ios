@@ -39,6 +39,7 @@
         _congratsLabel.font = [UIFont guessItCongratulationTitleFont];
         _congratsLabel.text = @"Congratulations";
         _congratsLabel.textColor = interface.congratulationColor;
+        _congratsLabel.backgroundColor = [UIColor clearColor];
         _congratsLabel.shineColor = interface.congratulationShineColor;
         _congratsLabel.shadowColor = interface.congratulationShadowColor;
         _congratsLabel.shadowOffset = CGSizeMake(0.f, -1.f);
@@ -54,6 +55,7 @@
 
         _descriptionLabel = [UILabel label];
         _descriptionLabel.text = @"You've guessed the correct answer!";
+        _descriptionLabel.backgroundColor = [UIColor clearColor];
         _descriptionLabel.font = [UIFont guessItCongratulationDescriptionFont];
         _descriptionLabel.textColor = interface.subtitleColor;
         _descriptionLabel.shadowColor = [UIColor blackColor];
@@ -70,6 +72,7 @@
 
         _answerDescriptionLabel = [UILabel label];
         _answerDescriptionLabel.text = @"The answer was";
+        _answerDescriptionLabel.backgroundColor = [UIColor clearColor];
         _answerDescriptionLabel.font = [UIFont guessItCongratulationAnswerDescriptionFont];
         _answerDescriptionLabel.textColor = interface.subtitleColor;
         _answerDescriptionLabel.shadowColor = [UIColor blackColor];
