@@ -83,15 +83,18 @@
     _currentLevel = currentLevel;
 
     self.imageViewFrame.transform = CGAffineTransformMakeScale(0.05f, 0.05f);
+    self.imageView.alpha = 0.f;
+    self.inputView.alpha = 0.f;
+    self.categoryLabel.alpha = 0.f;
 
     if (_currentLevel) {
-        self.imageView.image = _currentLevel.image;
         self.inputView.currentLevel = _currentLevel;
+        self.imageView.image = _currentLevel.image;
         self.categoryLabel.text = _currentLevel.category;
-    } else {
-        self.imageView.alpha = 0.f;
-        self.inputView.alpha = 0.f;
-        self.categoryLabel.alpha = 0.f;
+
+        self.inputView.alpha = 1.f;
+        if (self.imageView.image) self.imageView.alpha = 1.f;
+        if (self.categoryLabel.text.length > 0) self.categoryLabel.alpha = 1.f;
     }
 
     [UIView animateWithDuration:0.2f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -126,7 +129,9 @@
     [super layoutSubviews];
 
     CGPoint center = self.center;
-    center.y = (self.height + GI_CATEGORY_HEIGHT - self.inputView.height) / 2.f;
+    center.y = (self.height - self.inputView.height) / 2.f;
+
+    if (self.categoryLabel.alpha) center.y = center.y + (GI_CATEGORY_HEIGHT / 2.f);
 
     self.imageViewFrame.center = center;
 }
