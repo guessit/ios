@@ -14,6 +14,7 @@
 #import "GIGame+PrettyDescription.h"
 #import "GILevelViewController.h"
 #import "UIFont+GuessItFonts.h"
+#import "UIView+CBFrameHelpers.h"
 
 @interface GIMainViewController ()
 
@@ -37,6 +38,7 @@
         _titleLabel.font = [UIFont guessItTitleFont];
         _titleLabel.text = @"Guess It!";
         [_titleLabel sizeToFit];
+        _titleLabel.w = _titleLabel.width + 10.f;
         _titleLabel.textColor = [GIConfiguration sharedInstance].game.interface.titleColor;
         _titleLabel.shineColor = [GIConfiguration sharedInstance].game.interface.titleShineColor;
         _titleLabel.textAlignment = NSTextAlignmentCenter;
