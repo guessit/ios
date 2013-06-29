@@ -18,6 +18,14 @@
     return [UIFont fontWithName:@"Lobster" size:26.f];
 }
 
++ (UIFont *)guessItBackButtonFont {
+    return [UIFont fontWithName:@"EuphemiaUCAS" size:22.f];
+}
+
++ (UIFont *)guessItBarButtonFont {
+    return [UIFont fontWithName:@"JotiOne-Regular" size:24.f];
+}
+
 + (UIFont *)guessItKeypadLetterFont {
     return [UIFont fontWithName:@"AvenirNextCondensed-Medium" size:18.f];
 }

@@ -19,6 +19,7 @@
 #import "GIModalPanel.h"
 #import "GINavigationBar.h"
 #import "MALazykit.h"
+#import "UIFont+GuessItFonts.h"
 #import "UIViewController+KNSemiModal.h"
 
 @interface GILevelViewController() <GILevelViewDelegate, UAModalPanelDelegate>
@@ -58,10 +59,11 @@
         [button addTarget:self
                    action:@selector(_rightButtonTouched:)
          forControlEvents:UIControlEventTouchUpInside];
-        [button setImage:[UIImage imageNamed:@"ico_guess_it"]
-                forState:UIControlStateNormal];
+        [button setTitle:@"?" forState:UIControlStateNormal];
+        button.titleLabel.font = [UIFont guessItBarButtonFont];
+        button.titleLabel.textAlignment = NSTextAlignmentCenter;
         button.frame = CGRectMake(0.f, 0.f, 70.f, 70.f);
-        button.imageEdgeInsets = UIEdgeInsetsMake(3.f, 40.f, 0.f, 0.f);
+        button.titleEdgeInsets = UIEdgeInsetsMake(0.f, 30.f, 0.f, 0.f);
 
         _rightButtonItem = [UIBarButtonItem barButtonItemWithCustomView:button];
     }

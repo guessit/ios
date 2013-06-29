@@ -51,7 +51,7 @@
     if (!_imageViewFrame) {
         GIUserInterface *interface = [GIConfiguration sharedInstance].game.interface;
 
-        _imageViewFrame = [UIView viewWithFrame:CGRectMake(0.f, 0.f, 280.f, 200.f)];
+        _imageViewFrame = [UIView viewWithFrame:CGRectMake(0.f, 0.f, 200.f, 200.f)];
         _imageViewFrame.backgroundColor = interface.imageBackgroundColor;
         _imageViewFrame.layer.cornerRadius = 1.f;
         _imageViewFrame.layer.borderColor = [interface.frameColor CGColor];
