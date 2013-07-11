@@ -22,6 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    if ([self respondsToSelector:@selector(setExtendedLayoutIncludesOpaqueBars:)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [backButton setTitle:@"<" forState:UIControlStateNormal];
     backButton.titleLabel.font = [UIFont guessItBackButtonFont];
