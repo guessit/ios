@@ -51,7 +51,7 @@
     if (!_imageViewFrame) {
         GIUserInterface *interface = [GIConfiguration sharedInstance].game.interface;
 
-        _imageViewFrame = [UIView viewWithFrame:CGRectMake(0.f, 0.f, 200.f, 200.f)];
+        _imageViewFrame = [UIView view];
         _imageViewFrame.backgroundColor = interface.imageBackgroundColor;
         _imageViewFrame.layer.cornerRadius = 1.f;
         _imageViewFrame.layer.borderColor = [interface.frameColor CGColor];
@@ -62,7 +62,7 @@
 
 - (UIImageView *)imageView {
     if (!_imageView) {
-        _imageView = [UIImageView viewWithFrame:CGRectInset(self.imageViewFrame.bounds, 10.f, 10.f)];
+        _imageView = [UIImageView viewWithFrame:CGRectInset(self.imageViewFrame.bounds, GI_IMAGE_FRAME_BORDER, GI_IMAGE_FRAME_BORDER)];
         _imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _imageView.contentMode = UIViewContentModeScaleAspectFit;
         [self.imageViewFrame addSubview:_imageView];
@@ -84,6 +84,10 @@
 
 - (void)setCurrentLevel:(GILevel *)currentLevel {
     _currentLevel = currentLevel;
+
+    self.imageViewFrame.transform = CGAffineTransformIdentity;
+    self.imageViewFrame.w = currentLevel.image.size.width + 2 * GI_IMAGE_FRAME_BORDER;
+    self.imageViewFrame.h = currentLevel.image.size.height + 2 * GI_IMAGE_FRAME_BORDER;
 
     self.imageViewFrame.transform = CGAffineTransformMakeScale(0.05f, 0.05f);
     self.imageView.alpha = 0.f;

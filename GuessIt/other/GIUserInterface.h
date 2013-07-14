@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) UIColor *backgroundColor;
 @property (nonatomic, strong) UIColor *navigationBackgroundColor;
+@property (nonatomic, strong) UIColor *navigationButtonColor;
 @property (nonatomic, strong) UIColor *titleColor;
 @property (nonatomic, strong) UIColor *titleShadowColor;
 @property (nonatomic, strong) UIColor *titleShineColor;

@@ -17,6 +17,7 @@
 
     ui.backgroundColor = [UIColor colorWithHex:dictionary[@"background_color"]];
     ui.navigationBackgroundColor = [UIColor colorWithHex:dictionary[@"navigation_background_color"]];
+    ui.navigationButtonColor = [UIColor colorWithHex:dictionary[@"navigation_button_color"]];
     ui.titleColor = [UIColor colorWithHex:dictionary[@"title_color"]];
     ui.titleShadowColor = [UIColor colorWithHex:dictionary[@"title_shadow_color"]];
     ui.titleShineColor = [UIColor colorWithHex:dictionary[@"title_shine_color"]];

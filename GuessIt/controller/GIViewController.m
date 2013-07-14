@@ -8,6 +8,8 @@
 
 #import "GIViewController.h"
 
+#import "GIConfiguration.h"
+#import "GIUserInterface.h"
 #import "MALazykit.h"
 #import "UIFont+GuessItFonts.h"
 
@@ -26,8 +28,11 @@
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
 
+    GIUserInterface *ui = [GIConfiguration sharedInstance].game.interface;
+
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [backButton setTitle:@"<" forState:UIControlStateNormal];
+    [backButton setTitleColor:ui.navigationButtonColor forState:UIControlStateNormal];
     backButton.titleLabel.font = [UIFont guessItBackButtonFont];
     backButton.titleEdgeInsets = UIEdgeInsetsMake(0.f, 0.f, 0.f, 30.f);
 
