@@ -12,6 +12,7 @@
 @interface GIGame : NSObject
 
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSDictionary *options;
 @property (nonatomic, strong) GIUserInterface *interface;
 @property (nonatomic, strong) NSArray *levels;
 

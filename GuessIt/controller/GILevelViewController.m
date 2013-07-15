@@ -133,7 +133,7 @@
 #pragma mark - UAModalPanelDelegate Methods
 
 - (void)didCloseModalPanel:(UAModalPanel *)modalPanel {
-    [[GIConfiguration sharedInstance] loadNewRandomLevel];
+    [[GIConfiguration sharedInstance] loadNextLevel];
     [self _adjustViewForCurrentLevel];
 }
 
