@@ -1,5 +1,6 @@
 PODS:
   - AHEasing (1.1)
+  - Finch (0.1)
   - KNSemiModalViewController (0.3)
   - MALazykit (HEAD based on 0.1.10)
   - SSToolkit (1.0.4)
@@ -9,6 +10,7 @@ PODS:
 
 DEPENDENCIES:
   - AHEasing (~> 1.1)
+  - Finch (from `https://raw.github.com/marlonandrade/Specs/master/Finch/0.1/Finch.podspec`)
   - KNSemiModalViewController
   - MALazykit (HEAD)
   - SSToolkit
@@ -16,8 +18,13 @@ DEPENDENCIES:
   - UIView+EasingFunctions (~> 0.0.1)
   - uiview-frame-helpers
 
+EXTERNAL SOURCES:
+  Finch:
+    :podspec: https://raw.github.com/marlonandrade/Specs/master/Finch/0.1/Finch.podspec
+
 SPEC CHECKSUMS:
   AHEasing: b9a02ca67d0d663e2a8b83fd24fa8c2ecc5ddf9b
+  Finch: dd157f537cc9a1326b3b98c38246dc40abe794b2
   KNSemiModalViewController: 976b739f57aa595359a2cfdf6aadde991ada8f99
   MALazykit: 7a3c9c4004f85f8db26962c4b041e18f4f64b9dc
   SSToolkit: 689acaedac79c2079e492e528a55bcb5db9d98c4

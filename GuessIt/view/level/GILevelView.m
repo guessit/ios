@@ -14,7 +14,7 @@
 #import "GIInputViewDelegate.h"
 #import "MALazykit.h"
 #import "UIView+CBFrameHelpers.h"
-#import <UIFont+GuessItFonts.h>
+#import "UIFont+GuessItFonts.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface GILevelView () <GIInputViewDelegate>

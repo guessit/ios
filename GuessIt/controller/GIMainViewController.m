@@ -8,11 +8,11 @@
 
 #import "GIMainViewController.h"
 
-#import "MALazykit.h"
 #import "GIConfiguration.h"
 #import "GIDefinitions.h"
 #import "GIGame+PrettyDescription.h"
 #import "GILevelViewController.h"
+#import "MALazykit.h"
 #import "UIFont+GuessItFonts.h"
 #import "UIView+CBFrameHelpers.h"
 
@@ -75,6 +75,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    #warning TODO: Remover
     NSLog(@"Game: %@", [[GIConfiguration sharedInstance].game prettyDescription]);
 
     [self.view addSubview:self.titleLabel];

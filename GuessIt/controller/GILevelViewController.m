@@ -132,6 +132,10 @@
 
 #pragma mark - UAModalPanelDelegate Methods
 
+- (void)didShowModalPanel:(UAModalPanel *)modalPanel {
+    [[GIConfiguration sharedInstance].game.sound playLevelFinishedSound];
+}
+
 - (void)didCloseModalPanel:(UAModalPanel *)modalPanel {
     [[GIConfiguration sharedInstance] loadNextLevel];
     [self _adjustViewForCurrentLevel];
