@@ -21,6 +21,8 @@ extern NSString * const GICurrentLevelDidChangeNotification;
 #define GI_CATEGORY_HEIGHT 28.f
 #define GI_INPUT_HEIGHT 150.f
 
+#define GI_IMAGE_FRAME_BORDER 5.f
+
 #define GI_ANSWER_PLACEHOLDER_MAX_WIDTH 40.f
 #define GI_ANSWER_PLACEHOLDER_MAX_HEIGHT 45.f
 #define GI_ANSWER_PLACEHOLDER_PADDING 2.f

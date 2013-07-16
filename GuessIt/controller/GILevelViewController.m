@@ -55,11 +55,15 @@
 
 - (UIBarButtonItem *)rightButtonItem {
     if (!_rightButtonItem) {
+        GIUserInterface *ui = [GIConfiguration sharedInstance].game.interface;
+
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button addTarget:self
                    action:@selector(_rightButtonTouched:)
          forControlEvents:UIControlEventTouchUpInside];
         [button setTitle:@"?" forState:UIControlStateNormal];
+        [button setTitleColor:ui.navigationButtonColor forState:UIControlStateNormal];
+
         button.titleLabel.font = [UIFont guessItBarButtonFont];
         button.titleLabel.textAlignment = NSTextAlignmentCenter;
         button.frame = CGRectMake(0.f, 0.f, 70.f, 70.f);
@@ -129,7 +133,7 @@
 #pragma mark - UAModalPanelDelegate Methods
 
 - (void)didCloseModalPanel:(UAModalPanel *)modalPanel {
-    [[GIConfiguration sharedInstance] loadNewRandomLevel];
+    [[GIConfiguration sharedInstance] loadNextLevel];
     [self _adjustViewForCurrentLevel];
 }
 

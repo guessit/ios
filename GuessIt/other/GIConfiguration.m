@@ -32,7 +32,7 @@
 
     NSString *currentLevelName = self.currentLevelName;
     if (!currentLevelName) {
-        currentLevel = [self loadNewRandomLevel];
+        currentLevel = [self loadNextLevel];
     } else {
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"imageName == %@", self.currentLevelName];
         NSArray *currentLevelArray = [self.game.todoLevels filteredArrayUsingPredicate:predicate];
@@ -78,17 +78,24 @@
     return __sharedInstance;
 }
 
-- (GILevel *)loadNewRandomLevel {
+- (GILevel *)loadNextLevel {
     NSArray *todoLevels = self.game.todoLevels;
     if (self.currentLevelName) {
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"imageName != %@", self.currentLevelName];
         todoLevels = [todoLevels filteredArrayUsingPredicate:predicate];
     }
 
-    GILevel *randomLevel = todoLevels.randomObject;
-    self.currentLevel = randomLevel;
+    GILevel *nextLevel = nil;
 
-    return randomLevel;
+    if ([self.game.options[@"randomize"] boolValue]) {
+        nextLevel = todoLevels.randomObject;
+    } else {
+        nextLevel = todoLevels.firstObject;
+    }
+
+    self.currentLevel = nextLevel;
+
+    return nextLevel;
 }
 
 - (NSArray *)finishedLevelsName {

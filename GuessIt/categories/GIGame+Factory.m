@@ -23,7 +23,8 @@
         [gameLevels addObject:[GILevel levelWithDictionary:level]];
     }
 
-    game.interface = [GIUserInterface userInterfaceWithDictionary:dictionary[@"ui_colors"]];
+    game.options = dictionary[@"options"];
+    game.interface = [GIUserInterface userInterfaceWithDictionary:dictionary[@"ui"]];
     game.levels = gameLevels;
 
     return game;
