@@ -93,6 +93,7 @@
 
 - (void)answerView:(GIAnswerView *)answerView didRemoveLetterView:(GILetterView *)letterView {
     [self.keypadView addLetterView:letterView];
+    [[GIConfiguration sharedInstance].game.sound playRemoveLetterSound];
 }
 
 #pragma mark - GIKeypadViewDelegate Methods

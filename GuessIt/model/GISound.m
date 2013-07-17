@@ -20,4 +20,8 @@
     [self.levelFinished play];
 }
 
+- (void)playRemoveLetterSound {
+    [self.removeLetter play];
+}
+
 @end

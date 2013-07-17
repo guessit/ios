@@ -14,8 +14,10 @@
 
 @property (nonatomic, strong) FISound *keypad;
 @property (nonatomic, strong) FISound *levelFinished;
+@property (nonatomic, strong) FISound *removeLetter;
 
 - (void)playKeypadSound;
 - (void)playLevelFinishedSound;
+- (void)playRemoveLetterSound;
 
 @end
