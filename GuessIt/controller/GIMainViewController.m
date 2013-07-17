@@ -18,6 +18,7 @@
 
 @interface GIMainViewController ()
 
+@property (nonatomic, strong) UIImageView *backgroundImageView;
 @property (nonatomic, strong) GIShineLabel *titleLabel;
 @property (nonatomic, strong) UILabel *tapToPlayLabel;
 
@@ -29,6 +30,14 @@
 @implementation GIMainViewController
 
 #pragma mark - Getter
+
+- (UIImageView *)backgroundImageView {
+    if (!_backgroundImageView) {
+        _backgroundImageView = [UIImageView imageViewWithImageNamed:@"main_background"];
+        _backgroundImageView.contentMode = UIViewContentModeCenter;
+    }
+    return _backgroundImageView;
+}
 
 - (GIShineLabel *)titleLabel {
     if (!_titleLabel) {
@@ -77,6 +86,7 @@
 
     NSLog(@"Game: %@", [[GIConfiguration sharedInstance].game prettyDescription]);
 
+    [self.view addSubview:self.backgroundImageView];
     [self.view addSubview:self.titleLabel];
     [self.view addSubview:self.tapToPlayLabel];
 

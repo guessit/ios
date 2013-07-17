@@ -33,6 +33,7 @@
 		BF714A0B175FE8F200DF6274 /* GIBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF714A0A175FE8F200DF6274 /* GIBuyViewController.m */; };
 		BF91795817244A8200B136E2 /* shine_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF91795717244A8200B136E2 /* shine_mask@2x.png */; };
 		BFA44032175A1D8700D4B8E5 /* GIConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA44031175A1D8700D4B8E5 /* GIConfiguration.m */; };
+		BFA635B81796F68B0003008C /* main_background.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA635B71796F68B0003008C /* main_background.png */; };
 		BFAD126716F136A100F6D429 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126616F136A100F6D429 /* UIKit.framework */; };
 		BFAD126916F136A100F6D429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126816F136A100F6D429 /* Foundation.framework */; };
 		BFAD126B16F136A100F6D429 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126A16F136A100F6D429 /* CoreGraphics.framework */; };
@@ -117,6 +118,7 @@
 		BF99CD45176E317300CA2650 /* GICongratulationsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GICongratulationsView.m; sourceTree = "<group>"; };
 		BFA44030175A1D8700D4B8E5 /* GIConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIConfiguration.h; sourceTree = "<group>"; };
 		BFA44031175A1D8700D4B8E5 /* GIConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIConfiguration.m; sourceTree = "<group>"; };
+		BFA635B71796F68B0003008C /* main_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_background.png; sourceTree = "<group>"; };
 		BFAD126316F136A100F6D429 /* GuessIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAD126616F136A100F6D429 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BFAD126816F136A100F6D429 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -416,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				BF91795717244A8200B136E2 /* shine_mask@2x.png */,
+				BFA635B71796F68B0003008C /* main_background.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				BF91795817244A8200B136E2 /* shine_mask@2x.png in Resources */,
 				BF565942176E721400F5198A /* Lobster.ttf in Resources */,
 				BF565941176E721400F5198A /* JotiOne-Regular.ttf in Resources */,
+				BFA635B81796F68B0003008C /* main_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
