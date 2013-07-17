@@ -17,6 +17,7 @@
 
     FISoundEngine *engine = [FISoundEngine sharedEngine];
     sound.keypad = [engine soundNamed:dictionary[@"keystroke"] error:NULL];
+    sound.fail = [engine soundNamed:dictionary[@"fail"] error:NULL];
     sound.levelFinished = [engine soundNamed:dictionary[@"success"] error:NULL];
     sound.removeLetter = [engine soundNamed:dictionary[@"remove_letter"] error:NULL];
 

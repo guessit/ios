@@ -121,7 +121,7 @@
         [mainWindow addSubview:modalPanel];
         [modalPanel showFromPoint:mainWindow.center];
     } else {
-
+        [[GIConfiguration sharedInstance].game.sound playFailSound];
     }
 }
 

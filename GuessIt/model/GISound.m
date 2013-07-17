@@ -16,6 +16,10 @@
     [self.keypad play];
 }
 
+- (void)playFailSound {
+    [self.fail play];
+}
+
 - (void)playLevelFinishedSound {
     [self.levelFinished play];
 }

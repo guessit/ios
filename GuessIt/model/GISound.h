@@ -13,10 +13,12 @@
 @interface GISound : NSObject
 
 @property (nonatomic, strong) FISound *keypad;
+@property (nonatomic, strong) FISound *fail;
 @property (nonatomic, strong) FISound *levelFinished;
 @property (nonatomic, strong) FISound *removeLetter;
 
 - (void)playKeypadSound;
+- (void)playFailSound;
 - (void)playLevelFinishedSound;
 - (void)playRemoveLetterSound;
 
