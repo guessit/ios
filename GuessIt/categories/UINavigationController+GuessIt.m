@@ -15,6 +15,8 @@
 @implementation UINavigationController (GuessIt)
 
 + (instancetype)guessItGame {
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+
     UINavigationController *nav = [UINavigationController navigationControllerWithNavigationBarClass:[GINavigationBar class]
                                                                                         toolbarClass:nil];
     nav.viewControllers = @[[GIMainViewController viewController]];
