@@ -121,8 +121,12 @@
         [mainWindow addSubview:modalPanel];
         [modalPanel showFromPoint:mainWindow.center];
     } else {
-        [[GIConfiguration sharedInstance].game.sound playFailSound];
+        [self performSelector:@selector(fail) withObject:nil afterDelay:0.25f];
     }
+}
+
+- (void)fail {
+    [[GIConfiguration sharedInstance].game.sound playFailSound];
 }
 
 - (void)didRequestHelpFromLevelView:(GILevelView *)levelView {
