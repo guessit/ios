@@ -91,6 +91,8 @@
     [self.view addSubview:self.titleLabel];
     [self.view addSubview:self.tapToPlayLabel];
 
+    self.backgroundImageView.frame = self.view.bounds;
+
     self.titleLabel.center = CGPointMake(self.view.center.x, self.view.center.y - 50.f);
     self.tapToPlayLabel.center = CGPointMake(self.view.center.x, self.titleLabel.center.y + 46.f);
 

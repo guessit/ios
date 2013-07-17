@@ -35,8 +35,6 @@
 		BF71258B175D4238007F99EB /* GILevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712589175D4238007F99EB /* GILevelView.m */; };
 		BF714A0B175FE8F200DF6274 /* GIBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF714A0A175FE8F200DF6274 /* GIBuyViewController.m */; };
 		BF91795817244A8200B136E2 /* shine_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF91795717244A8200B136E2 /* shine_mask@2x.png */; };
-		BFA44032175A1D8700D4B8E5 /* GIConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA44031175A1D8700D4B8E5 /* GIConfiguration.m */; };
-		BFA635B81796F68B0003008C /* main_background.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA635B71796F68B0003008C /* main_background.png */; };
 		BFAD126716F136A100F6D429 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126616F136A100F6D429 /* UIKit.framework */; };
 		BFAD126916F136A100F6D429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126816F136A100F6D429 /* Foundation.framework */; };
 		BFAD126B16F136A100F6D429 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126A16F136A100F6D429 /* CoreGraphics.framework */; };
@@ -52,6 +50,7 @@
 		BFBAF9F9175D773200AA0AE1 /* GIGlowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBAF9F8175D773200AA0AE1 /* GIGlowButton.m */; };
 		BFBDD2121701092000F5698E /* GIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBDD2111701092000F5698E /* GIMainViewController.m */; };
 		BFDE0173176CFFBC00E704CF /* UINavigationController+GuessIt.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDE0172176CFFBC00E704CF /* UINavigationController+GuessIt.m */; };
+		BFE898EB1796FA630081E646 /* main_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE898EA1796FA630081E646 /* main_background@2x.png */; };
 		BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */; };
 		BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF92975172443AC00F230C6 /* GIShineLabel.m */; };
 		BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7381727F815003B4385 /* NSString+RandomString.m */; };
@@ -125,9 +124,6 @@
 		BF91795717244A8200B136E2 /* shine_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shine_mask@2x.png"; sourceTree = "<group>"; };
 		BF99CD44176E317300CA2650 /* GICongratulationsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GICongratulationsView.h; sourceTree = "<group>"; };
 		BF99CD45176E317300CA2650 /* GICongratulationsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GICongratulationsView.m; sourceTree = "<group>"; };
-		BFA44030175A1D8700D4B8E5 /* GIConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIConfiguration.h; sourceTree = "<group>"; };
-		BFA44031175A1D8700D4B8E5 /* GIConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIConfiguration.m; sourceTree = "<group>"; };
-		BFA635B71796F68B0003008C /* main_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_background.png; sourceTree = "<group>"; };
 		BFAD126316F136A100F6D429 /* GuessIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAD126616F136A100F6D429 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BFAD126816F136A100F6D429 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -153,6 +149,7 @@
 		BFBDD2111701092000F5698E /* GIMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIMainViewController.m; sourceTree = "<group>"; };
 		BFDE0171176CFFBC00E704CF /* UINavigationController+GuessIt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+GuessIt.h"; sourceTree = "<group>"; };
 		BFDE0172176CFFBC00E704CF /* UINavigationController+GuessIt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GuessIt.m"; sourceTree = "<group>"; };
+		BFE898EA1796FA630081E646 /* main_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_background@2x.png"; sourceTree = "<group>"; };
 		BFF5A2E4171EB74E00F401B3 /* GIDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIDefinitions.h; sourceTree = "<group>"; };
 		BFF9297117243EF900F230C6 /* UIFont+GuessItFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+GuessItFonts.h"; sourceTree = "<group>"; };
 		BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+GuessItFonts.m"; sourceTree = "<group>"; };
@@ -430,8 +427,8 @@
 		BFF9290F17243E0300F230C6 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BFE898EA1796FA630081E646 /* main_background@2x.png */,
 				BF91795717244A8200B136E2 /* shine_mask@2x.png */,
-				BFA635B71796F68B0003008C /* main_background.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -509,11 +506,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE898EB1796FA630081E646 /* main_background@2x.png in Resources */,
 				BFAD127116F136A100F6D429 /* InfoPlist.strings in Resources */,
 				BF91795817244A8200B136E2 /* shine_mask@2x.png in Resources */,
 				BF565942176E721400F5198A /* Lobster.ttf in Resources */,
 				BF565941176E721400F5198A /* JotiOne-Regular.ttf in Resources */,
-				BFA635B81796F68B0003008C /* main_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
