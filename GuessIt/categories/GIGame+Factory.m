@@ -8,6 +8,7 @@
 
 #import "GIGame+Factory.h"
 #import "GILevel+Factory.h"
+#import "GISound+Factory.h"
 #import "GIUserInterface+Factory.h"
 
 @implementation GIGame (Factory)
@@ -25,6 +26,7 @@
 
     game.options = dictionary[@"options"];
     game.interface = [GIUserInterface userInterfaceWithDictionary:dictionary[@"ui"]];
+    game.sound = [GISound soundWithDictionary:dictionary[@"sound"]];
     game.levels = gameLevels;
 
     return game;

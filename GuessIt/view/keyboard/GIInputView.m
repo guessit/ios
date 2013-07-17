@@ -10,6 +10,7 @@
 
 #import "GIAnswerView.h"
 #import "GIAnswerViewDelegate.h"
+#import "GIConfiguration.h"
 #import "GIDefinitions.h"
 #import "GIKeypadView.h"
 #import "GIKeypadViewDelegate.h"
@@ -92,6 +93,7 @@
 
 - (void)answerView:(GIAnswerView *)answerView didRemoveLetterView:(GILetterView *)letterView {
     [self.keypadView addLetterView:letterView];
+    [[GIConfiguration sharedInstance].game.sound playRemoveLetterSound];
 }
 
 #pragma mark - GIKeypadViewDelegate Methods
@@ -106,6 +108,7 @@
 
 - (void)keypadView:(GIKeypadView *)keypadView didAddLetterView:(GILetterView *)letterView {
     [self.answerView addLetterView:letterView];
+    [[GIConfiguration sharedInstance].game.sound playKeypadSound];
 
     if (!self.answerView.canAddLetter) {
         [self.delegate inputView:self didFinishGuessingWithAnswer:self.answerView.answer];
