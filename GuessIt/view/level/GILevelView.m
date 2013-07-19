@@ -146,7 +146,7 @@
 #pragma mark - Private Interface
 
 - (void)_initialize {
-    self.backgroundColor = [GIConfiguration sharedInstance].game.interface.backgroundColor;
+    self.backgroundColor = [GIConfiguration sharedInstance].game.interface.levelBackgroundColor;
 
     [self addSubview:self.categoryLabel];
     [self addSubview:self.imageViewFrame];

@@ -21,6 +21,9 @@
 @property (nonatomic, strong) UIColor *congratulationColor;
 @property (nonatomic, strong) UIColor *congratulationShadowColor;
 @property (nonatomic, strong) UIColor *congratulationShineColor;
+@property (nonatomic, strong) UIColor *congratulationSubtitleColor;
+@property (nonatomic, strong) UIColor *congratulationSubtitleShadowColor;
+@property (nonatomic, strong) UIColor *levelBackgroundColor;
 @property (nonatomic, strong) UIColor *answerBackgroundColor;
 @property (nonatomic, strong) UIColor *placeholderBackgroundColor;
 @property (nonatomic, strong) UIColor *categoryBackgroundColor;

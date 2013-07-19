@@ -26,6 +26,9 @@
     ui.congratulationColor = [UIColor colorWithHex:dictionary[@"congratulation_color"]];
     ui.congratulationShadowColor = [UIColor colorWithHex:dictionary[@"congratulation_shadow_color"]];
     ui.congratulationShineColor = [UIColor colorWithHex:dictionary[@"congratulation_shine_color"]];
+    ui.congratulationSubtitleColor = [UIColor colorWithHex:dictionary[@"congratulation_subtitle_color"]];
+    ui.congratulationSubtitleShadowColor = [UIColor colorWithHex:dictionary[@"congratulation_subtitle_shadow_color"]];
+    ui.levelBackgroundColor = [UIColor colorWithHex:dictionary[@"level_background_color"]];
     ui.answerBackgroundColor = [UIColor colorWithHex:dictionary[@"answer_background_color"]];
     ui.placeholderBackgroundColor = [UIColor colorWithHex:dictionary[@"placeholder_background_color"]];
     ui.categoryBackgroundColor = [UIColor colorWithHex:dictionary[@"category_background_color"]];
