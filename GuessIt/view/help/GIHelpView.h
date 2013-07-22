@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "GIHelpViewDelegate.h"
+
 @interface GIHelpView : UIView
+
+@property (nonatomic, weak) id<GIHelpViewDelegate> delegate;
 
 @end

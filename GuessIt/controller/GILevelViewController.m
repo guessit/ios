@@ -22,7 +22,7 @@
 #import "UIFont+GuessItFonts.h"
 #import "UIViewController+KNSemiModal.h"
 
-@interface GILevelViewController() <GILevelViewDelegate, UAModalPanelDelegate>
+@interface GILevelViewController() <GIHelpViewDelegate, GILevelViewDelegate, UAModalPanelDelegate>
 
 @property (nonatomic, strong) GILevelView *levelView;
 @property (nonatomic, strong) GIHelpView *helpView;
@@ -48,6 +48,7 @@
 - (GIHelpView *)helpView {
     if (!_helpView) {
         _helpView = [GIHelpView viewWithFrame:CGRectMake(0.f, 0.f, 320.f, 200.f)];
+        _helpView.delegate = self;
         _helpView.backgroundColor = [UIColor yellowColor];
     }
     return _helpView;
@@ -101,6 +102,30 @@
                                                                                                   toolbarClass:nil];
     navController.viewControllers = @[buyViewController];
     [self presentViewController:navController animated:YES completion:NULL];
+}
+
+#pragma mark - GIHelpViewDelegate Methods
+
+- (BOOL)helpViewCanEliminateWrongLetter:(GIHelpView *)helpView {
+    #warning TODO: verify if exists wrong letters on keypad
+    return YES;
+}
+
+- (BOOL)helpViewCanFillCorrectLetter:(GIHelpView *)helpView {
+    #warning TODO: verify if it is not used more that 3? times
+    return YES;
+}
+
+- (void)helpViewDidRequestToEliminateWrongLetter:(GIHelpView *)helpView {
+    #warning TODO: remove wrong letter form keypad
+}
+
+- (void)helpViewDidRequestToFillCorrectLetter:(GIHelpView *)helpView {
+    #warning TODO: get a correct letter from keypad and put it on answer
+}
+
+- (void)helpViewDidRequestToSkipLevel:(GIHelpView *)helpView {
+    #warning TODO: skip level - mark level as skipped
 }
 
 #pragma mark - GILevelViewDelegate Methods

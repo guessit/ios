@@ -14,6 +14,7 @@
 		BF1F29B01707347900A83FE3 /* GILevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29AF1707347800A83FE3 /* GILevel.m */; };
 		BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B21707617700A83FE3 /* GIViewController.m */; };
 		BF1F29B6170761D400A83FE3 /* GILevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B5170761D400A83FE3 /* GILevelViewController.m */; };
+		BF239B88179D462000005FCA /* GIHelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF239B87179D462000005FCA /* GIHelpView.m */; };
 		BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF291E8B174ECA320066D5EF /* GIDefinitions.m */; };
 		BF3DDBA1176D070B0055A388 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3DDBA0176D070A0055A388 /* main.m */; };
 		BF3DDBA4176D07230055A388 /* _GIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3DDBA3176D07230055A388 /* _GIAppDelegate.m */; };
@@ -26,7 +27,6 @@
 		BF659F781795AE7200C99668 /* GISound.m in Sources */ = {isa = PBXBuildFile; fileRef = BF659F771795AE7200C99668 /* GISound.m */; };
 		BF6943BB171CA244000F74E0 /* GILevel+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */; };
 		BF6943BE171CA2AD000F74E0 /* GIGame+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BD171CA2AD000F74E0 /* GIGame+PrettyDescription.m */; };
-		BF6B70231767E7EB006BF650 /* GIHelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6B70221767E66C006BF650 /* GIHelpView.m */; };
 		BF71257B175D40D2007F99EB /* GIAnswerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712575175D40D2007F99EB /* GIAnswerView.m */; };
 		BF71257C175D40D2007F99EB /* GIKeypadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712579175D40D2007F99EB /* GIKeypadView.m */; };
 		BF712583175D40F0007F99EB /* GIInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF71257E175D40F0007F99EB /* GIInputView.m */; };
@@ -81,6 +81,9 @@
 		BF1F29B21707617700A83FE3 /* GIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIViewController.m; sourceTree = "<group>"; };
 		BF1F29B4170761D400A83FE3 /* GILevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelViewController.h; sourceTree = "<group>"; };
 		BF1F29B5170761D400A83FE3 /* GILevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelViewController.m; sourceTree = "<group>"; };
+		BF239B86179D462000005FCA /* GIHelpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIHelpView.h; sourceTree = "<group>"; };
+		BF239B87179D462000005FCA /* GIHelpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIHelpView.m; sourceTree = "<group>"; };
+		BF239B89179D463200005FCA /* GIHelpViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIHelpViewDelegate.h; sourceTree = "<group>"; };
 		BF291E8B174ECA320066D5EF /* GIDefinitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIDefinitions.m; sourceTree = "<group>"; };
 		BF3DDBA0176D070A0055A388 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF3DDBA2176D07230055A388 /* _GIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _GIAppDelegate.h; sourceTree = "<group>"; };
@@ -99,8 +102,6 @@
 		BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GILevel+PrettyDescription.m"; sourceTree = "<group>"; };
 		BF6943BC171CA2AD000F74E0 /* GIGame+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GIGame+PrettyDescription.h"; sourceTree = "<group>"; };
 		BF6943BD171CA2AD000F74E0 /* GIGame+PrettyDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GIGame+PrettyDescription.m"; sourceTree = "<group>"; };
-		BF6B70211767E66C006BF650 /* GIHelpView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIHelpView.h; sourceTree = "<group>"; };
-		BF6B70221767E66C006BF650 /* GIHelpView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIHelpView.m; sourceTree = "<group>"; };
 		BF712574175D40D2007F99EB /* GIAnswerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIAnswerView.h; sourceTree = "<group>"; };
 		BF712575175D40D2007F99EB /* GIAnswerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIAnswerView.m; sourceTree = "<group>"; };
 		BF712576175D40D2007F99EB /* GIAnswerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIAnswerViewDelegate.h; sourceTree = "<group>"; };
@@ -184,6 +185,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF239B85179D462000005FCA /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				BF239B86179D462000005FCA /* GIHelpView.h */,
+				BF239B87179D462000005FCA /* GIHelpView.m */,
+				BF239B89179D463200005FCA /* GIHelpViewDelegate.h */,
+			);
+			name = Help;
+			path = help;
+			sourceTree = "<group>";
+		};
 		BF41EA91170BB48D006540E7 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,12 +410,11 @@
 		BFAD12AC16F1376600F6D429 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BF239B85179D462000005FCA /* Help */,
 				BF712572175D40D2007F99EB /* Keyboard */,
 				BF712587175D4238007F99EB /* Level */,
 				BFBAF9F7175D773200AA0AE1 /* GIGlowButton.h */,
 				BFBAF9F8175D773200AA0AE1 /* GIGlowButton.m */,
-				BF6B70211767E66C006BF650 /* GIHelpView.h */,
-				BF6B70221767E66C006BF650 /* GIHelpView.m */,
 				BF565939176E6D3800F5198A /* GIModalPanel.h */,
 				BF56593A176E6D3800F5198A /* GIModalPanel.m */,
 				BF1835D3172C3D1D00E2CB5F /* GINavigationBar.h */,
@@ -567,9 +578,9 @@
 				BF3DDBA4176D07230055A388 /* _GIAppDelegate.m in Sources */,
 				BF6943BB171CA244000F74E0 /* GILevel+PrettyDescription.m in Sources */,
 				BF3DDBA1176D070B0055A388 /* main.m in Sources */,
-				BF6B70231767E7EB006BF650 /* GIHelpView.m in Sources */,
 				BF6943BE171CA2AD000F74E0 /* GIGame+PrettyDescription.m in Sources */,
 				BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */,
+				BF239B88179D462000005FCA /* GIHelpView.m in Sources */,
 				BFDE0173176CFFBC00E704CF /* UINavigationController+GuessIt.m in Sources */,
 				BF659F751795AE6300C99668 /* GIUserInterface.m in Sources */,
 				BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */,
