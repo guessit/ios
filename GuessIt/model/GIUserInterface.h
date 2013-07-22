@@ -42,5 +42,7 @@
 @property (nonatomic, strong) UIColor *actionShadowColor;
 @property (nonatomic, strong) UIColor *actionSelectedColor;
 @property (nonatomic, strong) UIColor *actionSelectedTextColor;
+@property (nonatomic, strong) UIColor *helpBackgroundColor;
+@property (nonatomic, strong) UIColor *helpButtonColor;
 
 @end

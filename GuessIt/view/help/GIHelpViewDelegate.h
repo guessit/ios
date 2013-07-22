@@ -12,11 +12,11 @@
 
 @protocol GIHelpViewDelegate <NSObject>
 
+- (BOOL)helpViewCanPlaceCorrectLetter:(GIHelpView *)helpView;
 - (BOOL)helpViewCanEliminateWrongLetter:(GIHelpView *)helpView;
-- (BOOL)helpViewCanFillCorrectLetter:(GIHelpView *)helpView;
 
+- (void)helpViewDidRequestToPlaceCorrectLetter:(GIHelpView *)helpView;
 - (void)helpViewDidRequestToEliminateWrongLetter:(GIHelpView *)helpView;
-- (void)helpViewDidRequestToFillCorrectLetter:(GIHelpView *)helpView;
 - (void)helpViewDidRequestToSkipLevel:(GIHelpView *)helpView;
 
 @optional

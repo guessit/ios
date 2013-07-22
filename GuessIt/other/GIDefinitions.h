@@ -36,3 +36,8 @@ extern NSString * const GICurrentLevelDidChangeNotification;
 
 #define GI_LETTER_ZOOMED_SCALE 1.15f
 #define GI_LETTER_MINIMIZED_SCALE 0.3f
+
+#define GI_HELP_VIEW_PADDING 2.f
+#define GI_HELP_BUTTON_HEIGHT 50.f
+#define GI_HELP_VIEW_HEIGHT (5 * GI_HELP_VIEW_PADDING) + (4 * GI_HELP_BUTTON_HEIGHT)
+

@@ -8,13 +8,136 @@
 
 #import "GIHelpView.h"
 
+#import "GIConfiguration.h"
+#import "GIDefinitions.h"
+#import "UIView+CBFrameHelpers.h"
+
 @interface GIHelpView ()
 
+@property (nonatomic, strong) UIButton *placeCorrectLetterButton;
+@property (nonatomic, strong) UIButton *eliminateWrongLetterButton;
+@property (nonatomic, strong) UIButton *skipLevelButton;
+@property (nonatomic, strong) UIButton *facebookButton;
+@property (nonatomic, strong) UIButton *twitterButton;
+
 - (void)_initialize;
+
+- (void)_placeCorrectLetterTouched:(id)sender;
+- (void)_eliminateWrongLetterTouched:(id)sender;
+- (void)_skipLevelTouched:(id)sender;
+- (void)_facebookTouched:(id)sender;
+- (void)_twitterTouched:(id)sender;
 
 @end
 
 @implementation GIHelpView
+
+#pragma mark - Getter
+
+- (UIButton *)placeCorrectLetterButton {
+    if (!_placeCorrectLetterButton) {
+        _placeCorrectLetterButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _placeCorrectLetterButton.backgroundColor = [GIConfiguration sharedInstance].game.interface.helpButtonColor;
+
+        CGFloat x = GI_HELP_VIEW_PADDING;
+        CGFloat y = GI_HELP_VIEW_PADDING;
+        CGFloat width = self.width - (2 * GI_HELP_VIEW_PADDING);
+        CGFloat height = GI_HELP_BUTTON_HEIGHT;
+
+        _placeCorrectLetterButton.frame = CGRectMake(x, y, width, height);
+        _placeCorrectLetterButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+
+        [_placeCorrectLetterButton setTitle:@"Place correct letter" forState:UIControlStateNormal];
+        [_placeCorrectLetterButton addTarget:self
+                                     action:@selector(_placeCorrectLetterTouched:)
+                           forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _placeCorrectLetterButton;
+}
+
+- (UIButton *)eliminateWrongLetterButton {
+    if (!_eliminateWrongLetterButton) {
+        _eliminateWrongLetterButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _eliminateWrongLetterButton.backgroundColor = [GIConfiguration sharedInstance].game.interface.helpButtonColor;
+
+        CGFloat x = GI_HELP_VIEW_PADDING;
+        CGFloat y = (2 * GI_HELP_VIEW_PADDING) + GI_HELP_BUTTON_HEIGHT;
+        CGFloat width = self.width - (2 * GI_HELP_VIEW_PADDING);
+        CGFloat height = GI_HELP_BUTTON_HEIGHT;
+
+        _eliminateWrongLetterButton.frame = CGRectMake(x, y, width, height);
+        _eliminateWrongLetterButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+
+        [_eliminateWrongLetterButton setTitle:@"Eliminate wrong letter" forState:UIControlStateNormal];
+        [_eliminateWrongLetterButton addTarget:self
+                                        action:@selector(_eliminateWrongLetterTouched:)
+                              forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _eliminateWrongLetterButton;
+}
+
+- (UIButton *)skipLevelButton {
+    if (!_skipLevelButton) {
+        _skipLevelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _skipLevelButton.backgroundColor = [GIConfiguration sharedInstance].game.interface.helpButtonColor;
+
+        CGFloat x = GI_HELP_VIEW_PADDING;
+        CGFloat y = (3 * GI_HELP_VIEW_PADDING) + (2 * GI_HELP_BUTTON_HEIGHT);
+        CGFloat width = self.width - (2 * GI_HELP_VIEW_PADDING);
+        CGFloat height = GI_HELP_BUTTON_HEIGHT;
+
+        _skipLevelButton.frame = CGRectMake(x, y, width, height);
+        _skipLevelButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+
+        [_skipLevelButton setTitle:@"Skip level" forState:UIControlStateNormal];
+        [_skipLevelButton addTarget:self
+                             action:@selector(_skipLevelTouched:)
+                   forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _skipLevelButton;
+}
+
+- (UIButton *)facebookButton {
+    if (!_facebookButton) {
+        _facebookButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _facebookButton.backgroundColor = [GIConfiguration sharedInstance].game.interface.helpButtonColor;
+
+        CGFloat x = GI_HELP_VIEW_PADDING;
+        CGFloat y = self.height - GI_HELP_BUTTON_HEIGHT - GI_HELP_VIEW_PADDING;
+        CGFloat width = (self.width - (3 * GI_HELP_VIEW_PADDING)) / 2.f;
+        CGFloat height = GI_HELP_BUTTON_HEIGHT;
+
+        _facebookButton.frame = CGRectMake(x, y, width, height);
+        _facebookButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+
+        [_facebookButton setTitle:@"Facebook" forState:UIControlStateNormal];
+        [_facebookButton addTarget:self
+                            action:@selector(_facebookTouched:)
+                  forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _facebookButton;
+}
+
+- (UIButton *)twitterButton {
+    if (!_twitterButton) {
+        _twitterButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _twitterButton.backgroundColor = [GIConfiguration sharedInstance].game.interface.helpButtonColor;
+
+        CGFloat width = (self.width - (3 * GI_HELP_VIEW_PADDING)) / 2.f;
+        CGFloat height = GI_HELP_BUTTON_HEIGHT;
+        CGFloat x = 2 * GI_HELP_VIEW_PADDING + width;
+        CGFloat y = self.height - GI_HELP_BUTTON_HEIGHT - GI_HELP_VIEW_PADDING;
+
+        _twitterButton.frame = CGRectMake(x, y, width, height);
+        _twitterButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+
+        [_twitterButton setTitle:@"Twitter" forState:UIControlStateNormal];
+        [_twitterButton addTarget:self
+                           action:@selector(_twitterTouched:)
+                 forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _twitterButton;
+}
 
 #pragma mark - UIView Methods
 
@@ -29,8 +152,36 @@
 #pragma mark - Private Interface
 
 - (void)_initialize {
-    self.backgroundColor = [UIColor magentaColor];
+    GIUserInterface *ui = [GIConfiguration sharedInstance].game.interface;
+    self.backgroundColor = ui.helpBackgroundColor;
+
+    [self addSubview:self.placeCorrectLetterButton];
+    [self addSubview:self.eliminateWrongLetterButton];
+    [self addSubview:self.skipLevelButton];
+    [self addSubview:self.facebookButton];
+    [self addSubview:self.twitterButton];
 }
 
+#pragma mark - IBActions
+
+- (void)_placeCorrectLetterTouched:(id)sender {
+    NSLog(@"Place correct letter!");
+}
+
+- (void)_eliminateWrongLetterTouched:(id)sender {
+    NSLog(@"Eliminate wrong letter!");
+}
+
+- (void)_skipLevelTouched:(id)sender {
+    NSLog(@"Skip level!");
+}
+
+- (void)_facebookTouched:(id)sender {
+    NSLog(@"Share your love on facebook!");
+}
+
+- (void)_twitterTouched:(id)sender {
+    NSLog(@"Share your love on twitter!");
+}
 
 @end

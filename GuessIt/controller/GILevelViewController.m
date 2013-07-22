@@ -11,6 +11,7 @@
 #import "GIBuyViewController.h"
 #import "GIConfiguration.h"
 #import "GICongratulationsView.h"
+#import "GIDefinitions.h"
 #import "GIGame.h"
 #import "GIHelpView.h"
 #import "GILevel.h"
@@ -20,6 +21,7 @@
 #import "GINavigationBar.h"
 #import "MALazykit.h"
 #import "UIFont+GuessItFonts.h"
+#import "UIView+CBFrameHelpers.h"
 #import "UIViewController+KNSemiModal.h"
 
 @interface GILevelViewController() <GIHelpViewDelegate, GILevelViewDelegate, UAModalPanelDelegate>
@@ -47,9 +49,8 @@
 
 - (GIHelpView *)helpView {
     if (!_helpView) {
-        _helpView = [GIHelpView viewWithFrame:CGRectMake(0.f, 0.f, 320.f, 200.f)];
+        _helpView = [GIHelpView viewWithFrame:CGRectMake(0.f, 0.f, self.view.width, GI_HELP_VIEW_HEIGHT)];
         _helpView.delegate = self;
-        _helpView.backgroundColor = [UIColor yellowColor];
     }
     return _helpView;
 }
@@ -111,7 +112,7 @@
     return YES;
 }
 
-- (BOOL)helpViewCanFillCorrectLetter:(GIHelpView *)helpView {
+- (BOOL)helpViewCanPlaceCorrectLetter:(GIHelpView *)helpView {
     #warning TODO: verify if it is not used more that 3? times
     return YES;
 }
@@ -120,7 +121,7 @@
     #warning TODO: remove wrong letter form keypad
 }
 
-- (void)helpViewDidRequestToFillCorrectLetter:(GIHelpView *)helpView {
+- (void)helpViewDidRequestToPlaceCorrectLetter:(GIHelpView *)helpView {
     #warning TODO: get a correct letter from keypad and put it on answer
 }
 

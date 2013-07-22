@@ -47,6 +47,8 @@
     ui.actionShadowColor = [UIColor colorWithHex:dictionary[@"action_shadow_color"]];
     ui.actionSelectedColor = [UIColor colorWithHex:dictionary[@"action_selected_color"]];
     ui.actionSelectedTextColor = [UIColor colorWithHex:dictionary[@"action_selected_text_color"]];
+    ui.helpBackgroundColor = ui.keypadBackgroundColor;
+    ui.helpButtonColor = ui.letterBackgroundColor;
 
     return ui;
 }
