@@ -131,7 +131,12 @@
 
 - (void)didRequestHelpFromLevelView:(GILevelView *)levelView {
     [self.levelView resignFirstResponder];
-    [self presentSemiView:self.helpView];
+
+    [self presentSemiView:self.helpView
+              withOptions:@{
+        KNSemiModalOptionKeys.pushParentBack : @(NO),
+        KNSemiModalOptionKeys.animationDuration : @(0.25f)
+    }];
 }
 
 #pragma mark - UAModalPanelDelegate Methods
