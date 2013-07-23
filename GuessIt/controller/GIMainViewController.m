@@ -48,10 +48,13 @@
         _titleLabel.text = @"Guess It!";
         [_titleLabel sizeToFit];
         _titleLabel.w = _titleLabel.width + 10.f;
-        _titleLabel.textColor = [GIConfiguration sharedInstance].game.interface.titleColor;
-        _titleLabel.shineColor = [GIConfiguration sharedInstance].game.interface.titleShineColor;
+
+        GIUserInterface *ui = [GIConfiguration sharedInstance].game.interface;
+
+        _titleLabel.textColor = ui.title.textColor;
+        _titleLabel.shineColor  = ui.title.secondaryColor;
         _titleLabel.textAlignment = NSTextAlignmentCenter;
-        _titleLabel.shadowColor = [GIConfiguration sharedInstance].game.interface.titleShadowColor;
+        _titleLabel.shadowColor = ui.title.shadowColor;
         _titleLabel.shadowOffset = CGSizeMake(0.f, -1.f);
     }
     return _titleLabel;
@@ -65,9 +68,12 @@
         _tapToPlayLabel.font = [UIFont guessItTapToPlayFont];
         _tapToPlayLabel.text = @"Tap to PLAY";
         [_tapToPlayLabel sizeToFit];
-        _tapToPlayLabel.textColor = [GIConfiguration sharedInstance].game.interface.subtitleColor;
+
+        GIUserInterface *ui = [GIConfiguration sharedInstance].game.interface;
+
+        _tapToPlayLabel.textColor = ui.subtitle.textColor;
         _tapToPlayLabel.textAlignment = NSTextAlignmentCenter;
-        _tapToPlayLabel.shadowColor = [GIConfiguration sharedInstance].game.interface.subtitleShadowColor;
+        _tapToPlayLabel.shadowColor = ui.subtitle.shadowColor;
         _tapToPlayLabel.shadowOffset = CGSizeMake(0.f, -1.f);
     }
     return _tapToPlayLabel;
@@ -96,7 +102,8 @@
     self.titleLabel.center = CGPointMake(self.view.center.x, self.view.center.y - 50.f);
     self.tapToPlayLabel.center = CGPointMake(self.view.center.x, self.titleLabel.center.y + 46.f);
 
-    self.view.backgroundColor = [GIConfiguration sharedInstance].game.interface.backgroundColor;
+    GIUserInterface *interface = [GIConfiguration sharedInstance].game.interface;
+    self.view.backgroundColor = interface.main.backgroundColor;
 
     UIButton *resetButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [resetButton addTarget:self action:@selector(_resetTouched:) forControlEvents:UIControlEventTouchUpInside];

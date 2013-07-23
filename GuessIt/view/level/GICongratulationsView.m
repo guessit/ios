@@ -18,6 +18,7 @@
 
 @interface GICongratulationsView ()
 
+@property (nonatomic, strong, readonly) GIUserInterfaceElement *ui;
 @property (nonatomic, strong) GIShineLabel *congratsLabel;
 @property (nonatomic, strong) UILabel *descriptionLabel;
 @property (nonatomic, strong) UILabel *answerDescriptionLabel;
@@ -31,17 +32,19 @@
 
 #pragma mark - Getter
 
+- (GIUserInterfaceElement *)ui {
+    return [GIConfiguration sharedInstance].game.interface.congratulations;
+}
+
 - (GIShineLabel *)congratsLabel {
     if (!_congratsLabel) {
-        GIUserInterface *interface = [GIConfiguration sharedInstance].game.interface;
-
         _congratsLabel = [GIShineLabel label];
         _congratsLabel.font = [UIFont guessItCongratulationTitleFont];
         _congratsLabel.text = @"Congratulations";
-        _congratsLabel.textColor = interface.congratulationColor;
+        _congratsLabel.textColor = self.ui.textColor;
         _congratsLabel.backgroundColor = [UIColor clearColor];
-        _congratsLabel.shineColor = interface.congratulationShineColor;
-        _congratsLabel.shadowColor = interface.congratulationShadowColor;
+        _congratsLabel.shineColor = self.ui.secondaryColor;
+        _congratsLabel.shadowColor = self.ui.shadowColor;
         _congratsLabel.shadowOffset = CGSizeMake(0.f, -1.f);
         _congratsLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(-5.f));
         [_congratsLabel sizeToFit];
@@ -51,14 +54,12 @@
 
 - (UILabel *)descriptionLabel {
     if (!_descriptionLabel) {
-        GIUserInterface *interface = [GIConfiguration sharedInstance].game.interface;
-
         _descriptionLabel = [UILabel label];
         _descriptionLabel.text = @"You've guessed the correct answer!";
         _descriptionLabel.backgroundColor = [UIColor clearColor];
         _descriptionLabel.font = [UIFont guessItCongratulationDescriptionFont];
-        _descriptionLabel.textColor = interface.subtitleColor;
-        _descriptionLabel.shadowColor = [UIColor blackColor];
+        _descriptionLabel.textColor = self.ui.secondaryTextColor;
+        _descriptionLabel.shadowColor = self.ui.secondaryShadowColor;
         _descriptionLabel.shadowOffset = CGSizeMake(0.f, -1.f);
         _descriptionLabel.transform = self.congratsLabel.transform;
         [_descriptionLabel sizeToFit];
@@ -68,14 +69,12 @@
 
 - (UILabel *)answerDescriptionLabel {
     if (!_answerDescriptionLabel) {
-        GIUserInterface *interface = [GIConfiguration sharedInstance].game.interface;
-
         _answerDescriptionLabel = [UILabel label];
         _answerDescriptionLabel.text = @"The answer was";
         _answerDescriptionLabel.backgroundColor = [UIColor clearColor];
         _answerDescriptionLabel.font = [UIFont guessItCongratulationAnswerDescriptionFont];
-        _answerDescriptionLabel.textColor = interface.subtitleColor;
-        _answerDescriptionLabel.shadowColor = [UIColor blackColor];
+        _answerDescriptionLabel.textColor = self.ui.secondaryTextColor;
+        _answerDescriptionLabel.shadowColor = self.ui.secondaryShadowColor;
         _answerDescriptionLabel.shadowOffset = CGSizeMake(0.f, -1.f);
         [_answerDescriptionLabel sizeToFit];
     }

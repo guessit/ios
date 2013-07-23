@@ -32,7 +32,7 @@
 
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [backButton setTitle:@"<" forState:UIControlStateNormal];
-    [backButton setTitleColor:ui.navigationButtonColor forState:UIControlStateNormal];
+    [backButton setTitleColor:ui.navigation.color forState:UIControlStateNormal];
     backButton.titleLabel.font = [UIFont guessItBackButtonFont];
     backButton.titleEdgeInsets = UIEdgeInsetsMake(0.f, 0.f, 0.f, 30.f);
 

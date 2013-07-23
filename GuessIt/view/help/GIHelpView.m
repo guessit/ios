@@ -14,6 +14,8 @@
 
 @interface GIHelpView ()
 
+@property (nonatomic, strong, readonly) GIUserInterfaceElement *ui;
+
 @property (nonatomic, strong) UIButton *placeCorrectLetterButton;
 @property (nonatomic, strong) UIButton *eliminateWrongLetterButton;
 @property (nonatomic, strong) UIButton *skipLevelButton;
@@ -34,10 +36,14 @@
 
 #pragma mark - Getter
 
+- (GIUserInterfaceElement *)ui {
+    return [GIConfiguration sharedInstance].game.interface.help;
+}
+
 - (UIButton *)placeCorrectLetterButton {
     if (!_placeCorrectLetterButton) {
         _placeCorrectLetterButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _placeCorrectLetterButton.backgroundColor = [GIConfiguration sharedInstance].game.interface.helpButtonColor;
+        _placeCorrectLetterButton.backgroundColor = self.ui.secondaryBackgroundColor;
 
         CGFloat x = GI_HELP_VIEW_PADDING;
         CGFloat y = GI_HELP_VIEW_PADDING;
@@ -58,7 +64,7 @@
 - (UIButton *)eliminateWrongLetterButton {
     if (!_eliminateWrongLetterButton) {
         _eliminateWrongLetterButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _eliminateWrongLetterButton.backgroundColor = [GIConfiguration sharedInstance].game.interface.helpButtonColor;
+        _eliminateWrongLetterButton.backgroundColor = self.ui.secondaryBackgroundColor;
 
         CGFloat x = GI_HELP_VIEW_PADDING;
         CGFloat y = (2 * GI_HELP_VIEW_PADDING) + GI_HELP_BUTTON_HEIGHT;
@@ -79,7 +85,7 @@
 - (UIButton *)skipLevelButton {
     if (!_skipLevelButton) {
         _skipLevelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _skipLevelButton.backgroundColor = [GIConfiguration sharedInstance].game.interface.helpButtonColor;
+        _skipLevelButton.backgroundColor = self.ui.secondaryBackgroundColor;
 
         CGFloat x = GI_HELP_VIEW_PADDING;
         CGFloat y = (3 * GI_HELP_VIEW_PADDING) + (2 * GI_HELP_BUTTON_HEIGHT);
@@ -100,7 +106,7 @@
 - (UIButton *)facebookButton {
     if (!_facebookButton) {
         _facebookButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _facebookButton.backgroundColor = [GIConfiguration sharedInstance].game.interface.helpButtonColor;
+        _facebookButton.backgroundColor = self.ui.secondaryBackgroundColor;
 
         CGFloat x = GI_HELP_VIEW_PADDING;
         CGFloat y = self.height - GI_HELP_BUTTON_HEIGHT - GI_HELP_VIEW_PADDING;
@@ -121,7 +127,7 @@
 - (UIButton *)twitterButton {
     if (!_twitterButton) {
         _twitterButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _twitterButton.backgroundColor = [GIConfiguration sharedInstance].game.interface.helpButtonColor;
+        _twitterButton.backgroundColor = self.ui.secondaryBackgroundColor;
 
         CGFloat width = (self.width - (3 * GI_HELP_VIEW_PADDING)) / 2.f;
         CGFloat height = GI_HELP_BUTTON_HEIGHT;
@@ -152,8 +158,7 @@
 #pragma mark - Private Interface
 
 - (void)_initialize {
-    GIUserInterface *ui = [GIConfiguration sharedInstance].game.interface;
-    self.backgroundColor = ui.helpBackgroundColor;
+    self.backgroundColor = self.ui.backgroundColor;
 
     [self addSubview:self.placeCorrectLetterButton];
     [self addSubview:self.eliminateWrongLetterButton];

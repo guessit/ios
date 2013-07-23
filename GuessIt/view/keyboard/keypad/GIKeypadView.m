@@ -73,17 +73,17 @@
                                   GI_KEYPAD_ACTION_WIDTH - GI_KEYPAD_PADDING, self.height - 2 * GI_KEYPAD_PADDING);
         _actionButton.frame = frame;
         _actionButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
-        _actionButton.backgroundColor = [GIConfiguration sharedInstance].game.interface.actionBackgroundColor;
-        _actionButton.glowColor = [GIConfiguration sharedInstance].game.interface.actionSelectedColor;
+
+        GIUserInterfaceElement *ui = [GIConfiguration sharedInstance].game.interface.action;
+
+        _actionButton.backgroundColor = ui.backgroundColor;
+        _actionButton.glowColor = ui.secondaryColor;
         _actionButton.titleLabel.font = [UIFont guessItActionFont];
         _actionButton.titleEdgeInsets = UIEdgeInsetsMake(0.f, 2.f, 0.f, 0.f);
         _actionButton.titleLabel.shadowOffset = CGSizeMake(0.f, -1.f);
-        [_actionButton setTitleShadowColor:[GIConfiguration sharedInstance].game.interface.actionShadowColor
-                                  forState:UIControlStateNormal];
-        [_actionButton setTitleColor:[GIConfiguration sharedInstance].game.interface.actionTextColor
-                            forState:UIControlStateNormal];
-        [_actionButton setTitleColor:[GIConfiguration sharedInstance].game.interface.actionSelectedTextColor
-                            forState:UIControlStateHighlighted];
+        [_actionButton setTitleShadowColor:ui.shadowColor forState:UIControlStateNormal];
+        [_actionButton setTitleColor:ui.textColor forState:UIControlStateNormal];
+        [_actionButton setTitleColor:ui.secondaryTextColor forState:UIControlStateHighlighted];
         [_actionButton setTitle:@"?" forState:UIControlStateNormal];
 
         [_actionButton addTarget:self
@@ -248,7 +248,7 @@
 #pragma mark - Private Methods
 
 - (void)_initialize {
-    self.backgroundColor = [GIConfiguration sharedInstance].game.interface.keypadBackgroundColor;
+    self.backgroundColor = [GIConfiguration sharedInstance].game.interface.keypad.backgroundColor;
 
     [self addSubview:self.actionButton];
     [self addSubview:self.lettersContainer];
@@ -299,14 +299,16 @@
 
     letterView.transform = CGAffineTransformMakeScale(GI_LETTER_MINIMIZED_SCALE, GI_LETTER_MINIMIZED_SCALE);
 
+    GIUserInterfaceElement *ui = [GIConfiguration sharedInstance].game.interface.letter;
+
     [UIView animateWithDuration:0.2f animations:^{
         letterView.alpha = 1.f;
         letterView.transform = CGAffineTransformMakeScale(GI_LETTER_ZOOMED_SCALE, GI_LETTER_ZOOMED_SCALE);
-        letterView.backgroundColor = [GIConfiguration sharedInstance].game.interface.letterSelectedColor;
+        letterView.backgroundColor = ui.secondaryBackgroundColor;
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:0.1f animations:^{
             letterView.transform = CGAffineTransformIdentity;
-            letterView.backgroundColor = [GIConfiguration sharedInstance].game.interface.letterBackgroundColor;
+            letterView.backgroundColor = ui.backgroundColor;
         }];
     }];
 }

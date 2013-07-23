@@ -34,12 +34,14 @@
 
 - (UILabel *)categoryLabel {
     if (!_categoryLabel) {
+        GIUserInterfaceElement *ui = [GIConfiguration sharedInstance].game.interface.category;
+
         _categoryLabel = [UILabel labelWithFrame:CGRectMake(0.f, 0.f, self.width, GI_CATEGORY_HEIGHT)];
         _categoryLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        _categoryLabel.backgroundColor = [GIConfiguration sharedInstance].game.interface.categoryBackgroundColor;
-        _categoryLabel.textColor = [GIConfiguration sharedInstance].game.interface.categoryTextColor;
+        _categoryLabel.backgroundColor = ui.backgroundColor;
+        _categoryLabel.textColor = ui.textColor;
         _categoryLabel.shadowOffset = CGSizeMake(0.f, -1.f);
-        _categoryLabel.shadowColor = [GIConfiguration sharedInstance].game.interface.categoryShadowColor;
+        _categoryLabel.shadowColor = ui.shadowColor;
         _categoryLabel.text = @"Category";
         _categoryLabel.textAlignment = NSTextAlignmentCenter;
         _categoryLabel.font = [UIFont guessItCategoryFont];
@@ -52,9 +54,9 @@
         GIUserInterface *interface = [GIConfiguration sharedInstance].game.interface;
 
         _imageViewFrame = [UIView view];
-        _imageViewFrame.backgroundColor = interface.imageBackgroundColor;
+        _imageViewFrame.backgroundColor = interface.image.backgroundColor;
         _imageViewFrame.layer.cornerRadius = 1.f;
-        _imageViewFrame.layer.borderColor = [interface.frameColor CGColor];
+        _imageViewFrame.layer.borderColor = [interface.frame.backgroundColor CGColor];
         _imageViewFrame.layer.borderWidth = 5.f;
     }
     return _imageViewFrame;
@@ -146,7 +148,7 @@
 #pragma mark - Private Interface
 
 - (void)_initialize {
-    self.backgroundColor = [GIConfiguration sharedInstance].game.interface.levelBackgroundColor;
+    self.backgroundColor = [GIConfiguration sharedInstance].game.interface.level.backgroundColor;
 
     [self addSubview:self.categoryLabel];
     [self addSubview:self.imageViewFrame];

@@ -31,8 +31,8 @@
         _label = [UILabel labelWithFrame:self.bounds];
         _label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _label.backgroundColor = [UIColor clearColor];
-        _label.textColor = [GIConfiguration sharedInstance].game.interface.letterTextColor;
-        _label.shadowColor = [GIConfiguration sharedInstance].game.interface.letterShadowColor;
+        _label.textColor = [GIConfiguration sharedInstance].game.interface.letter.textColor;
+        _label.shadowColor = [GIConfiguration sharedInstance].game.interface.letter.shadowColor;
         _label.shadowOffset = CGSizeMake(0.f, -1.f);
         _label.textAlignment = NSTextAlignmentCenter;
     }
@@ -96,7 +96,7 @@
 #pragma mark - Public Interface
 
 - (void)reset {
-    self.backgroundColor = [GIConfiguration sharedInstance].game.interface.letterBackgroundColor;
+    self.backgroundColor = [GIConfiguration sharedInstance].game.interface.letter.backgroundColor;
     [self.layer removeAllAnimations];
     self.frame = CGRectZero;
     self.transform = CGAffineTransformIdentity;
@@ -105,16 +105,16 @@
 - (void)zoomIn {
     [UIView animateWithDuration:0.2f animations:^{
         self.transform = CGAffineTransformMakeScale(GI_LETTER_ZOOMED_SCALE, GI_LETTER_ZOOMED_SCALE);
-        self.backgroundColor = [GIConfiguration sharedInstance].game.interface.letterSelectedColor;
-        self.label.textColor = [GIConfiguration sharedInstance].game.interface.letterSelectedTextColor;
+        self.backgroundColor = [GIConfiguration sharedInstance].game.interface.letter.secondaryBackgroundColor;
+        self.label.textColor = [GIConfiguration sharedInstance].game.interface.letter.secondaryTextColor;
     }];
 }
 
 - (void)zoomOut {
     [UIView animateWithDuration:0.2f animations:^{
         self.transform = CGAffineTransformIdentity;
-        self.backgroundColor = [GIConfiguration sharedInstance].game.interface.letterBackgroundColor;
-        self.label.textColor = [GIConfiguration sharedInstance].game.interface.letterTextColor;
+        self.backgroundColor = [GIConfiguration sharedInstance].game.interface.letter.backgroundColor;
+        self.label.textColor = [GIConfiguration sharedInstance].game.interface.letter.textColor;
     }];
 }
 
@@ -122,8 +122,8 @@
     self.transform = CGAffineTransformIdentity;
     [UIView animateWithDuration:0.3f animations:^{
         self.transform = CGAffineTransformMakeScale(GI_LETTER_MINIMIZED_SCALE, GI_LETTER_MINIMIZED_SCALE);
-        self.backgroundColor = [GIConfiguration sharedInstance].game.interface.letterBackgroundColor;
-        self.label.textColor = [GIConfiguration sharedInstance].game.interface.letterTextColor;
+        self.backgroundColor = [GIConfiguration sharedInstance].game.interface.letter.backgroundColor;
+        self.label.textColor = [GIConfiguration sharedInstance].game.interface.letter.textColor;
         self.alpha = 0.f;
     }];
 }

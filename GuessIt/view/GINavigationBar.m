@@ -45,8 +45,8 @@
     UILabel *label = [UILabel label];
     label.backgroundColor = [UIColor clearColor];
     label.font = [UIFont guessItNavigationTitleFont];
-    label.textColor = [GIConfiguration sharedInstance].game.interface.titleColor;
-    label.shadowColor = [GIConfiguration sharedInstance].game.interface.titleShadowColor;
+    label.textColor = [GIConfiguration sharedInstance].game.interface.title.textColor;
+    label.shadowColor = [GIConfiguration sharedInstance].game.interface.title.shadowColor;
     label.shadowOffset = CGSizeMake(0.f, -1.f);
     label.text = @"Guess It!";
     label.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin |
@@ -56,7 +56,7 @@
 
     [self addSubview:label];
 
-    UIColor *navigationBackgroundColor = [GIConfiguration sharedInstance].game.interface.navigationBackgroundColor;
+    UIColor *navigationBackgroundColor = [GIConfiguration sharedInstance].game.interface.navigation.backgroundColor;
     [self setBackgroundImage:[UIImage imageWithColor:navigationBackgroundColor]
                forBarMetrics:UIBarMetricsDefault];
 }

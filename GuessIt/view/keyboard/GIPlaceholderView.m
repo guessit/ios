@@ -57,7 +57,7 @@
 #pragma mark - Private Interface
 
 - (void)_initialize {
-    self.backgroundColor = [GIConfiguration sharedInstance].game.interface.placeholderBackgroundColor;
+    self.backgroundColor = [GIConfiguration sharedInstance].game.interface.placeholder.backgroundColor;
     self.layer.cornerRadius = 3.f;
     self.layer.shadowColor = [UIColor blackColor].CGColor;
     self.layer.shadowOffset = CGSizeMake(1.f, 1.f);
@@ -83,14 +83,16 @@
 
     self.letterView.transform = CGAffineTransformMakeScale(GI_LETTER_MINIMIZED_SCALE, GI_LETTER_MINIMIZED_SCALE);
 
+    GIUserInterfaceElement *ui = [GIConfiguration sharedInstance].game.interface.letter;
+
     [UIView animateWithDuration:0.2f animations:^{
         self.letterView.alpha = 1.f;
         self.letterView.transform = CGAffineTransformMakeScale(GI_LETTER_ZOOMED_SCALE, GI_LETTER_ZOOMED_SCALE);
-        self.letterView.backgroundColor = [GIConfiguration sharedInstance].game.interface.letterSelectedColor;
+        self.letterView.backgroundColor = ui.secondaryBackgroundColor;
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:0.1f animations:^{
             self.letterView.transform = CGAffineTransformIdentity;
-            self.letterView.backgroundColor = [GIConfiguration sharedInstance].game.interface.letterBackgroundColor;
+            self.letterView.backgroundColor = ui.backgroundColor;
         }];
     }];
 }

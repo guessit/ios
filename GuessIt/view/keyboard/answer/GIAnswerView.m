@@ -109,7 +109,7 @@
 #pragma mark - Private Interface
 
 - (void)_initialize {
-    self.backgroundColor = [GIConfiguration sharedInstance].game.interface.answerBackgroundColor;
+    self.backgroundColor = [GIConfiguration sharedInstance].game.interface.answer.backgroundColor;
     self.containerView = [UIView view];
     [self addSubview:self.containerView];
 }

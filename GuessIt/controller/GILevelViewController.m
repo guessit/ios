@@ -64,7 +64,7 @@
                    action:@selector(_rightButtonTouched:)
          forControlEvents:UIControlEventTouchUpInside];
         [button setTitle:@"?" forState:UIControlStateNormal];
-        [button setTitleColor:ui.navigationButtonColor forState:UIControlStateNormal];
+        [button setTitleColor:ui.navigation.color forState:UIControlStateNormal];
 
         button.titleLabel.font = [UIFont guessItBarButtonFont];
         button.titleLabel.textAlignment = NSTextAlignmentCenter;
