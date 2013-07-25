@@ -17,6 +17,7 @@
 		BF239B88179D462000005FCA /* GIHelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF239B87179D462000005FCA /* GIHelpView.m */; };
 		BF239B8C179E8E5200005FCA /* GIUserInterfaceElement.m in Sources */ = {isa = PBXBuildFile; fileRef = BF239B8B179E8E5200005FCA /* GIUserInterfaceElement.m */; };
 		BF239B8F179E8F9800005FCA /* GIUserInterfaceElement+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BF239B8E179E8F9800005FCA /* GIUserInterfaceElement+Factory.m */; };
+		BF239B9217A1398300005FCA /* GISettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF239B9117A1398300005FCA /* GISettingsViewController.m */; };
 		BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF291E8B174ECA320066D5EF /* GIDefinitions.m */; };
 		BF3DDBA1176D070B0055A388 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3DDBA0176D070A0055A388 /* main.m */; };
 		BF3DDBA4176D07230055A388 /* _GIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3DDBA3176D07230055A388 /* _GIAppDelegate.m */; };
@@ -35,7 +36,6 @@
 		BF712584175D40F0007F99EB /* GILetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712580175D40F0007F99EB /* GILetterView.m */; };
 		BF712585175D40F0007F99EB /* GIPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712582175D40F0007F99EB /* GIPlaceholderView.m */; };
 		BF71258B175D4238007F99EB /* GILevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712589175D4238007F99EB /* GILevelView.m */; };
-		BF714A0B175FE8F200DF6274 /* GIBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF714A0A175FE8F200DF6274 /* GIBuyViewController.m */; };
 		BF91795817244A8200B136E2 /* shine_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF91795717244A8200B136E2 /* shine_mask@2x.png */; };
 		BFAD126716F136A100F6D429 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126616F136A100F6D429 /* UIKit.framework */; };
 		BFAD126916F136A100F6D429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126816F136A100F6D429 /* Foundation.framework */; };
@@ -90,6 +90,8 @@
 		BF239B8B179E8E5200005FCA /* GIUserInterfaceElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIUserInterfaceElement.m; sourceTree = "<group>"; };
 		BF239B8D179E8F9800005FCA /* GIUserInterfaceElement+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GIUserInterfaceElement+Factory.h"; sourceTree = "<group>"; };
 		BF239B8E179E8F9800005FCA /* GIUserInterfaceElement+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GIUserInterfaceElement+Factory.m"; sourceTree = "<group>"; };
+		BF239B9017A1398300005FCA /* GISettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GISettingsViewController.h; sourceTree = "<group>"; };
+		BF239B9117A1398300005FCA /* GISettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GISettingsViewController.m; sourceTree = "<group>"; };
 		BF291E8B174ECA320066D5EF /* GIDefinitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIDefinitions.m; sourceTree = "<group>"; };
 		BF3DDBA0176D070A0055A388 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF3DDBA2176D07230055A388 /* _GIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _GIAppDelegate.h; sourceTree = "<group>"; };
@@ -124,8 +126,6 @@
 		BF712588175D4238007F99EB /* GILevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelView.h; sourceTree = "<group>"; };
 		BF712589175D4238007F99EB /* GILevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelView.m; sourceTree = "<group>"; };
 		BF71258A175D4238007F99EB /* GILevelViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelViewDelegate.h; sourceTree = "<group>"; };
-		BF714A09175FE8F200DF6274 /* GIBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIBuyViewController.h; sourceTree = "<group>"; };
-		BF714A0A175FE8F200DF6274 /* GIBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIBuyViewController.m; sourceTree = "<group>"; };
 		BF8D8B701795E454000D6507 /* GISound+Factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GISound+Factory.h"; sourceTree = "<group>"; };
 		BF8D8B711795E454000D6507 /* GISound+Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GISound+Factory.m"; sourceTree = "<group>"; };
 		BF91795717244A8200B136E2 /* shine_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shine_mask@2x.png"; sourceTree = "<group>"; };
@@ -370,14 +370,14 @@
 		BFAD12A116F1376600F6D429 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BF714A09175FE8F200DF6274 /* GIBuyViewController.h */,
-				BF714A0A175FE8F200DF6274 /* GIBuyViewController.m */,
 				BF1F29B4170761D400A83FE3 /* GILevelViewController.h */,
 				BF1F29B5170761D400A83FE3 /* GILevelViewController.m */,
 				BFBDD2101701092000F5698E /* GIMainViewController.h */,
 				BFBDD2111701092000F5698E /* GIMainViewController.m */,
 				BF1F29B11707617700A83FE3 /* GIViewController.h */,
 				BF1F29B21707617700A83FE3 /* GIViewController.m */,
+				BF239B9017A1398300005FCA /* GISettingsViewController.h */,
+				BF239B9117A1398300005FCA /* GISettingsViewController.m */,
 			);
 			name = Controller;
 			path = controller;
@@ -612,7 +612,7 @@
 				BF659F781795AE7200C99668 /* GISound.m in Sources */,
 				BF71258B175D4238007F99EB /* GILevelView.m in Sources */,
 				BFBAF9F9175D773200AA0AE1 /* GIGlowButton.m in Sources */,
-				BF714A0B175FE8F200DF6274 /* GIBuyViewController.m in Sources */,
+				BF239B9217A1398300005FCA /* GISettingsViewController.m in Sources */,
 				BF56593B176E6D3800F5198A /* GIModalPanel.m in Sources */,
 				BF0EFE77176BC929007CD06F /* GIUserInterface+Factory.m in Sources */,
 			);

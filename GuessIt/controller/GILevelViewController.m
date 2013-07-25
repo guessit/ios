@@ -8,7 +8,6 @@
 
 #import "GILevelViewController.h"
 
-#import "GIBuyViewController.h"
 #import "GIConfiguration.h"
 #import "GICongratulationsView.h"
 #import "GIDefinitions.h"
@@ -19,12 +18,13 @@
 #import "GILevelViewDelegate.h"
 #import "GIModalPanel.h"
 #import "GINavigationBar.h"
+#import "GISettingsViewController.h"
 #import "MALazykit.h"
 #import "UIFont+GuessItFonts.h"
 #import "UIView+CBFrameHelpers.h"
 #import "UIViewController+KNSemiModal.h"
 
-@interface GILevelViewController() <GIHelpViewDelegate, GILevelViewDelegate, UAModalPanelDelegate>
+@interface GILevelViewController() <GISettingsDelegate, GIHelpViewDelegate, GILevelViewDelegate, UAModalPanelDelegate>
 
 @property (nonatomic, strong) GILevelView *levelView;
 @property (nonatomic, strong) GIHelpView *helpView;
@@ -98,11 +98,18 @@
 }
 
 - (void)_rightButtonTouched:(id)sender {
-    GIBuyViewController *buyViewController = [GIBuyViewController viewController];
+    GISettingsViewController *settings = [GISettingsViewController viewController];
+    settings.settingsDelegate = self;
     UINavigationController *navController = [UINavigationController navigationControllerWithNavigationBarClass:[GINavigationBar class]
                                                                                                   toolbarClass:nil];
-    navController.viewControllers = @[buyViewController];
+    navController.viewControllers = @[settings];
     [self presentViewController:navController animated:YES completion:NULL];
+}
+
+#pragma mark - GISettingsDelegate Methods
+
+- (void)didCancelSettingsViewController:(GISettingsViewController *)settingsViewController {
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 #pragma mark - GIHelpViewDelegate Methods
