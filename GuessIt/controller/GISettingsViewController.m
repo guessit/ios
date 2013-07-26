@@ -112,6 +112,16 @@ typedef enum {
     return height;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+//    UIView *header = [UIView view];
+    UILabel *label = [UILabel label];
+
+    NSString *title = NSLocalizedStringFromTable(@"liked_the_game", @"settings", nil);
+    label.text = title;
+
+    return label;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

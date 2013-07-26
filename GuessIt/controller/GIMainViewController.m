@@ -107,8 +107,10 @@
 
     UIButton *resetButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [resetButton addTarget:self action:@selector(_resetTouched:) forControlEvents:UIControlEventTouchUpInside];
-    [resetButton setTitle:@"Reset" forState:UIControlStateNormal];
-    resetButton.frame = CGRectMake(self.view.center.x - 50.f, self.view.bounds.size.height - 60.f, 100.f, 40.f);
+    NSString *reset = NSLocalizedStringFromTable(@"liked_the_game", @"settings", nil);
+    [resetButton setTitle:reset forState:UIControlStateNormal];
+    [resetButton sizeToFit];
+    resetButton.center = CGPointMake(self.view.center.x, self.view.bounds.size.height - 70.f);
 
     [self.view addSubview:resetButton];
 
