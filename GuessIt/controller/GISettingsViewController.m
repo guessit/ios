@@ -8,6 +8,7 @@
 
 #import "GISettingsViewController.h"
 
+#import "GIConfiguration.h"
 #import "MALazykit.h"
 
 typedef enum {
@@ -44,9 +45,19 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem buttonWithSystemItem:UIBarButtonSystemItemCancel
-                                                                           target:self
-                                                                           action:@selector(_cancelTouched:)];
+    UIColor *color = [GIConfiguration sharedInstance].game.interface.navigation.color;
+
+    UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    cancelButton.frame = CGRectMake(0.f, 0.f, 70.f, 40.f);
+
+    [cancelButton setTitleColor:color forState:UIControlStateNormal];
+    [cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
+    [cancelButton addTarget:self
+                     action:@selector(_cancelTouched:)
+           forControlEvents:UIControlEventTouchUpInside];
+//    backButton.titleEdgeInsets = UIEdgeInsetsMake(0.f, 0.f, 0.f, 30.f);
+//    backButton.frame = CGRectMake(0.f, 0.f, 70.f, 40.f);
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem buttonWithCustomView:cancelButton];
 }
 
 #pragma mark - Private Interface
