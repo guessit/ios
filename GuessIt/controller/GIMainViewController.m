@@ -66,7 +66,7 @@
         _tapToPlayLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
         _tapToPlayLabel.backgroundColor = [UIColor clearColor];
         _tapToPlayLabel.font = [UIFont guessItTapToPlayFont];
-        _tapToPlayLabel.text = @"Tap to PLAY";
+        _tapToPlayLabel.text = NSLocalizedStringFromTable(@"tap_to_play", @"general", nil);
         [_tapToPlayLabel sizeToFit];
 
         GIUserInterface *ui = [GIConfiguration sharedInstance].game.interface;

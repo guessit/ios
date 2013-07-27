@@ -40,7 +40,7 @@
     if (!_congratsLabel) {
         _congratsLabel = [GIShineLabel label];
         _congratsLabel.font = [UIFont guessItCongratulationTitleFont];
-        _congratsLabel.text = @"Congratulations";
+        _congratsLabel.text = NSLocalizedStringFromTable(@"congratulations", @"congratulations", nil);
         _congratsLabel.textColor = self.ui.textColor;
         _congratsLabel.backgroundColor = [UIColor clearColor];
         _congratsLabel.shineColor = self.ui.secondaryColor;
@@ -55,7 +55,7 @@
 - (UILabel *)descriptionLabel {
     if (!_descriptionLabel) {
         _descriptionLabel = [UILabel label];
-        _descriptionLabel.text = @"You've guessed the correct answer!";
+        _descriptionLabel.text = NSLocalizedStringFromTable(@"correct_answer", @"congratulations", nil);
         _descriptionLabel.backgroundColor = [UIColor clearColor];
         _descriptionLabel.font = [UIFont guessItCongratulationDescriptionFont];
         _descriptionLabel.textColor = self.ui.secondaryTextColor;
@@ -70,7 +70,7 @@
 - (UILabel *)answerDescriptionLabel {
     if (!_answerDescriptionLabel) {
         _answerDescriptionLabel = [UILabel label];
-        _answerDescriptionLabel.text = @"The answer was";
+        _answerDescriptionLabel.text = NSLocalizedStringFromTable(@"answer_was", @"congratulations", nil);
         _answerDescriptionLabel.backgroundColor = [UIColor clearColor];
         _answerDescriptionLabel.font = [UIFont guessItCongratulationAnswerDescriptionFont];
         _answerDescriptionLabel.textColor = self.ui.secondaryTextColor;

@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '6.0'
 
   s.source_files = 'GuessIt/**/*.{h,m}'
-  s.resources = ['Resources/*.{lproj}', 'Resources/fonts/*', 'Resources/sounds/*', 'Resources/images/*']
+  s.resources = ['Resources/localization/*.{lproj}', 'Resources/fonts/*', 'Resources/sounds/*', 'Resources/images/*']
   
   s.dependency 'SSToolkit'
   s.dependency 'MALazykit'

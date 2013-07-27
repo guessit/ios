@@ -18,7 +18,6 @@
 		BF239B8C179E8E5200005FCA /* GIUserInterfaceElement.m in Sources */ = {isa = PBXBuildFile; fileRef = BF239B8B179E8E5200005FCA /* GIUserInterfaceElement.m */; };
 		BF239B8F179E8F9800005FCA /* GIUserInterfaceElement+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BF239B8E179E8F9800005FCA /* GIUserInterfaceElement+Factory.m */; };
 		BF239B9217A1398300005FCA /* GISettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF239B9117A1398300005FCA /* GISettingsViewController.m */; };
-		BF239BAF17A2DDED00005FCA /* settings.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF239BB117A2DDED00005FCA /* settings.strings */; };
 		BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF291E8B174ECA320066D5EF /* GIDefinitions.m */; };
 		BF3DDBA1176D070B0055A388 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3DDBA0176D070A0055A388 /* main.m */; };
 		BF3DDBA4176D07230055A388 /* _GIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3DDBA3176D07230055A388 /* _GIAppDelegate.m */; };
@@ -38,6 +37,9 @@
 		BF712585175D40F0007F99EB /* GIPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712582175D40F0007F99EB /* GIPlaceholderView.m */; };
 		BF71258B175D4238007F99EB /* GILevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712589175D4238007F99EB /* GILevelView.m */; };
 		BF91795817244A8200B136E2 /* shine_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF91795717244A8200B136E2 /* shine_mask@2x.png */; };
+		BF92630B17A3E4C400C29A70 /* congratulations.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF92630517A3E4C400C29A70 /* congratulations.strings */; };
+		BF92630C17A3E4C400C29A70 /* settings.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF92630717A3E4C400C29A70 /* settings.strings */; };
+		BF92630F17A3E56600C29A70 /* general.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF92631117A3E56600C29A70 /* general.strings */; };
 		BFAD126716F136A100F6D429 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126616F136A100F6D429 /* UIKit.framework */; };
 		BFAD126916F136A100F6D429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126816F136A100F6D429 /* Foundation.framework */; };
 		BFAD126B16F136A100F6D429 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126A16F136A100F6D429 /* CoreGraphics.framework */; };
@@ -91,8 +93,6 @@
 		BF239B8E179E8F9800005FCA /* GIUserInterfaceElement+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GIUserInterfaceElement+Factory.m"; sourceTree = "<group>"; };
 		BF239B9017A1398300005FCA /* GISettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GISettingsViewController.h; sourceTree = "<group>"; };
 		BF239B9117A1398300005FCA /* GISettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GISettingsViewController.m; sourceTree = "<group>"; };
-		BF239BB017A2DDED00005FCA /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/settings.strings; sourceTree = "<group>"; };
-		BF239BB217A2DDF300005FCA /* pt */ = {isa = PBXFileReference; lastKnownFileType = file; name = pt; path = pt.lproj/settings.strings; sourceTree = "<group>"; };
 		BF291E8B174ECA320066D5EF /* GIDefinitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIDefinitions.m; sourceTree = "<group>"; };
 		BF3DDBA0176D070A0055A388 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF3DDBA2176D07230055A388 /* _GIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _GIAppDelegate.h; sourceTree = "<group>"; };
@@ -130,6 +130,12 @@
 		BF8D8B701795E454000D6507 /* GISound+Factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GISound+Factory.h"; sourceTree = "<group>"; };
 		BF8D8B711795E454000D6507 /* GISound+Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GISound+Factory.m"; sourceTree = "<group>"; };
 		BF91795717244A8200B136E2 /* shine_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shine_mask@2x.png"; sourceTree = "<group>"; };
+		BF92630617A3E4C400C29A70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/congratulations.strings; sourceTree = "<group>"; };
+		BF92630817A3E4C400C29A70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/settings.strings; sourceTree = "<group>"; };
+		BF92630917A3E4C400C29A70 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/congratulations.strings; sourceTree = "<group>"; };
+		BF92630A17A3E4C400C29A70 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/settings.strings; sourceTree = "<group>"; };
+		BF92631017A3E56600C29A70 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/general.strings; sourceTree = "<group>"; };
+		BF92631217A3E56700C29A70 /* pt */ = {isa = PBXFileReference; lastKnownFileType = file; name = pt; path = pt.lproj/general.strings; sourceTree = "<group>"; };
 		BF99CD44176E317300CA2650 /* GICongratulationsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GICongratulationsView.h; sourceTree = "<group>"; };
 		BF99CD45176E317300CA2650 /* GICongratulationsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GICongratulationsView.m; sourceTree = "<group>"; };
 		BFAD126316F136A100F6D429 /* GuessIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,6 +298,16 @@
 			path = level;
 			sourceTree = "<group>";
 		};
+		BF92630417A3E4C400C29A70 /* localization */ = {
+			isa = PBXGroup;
+			children = (
+				BF92630517A3E4C400C29A70 /* congratulations.strings */,
+				BF92631117A3E56600C29A70 /* general.strings */,
+				BF92630717A3E4C400C29A70 /* settings.strings */,
+			);
+			path = localization;
+			sourceTree = "<group>";
+		};
 		BFAD125A16F136A100F6D429 = {
 			isa = PBXGroup;
 			children = (
@@ -436,9 +452,9 @@
 		BFF9290E17243E0300F230C6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BF239BB117A2DDED00005FCA /* settings.strings */,
 				BF56593E176E721400F5198A /* fonts */,
 				BFF9290F17243E0300F230C6 /* images */,
+				BF92630417A3E4C400C29A70 /* localization */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -528,10 +544,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFE898EB1796FA630081E646 /* main_background@2x.png in Resources */,
-				BF239BAF17A2DDED00005FCA /* settings.strings in Resources */,
+				BF92630C17A3E4C400C29A70 /* settings.strings in Resources */,
 				BF91795817244A8200B136E2 /* shine_mask@2x.png in Resources */,
+				BF92630F17A3E56600C29A70 /* general.strings in Resources */,
 				BF565942176E721400F5198A /* Lobster.ttf in Resources */,
 				BF565941176E721400F5198A /* JotiOne-Regular.ttf in Resources */,
+				BF92630B17A3E4C400C29A70 /* congratulations.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,13 +654,31 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BF239BB117A2DDED00005FCA /* settings.strings */ = {
+		BF92630517A3E4C400C29A70 /* congratulations.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BF239BB017A2DDED00005FCA /* en */,
-				BF239BB217A2DDF300005FCA /* pt */,
+				BF92630617A3E4C400C29A70 /* en */,
+				BF92630917A3E4C400C29A70 /* pt */,
+			);
+			name = congratulations.strings;
+			sourceTree = "<group>";
+		};
+		BF92630717A3E4C400C29A70 /* settings.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF92630817A3E4C400C29A70 /* en */,
+				BF92630A17A3E4C400C29A70 /* pt */,
 			);
 			name = settings.strings;
+			sourceTree = "<group>";
+		};
+		BF92631117A3E56600C29A70 /* general.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF92631017A3E56600C29A70 /* en */,
+				BF92631217A3E56700C29A70 /* pt */,
+			);
+			name = general.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -27,6 +27,7 @@
 @interface GILevelViewController() <GISettingsDelegate, GIHelpViewDelegate, GILevelViewDelegate, UAModalPanelDelegate>
 
 @property (nonatomic, strong) GILevelView *levelView;
+@property (nonatomic, strong) UIView *adView;
 @property (nonatomic, strong) GIHelpView *helpView;
 @property (nonatomic, strong) UIBarButtonItem *rightButtonItem;
 
@@ -45,6 +46,14 @@
         _levelView.levelDelegate = self;
     }
     return _levelView;
+}
+
+- (UIView *)adView {
+    if (!_adView) {
+        _adView = [UIView view];
+        _adView.backgroundColor = [UIColor yellowColor];
+    }
+    return _adView;
 }
 
 - (GIHelpView *)helpView {
@@ -87,7 +96,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view = self.levelView;
+    self.levelView.frame = CGRectMake(0.f, 0.f, self.view.width, self.view.height - 50.f);
+    self.levelView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [self.view addSubview:self.levelView];
+
+    self.adView.frame = CGRectMake(0.f, self.levelView.height, self.view.width, 50.f);
+    self.adView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+    [self.view addSubview:self.adView];
+
+    [self.view bringSubviewToFront:self.adView];
+
     self.navigationItem.rightBarButtonItem = self.rightButtonItem;
 }
 
