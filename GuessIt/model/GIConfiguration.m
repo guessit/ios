@@ -98,6 +98,13 @@
     return nextLevel;
 }
 
+- (void)resetProgress {
+    [[NSUserDefaults standardUserDefaults] setObject:@[] forKey:GI_FINISHED_LEVELS];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:GI_CURRENT_LEVEL];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+
 - (NSArray *)finishedLevelsName {
     return [[NSUserDefaults standardUserDefaults] arrayForKey:GI_FINISHED_LEVELS];
 }

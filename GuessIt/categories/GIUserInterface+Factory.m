@@ -30,6 +30,7 @@
     ui.letter = [GIUserInterfaceElement elementWithDictionary:dictionary[@"letter"]];
     ui.action = [GIUserInterfaceElement elementWithDictionary:dictionary[@"action"]];
     ui.help = [GIUserInterfaceElement elementWithDictionary:dictionary[@"help"]];
+    ui.settings = [GIUserInterfaceElement elementWithDictionary:dictionary[@"settings"]];
 
     return ui;
 }

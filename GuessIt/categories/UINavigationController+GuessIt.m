@@ -15,6 +15,8 @@
 @implementation UINavigationController (GuessIt)
 
 + (instancetype)guessItGame {
+    NSLog(@"Bundle: %@", [NSBundle mainBundle]);
+
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
 
     UINavigationController *nav = [UINavigationController navigationControllerWithNavigationBarClass:[GINavigationBar class]

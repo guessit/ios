@@ -81,12 +81,6 @@
 
 #pragma mark - UIViewController Methods
 
-- (void)_resetTouched:(id)sender {
-    [[NSUserDefaults standardUserDefaults] setObject:@[] forKey:GI_FINISHED_LEVELS];
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:GI_CURRENT_LEVEL];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -104,15 +98,6 @@
 
     GIUserInterface *interface = [GIConfiguration sharedInstance].game.interface;
     self.view.backgroundColor = interface.main.backgroundColor;
-
-    UIButton *resetButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [resetButton addTarget:self action:@selector(_resetTouched:) forControlEvents:UIControlEventTouchUpInside];
-    NSString *reset = NSLocalizedStringFromTable(@"liked_the_game", @"settings", nil);
-    [resetButton setTitle:reset forState:UIControlStateNormal];
-    [resetButton sizeToFit];
-    resetButton.center = CGPointMake(self.view.center.x, self.view.bounds.size.height - 70.f);
-
-    [self.view addSubview:resetButton];
 
     UITapGestureRecognizer *tapGesture = [UITapGestureRecognizer gestureRecognizerWithTarget:self
                                                                                       action:@selector(_tapRecognized:)];

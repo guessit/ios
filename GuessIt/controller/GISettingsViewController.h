@@ -19,5 +19,6 @@
 @protocol GISettingsDelegate <NSObject>
 
 - (void)didCancelSettingsViewController:(GISettingsViewController *)settingsViewController;
+- (void)didResetProgressWithSettingsViewController:(GISettingsViewController *)settingsViewController;
 
 @end

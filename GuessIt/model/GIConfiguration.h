@@ -19,6 +19,7 @@
 + (instancetype)sharedInstance;
 
 - (GILevel *)loadNextLevel;
+- (void)resetProgress;
 - (NSArray *)finishedLevelsName;
 
 @end

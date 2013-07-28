@@ -27,5 +27,6 @@
 @property (nonatomic, strong) GIUserInterfaceElement *letter;
 @property (nonatomic, strong) GIUserInterfaceElement *action;
 @property (nonatomic, strong) GIUserInterfaceElement *help;
+@property (nonatomic, strong) GIUserInterfaceElement *settings;
 
 @end
