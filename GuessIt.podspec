@@ -30,5 +30,6 @@ Pod::Spec.new do |s|
   s.dependency 'AHEasing', '~> 1.1'
   s.dependency 'UAModalPanel'
   s.dependency 'Finch', '~> 0.1'
+  s.dependency 'CargoBay'
   
 end

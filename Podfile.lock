@@ -1,5 +1,8 @@
 PODS:
+  - AFNetworking (1.3.1)
   - AHEasing (1.1)
+  - CargoBay (0.3.3):
+    - AFNetworking (>= 1.0)
   - Finch (0.1)
   - KNSemiModalViewController (0.3)
   - MALazykit (HEAD based on 0.1.10)
@@ -10,6 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - AHEasing (~> 1.1)
+  - CargoBay
   - Finch (from `https://raw.github.com/marlonandrade/Specs/master/Finch/0.1/Finch.podspec`)
   - KNSemiModalViewController
   - MALazykit (HEAD)
@@ -23,7 +27,9 @@ EXTERNAL SOURCES:
     :podspec: https://raw.github.com/marlonandrade/Specs/master/Finch/0.1/Finch.podspec
 
 SPEC CHECKSUMS:
+  AFNetworking: 9ec8aafb9269236a7630bd8d9838ce2ba30fa2a0
   AHEasing: b9a02ca67d0d663e2a8b83fd24fa8c2ecc5ddf9b
+  CargoBay: 28fe2c5b7e716fda19ba2b0601e7e82c7cc65813
   Finch: dd157f537cc9a1326b3b98c38246dc40abe794b2
   KNSemiModalViewController: 976b739f57aa595359a2cfdf6aadde991ada8f99
   MALazykit: 7a3c9c4004f85f8db26962c4b041e18f4f64b9dc
@@ -32,4 +38,4 @@ SPEC CHECKSUMS:
   UIView+EasingFunctions: b27927be096f11b2d9551cefd63c08683bbd2a9f
   uiview-frame-helpers: d01c252e592b409a5b41332177e2a2da0a661390
 
-COCOAPODS: 0.22.2
+COCOAPODS: 0.22.3
