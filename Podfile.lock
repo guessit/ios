@@ -16,7 +16,7 @@ DEPENDENCIES:
   - CargoBay
   - Finch (~> 0.1)
   - MALazykit (HEAD)
-  - MASimplestSemiModalViewController (~> 0.1)
+  - MASimplestSemiModalViewController
   - SSToolkit
   - UAModalPanel
   - UIView+EasingFunctions (~> 0.0.1)
@@ -28,7 +28,7 @@ SPEC CHECKSUMS:
   CargoBay: 28fe2c5b7e716fda19ba2b0601e7e82c7cc65813
   Finch: dd157f537cc9a1326b3b98c38246dc40abe794b2
   MALazykit: 7a3c9c4004f85f8db26962c4b041e18f4f64b9dc
-  MASimplestSemiModalViewController: c7eeb45e1558f8fa5784577b79b14cf1157003a9
+  MASimplestSemiModalViewController: 2ad4c181ad3010ced5e66c3b5e7999cc0aab217e
   SSToolkit: 689acaedac79c2079e492e528a55bcb5db9d98c4
   UAModalPanel: e0f697b4d89ccf0f07c3dc2eb7d17d0e3cb7fe56
   UIView+EasingFunctions: b27927be096f11b2d9551cefd63c08683bbd2a9f
