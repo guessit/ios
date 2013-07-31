@@ -22,7 +22,7 @@
 #import "MALazykit.h"
 #import "UIFont+GuessItFonts.h"
 #import "UIView+CBFrameHelpers.h"
-#import "UIViewController+KNSemiModal.h"
+#import "UIViewController+MASimplestSemiModal.h"
 
 @interface GILevelViewController() <GISettingsDelegate, GIHelpViewDelegate, GILevelViewDelegate, UAModalPanelDelegate>
 
@@ -170,12 +170,7 @@
 
 - (void)didRequestHelpFromLevelView:(GILevelView *)levelView {
     [self.levelView resignFirstResponder];
-
-    [self presentSemiView:self.helpView
-              withOptions:@{
-        KNSemiModalOptionKeys.pushParentBack : @(NO),
-        KNSemiModalOptionKeys.animationDuration : @(0.25f)
-    }];
+    [self.navigationController ma_presentSemiView:self.helpView];
 }
 
 #pragma mark - UAModalPanelDelegate Methods

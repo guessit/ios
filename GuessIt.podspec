@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   
   s.dependency 'SSToolkit'
   s.dependency 'MALazykit'
-  s.dependency 'KNSemiModalViewController'
+  s.dependency 'MASimplestSemiModalViewController', '~> 0.1'
   s.dependency 'uiview-frame-helpers'
   s.dependency 'UIView+EasingFunctions', '~> 0.0.1'
   s.dependency 'AHEasing', '~> 1.1'
