@@ -24,12 +24,16 @@
 #import "UIView+CBFrameHelpers.h"
 #import "UIViewController+MASimplestSemiModal.h"
 
+#import "GADInterstitial.h"
+
 @interface GILevelViewController() <GISettingsDelegate, GIHelpViewDelegate, GILevelViewDelegate, UAModalPanelDelegate>
 
 @property (nonatomic, strong) GILevelView *levelView;
 @property (nonatomic, strong) GIHelpView *helpView;
 @property (nonatomic, strong) UIBarButtonItem *rightButtonItem;
 @property (nonatomic, assign) BOOL showAdOnNextLevel;
+
+@property (nonatomic, strong) GADInterstitial *adMobInterstitial;
 
 - (void)_adjustViewForCurrentLevel;
 - (void)_rightButtonTouched:(id)sender;
@@ -75,6 +79,22 @@
         _rightButtonItem = [UIBarButtonItem barButtonItemWithCustomView:button];
     }
     return _rightButtonItem;
+}
+
+#define GI_AD_MOB_INTERSTITIAL_ID @"a151feb890436f7"
+
+- (GADInterstitial *)adMobInterstitial {
+    if (!_adMobInterstitial) {
+        _adMobInterstitial = [[GADInterstitial alloc] init];
+        _adMobInterstitial.adUnitID = GI_AD_MOB_INTERSTITIAL_ID;
+
+        GADRequest *request = [GADRequest request];
+        request.testDevices = @[];
+
+        [_adMobInterstitial loadRequest:request];
+
+    }
+    return _adMobInterstitial;
 }
 
 #pragma mark - UIViewController Methods
@@ -183,6 +203,7 @@
 - (void)didCloseModalPanel:(UAModalPanel *)modalPanel {
     GIConfiguration *conf = [GIConfiguration sharedInstance];
     if (conf.showAds && conf.numberOfLevelsPresented == GI_MAX_NUMBER_OF_LEVELS_TO_PRESENT_AD) {
+        [self.adMobInterstitial presentFromRootViewController:self];
         NSLog(@"Show ad!");
         conf.numberOfLevelsPresented = 0;
     }
