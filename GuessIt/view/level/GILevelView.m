@@ -97,6 +97,8 @@
     self.categoryLabel.alpha = 0.f;
 
     if (_currentLevel) {
+        
+
         self.inputView.currentLevel = _currentLevel;
         self.imageView.image = _currentLevel.image;
         self.categoryLabel.text = _currentLevel.category;

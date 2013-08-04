@@ -29,6 +29,7 @@
 @property (nonatomic, strong) GILevelView *levelView;
 @property (nonatomic, strong) GIHelpView *helpView;
 @property (nonatomic, strong) UIBarButtonItem *rightButtonItem;
+@property (nonatomic, assign) BOOL showAdOnNextLevel;
 
 - (void)_adjustViewForCurrentLevel;
 - (void)_rightButtonTouched:(id)sender;
@@ -180,6 +181,12 @@
 }
 
 - (void)didCloseModalPanel:(UAModalPanel *)modalPanel {
+    GIConfiguration *conf = [GIConfiguration sharedInstance];
+    if (conf.showAds && conf.numberOfLevelsPresented == GI_MAX_NUMBER_OF_LEVELS_TO_PRESENT_AD) {
+        NSLog(@"Show ad!");
+        conf.numberOfLevelsPresented = 0;
+    }
+
     [[GIConfiguration sharedInstance] loadNextLevel];
     [self _adjustViewForCurrentLevel];
 }

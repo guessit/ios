@@ -49,12 +49,32 @@
     return [[NSUserDefaults standardUserDefaults] stringForKey:GI_CURRENT_LEVEL];
 }
 
+- (NSInteger)numberOfLevelsPresented {
+    return [[NSUserDefaults standardUserDefaults] integerForKey:GI_NUMBER_OF_LEVELS_PRESENTED];
+}
+
+- (BOOL)showAds {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:GI_SHOW_ADS];
+}
+
 #pragma mark - Setter
 
 - (void)setCurrentLevel:(GILevel *)currentLevel {
+    self.numberOfLevelsPresented += 1;
+
     [[NSUserDefaults standardUserDefaults] setObject:currentLevel.imageName forKey:GI_CURRENT_LEVEL];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    [[NSNotificationCenter defaultCenter] postNotificationName:GICurrentLevelDidChangeNotification object:currentLevel];
+    [[NSNotificationCenter defaultCenter] postNotificationName:GICurrentLevelDidChangeNotification
+                                                        object:currentLevel];
+}
+
+- (void)setNumberOfLevelsPresented:(NSInteger)numberOfLevelsPresented {
+    [[NSUserDefaults standardUserDefaults] setInteger:numberOfLevelsPresented forKey:GI_NUMBER_OF_LEVELS_PRESENTED];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)setShowAds:(BOOL)showAds {
+    [[NSUserDefaults standardUserDefaults] setBool:showAds forKey:GI_SHOW_ADS];
 }
 
 #pragma mark - NSObject Methods
@@ -130,6 +150,8 @@
     if (json) {
         self.game = [GIGame gameWithDictionary:json];
     }
+
+    self.showAds = YES;
 }
 
 @end
