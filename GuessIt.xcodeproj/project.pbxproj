@@ -11,6 +11,7 @@
 		BF0EFE77176BC929007CD06F /* GIUserInterface+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0EFE76176BC929007CD06F /* GIUserInterface+Factory.m */; };
 		BF1835D5172C3D1D00E2CB5F /* GINavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */; };
 		BF1835EB172DC49D00E2CB5F /* UIImage+FromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835EA172DC49D00E2CB5F /* UIImage+FromColor.m */; };
+		BF1C462317AFBCF20042D149 /* GIAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1C462217AFBCF20042D149 /* GIAdManager.m */; };
 		BF1F29B01707347900A83FE3 /* GILevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29AF1707347800A83FE3 /* GILevel.m */; };
 		BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B21707617700A83FE3 /* GIViewController.m */; };
 		BF1F29B6170761D400A83FE3 /* GILevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B5170761D400A83FE3 /* GILevelViewController.m */; };
@@ -90,6 +91,8 @@
 		BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GINavigationBar.m; sourceTree = "<group>"; };
 		BF1835E9172DC49D00E2CB5F /* UIImage+FromColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FromColor.h"; sourceTree = "<group>"; };
 		BF1835EA172DC49D00E2CB5F /* UIImage+FromColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FromColor.m"; sourceTree = "<group>"; };
+		BF1C462117AFBCF20042D149 /* GIAdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIAdManager.h; sourceTree = "<group>"; };
+		BF1C462217AFBCF20042D149 /* GIAdManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIAdManager.m; sourceTree = "<group>"; };
 		BF1F29AE1707347800A83FE3 /* GILevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevel.h; sourceTree = "<group>"; };
 		BF1F29AF1707347800A83FE3 /* GILevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevel.m; sourceTree = "<group>"; };
 		BF1F29B11707617700A83FE3 /* GIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIViewController.h; sourceTree = "<group>"; };
@@ -146,8 +149,8 @@
 		BF92630817A3E4C400C29A70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/settings.strings; sourceTree = "<group>"; };
 		BF92630917A3E4C400C29A70 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/congratulations.strings; sourceTree = "<group>"; };
 		BF92630A17A3E4C400C29A70 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/settings.strings; sourceTree = "<group>"; };
-		BF92631017A3E56600C29A70 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/general.strings; sourceTree = "<group>"; };
-		BF92631217A3E56700C29A70 /* pt */ = {isa = PBXFileReference; lastKnownFileType = file; name = pt; path = pt.lproj/general.strings; sourceTree = "<group>"; };
+		BF92631017A3E56600C29A70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/general.strings; sourceTree = "<group>"; };
+		BF92631217A3E56700C29A70 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/general.strings; sourceTree = "<group>"; };
 		BF92631917A5536600C29A70 /* icon_buy_coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_buy_coffee.png; sourceTree = "<group>"; };
 		BF92631A17A5536600C29A70 /* icon_buy_coffee@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_buy_coffee@2x.png"; sourceTree = "<group>"; };
 		BF92631D17A5537300C29A70 /* icon_buy_sandwich.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_buy_sandwich.png; sourceTree = "<group>"; };
@@ -435,6 +438,8 @@
 				BF659F741795AE6300C99668 /* GIUserInterface.m */,
 				BF239B8A179E8E5200005FCA /* GIUserInterfaceElement.h */,
 				BF239B8B179E8E5200005FCA /* GIUserInterfaceElement.m */,
+				BF1C462117AFBCF20042D149 /* GIAdManager.h */,
+				BF1C462217AFBCF20042D149 /* GIAdManager.m */,
 			);
 			name = Model;
 			path = model;
@@ -649,6 +654,7 @@
 				BF1F29B01707347900A83FE3 /* GILevel.m in Sources */,
 				BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */,
 				BF659F721795AE5700C99668 /* GIConfiguration.m in Sources */,
+				BF1C462317AFBCF20042D149 /* GIAdManager.m in Sources */,
 				BF1F29B6170761D400A83FE3 /* GILevelViewController.m in Sources */,
 				BF3DDBA4176D07230055A388 /* _GIAppDelegate.m in Sources */,
 				BF6943BB171CA244000F74E0 /* GILevel+PrettyDescription.m in Sources */,
