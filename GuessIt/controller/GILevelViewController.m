@@ -84,6 +84,10 @@
     [super viewWillAppear:animated];
 
     [self _adjustViewForCurrentLevel];
+
+    if ([GIConfiguration sharedInstance].showAds) {
+        [[GIAdManager sharedInstance] loadAds];
+    }
 }
 
 - (void)viewDidLoad {
@@ -184,8 +188,7 @@
 - (void)didCloseModalPanel:(UAModalPanel *)modalPanel {
     GIConfiguration *conf = [GIConfiguration sharedInstance];
     GIAdManager *adManager = [GIAdManager sharedInstance];
-    if (conf.showAds && adManager.hasAdToShow &&
-        conf.numberOfLevelsPresented == GI_MAX_NUMBER_OF_LEVELS_TO_PRESENT_AD) {
+    if (conf.showAds && conf.numberOfLevelsPresented >= GI_MAX_NUMBER_OF_LEVELS_TO_PRESENT_AD) {
         NSLog(@"Show ad!");
         [adManager presentAdFromViewController:self];
         conf.numberOfLevelsPresented = 0;

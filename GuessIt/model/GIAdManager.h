@@ -10,9 +10,8 @@
 
 @interface GIAdManager : NSObject
 
-@property (nonatomic, assign, readonly) BOOL hasAdToShow;
-
 + (GIAdManager *)sharedInstance;
+- (void)loadAds;
 - (void)presentAdFromViewController:(UIViewController *)viewController;
 
 @end
