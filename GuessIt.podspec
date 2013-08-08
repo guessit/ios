@@ -1,26 +1,28 @@
 Pod::Spec.new do |s|
-  s.name         =  'GuessIt'
-  s.version      =  '0.1'
-  s.summary      =  'GuessIt is a framework for creating guessing games'
-  s.homepage     =  'http://github.com/marlonandrade/guess-it-framework'
-  s.author       =  { 
+  s.name                  =  'GuessIt'
+  s.version               =  '0.1'
+  s.summary               =  'GuessIt is a framework for creating guessing games'
+  s.homepage              =  'http://github.com/marlonandrade/guess-it-framework'
+  s.author                =  { 
     'Marlon Andrade' => 'marlonmandrade@gmail.com' 
   }
-  s.source       =  { 
+  s.source                =  { 
     :git => 'https://github.com/marlonandrade/guess-it-framework.git', 
     :branch => 'master' 
   }
-  s.license      = { 
+  s.license               = { 
     :type => 'Commercial',
     :file => 'LICENSE' 
   }
   
-  s.platform = :ios
-  s.requires_arc = true
+  s.platform              = :ios
+  s.requires_arc          = true
   s.ios.deployment_target = '6.0'
 
-  s.source_files = 'GuessIt/**/*.{h,m}'
-  s.resources = ['Resources/localization/*.{lproj}', 'Resources/fonts/*', 'Resources/sounds/*', 'Resources/images/*']
+  s.source_files          = 'GuessIt/**/*.{h,m}'
+  s.resources             = ['Resources/localization/*.{lproj}', 'Resources/fonts/*', 'Resources/sounds/*', 'Resources/images/*']
+  s.frameworks            = ['MediaPlayer', 'CoreLocation', 'AdSupport', 'StoreKit']
+  s.vendored_frameworks   = 'frameworks/MobFox.framework'
   
   s.dependency 'SSToolkit'
   s.dependency 'MALazykit'

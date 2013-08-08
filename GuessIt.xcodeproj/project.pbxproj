@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		22089BA97554462C80199B37 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62620204B775499F949AB190 /* libPods.a */; };
+		BF04BBEA17B3AE3300D83137 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF04BBE917B3AE3300D83137 /* StoreKit.framework */; };
+		BF04BBEC17B3AE3900D83137 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF04BBEB17B3AE3800D83137 /* AdSupport.framework */; };
+		BF04BBEE17B3AE4300D83137 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF04BBED17B3AE4300D83137 /* CoreLocation.framework */; };
+		BF04BBF017B3AE4900D83137 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF04BBEF17B3AE4900D83137 /* MediaPlayer.framework */; };
 		BF0EFE77176BC929007CD06F /* GIUserInterface+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0EFE76176BC929007CD06F /* GIUserInterface+Factory.m */; };
 		BF1835D5172C3D1D00E2CB5F /* GINavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */; };
 		BF1835EB172DC49D00E2CB5F /* UIImage+FromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835EA172DC49D00E2CB5F /* UIImage+FromColor.m */; };
@@ -70,6 +74,7 @@
 		BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */; };
 		BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF92975172443AC00F230C6 /* GIShineLabel.m */; };
 		BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7381727F815003B4385 /* NSString+RandomString.m */; };
+		BFFE5A0217B3B00400C2E74F /* MobFox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFE5A0117B3B00400C2E74F /* MobFox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +90,10 @@
 /* Begin PBXFileReference section */
 		62620204B775499F949AB190 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD30177A3D9541AEB54F865D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		BF04BBE917B3AE3300D83137 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BF04BBEB17B3AE3800D83137 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		BF04BBED17B3AE4300D83137 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BF04BBEF17B3AE4900D83137 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		BF0EFE75176BC929007CD06F /* GIUserInterface+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GIUserInterface+Factory.h"; sourceTree = "<group>"; };
 		BF0EFE76176BC929007CD06F /* GIUserInterface+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GIUserInterface+Factory.m"; sourceTree = "<group>"; };
 		BF1835D3172C3D1D00E2CB5F /* GINavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GINavigationBar.h; sourceTree = "<group>"; };
@@ -196,6 +205,7 @@
 		BFF92975172443AC00F230C6 /* GIShineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIShineLabel.m; sourceTree = "<group>"; };
 		BFF9E7371727F815003B4385 /* NSString+RandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RandomString.h"; sourceTree = "<group>"; };
 		BFF9E7381727F815003B4385 /* NSString+RandomString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RandomString.m"; sourceTree = "<group>"; };
+		BFFE5A0117B3B00400C2E74F /* MobFox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobFox.framework; path = frameworks/MobFox.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,8 +213,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF04BBF017B3AE4900D83137 /* MediaPlayer.framework in Frameworks */,
+				BF04BBEE17B3AE4300D83137 /* CoreLocation.framework in Frameworks */,
+				BF04BBEC17B3AE3900D83137 /* AdSupport.framework in Frameworks */,
+				BF04BBEA17B3AE3300D83137 /* StoreKit.framework in Frameworks */,
 				BFAD126716F136A100F6D429 /* UIKit.framework in Frameworks */,
 				BFAD126916F136A100F6D429 /* Foundation.framework in Frameworks */,
+				BFFE5A0217B3B00400C2E74F /* MobFox.framework in Frameworks */,
 				BFAD126B16F136A100F6D429 /* CoreGraphics.framework in Frameworks */,
 				22089BA97554462C80199B37 /* libPods.a in Frameworks */,
 			);
@@ -359,6 +374,11 @@
 		BFAD126516F136A100F6D429 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFFE5A0117B3B00400C2E74F /* MobFox.framework */,
+				BF04BBEF17B3AE4900D83137 /* MediaPlayer.framework */,
+				BF04BBED17B3AE4300D83137 /* CoreLocation.framework */,
+				BF04BBEB17B3AE3800D83137 /* AdSupport.framework */,
+				BF04BBE917B3AE3300D83137 /* StoreKit.framework */,
 				BFAD126616F136A100F6D429 /* UIKit.framework */,
 				BFAD126816F136A100F6D429 /* Foundation.framework */,
 				BFAD126A16F136A100F6D429 /* CoreGraphics.framework */,
@@ -798,6 +818,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/marlonandrade/dev/guess-it/framework",
+					"/Users/marlonandrade/dev/guess-it/framework/Resources/frameworks",
+					"/Users/marlonandrade/dev/guess-it/framework/frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GuessIt/other/GuessIt-Prefix.pch";
 				INFOPLIST_FILE = "GuessIt/GuessIt-Info.plist";
@@ -811,6 +837,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/marlonandrade/dev/guess-it/framework",
+					"/Users/marlonandrade/dev/guess-it/framework/Resources/frameworks",
+					"/Users/marlonandrade/dev/guess-it/framework/frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GuessIt/other/GuessIt-Prefix.pch";
 				INFOPLIST_FILE = "GuessIt/GuessIt-Info.plist";
