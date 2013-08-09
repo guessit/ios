@@ -11,7 +11,8 @@
 #import "GADInterstitial.h"
 
 #define GI_AD_MOB_INTERSTITIAL_ID @"a151feb890436f7"
-// mediation id 43e0ebdc8f254476
+#define GI_AD_MOB_MEDIATION_INTERSTITIAL_ID @"43e0ebdc8f254476"
+
 #define GI_AD_RETRY_DELAY 30
 
 typedef enum {
@@ -89,7 +90,7 @@ typedef enum {
     self.adMobRequestStatus = GIAdRequestStatusNotRequested;
 
     GADInterstitial *interstitial = [[GADInterstitial alloc] init];
-    interstitial.adUnitID = GI_AD_MOB_INTERSTITIAL_ID;
+    interstitial.adUnitID = GI_AD_MOB_MEDIATION_INTERSTITIAL_ID;
     interstitial.delegate = self;
 
     return interstitial;

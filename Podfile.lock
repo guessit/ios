@@ -38,4 +38,4 @@ SPEC CHECKSUMS:
   UIView+EasingFunctions: b27927be096f11b2d9551cefd63c08683bbd2a9f
   uiview-frame-helpers: d01c252e592b409a5b41332177e2a2da0a661390
 
-COCOAPODS: 0.22.3
+COCOAPODS: 0.23.0

@@ -20,10 +20,17 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '6.0'
 
   s.source_files          = 'GuessIt/**/*.{h,m}'
-  s.resources             = ['Resources/localization/*.{lproj}', 'Resources/fonts/*', 'Resources/sounds/*', 'Resources/images/*']
+  s.resources             = [
+      'Resources/localization/*.{lproj}', 
+      'Resources/fonts/*', 
+      'Resources/sounds/*', 
+      'Resources/images/*',
+      'vendor/mobfox/MRAID.bundle'
+  ]
   s.frameworks            = ['MediaPlayer', 'CoreLocation', 'AdSupport', 'StoreKit']
-  s.vendored_frameworks   = 'frameworks/MobFox.framework'
-  
+
+  s.vendored_libraries = 'vendor/mobfox/GoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a'
+
   s.dependency 'SSToolkit'
   s.dependency 'MALazykit'
   s.dependency 'MASimplestSemiModalViewController'
@@ -33,7 +40,7 @@ Pod::Spec.new do |s|
   s.dependency 'UAModalPanel'
   s.dependency 'Finch', '~> 0.1'
   s.dependency 'AdMob'
-  s.dependency 'AFNetworking', '~> 1.3.1'
+  s.dependency 'AFNetworking', '1.3.1'
   s.dependency 'CargoBay'
   
 end
