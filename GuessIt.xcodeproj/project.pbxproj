@@ -41,7 +41,6 @@
 		BF712584175D40F0007F99EB /* GILetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712580175D40F0007F99EB /* GILetterView.m */; };
 		BF712585175D40F0007F99EB /* GIPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712582175D40F0007F99EB /* GIPlaceholderView.m */; };
 		BF71258B175D4238007F99EB /* GILevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712589175D4238007F99EB /* GILevelView.m */; };
-		BF82556D17B93D3E00E0B017 /* GoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE6170717B5029D001F1C89 /* GoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a */; };
 		BF91795817244A8200B136E2 /* shine_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF91795717244A8200B136E2 /* shine_mask@2x.png */; };
 		BF92630B17A3E4C400C29A70 /* congratulations.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF92630517A3E4C400C29A70 /* congratulations.strings */; };
 		BF92630C17A3E4C400C29A70 /* settings.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF92630717A3E4C400C29A70 /* settings.strings */; };
@@ -215,7 +214,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF82556D17B93D3E00E0B017 /* GoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a in Frameworks */,
 				BF04BBF017B3AE4900D83137 /* MediaPlayer.framework in Frameworks */,
 				BF04BBEE17B3AE4300D83137 /* CoreLocation.framework in Frameworks */,
 				BF04BBEC17B3AE3900D83137 /* AdSupport.framework in Frameworks */,

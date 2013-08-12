@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   ]
   s.frameworks            = ['MediaPlayer', 'CoreLocation', 'AdSupport', 'StoreKit']
 
-  s.vendored_libraries = 'vendor/mobfox/GoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a'
+  s.vendored_libraries = 'vendor/mobfox/libGoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a'
 
   s.dependency 'SSToolkit'
   s.dependency 'MALazykit'
