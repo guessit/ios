@@ -28,6 +28,7 @@
     game.interface = [GIUserInterface userInterfaceWithDictionary:dictionary[@"ui"]];
     game.sound = [GISound soundWithDictionary:dictionary[@"sound"]];
     game.levels = gameLevels;
+    game.adMediationId = dictionary[@"ad_mediation_id"];
 
     return game;
 }

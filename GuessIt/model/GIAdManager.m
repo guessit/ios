@@ -8,10 +8,8 @@
 
 #import "GIAdManager.h"
 
+#import "GIConfiguration.h"
 #import "GADInterstitial.h"
-
-#define GI_AD_MOB_INTERSTITIAL_ID @"a151feb890436f7"
-#define GI_AD_MOB_MEDIATION_INTERSTITIAL_ID @"43e0ebdc8f254476"
 
 #define GI_AD_RETRY_DELAY 30
 
@@ -90,7 +88,7 @@ typedef enum {
     self.adMobRequestStatus = GIAdRequestStatusNotRequested;
 
     GADInterstitial *interstitial = [[GADInterstitial alloc] init];
-    interstitial.adUnitID = GI_AD_MOB_MEDIATION_INTERSTITIAL_ID;
+    interstitial.adUnitID = [GIConfiguration sharedInstance].game.adMediationId;
     interstitial.delegate = self;
 
     return interstitial;

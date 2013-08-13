@@ -33,6 +33,12 @@
 		BF659F721795AE5700C99668 /* GIConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BF659F711795AE5700C99668 /* GIConfiguration.m */; };
 		BF659F751795AE6300C99668 /* GIUserInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = BF659F741795AE6300C99668 /* GIUserInterface.m */; };
 		BF659F781795AE7200C99668 /* GISound.m in Sources */ = {isa = PBXBuildFile; fileRef = BF659F771795AE7200C99668 /* GISound.m */; };
+		BF68D0DA17B9ADA90006E331 /* libGoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF68D0D917B9ADA90006E331 /* libGoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a */; };
+		BF68D0DD17B9ADAF0006E331 /* libAdapterIAd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF68D0DC17B9ADAF0006E331 /* libAdapterIAd.a */; };
+		BF68D0DF17B9AE440006E331 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF68D0DE17B9AE440006E331 /* iAd.framework */; };
+		BF68D0E417B9B2020006E331 /* libAdapterSDKFlurryAppCircle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF68D0E117B9B2020006E331 /* libAdapterSDKFlurryAppCircle.a */; };
+		BF68D0E517B9B2020006E331 /* libFlurry_4.2.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF68D0E217B9B2020006E331 /* libFlurry_4.2.3.a */; };
+		BF68D0E617B9B2020006E331 /* libFlurryAds_4.2.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF68D0E317B9B2020006E331 /* libFlurryAds_4.2.3.a */; };
 		BF6943BB171CA244000F74E0 /* GILevel+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */; };
 		BF6943BE171CA2AD000F74E0 /* GIGame+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BD171CA2AD000F74E0 /* GIGame+PrettyDescription.m */; };
 		BF71257B175D40D2007F99EB /* GIAnswerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712575175D40D2007F99EB /* GIAnswerView.m */; };
@@ -131,6 +137,12 @@
 		BF659F741795AE6300C99668 /* GIUserInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIUserInterface.m; sourceTree = "<group>"; };
 		BF659F761795AE7200C99668 /* GISound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GISound.h; sourceTree = "<group>"; };
 		BF659F771795AE7200C99668 /* GISound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GISound.m; sourceTree = "<group>"; };
+		BF68D0D917B9ADA90006E331 /* libGoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a; sourceTree = "<group>"; };
+		BF68D0DC17B9ADAF0006E331 /* libAdapterIAd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdapterIAd.a; sourceTree = "<group>"; };
+		BF68D0DE17B9AE440006E331 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		BF68D0E117B9B2020006E331 /* libAdapterSDKFlurryAppCircle.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdapterSDKFlurryAppCircle.a; sourceTree = "<group>"; };
+		BF68D0E217B9B2020006E331 /* libFlurry_4.2.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.2.3.a; sourceTree = "<group>"; };
+		BF68D0E317B9B2020006E331 /* libFlurryAds_4.2.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAds_4.2.3.a; sourceTree = "<group>"; };
 		BF6943B9171CA244000F74E0 /* GILevel+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GILevel+PrettyDescription.h"; sourceTree = "<group>"; };
 		BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GILevel+PrettyDescription.m"; sourceTree = "<group>"; };
 		BF6943BC171CA2AD000F74E0 /* GIGame+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GIGame+PrettyDescription.h"; sourceTree = "<group>"; };
@@ -197,7 +209,6 @@
 		BFBDD2111701092000F5698E /* GIMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIMainViewController.m; sourceTree = "<group>"; };
 		BFDE0171176CFFBC00E704CF /* UINavigationController+GuessIt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+GuessIt.h"; sourceTree = "<group>"; };
 		BFDE0172176CFFBC00E704CF /* UINavigationController+GuessIt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GuessIt.m"; sourceTree = "<group>"; };
-		BFE6170717B5029D001F1C89 /* GoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = GoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a; sourceTree = "<group>"; };
 		BFE6170817B5029D001F1C89 /* MRAID.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MRAID.bundle; sourceTree = "<group>"; };
 		BFE898EA1796FA630081E646 /* main_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_background@2x.png"; sourceTree = "<group>"; };
 		BFF5A2E4171EB74E00F401B3 /* GIDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIDefinitions.h; sourceTree = "<group>"; };
@@ -214,10 +225,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF68D0DF17B9AE440006E331 /* iAd.framework in Frameworks */,
+				BF68D0DD17B9ADAF0006E331 /* libAdapterIAd.a in Frameworks */,
+				BF68D0E517B9B2020006E331 /* libFlurry_4.2.3.a in Frameworks */,
+				BF68D0E417B9B2020006E331 /* libAdapterSDKFlurryAppCircle.a in Frameworks */,
+				BF68D0E617B9B2020006E331 /* libFlurryAds_4.2.3.a in Frameworks */,
 				BF04BBF017B3AE4900D83137 /* MediaPlayer.framework in Frameworks */,
 				BF04BBEE17B3AE4300D83137 /* CoreLocation.framework in Frameworks */,
 				BF04BBEC17B3AE3900D83137 /* AdSupport.framework in Frameworks */,
 				BF04BBEA17B3AE3300D83137 /* StoreKit.framework in Frameworks */,
+				BF68D0DA17B9ADA90006E331 /* libGoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a in Frameworks */,
 				BFAD126716F136A100F6D429 /* UIKit.framework in Frameworks */,
 				BFAD126916F136A100F6D429 /* Foundation.framework in Frameworks */,
 				BFAD126B16F136A100F6D429 /* CoreGraphics.framework in Frameworks */,
@@ -286,6 +303,26 @@
 				BF565940176E721400F5198A /* Lobster.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		BF68D0DB17B9ADAF0006E331 /* iAd */ = {
+			isa = PBXGroup;
+			children = (
+				BF68D0DC17B9ADAF0006E331 /* libAdapterIAd.a */,
+			);
+			name = iAd;
+			path = iad;
+			sourceTree = "<group>";
+		};
+		BF68D0E017B9B2020006E331 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				BF68D0E117B9B2020006E331 /* libAdapterSDKFlurryAppCircle.a */,
+				BF68D0E217B9B2020006E331 /* libFlurry_4.2.3.a */,
+				BF68D0E317B9B2020006E331 /* libFlurryAds_4.2.3.a */,
+			);
+			name = Flurry;
+			path = flurry;
 			sourceTree = "<group>";
 		};
 		BF712572175D40D2007F99EB /* Keyboard */ = {
@@ -375,6 +412,7 @@
 		BFAD126516F136A100F6D429 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF68D0DE17B9AE440006E331 /* iAd.framework */,
 				BF04BBEF17B3AE4900D83137 /* MediaPlayer.framework */,
 				BF04BBED17B3AE4300D83137 /* CoreLocation.framework */,
 				BF04BBEB17B3AE3800D83137 /* AdSupport.framework */,
@@ -501,6 +539,8 @@
 		BFE6170517B5029D001F1C89 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				BF68D0E017B9B2020006E331 /* Flurry */,
+				BF68D0DB17B9ADAF0006E331 /* iAd */,
 				BFE6170617B5029D001F1C89 /* MobFox */,
 			);
 			name = Vendor;
@@ -510,7 +550,7 @@
 		BFE6170617B5029D001F1C89 /* MobFox */ = {
 			isa = PBXGroup;
 			children = (
-				BFE6170717B5029D001F1C89 /* GoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a */,
+				BF68D0D917B9ADA90006E331 /* libGoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a */,
 				BFE6170817B5029D001F1C89 /* MRAID.bundle */,
 			);
 			name = MobFox;
@@ -851,6 +891,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/marlonandrade/dev/guess-it/framework/vendor/mobfox",
+					"/Users/marlonandrade/dev/guess-it/framework/vendor/iad",
+					"/Users/marlonandrade/dev/guess-it/framework/vendor/flurry",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -874,6 +916,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/marlonandrade/dev/guess-it/framework/vendor/mobfox",
+					"/Users/marlonandrade/dev/guess-it/framework/vendor/iad",
+					"/Users/marlonandrade/dev/guess-it/framework/vendor/flurry",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

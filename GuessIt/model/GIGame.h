@@ -17,6 +17,7 @@
 @property (nonatomic, strong) GIUserInterface *interface;
 @property (nonatomic, strong) GISound *sound;
 @property (nonatomic, strong) NSArray *levels;
+@property (nonatomic, strong) NSString *adMediationId;
 
 @property (nonatomic, strong, readonly) NSArray *todoLevels;
 @property (nonatomic, strong, readonly) NSArray *finishedLevels;

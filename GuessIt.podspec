@@ -21,15 +21,22 @@ Pod::Spec.new do |s|
 
   s.source_files          = 'GuessIt/**/*.{h,m}'
   s.resources             = [
-      'Resources/localization/*.{lproj}', 
-      'Resources/fonts/*', 
-      'Resources/sounds/*', 
-      'Resources/images/*',
-      'vendor/mobfox/MRAID.bundle'
+    'Resources/localization/*.{lproj}', 
+    'Resources/fonts/*', 
+    'Resources/sounds/*', 
+    'Resources/images/*',
+    'vendor/mobfox/MRAID.bundle'
   ]
-  s.frameworks            = ['MediaPlayer', 'CoreLocation', 'AdSupport', 'StoreKit']
 
-  s.vendored_libraries = 'vendor/mobfox/libGoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a'
+  s.frameworks            = ['MediaPlayer', 'CoreLocation', 'AdSupport', 'StoreKit', 'iAd']
+
+  s.vendored_libraries = [
+    'vendor/mobfox/libGoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a',
+    'vendor/iad/libAdapterIAd.a',
+    'vendor/flurry/libFlurry_4.2.3.a',
+    'vendor/flurry/libFlurryAds_4.2.3.a',
+    'vendor/flurry/libAdapterSDKFlurryAppCircle.a'
+  ]
 
   s.dependency 'SSToolkit'
   s.dependency 'MALazykit'
