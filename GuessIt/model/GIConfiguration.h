@@ -15,7 +15,10 @@
 
 @property (nonatomic, strong) GIGame *game;
 @property (nonatomic, strong) GILevel *currentLevel;
+
 @property (nonatomic, assign) NSInteger numberOfLevelsPresented;
+@property (nonatomic, assign) NSInteger numberOfHelpRequested;
+
 @property (nonatomic, assign) BOOL showAds;
 
 + (instancetype)sharedInstance;
@@ -23,5 +26,6 @@
 - (GILevel *)loadNextLevel;
 - (void)resetProgress;
 - (NSArray *)finishedLevelsName;
+- (void)resetAfterShowingAd;
 
 @end

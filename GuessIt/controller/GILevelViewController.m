@@ -152,6 +152,8 @@
 
 - (void)levelView:(GILevelView *)levelView didFinishGuessingLevel:(GILevel *)level withResult:(GIGuessingResult)guessingResult {
     if (guessingResult == GIGuessingResultCorrect) {
+        [[GIConfiguration sharedInstance] loadNextLevel];
+
         UIWindow *mainWindow = [UIApplication sharedApplication].keyWindow;
 
         GIModalPanel *modalPanel = [GIModalPanel viewWithFrame:mainWindow.bounds];
@@ -187,14 +189,18 @@
 
 - (void)didCloseModalPanel:(UAModalPanel *)modalPanel {
     GIConfiguration *conf = [GIConfiguration sharedInstance];
-    GIAdManager *adManager = [GIAdManager sharedInstance];
-    if (conf.showAds && conf.numberOfLevelsPresented >= GI_MAX_NUMBER_OF_LEVELS_TO_PRESENT_AD) {
+
+//    NSInteger levelsToShowAd = conf.game.levels.count / 10.f;
+    #warning TODO: remover
+    NSInteger levelsToShowAd = 2;
+    NSInteger levelsPlusHelps = conf.numberOfLevelsPresented + conf.numberOfHelpRequested;
+
+    if (conf.showAds && levelsPlusHelps >= levelsToShowAd) {
         NSLog(@"Show ad!");
-        [adManager presentAdFromViewController:self];
-        conf.numberOfLevelsPresented = 0;
+        [[GIAdManager sharedInstance] presentAdFromViewController:self];
+        [conf resetAfterShowingAd];
     }
 
-    [[GIConfiguration sharedInstance] loadNextLevel];
     [self _adjustViewForCurrentLevel];
 }
 

@@ -20,6 +20,8 @@
 @property (nonatomic, strong, readonly) NSString *currentLevelName;
 
 - (void)_initialize;
+- (NSInteger)_integerForKey:(NSString *)key;
+- (void)_setInteger:(NSInteger)integer forKey:(NSString *)key;
 
 @end
 
@@ -46,11 +48,24 @@
 }
 
 - (NSString *)currentLevelName {
-    return [[NSUserDefaults standardUserDefaults] stringForKey:GI_CURRENT_LEVEL];
+    NSString *currentLevelName = [[NSUserDefaults standardUserDefaults] stringForKey:GI_CURRENT_LEVEL];
+
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"imageName == %@", currentLevelName];
+    NSArray *currentLevelFinished = [self.game.finishedLevels filteredArrayUsingPredicate:predicate];
+
+    if (currentLevelFinished.count == 1) {
+        currentLevelName = nil;
+    }
+
+    return currentLevelName;
 }
 
 - (NSInteger)numberOfLevelsPresented {
-    return [[NSUserDefaults standardUserDefaults] integerForKey:GI_NUMBER_OF_LEVELS_PRESENTED];
+    return [self _integerForKey:GI_NUMBER_OF_LEVELS_PRESENTED];
+}
+
+- (NSInteger)numberOfHelpRequested {
+    return [self _integerForKey:GI_NUMBER_OF_HELPS_REQUESTED];
 }
 
 - (BOOL)showAds {
@@ -60,21 +75,27 @@
 #pragma mark - Setter
 
 - (void)setCurrentLevel:(GILevel *)currentLevel {
-    self.numberOfLevelsPresented += 1;
-
     [[NSUserDefaults standardUserDefaults] setObject:currentLevel.imageName forKey:GI_CURRENT_LEVEL];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    [[NSNotificationCenter defaultCenter] postNotificationName:GICurrentLevelDidChangeNotification
-                                                        object:currentLevel];
+
+    if (currentLevel) {
+        self.numberOfLevelsPresented += 1;
+        [[NSNotificationCenter defaultCenter] postNotificationName:GICurrentLevelDidChangeNotification
+                                                            object:currentLevel];
+    }
 }
 
 - (void)setNumberOfLevelsPresented:(NSInteger)numberOfLevelsPresented {
-    [[NSUserDefaults standardUserDefaults] setInteger:numberOfLevelsPresented forKey:GI_NUMBER_OF_LEVELS_PRESENTED];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self _setInteger:numberOfLevelsPresented forKey:GI_NUMBER_OF_LEVELS_PRESENTED];
+}
+
+- (void)setNumberOfHelpRequested:(NSInteger)numberOfHelpRequested {
+    [self _setInteger:numberOfHelpRequested forKey:GI_NUMBER_OF_HELPS_REQUESTED];
 }
 
 - (void)setShowAds:(BOOL)showAds {
     [[NSUserDefaults standardUserDefaults] setBool:showAds forKey:GI_SHOW_ADS];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 #pragma mark - NSObject Methods
@@ -129,6 +150,11 @@
     return [[NSUserDefaults standardUserDefaults] arrayForKey:GI_FINISHED_LEVELS];
 }
 
+- (void)resetAfterShowingAd {
+    self.numberOfLevelsPresented = 0;
+    self.numberOfHelpRequested = 0;
+}
+
 #pragma mark - Private Interface
 
 - (void)_initialize {
@@ -152,6 +178,15 @@
     }
 
     self.showAds = YES;
+}
+
+- (NSInteger)_integerForKey:(NSString *)key {
+    return [[NSUserDefaults standardUserDefaults] integerForKey:key];
+}
+
+- (void)_setInteger:(NSInteger)integer forKey:(NSString *)key {
+    [[NSUserDefaults standardUserDefaults] setInteger:integer forKey:key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 @end

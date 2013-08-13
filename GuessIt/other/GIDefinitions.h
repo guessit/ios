@@ -18,9 +18,8 @@ extern NSString * const GICurrentLevelDidChangeNotification;
 #define GI_CURRENT_LEVEL @"GuessItCurrentLevel"
 #define GI_FINISHED_LEVELS @"GuessItFinishedLevels"
 #define GI_NUMBER_OF_LEVELS_PRESENTED @"GuessItNumberOfLevelsPresented"
+#define GI_NUMBER_OF_HELPS_REQUESTED @"GuessItNumberOfHelpsRequested"
 #define GI_SHOW_ADS @"GuessItShowAds"
-
-#define GI_MAX_NUMBER_OF_LEVELS_TO_PRESENT_AD 2
 
 #define GI_CATEGORY_HEIGHT 28.f
 #define GI_INPUT_HEIGHT 150.f
