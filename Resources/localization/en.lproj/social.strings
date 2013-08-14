@@ -1,0 +1,11 @@
+/* 
+  social.strings
+  GuessIt
+
+  Created by Marlon Andrade on 13/08/13.
+  Copyright (c) 2013 Marlon Andrade. All rights reserved.
+*/
+"twitter_message"="Can you guess it? Let's play GuessIt with me! #guessit @guessit_mobi";
+"twitter_unavailable"="Sorry, tweeting is not available right now.\nMake sure you are connected to the internet and you have a Twitter account setted up!";
+"facebook_message"="Can you guess it? Really liked this GuessIt game! #guessit @guessit.mobi";
+"facebook_unavailable"="Sorry, posting to facebook is not available right now.\nMake sure you are connected to the internet and you have a Facebook account setted up!";

@@ -194,13 +194,11 @@
 }
 
 - (void)_facebookTouched:(id)sender {
-    #warning TODO: facebook
-    NSLog(@"Share your love on facebook!");
+    [self.delegate helpViewDidRequestToPostOnFacebook:self];
 }
 
 - (void)_twitterTouched:(id)sender {
-    #warning TODO: twitter
-    NSLog(@"Share your love on twitter!");
+    [self.delegate helpViewDidRequestToPostOnTwitter:self];
 }
 
 @end

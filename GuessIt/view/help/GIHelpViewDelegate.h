@@ -19,6 +19,9 @@
 - (void)helpViewDidRequestToEliminateWrongLetter:(GIHelpView *)helpView;
 - (void)helpViewDidRequestToSkipLevel:(GIHelpView *)helpView;
 
+- (void)helpViewDidRequestToPostOnFacebook:(GIHelpView *)helpView;
+- (void)helpViewDidRequestToPostOnTwitter:(GIHelpView *)helpView;
+
 @optional
 
 - (void)helpViewDidCancel:(GIHelpView *)helpView;

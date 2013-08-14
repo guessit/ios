@@ -23,7 +23,9 @@
 #import "MALazykit.h"
 #import "UIFont+GuessItFonts.h"
 #import "UIView+CBFrameHelpers.h"
+#import "UIView+GuessIt.h"
 #import "UIViewController+MASimplestSemiModal.h"
+#import <Social/Social.h>
 
 @interface GILevelViewController() <GISettingsDelegate, GIHelpViewDelegate, GILevelViewDelegate, UAModalPanelDelegate>
 
@@ -34,6 +36,7 @@
 
 - (void)_adjustViewForCurrentLevel;
 - (void)_rightButtonTouched:(id)sender;
+- (void)_shareWithServiceType:(NSString *)service;
 
 @end
 
@@ -113,6 +116,33 @@
     [self presentViewController:navController animated:YES completion:NULL];
 }
 
+- (void)_shareWithServiceType:(NSString *)service {
+    NSString *message = nil;
+    NSString *alert = nil;
+
+    if ([service isEqualToString:SLServiceTypeTwitter]) {
+        message = NSLocalizedStringFromTable(@"twitter_message", @"social", nil);
+        alert = NSLocalizedStringFromTable(@"twitter_unavailable", @"social", nil);
+    } else if ([service isEqualToString:SLServiceTypeFacebook]) {
+        message = NSLocalizedStringFromTable(@"facebook_message", @"social", nil);
+        alert = NSLocalizedStringFromTable(@"facebook_unavailable", @"social", nil);
+    }
+
+    if ([SLComposeViewController isAvailableForServiceType:service]) {
+        SLComposeViewController *share = [SLComposeViewController composeViewControllerForServiceType:service];
+        [share setInitialText:message];
+        [share addURL:[NSURL URLWithString:@"http://guessit.mobi"]];
+        [share addImage:[[UIApplication sharedApplication].keyWindow gi_screenshot]];
+        [self presentViewController:share animated:YES completion:NULL];
+    } else {
+        [[[UIAlertView alloc] initWithTitle:@"GuessIt!"
+                                    message:alert
+                                   delegate:nil
+                          cancelButtonTitle:@"Ok"
+                          otherButtonTitles:nil] show];
+    }
+}
+
 #pragma mark - GISettingsDelegate Methods
 
 - (void)didCancelSettingsViewController:(GISettingsViewController *)settingsViewController {
@@ -155,6 +185,16 @@
     [[GIConfiguration sharedInstance] loadNextLevel];
     [self _adjustViewForCurrentLevel];
     [self.navigationController ma_dismissSemiView];
+}
+
+- (void)helpViewDidRequestToPostOnFacebook:(GIHelpView *)helpView {
+    [self.navigationController ma_dismissSemiView];
+    [self _shareWithServiceType:SLServiceTypeFacebook];
+}
+
+- (void)helpViewDidRequestToPostOnTwitter:(GIHelpView *)helpView {
+    [self.navigationController ma_dismissSemiView];
+    [self _shareWithServiceType:SLServiceTypeTwitter];
 }
 
 #pragma mark - GILevelViewDelegate Methods

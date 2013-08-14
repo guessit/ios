@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
     'vendor/mobfox/MRAID.bundle'
   ]
 
-  s.frameworks            = ['MediaPlayer', 'CoreLocation', 'AdSupport', 'StoreKit', 'iAd']
+  s.frameworks            = ['MediaPlayer', 'CoreLocation', 'AdSupport', 'StoreKit', 'iAd', 'Social']
 
   s.vendored_libraries = [
     'vendor/mobfox/libGoogleAdMobAdapter_MobFoxSDK_iOS_4.1.6.a',

@@ -39,6 +39,8 @@
 		BF68D0E417B9B2020006E331 /* libAdapterSDKFlurryAppCircle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF68D0E117B9B2020006E331 /* libAdapterSDKFlurryAppCircle.a */; };
 		BF68D0E517B9B2020006E331 /* libFlurry_4.2.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF68D0E217B9B2020006E331 /* libFlurry_4.2.3.a */; };
 		BF68D0E617B9B2020006E331 /* libFlurryAds_4.2.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF68D0E317B9B2020006E331 /* libFlurryAds_4.2.3.a */; };
+		BF68D0E917BB18060006E331 /* social.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF68D0E717BB18060006E331 /* social.strings */; };
+		BF68D0ED17BB1FC10006E331 /* UIView+GuessIt.m in Sources */ = {isa = PBXBuildFile; fileRef = BF68D0EC17BB1FC10006E331 /* UIView+GuessIt.m */; };
 		BF6943BB171CA244000F74E0 /* GILevel+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */; };
 		BF6943BE171CA2AD000F74E0 /* GIGame+PrettyDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6943BD171CA2AD000F74E0 /* GIGame+PrettyDescription.m */; };
 		BF71257B175D40D2007F99EB /* GIAnswerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712575175D40D2007F99EB /* GIAnswerView.m */; };
@@ -143,6 +145,10 @@
 		BF68D0E117B9B2020006E331 /* libAdapterSDKFlurryAppCircle.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdapterSDKFlurryAppCircle.a; sourceTree = "<group>"; };
 		BF68D0E217B9B2020006E331 /* libFlurry_4.2.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.2.3.a; sourceTree = "<group>"; };
 		BF68D0E317B9B2020006E331 /* libFlurryAds_4.2.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAds_4.2.3.a; sourceTree = "<group>"; };
+		BF68D0E817BB18060006E331 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/social.strings; sourceTree = "<group>"; };
+		BF68D0EA17BB196A0006E331 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/social.strings; sourceTree = "<group>"; };
+		BF68D0EB17BB1FC10006E331 /* UIView+GuessIt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GuessIt.h"; sourceTree = "<group>"; };
+		BF68D0EC17BB1FC10006E331 /* UIView+GuessIt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GuessIt.m"; sourceTree = "<group>"; };
 		BF6943B9171CA244000F74E0 /* GILevel+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GILevel+PrettyDescription.h"; sourceTree = "<group>"; };
 		BF6943BA171CA244000F74E0 /* GILevel+PrettyDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GILevel+PrettyDescription.m"; sourceTree = "<group>"; };
 		BF6943BC171CA2AD000F74E0 /* GIGame+PrettyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GIGame+PrettyDescription.h"; sourceTree = "<group>"; };
@@ -291,6 +297,8 @@
 				BF1835EA172DC49D00E2CB5F /* UIImage+FromColor.m */,
 				BFDE0171176CFFBC00E704CF /* UINavigationController+GuessIt.h */,
 				BFDE0172176CFFBC00E704CF /* UINavigationController+GuessIt.m */,
+				BF68D0EB17BB1FC10006E331 /* UIView+GuessIt.h */,
+				BF68D0EC17BB1FC10006E331 /* UIView+GuessIt.m */,
 			);
 			name = Categories;
 			path = categories;
@@ -383,6 +391,7 @@
 				BF92630517A3E4C400C29A70 /* congratulations.strings */,
 				BF92631117A3E56600C29A70 /* general.strings */,
 				BF92630717A3E4C400C29A70 /* settings.strings */,
+				BF68D0E717BB18060006E331 /* social.strings */,
 			);
 			path = localization;
 			sourceTree = "<group>";
@@ -670,6 +679,7 @@
 				BF92630C17A3E4C400C29A70 /* settings.strings in Resources */,
 				BF92633017A553A400C29A70 /* icon_buy_clothes@2x.png in Resources */,
 				BF92631B17A5536600C29A70 /* icon_buy_coffee.png in Resources */,
+				BF68D0E917BB18060006E331 /* social.strings in Resources */,
 				BF92631C17A5536600C29A70 /* icon_buy_coffee@2x.png in Resources */,
 				BF92632017A5537300C29A70 /* icon_buy_sandwich@2x.png in Resources */,
 				BF92632717A5538B00C29A70 /* icon_buy_gift.png in Resources */,
@@ -742,6 +752,7 @@
 				BF6943BE171CA2AD000F74E0 /* GIGame+PrettyDescription.m in Sources */,
 				BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */,
 				BF239B88179D462000005FCA /* GIHelpView.m in Sources */,
+				BF68D0ED17BB1FC10006E331 /* UIView+GuessIt.m in Sources */,
 				BFDE0173176CFFBC00E704CF /* UINavigationController+GuessIt.m in Sources */,
 				BF659F751795AE6300C99668 /* GIUserInterface.m in Sources */,
 				BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */,
@@ -788,6 +799,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		BF68D0E717BB18060006E331 /* social.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF68D0E817BB18060006E331 /* en */,
+				BF68D0EA17BB196A0006E331 /* pt */,
+			);
+			name = social.strings;
+			sourceTree = "<group>";
+		};
 		BF92630517A3E4C400C29A70 /* congratulations.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
