@@ -186,7 +186,11 @@
 }
 
 - (void)_skipLevelTouched:(id)sender {
-    [self.delegate helpViewDidRequestToSkipLevel:self];
+    GIConfiguration *conf = [GIConfiguration sharedInstance];
+    if (conf.game.todoLevels.count > 1) {
+        conf.numberOfHelpRequested += 1;
+        [self.delegate helpViewDidRequestToSkipLevel:self];
+    }
 }
 
 - (void)_facebookTouched:(id)sender {
