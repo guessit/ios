@@ -40,8 +40,6 @@
         [answer appendString:letter];
     }
 
-    NSLog(@"Current Answer: %@", answer);
-
     return answer;
 }
 

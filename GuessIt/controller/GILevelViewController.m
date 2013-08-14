@@ -132,8 +132,15 @@
 }
 
 - (BOOL)helpViewCanPlaceCorrectLetter:(GIHelpView *)helpView {
-    #warning TODO: verify if it is not used more that 3? times
-    return YES;
+    BOOL canPlace = NO;
+
+    GILevel *currentLevel = [GIConfiguration sharedInstance].currentLevel;
+    if (self.levelView.currentAnswer.length < currentLevel.answer.length) {
+        #warning TODO: verificar se existem letras no keypad a serem colocadas
+        canPlace = YES;
+    }
+
+    return canPlace;
 }
 
 - (void)helpViewDidRequestToEliminateWrongLetter:(GIHelpView *)helpView {
@@ -145,7 +152,9 @@
 }
 
 - (void)helpViewDidRequestToSkipLevel:(GIHelpView *)helpView {
-    #warning TODO: skip level - mark level as skipped
+    [[GIConfiguration sharedInstance] loadNextLevel];
+    [self _adjustViewForCurrentLevel];
+    [self.navigationController ma_dismissSemiView];
 }
 
 #pragma mark - GILevelViewDelegate Methods

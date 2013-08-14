@@ -15,5 +15,6 @@
 
 @property (nonatomic, weak) id<GILevelViewDelegate> levelDelegate;
 @property (nonatomic, strong) GILevel *currentLevel;
+@property (nonatomic, strong, readonly) NSString *currentAnswer;
 
 @end

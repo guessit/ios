@@ -15,6 +15,7 @@
 #import "MALazykit.h"
 #import "UIView+CBFrameHelpers.h"
 #import "UIFont+GuessItFonts.h"
+#import <math.h>
 #import <QuartzCore/QuartzCore.h>
 
 @interface GILevelView () <GIInputViewDelegate>
@@ -31,6 +32,10 @@
 @implementation GILevelView
 
 #pragma mark - Getter
+
+- (NSString *)currentAnswer {
+    return self.inputView.currentAnswer;
+}
 
 - (UILabel *)categoryLabel {
     if (!_categoryLabel) {
@@ -97,8 +102,6 @@
     self.categoryLabel.alpha = 0.f;
 
     if (_currentLevel) {
-        
-
         self.inputView.currentLevel = _currentLevel;
         self.imageView.image = _currentLevel.image;
         self.categoryLabel.text = _currentLevel.category;
@@ -113,8 +116,7 @@
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:0.1f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
             self.imageViewFrame.transform = CGAffineTransformIdentity;
-        } completion:^(BOOL finished) {
-        }];
+        } completion:NULL];
     }];
 }
 
@@ -142,9 +144,12 @@
     CGPoint center = self.center;
     center.y = (self.height - self.inputView.height) / 2.f;
 
-    if (self.categoryLabel.alpha) center.y = center.y + (GI_CATEGORY_HEIGHT / 2.f);
+    if (self.categoryLabel.alpha) {
+        center.y = center.y + (GI_CATEGORY_HEIGHT / 2.f);
+    }
 
     self.imageViewFrame.center = center;
+    self.imageViewFrame.x = floorf(self.imageViewFrame.x);
 }
 
 #pragma mark - Private Interface

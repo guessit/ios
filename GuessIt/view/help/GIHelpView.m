@@ -170,22 +170,32 @@
 #pragma mark - IBActions
 
 - (void)_placeCorrectLetterTouched:(id)sender {
-    NSLog(@"Place correct letter!");
+    if ([self.delegate helpViewCanPlaceCorrectLetter:self]) {
+        [self.delegate helpViewDidRequestToPlaceCorrectLetter:self];
+    } else {
+        #warning TODO: make PAN sound
+    }
 }
 
 - (void)_eliminateWrongLetterTouched:(id)sender {
-    NSLog(@"Eliminate wrong letter!");
+    if ([self.delegate helpViewCanEliminateWrongLetter:self]) {
+        [self.delegate helpViewDidRequestToEliminateWrongLetter:self];
+    } else {
+        #warning TODO: make PAN sound
+    }
 }
 
 - (void)_skipLevelTouched:(id)sender {
-    NSLog(@"Skip level!");
+    [self.delegate helpViewDidRequestToSkipLevel:self];
 }
 
 - (void)_facebookTouched:(id)sender {
+    #warning TODO: facebook
     NSLog(@"Share your love on facebook!");
 }
 
 - (void)_twitterTouched:(id)sender {
+    #warning TODO: twitter
     NSLog(@"Share your love on twitter!");
 }
 

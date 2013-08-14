@@ -30,6 +30,10 @@
 
 #pragma mark - Getter
 
+- (NSString *)currentAnswer {
+    return self.answerView.answer;
+}
+
 - (GIAnswerView *)answerView {
     if (!_answerView) {
         _answerView = [GIAnswerView viewWithFrame:CGRectMake(0.f, 0.f, self.width, self.height - GI_KEYPAD_HEIGHT)];
