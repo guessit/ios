@@ -121,10 +121,10 @@
     NSString *alert = nil;
 
     if ([service isEqualToString:SLServiceTypeTwitter]) {
-        message = NSLocalizedStringFromTable(@"twitter_message", @"social", nil);
+        message = NSLocalizedStringFromTable(@"twitter_help", @"social", nil);
         alert = NSLocalizedStringFromTable(@"twitter_unavailable", @"social", nil);
     } else if ([service isEqualToString:SLServiceTypeFacebook]) {
-        message = NSLocalizedStringFromTable(@"facebook_message", @"social", nil);
+        message = NSLocalizedStringFromTable(@"facebook_help", @"social", nil);
         alert = NSLocalizedStringFromTable(@"facebook_unavailable", @"social", nil);
     }
 

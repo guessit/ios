@@ -5,7 +5,7 @@
   Created by Marlon Andrade on 13/08/13.
   Copyright (c) 2013 Marlon Andrade. All rights reserved.
 */
-"twitter_message"="Consegue adivinhar? Vamos jogar GuessIt comigo! #guessit @guessit_mobi";
+"twitter_help"="Pode me ajudar a adivinhar? GuessIt! #help_me #guessit @guessit_mobi";
 "twitter_unavailable"="Desculpe, mas tweetar não está disponível no momento.\nVerifique se você está conectado na internet e possui uma conta do Twitter configurada!";
-"facebook_message"="Consegue adivinhar? Curti muito o GuessIt! #guessit @guessit.mobi";
+"facebook_help"="Pode me ajudar a adivinhar? Não sei a resposta, talvez você pode me ajudar! #guessit @guessit.mobi";
 "facebook_unavailable"="Desculpe, mas postar no facebook não está disponível no momento.\nVerifique se você está conectado na internet e possui uma conta do Facebook configurada!";
