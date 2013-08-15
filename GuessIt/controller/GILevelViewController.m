@@ -244,7 +244,9 @@
     NSInteger levelsToShowAd = 2;
     NSInteger levelsPlusHelps = conf.numberOfLevelsPresented + conf.numberOfHelpRequested;
 
-    if (conf.showAds && levelsPlusHelps >= levelsToShowAd) {
+    BOOL hasMoreLevels = conf.currentLevel && conf.currentLevel != conf.lastLevel;
+
+    if (conf.showAds && levelsPlusHelps >= levelsToShowAd && hasMoreLevels) {
         NSLog(@"Show ad!");
         [[GIAdManager sharedInstance] presentAdFromViewController:self];
         [conf resetAfterShowingAd];

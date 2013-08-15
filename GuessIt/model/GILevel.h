@@ -25,6 +25,7 @@ typedef enum {
                              anwser:(NSString *)answer
                            category:(NSString *)category
                               hints:(NSArray *)hints;
++ (instancetype)lastLevel;
 
 - (GIGuessingResult)guessWithAnwser:(NSString *)guessingAnwser;
 - (BOOL)isFinished;

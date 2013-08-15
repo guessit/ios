@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) GIGame *game;
 @property (nonatomic, strong) GILevel *currentLevel;
+@property (nonatomic, strong) GILevel *lastLevel;
 
 @property (nonatomic, assign) NSInteger numberOfLevelsPresented;
 @property (nonatomic, assign) NSInteger numberOfHelpRequested;

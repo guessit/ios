@@ -46,6 +46,10 @@
                                       hints:hints];
 }
 
++ (instancetype)lastLevel {
+    return [self levelWithImageNamed:@"guessit_final" anwser:@"GuessIt" category:nil hints:nil];
+}
+
 - (GIGuessingResult)guessWithAnwser:(NSString *)guessingAnwser {
     GIGuessingResult guessingResult = GIGuessingResultWrong;
 

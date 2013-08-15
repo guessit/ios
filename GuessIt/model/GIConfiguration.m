@@ -35,6 +35,8 @@
     NSString *currentLevelName = self.currentLevelName;
     if (!currentLevelName) {
         currentLevel = [self loadNextLevel];
+    } else if ([currentLevelName isEqualToString:@"guessit_final"]) {
+        currentLevel = self.lastLevel;
     } else {
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"imageName == %@", self.currentLevelName];
         NSArray *currentLevelArray = [self.game.todoLevels filteredArrayUsingPredicate:predicate];
@@ -45,6 +47,13 @@
     }
 
     return currentLevel;
+}
+
+- (GILevel *)lastLevel {
+    if (!_lastLevel) {
+        _lastLevel = [GILevel lastLevel];
+    }
+    return _lastLevel;
 }
 
 - (NSString *)currentLevelName {
@@ -132,6 +141,10 @@
         nextLevel = todoLevels.randomObject;
     } else {
         nextLevel = todoLevels.firstObject;
+    }
+
+    if (!nextLevel && !self.lastLevel.isFinished) {
+        nextLevel = self.lastLevel;
     }
 
     self.currentLevel = nextLevel;
