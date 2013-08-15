@@ -10,19 +10,18 @@
 
 #import "GIConfiguration.h"
 #import "MALazykit.h"
+#import "UIColor+SSToolkitAdditions.h"
 #import "UIFont+GuessItFonts.h"
 #import "UIView+CBFrameHelpers.h"
 
 typedef enum {
     GISettingsSectionsMainOptions = 0,
-    GISettingsSectionsUnlockEasyMode,
     GISettingsSectionsBuyDeveloper,
     GI_SETTINGS_NUM_SECTIONS
 } GISettingsSections;
 
 typedef enum {
-    GISettingsMainOptionsRowsEasyMode = 0,
-    GISettingsMainOptionsRowsReset,
+    GISettingsMainOptionsRowsReset = 0,
     GI_SETTINGS_MAIN_OPTIONS_NUM_ROWS
 } GISettingsMainOptionsRows;
 
@@ -40,10 +39,8 @@ typedef enum {
 @property (nonatomic, strong, readonly) GIUserInterface *ui;
 
 @property (nonatomic, strong) NSArray *mainOptionsDescription;
-@property (nonatomic, strong) NSArray *struggle;
 @property (nonatomic, strong) NSArray *buyDeveloper;
 
-@property (nonatomic, strong) NSArray *struggleImage;
 @property (nonatomic, strong) NSArray *buyDeveloperImage;
 
 @property (nonatomic, strong) UIAlertView *resetAlert;
@@ -64,20 +61,10 @@ typedef enum {
 - (NSArray *)mainOptionsDescription {
     if (!_mainOptionsDescription) {
         _mainOptionsDescription = @[
-            @"easy_mode",
             @"reset"
         ];
     }
     return _mainOptionsDescription;
-}
-
-- (NSArray *)struggle {
-    if (!_struggle) {
-        _struggle = @[
-            @"unlock_easy_mode"
-        ];
-    }
-    return _struggle;
 }
 
 - (NSArray *)buyDeveloper {
@@ -91,18 +78,6 @@ typedef enum {
         ];
     }
     return _buyDeveloper;
-}
-
-- (NSArray *)struggleImage {
-    if (!_struggleImage) {
-        NSMutableArray *array = [NSMutableArray arrayWithCapacity:self.struggle.count];
-        for (NSString *struggle in self.struggle) {
-            NSString *imageName = [NSString stringWithFormat:@"icon_%@", struggle];
-            [array addObject:[UIImage imageNamed:imageName]];
-        }
-        _struggleImage = array;
-    }
-    return _struggleImage;
 }
 
 - (NSArray *)buyDeveloperImage {
@@ -175,13 +150,10 @@ typedef enum {
 
     switch (section) {
         case GISettingsSectionsMainOptions:
-            noRows = self.mainOptionsDescription.count;
-            break;
-        case GISettingsSectionsUnlockEasyMode:
-            noRows = self.struggle.count;
+            noRows = GI_SETTINGS_MAIN_OPTIONS_NUM_ROWS;
             break;
         case GISettingsSectionsBuyDeveloper:
-            noRows = self.buyDeveloper.count;
+            noRows = GI_SETTINGS_BUY_DEVELOPER_NUM_ROWS;
             break;
     }
 
@@ -201,6 +173,16 @@ typedef enum {
         cell.textLabel.shadowColor = self.ui.settings.secondaryShadowColor;
         cell.textLabel.shadowOffset = CGSizeMake(0.f, -1.f);
         cell.textLabel.numberOfLines = 2.f;
+
+        UIView *line = [UIView view];
+        line.h = 1;
+        line.w = cell.width - 20.f;
+        line.y = cell.height - 1.f;
+        line.x = 10.f;
+        line.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+        line.backgroundColor = [UIColor colorWithWhite:0.1f alpha:0.18f];
+
+        [cell addSubview:line];
     }
 
     NSString *key = nil;
@@ -208,10 +190,6 @@ typedef enum {
     switch (indexPath.section) {
         case GISettingsSectionsMainOptions:
             key = self.mainOptionsDescription[indexPath.row];
-            break;
-        case GISettingsSectionsUnlockEasyMode:
-            key = self.struggle[indexPath.row];
-            image = self.struggleImage[indexPath.row];
             break;
         case GISettingsSectionsBuyDeveloper:
             key = self.buyDeveloper[indexPath.row];
@@ -229,16 +207,11 @@ typedef enum {
     NSString *title = nil;
     switch (section) {
         case GISettingsSectionsMainOptions:
-        title = NSLocalizedStringFromTable(@"settings", @"settings", nil);
-        break;
-
-        case GISettingsSectionsUnlockEasyMode:
-        title = NSLocalizedStringFromTable(@"struggle", @"settings", nil);
-        break;
-
+            title = NSLocalizedStringFromTable(@"settings", @"settings", nil);
+            break;
         case GISettingsSectionsBuyDeveloper:
-        title = NSLocalizedStringFromTable(@"liked_the_game", @"settings", nil);
-        break;
+            title = NSLocalizedStringFromTable(@"liked_the_game", @"settings", nil);
+            break;
     }
 
     return title;
@@ -279,15 +252,10 @@ typedef enum {
     switch (indexPath.section) {
         case GISettingsSectionsMainOptions:
             switch (indexPath.row) {
-                case GISettingsMainOptionsRowsEasyMode:
-                    break;
                 case GISettingsMainOptionsRowsReset:
                     [self _resetProgress];
                     break;
             }
-            break;
-        case GISettingsSectionsUnlockEasyMode:
-            #warning TODO: buy unlock easy mode
             break;
         case GISettingsSectionsBuyDeveloper:
             switch (indexPath.row) {
