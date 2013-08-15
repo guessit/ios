@@ -173,16 +173,6 @@ typedef enum {
         cell.textLabel.shadowColor = self.ui.settings.secondaryShadowColor;
         cell.textLabel.shadowOffset = CGSizeMake(0.f, -1.f);
         cell.textLabel.numberOfLines = 2.f;
-
-        UIView *line = [UIView view];
-        line.h = 1;
-        line.w = cell.width - 20.f;
-        line.y = cell.height - 1.f;
-        line.x = 10.f;
-        line.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
-        line.backgroundColor = [UIColor colorWithWhite:0.1f alpha:0.18f];
-
-        [cell addSubview:line];
     }
 
     NSString *key = nil;
