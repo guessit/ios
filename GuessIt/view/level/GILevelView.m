@@ -109,6 +109,11 @@
         self.inputView.alpha = 1.f;
         if (self.imageView.image) self.imageView.alpha = 1.f;
         if (self.categoryLabel.text.length > 0) self.categoryLabel.alpha = 1.f;
+
+        if (_currentLevel == [GIConfiguration sharedInstance].lastLevel) {
+            self.imageViewFrame.backgroundColor = [UIColor clearColor];
+            self.imageViewFrame.layer.borderWidth = 0.f;
+        }
     }
 
     [UIView animateWithDuration:0.2f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
