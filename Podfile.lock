@@ -5,6 +5,7 @@ PODS:
   - CargoBay (0.3.3):
     - AFNetworking (>= 1.0)
   - Finch (0.1)
+  - FontAwesome+iOS (0.0.1)
   - MALazykit (HEAD based on 0.1.10)
   - MASimplestSemiModalViewController (0.1)
   - SSToolkit (1.0.4)
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - AHEasing (~> 1.1)
   - CargoBay
   - Finch (~> 0.1)
+  - FontAwesome+iOS
   - MALazykit (HEAD)
   - MASimplestSemiModalViewController
   - SSToolkit
@@ -31,6 +33,7 @@ SPEC CHECKSUMS:
   AHEasing: b9a02ca67d0d663e2a8b83fd24fa8c2ecc5ddf9b
   CargoBay: 28fe2c5b7e716fda19ba2b0601e7e82c7cc65813
   Finch: dd157f537cc9a1326b3b98c38246dc40abe794b2
+  FontAwesome+iOS: 2aa702396e80d0f9a553a8110fc6de660ad2c8e3
   MALazykit: 7a3c9c4004f85f8db26962c4b041e18f4f64b9dc
   MASimplestSemiModalViewController: 2ad4c181ad3010ced5e66c3b5e7999cc0aab217e
   SSToolkit: 689acaedac79c2079e492e528a55bcb5db9d98c4

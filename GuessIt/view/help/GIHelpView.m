@@ -10,6 +10,7 @@
 
 #import "GIConfiguration.h"
 #import "GIDefinitions.h"
+#import "GIIconButton.h"
 #import "UIView+CBFrameHelpers.h"
 
 @interface GIHelpView ()
@@ -19,8 +20,8 @@
 @property (nonatomic, strong) UIButton *placeCorrectLetterButton;
 @property (nonatomic, strong) UIButton *eliminateWrongLetterButton;
 @property (nonatomic, strong) UIButton *skipLevelButton;
-@property (nonatomic, strong) UIButton *facebookButton;
-@property (nonatomic, strong) UIButton *twitterButton;
+@property (nonatomic, strong) GIIconButton *facebookButton;
+@property (nonatomic, strong) GIIconButton *twitterButton;
 
 - (void)_initialize;
 
@@ -105,8 +106,9 @@
 
 - (UIButton *)facebookButton {
     if (!_facebookButton) {
-        _facebookButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _facebookButton = [GIIconButton buttonWithType:UIButtonTypeCustom];
         _facebookButton.backgroundColor = self.ui.secondaryBackgroundColor;
+        _facebookButton.icon = FAIconFacebook;
 
         CGFloat x = GI_HELP_VIEW_PADDING;
         CGFloat y = self.height - GI_HELP_BUTTON_HEIGHT - GI_HELP_VIEW_PADDING;
@@ -126,8 +128,9 @@
 
 - (UIButton *)twitterButton {
     if (!_twitterButton) {
-        _twitterButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _twitterButton = [GIIconButton buttonWithType:UIButtonTypeCustom];
         _twitterButton.backgroundColor = self.ui.secondaryBackgroundColor;
+        _twitterButton.icon = FAIconTwitter;
 
         CGFloat width = (self.width - (3 * GI_HELP_VIEW_PADDING)) / 2.f;
         CGFloat height = GI_HELP_BUTTON_HEIGHT;

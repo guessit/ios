@@ -49,5 +49,6 @@ Pod::Spec.new do |s|
   s.dependency 'AdMob'
   s.dependency 'AFNetworking', '1.3.1'
   s.dependency 'CargoBay'
+  s.dependency 'FontAwesome+iOS'
   
 end

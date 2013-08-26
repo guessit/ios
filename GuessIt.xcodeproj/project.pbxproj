@@ -81,6 +81,7 @@
 		BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */; };
 		BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF92975172443AC00F230C6 /* GIShineLabel.m */; };
 		BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7381727F815003B4385 /* NSString+RandomString.m */; };
+		BFFCF4F117C4D3B500A3EBEF /* GIIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFCF4F017C4D3B500A3EBEF /* GIIconButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,6 +221,8 @@
 		BFF92975172443AC00F230C6 /* GIShineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIShineLabel.m; sourceTree = "<group>"; };
 		BFF9E7371727F815003B4385 /* NSString+RandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RandomString.h"; sourceTree = "<group>"; };
 		BFF9E7381727F815003B4385 /* NSString+RandomString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RandomString.m"; sourceTree = "<group>"; };
+		BFFCF4EF17C4D3B500A3EBEF /* GIIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIIconButton.h; sourceTree = "<group>"; };
+		BFFCF4F017C4D3B500A3EBEF /* GIIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIIconButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -534,6 +537,8 @@
 				BF56593A176E6D3800F5198A /* GIModalPanel.m */,
 				BF1835D3172C3D1D00E2CB5F /* GINavigationBar.h */,
 				BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */,
+				BFFCF4EF17C4D3B500A3EBEF /* GIIconButton.h */,
+				BFFCF4F017C4D3B500A3EBEF /* GIIconButton.m */,
 				BFF92974172443AC00F230C6 /* GIShineLabel.h */,
 				BFF92975172443AC00F230C6 /* GIShineLabel.m */,
 			);
@@ -769,6 +774,7 @@
 				BF239B9217A1398300005FCA /* GISettingsViewController.m in Sources */,
 				BF56593B176E6D3800F5198A /* GIModalPanel.m in Sources */,
 				BF0EFE77176BC929007CD06F /* GIUserInterface+Factory.m in Sources */,
+				BFFCF4F117C4D3B500A3EBEF /* GIIconButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
