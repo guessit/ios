@@ -108,7 +108,7 @@
     if (!_facebookButton) {
         _facebookButton = [GIIconButton buttonWithType:UIButtonTypeCustom];
         _facebookButton.backgroundColor = self.ui.secondaryBackgroundColor;
-        _facebookButton.icon = FAIconFacebook;
+        _facebookButton.icon = FAIconFacebookSign;
 
         CGFloat x = GI_HELP_VIEW_PADDING;
         CGFloat y = self.height - GI_HELP_BUTTON_HEIGHT - GI_HELP_VIEW_PADDING;
@@ -130,7 +130,7 @@
     if (!_twitterButton) {
         _twitterButton = [GIIconButton buttonWithType:UIButtonTypeCustom];
         _twitterButton.backgroundColor = self.ui.secondaryBackgroundColor;
-        _twitterButton.icon = FAIconTwitter;
+        _twitterButton.icon = FAIconTwitterSign;
 
         CGFloat width = (self.width - (3 * GI_HELP_VIEW_PADDING)) / 2.f;
         CGFloat height = GI_HELP_BUTTON_HEIGHT;

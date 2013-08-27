@@ -58,15 +58,27 @@
     [self addSubview:self.imageButton];
 }
 
+#define GI_IMAGE_BUTTON_MARGIN 10.f
+
 - (void)layoutSubviews {
     [super layoutSubviews];
 
-    self.imageButton.frame = CGRectMake(10.f, 10.f, self.height - 20.f, self.height - 20.f);
+    CGFloat x = GI_IMAGE_BUTTON_MARGIN;
+    CGFloat y = GI_IMAGE_BUTTON_MARGIN;
+    CGFloat width = self.height - 2 * GI_IMAGE_BUTTON_MARGIN;
+    CGFloat height = width;
+    self.imageButton.frame = CGRectMake(x, y, width, height);
+
     self.imageButton.defaultView.font = [UIFont iconicFontOfSize:self.imageButton.bounds.size.height];
-    self.imageButton.defaultView.textColor = [UIColor whiteColor];
+    self.imageButton.defaultView.textColor = self.titleLabel.textColor;
     self.imageButton.defaultView.backgroundColor = self.backgroundColor;
-    self.imageButton.defaultView.shadowColor = [UIColor colorWithWhite:0.6f alpha:1.f];
-    self.imageButton.defaultView.shadowOffset = CGSizeMake(0.f, -1.f);
+    self.imageButton.defaultView.shadowColor = self.titleLabel.shadowColor;
+    self.imageButton.defaultView.shadowOffset = self.titleLabel.shadowOffset;
+
+    CGFloat iconRigth = width + 2 * GI_IMAGE_BUTTON_MARGIN;
+    if (iconRigth > self.titleLabel.x) {
+        self.titleLabel.x = iconRigth;
+    }
 }
 
 @end
