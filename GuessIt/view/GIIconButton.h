@@ -12,6 +12,8 @@
 
 @interface GIIconButton : UIButton
 
++ (instancetype)buttonWithIcon:(FAIcon)icon;
+
 @property (nonatomic, assign) FAIcon icon;
 
 @end

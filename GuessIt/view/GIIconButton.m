@@ -52,6 +52,14 @@
     return self;
 }
 
+#pragma mark - Designated Initializer
+
++ (instancetype)buttonWithIcon:(FAIcon)icon {
+    GIIconButton *button = [GIIconButton buttonWithType:UIButtonTypeCustom];
+    button.icon = icon;
+    return button;
+}
+
 #pragma mark - Private Interface
 
 - (void)_initialize {
@@ -71,7 +79,7 @@
 
     self.imageButton.defaultView.font = [UIFont iconicFontOfSize:self.imageButton.bounds.size.height];
     self.imageButton.defaultView.textColor = self.titleLabel.textColor;
-    self.imageButton.defaultView.backgroundColor = self.backgroundColor;
+    self.imageButton.defaultView.backgroundColor = [UIColor clearColor];
     self.imageButton.defaultView.shadowColor = self.titleLabel.shadowColor;
     self.imageButton.defaultView.shadowOffset = self.titleLabel.shadowOffset;
 
