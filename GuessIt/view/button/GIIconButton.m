@@ -12,6 +12,11 @@
 #import "UIView+CBFrameHelpers.h"
 #import "UIFont+FontAwesome.h"
 
+#define GI_FACEBOOK_BACKGROUND_COLOR [UIColor colorWithRed:76.f/255.f green:102.f/255.f blue:164.f/255.f alpha:1.f]
+#define GI_TWITTER_BACKGROUND_COLOR [UIColor colorWithRed:0.f/255.f green:190.f/255.f blue:246.f/255.f alpha:1.f]
+#define GI_SOCIAL_BUTTON_BORDER_WIDTH 1.f
+#define GI_SOCIAL_BUTTON_BORDER_COLOR [UIColor colorWithWhite:0.f alpha:0.15f].CGColor
+
 @interface GIIconButton ()
 
 @property (nonatomic, strong) FAImageView *imageButton;
@@ -58,6 +63,30 @@
     GIIconButton *button = [GIIconButton buttonWithType:UIButtonTypeCustom];
     button.icon = icon;
     return button;
+}
+
++ (instancetype)facebookButton {
+    GIIconButton *facebookButton = [GIIconButton buttonWithIcon:FAIconFacebookSign];
+
+    facebookButton.backgroundColor = GI_FACEBOOK_BACKGROUND_COLOR;
+    facebookButton.layer.borderWidth = GI_SOCIAL_BUTTON_BORDER_WIDTH;
+    facebookButton.layer.borderColor = GI_SOCIAL_BUTTON_BORDER_COLOR;
+
+    [facebookButton setTitle:@"Facebook" forState:UIControlStateNormal];
+
+    return facebookButton;
+}
+
++ (instancetype)twitterButton {
+    GIIconButton *twitterButton = [GIIconButton buttonWithIcon:FAIconTwitterSign];
+
+    twitterButton.backgroundColor = GI_TWITTER_BACKGROUND_COLOR;
+    twitterButton.layer.borderWidth = GI_SOCIAL_BUTTON_BORDER_WIDTH;
+    twitterButton.layer.borderColor = GI_SOCIAL_BUTTON_BORDER_COLOR;
+
+    [twitterButton setTitle:@"Twitter" forState:UIControlStateNormal];
+
+    return twitterButton;
 }
 
 #pragma mark - Private Interface

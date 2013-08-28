@@ -49,6 +49,7 @@
 		BF712584175D40F0007F99EB /* GILetterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712580175D40F0007F99EB /* GILetterView.m */; };
 		BF712585175D40F0007F99EB /* GIPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712582175D40F0007F99EB /* GIPlaceholderView.m */; };
 		BF71258B175D4238007F99EB /* GILevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712589175D4238007F99EB /* GILevelView.m */; };
+		BF85FE3517CE0F6800AFDF70 /* GIIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85FE3417CE0F6800AFDF70 /* GIIconButton.m */; };
 		BF91795817244A8200B136E2 /* shine_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF91795717244A8200B136E2 /* shine_mask@2x.png */; };
 		BF92630B17A3E4C400C29A70 /* congratulations.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF92630517A3E4C400C29A70 /* congratulations.strings */; };
 		BF92630C17A3E4C400C29A70 /* settings.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF92630717A3E4C400C29A70 /* settings.strings */; };
@@ -81,7 +82,6 @@
 		BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */; };
 		BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF92975172443AC00F230C6 /* GIShineLabel.m */; };
 		BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7381727F815003B4385 /* NSString+RandomString.m */; };
-		BFFCF4F117C4D3B500A3EBEF /* GIIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFCF4F017C4D3B500A3EBEF /* GIIconButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +168,9 @@
 		BF712588175D4238007F99EB /* GILevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelView.h; sourceTree = "<group>"; };
 		BF712589175D4238007F99EB /* GILevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelView.m; sourceTree = "<group>"; };
 		BF71258A175D4238007F99EB /* GILevelViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelViewDelegate.h; sourceTree = "<group>"; };
+		BF85FE3117CE0B7D00AFDF70 /* GICongratulationsViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GICongratulationsViewDelegate.h; sourceTree = "<group>"; };
+		BF85FE3317CE0F6800AFDF70 /* GIIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIIconButton.h; sourceTree = "<group>"; };
+		BF85FE3417CE0F6800AFDF70 /* GIIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIIconButton.m; sourceTree = "<group>"; };
 		BF8D8B701795E454000D6507 /* GISound+Factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GISound+Factory.h"; sourceTree = "<group>"; };
 		BF8D8B711795E454000D6507 /* GISound+Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GISound+Factory.m"; sourceTree = "<group>"; };
 		BF91795717244A8200B136E2 /* shine_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shine_mask@2x.png"; sourceTree = "<group>"; };
@@ -221,8 +224,6 @@
 		BFF92975172443AC00F230C6 /* GIShineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIShineLabel.m; sourceTree = "<group>"; };
 		BFF9E7371727F815003B4385 /* NSString+RandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RandomString.h"; sourceTree = "<group>"; };
 		BFF9E7381727F815003B4385 /* NSString+RandomString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RandomString.m"; sourceTree = "<group>"; };
-		BFFCF4EF17C4D3B500A3EBEF /* GIIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIIconButton.h; sourceTree = "<group>"; };
-		BFFCF4F017C4D3B500A3EBEF /* GIIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIIconButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,9 +380,22 @@
 				BF71258A175D4238007F99EB /* GILevelViewDelegate.h */,
 				BF99CD44176E317300CA2650 /* GICongratulationsView.h */,
 				BF99CD45176E317300CA2650 /* GICongratulationsView.m */,
+				BF85FE3117CE0B7D00AFDF70 /* GICongratulationsViewDelegate.h */,
 			);
 			name = Level;
 			path = level;
+			sourceTree = "<group>";
+		};
+		BF85FE3217CE0F4700AFDF70 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				BFBAF9F7175D773200AA0AE1 /* GIGlowButton.h */,
+				BFBAF9F8175D773200AA0AE1 /* GIGlowButton.m */,
+				BF85FE3317CE0F6800AFDF70 /* GIIconButton.h */,
+				BF85FE3417CE0F6800AFDF70 /* GIIconButton.m */,
+			);
+			name = Button;
+			path = button;
 			sourceTree = "<group>";
 		};
 		BF92630417A3E4C400C29A70 /* localization */ = {
@@ -531,14 +545,11 @@
 				BF239B85179D462000005FCA /* Help */,
 				BF712572175D40D2007F99EB /* Keyboard */,
 				BF712587175D4238007F99EB /* Level */,
-				BFBAF9F7175D773200AA0AE1 /* GIGlowButton.h */,
-				BFBAF9F8175D773200AA0AE1 /* GIGlowButton.m */,
+				BF85FE3217CE0F4700AFDF70 /* Button */,
 				BF565939176E6D3800F5198A /* GIModalPanel.h */,
 				BF56593A176E6D3800F5198A /* GIModalPanel.m */,
 				BF1835D3172C3D1D00E2CB5F /* GINavigationBar.h */,
 				BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */,
-				BFFCF4EF17C4D3B500A3EBEF /* GIIconButton.h */,
-				BFFCF4F017C4D3B500A3EBEF /* GIIconButton.m */,
 				BFF92974172443AC00F230C6 /* GIShineLabel.h */,
 				BFF92975172443AC00F230C6 /* GIShineLabel.m */,
 			);
@@ -741,6 +752,7 @@
 				BF1F29B01707347900A83FE3 /* GILevel.m in Sources */,
 				BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */,
 				BF659F721795AE5700C99668 /* GIConfiguration.m in Sources */,
+				BF85FE3517CE0F6800AFDF70 /* GIIconButton.m in Sources */,
 				BF1C462317AFBCF20042D149 /* GIAdManager.m in Sources */,
 				BF1F29B6170761D400A83FE3 /* GILevelViewController.m in Sources */,
 				BF3DDBA4176D07230055A388 /* _GIAppDelegate.m in Sources */,
@@ -774,7 +786,6 @@
 				BF239B9217A1398300005FCA /* GISettingsViewController.m in Sources */,
 				BF56593B176E6D3800F5198A /* GIModalPanel.m in Sources */,
 				BF0EFE77176BC929007CD06F /* GIUserInterface+Factory.m in Sources */,
-				BFFCF4F117C4D3B500A3EBEF /* GIIconButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

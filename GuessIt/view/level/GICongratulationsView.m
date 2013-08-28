@@ -17,6 +17,10 @@
 #import "UIView+CBFrameHelpers.h"
 #import <QuartzCore/QuartzCore.h>
 
+#define GI_CONGRATULATIONS_SHARE_BUTTON_MARGIN 10.f
+#define GI_CONGRATULATIONS_SHARE_BUTTON_HEIGHT 45.f
+#define GI_CONGRATULATIONS_SHARE_BUTTON_CORNER_RADIUS 6.f
+
 @interface GICongratulationsView ()
 
 @property (nonatomic, strong, readonly) GIUserInterfaceElement *ui;
@@ -101,22 +105,10 @@
     return _answerLabel;
 }
 
-#define GI_CONGRATULATIONS_SHARE_BUTTON_MARGIN 10.f
-#define GI_CONGRATULATIONS_SHARE_BUTTON_HEIGHT 45.f
-#define GI_CONGRATULATIONS_SHARE_BUTTON_CORNER_RADIUS 6.f
-#define GI_CONGRATULATIONS_SHARE_BUTTON_BORDER_WIDTH 1.f
-#define GI_CONGRATULATIONS_SHARE_BUTTON_BORDER_COLOR [UIColor colorWithWhite:0.f alpha:0.15f].CGColor
-
 - (UIButton *)facebookButton {
     if (!_facebookButton) {
-        _facebookButton = [GIIconButton buttonWithIcon:FAIconFacebookSign];
-
-        _facebookButton.backgroundColor = [UIColor colorWithRed:76.f/255.f green:102.f/255.f blue:164.f/255.f alpha:1.f];
+        _facebookButton = [GIIconButton facebookButton];
         _facebookButton.layer.cornerRadius = GI_CONGRATULATIONS_SHARE_BUTTON_CORNER_RADIUS;
-        _facebookButton.layer.borderWidth = GI_CONGRATULATIONS_SHARE_BUTTON_BORDER_WIDTH;
-        _facebookButton.layer.borderColor = GI_CONGRATULATIONS_SHARE_BUTTON_BORDER_COLOR;
-
-        [_facebookButton setTitle:@"Facebook" forState:UIControlStateNormal];
         [_facebookButton addTarget:self
                             action:@selector(_facebookTouched:)
                   forControlEvents:UIControlEventTouchUpInside];
@@ -126,14 +118,8 @@
 
 - (UIButton *)twitterButton {
     if (!_twitterButton) {
-        _twitterButton = [GIIconButton buttonWithIcon:FAIconTwitterSign];
-
-        _twitterButton.backgroundColor = [UIColor colorWithRed:0.f/255.f green:190.f/255.f blue:246.f/255.f alpha:1.f];
+        _twitterButton = [GIIconButton twitterButton];
         _twitterButton.layer.cornerRadius = GI_CONGRATULATIONS_SHARE_BUTTON_CORNER_RADIUS;
-        _twitterButton.layer.borderWidth = GI_CONGRATULATIONS_SHARE_BUTTON_BORDER_WIDTH;
-        _twitterButton.layer.borderColor = GI_CONGRATULATIONS_SHARE_BUTTON_BORDER_COLOR;
-
-        [_twitterButton setTitle:@"Twitter" forState:UIControlStateNormal];
         [_twitterButton addTarget:self
                            action:@selector(_twitterTouched:)
                  forControlEvents:UIControlEventTouchUpInside];
@@ -196,11 +182,15 @@
 }
 
 - (void)_facebookTouched:(id)sender {
-    NSLog(@"Facebook!");
+    if ([self.delegate respondsToSelector:@selector(congratulationsViewDidRequestToPostOnFacebook:)]) {
+        [self.delegate congratulationsViewDidRequestToPostOnFacebook:self];
+    }
 }
 
 - (void)_twitterTouched:(id)sender {
-    NSLog(@"Twitter!");
+    if ([self.delegate respondsToSelector:@selector(congratulationsViewDidRequestToPostOnTwitter:)]) {
+        [self.delegate congratulationsViewDidRequestToPostOnTwitter:self];
+    }
 }
 
 @end

@@ -14,6 +14,9 @@
 
 + (instancetype)buttonWithIcon:(FAIcon)icon;
 
++ (instancetype)facebookButton;
++ (instancetype)twitterButton;
+
 @property (nonatomic, assign) FAIcon icon;
 
 @end

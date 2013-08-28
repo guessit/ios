@@ -11,6 +11,7 @@
 #import "GIAdManager.h"
 #import "GIConfiguration.h"
 #import "GICongratulationsView.h"
+#import "GICongratulationsViewDelegate.h"
 #import "GIDefinitions.h"
 #import "GIGame.h"
 #import "GIHelpView.h"
@@ -27,7 +28,7 @@
 #import "UIViewController+MASimplestSemiModal.h"
 #import <Social/Social.h>
 
-@interface GILevelViewController() <GISettingsDelegate, GIHelpViewDelegate, GILevelViewDelegate, UAModalPanelDelegate>
+@interface GILevelViewController() <GISettingsDelegate, GIHelpViewDelegate, GICongratulationsViewDelegate, GILevelViewDelegate, UAModalPanelDelegate>
 
 @property (nonatomic, strong) GILevelView *levelView;
 @property (nonatomic, strong) GIHelpView *helpView;
@@ -36,7 +37,9 @@
 
 - (void)_adjustViewForCurrentLevel;
 - (void)_rightButtonTouched:(id)sender;
-- (void)_shareWithServiceType:(NSString *)service;
+- (void)_shareWithServiceType:(NSString *)service
+                      message:(NSString *)message
+                        alert:(NSString *)alert;
 
 @end
 
@@ -116,18 +119,9 @@
     [self presentViewController:navController animated:YES completion:NULL];
 }
 
-- (void)_shareWithServiceType:(NSString *)service {
-    NSString *message = nil;
-    NSString *alert = nil;
-
-    if ([service isEqualToString:SLServiceTypeTwitter]) {
-        message = NSLocalizedStringFromTable(@"twitter_help", @"social", nil);
-        alert = NSLocalizedStringFromTable(@"twitter_unavailable", @"social", nil);
-    } else if ([service isEqualToString:SLServiceTypeFacebook]) {
-        message = NSLocalizedStringFromTable(@"facebook_help", @"social", nil);
-        alert = NSLocalizedStringFromTable(@"facebook_unavailable", @"social", nil);
-    }
-
+- (void)_shareWithServiceType:(NSString *)service
+                      message:(NSString *)message
+                        alert:(NSString *)alert {
     if ([SLComposeViewController isAvailableForServiceType:service]) {
         SLComposeViewController *share = [SLComposeViewController composeViewControllerForServiceType:service];
         [share setInitialText:message];
@@ -189,12 +183,32 @@
 
 - (void)helpViewDidRequestToPostOnFacebook:(GIHelpView *)helpView {
     [self.navigationController ma_dismissSemiView];
-    [self _shareWithServiceType:SLServiceTypeFacebook];
+
+    [self _shareWithServiceType:SLServiceTypeFacebook
+                        message:NSLocalizedStringFromTable(@"facebook_help", @"social", nil)
+                          alert:NSLocalizedStringFromTable(@"facebook_unavailable", @"social", nil)];
 }
 
 - (void)helpViewDidRequestToPostOnTwitter:(GIHelpView *)helpView {
     [self.navigationController ma_dismissSemiView];
-    [self _shareWithServiceType:SLServiceTypeTwitter];
+
+    [self _shareWithServiceType:SLServiceTypeTwitter
+                        message:NSLocalizedStringFromTable(@"twitter_help", @"social", nil)
+                          alert:NSLocalizedStringFromTable(@"twitter_unavailable", @"social", nil)];
+}
+
+#pragma mark - GICongratulationsViewDelegate Methods
+
+- (void)congratulationsViewDidRequestToPostOnFacebook:(GICongratulationsView *)congratulationsView {
+    [self _shareWithServiceType:SLServiceTypeFacebook
+                        message:NSLocalizedStringFromTable(@"facebook_challenge", @"social", nil)
+                          alert:NSLocalizedStringFromTable(@"facebook_unavailable", @"social", nil)];
+}
+
+- (void)congratulationsViewDidRequestToPostOnTwitter:(GICongratulationsView *)congratulationsView {
+    [self _shareWithServiceType:SLServiceTypeTwitter
+                        message:NSLocalizedStringFromTable(@"twitter_challenge", @"social", nil)
+                          alert:NSLocalizedStringFromTable(@"twitter_unavailable", @"social", nil)];
 }
 
 #pragma mark - GILevelViewDelegate Methods
@@ -211,6 +225,7 @@
         GICongratulationsView *congratsView = [GICongratulationsView view];
         congratsView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         congratsView.level = level;
+        congratsView.delegate = self;
 
         [modalPanel.contentView addSubview:congratsView];
 

@@ -106,8 +106,7 @@
 
 - (UIButton *)facebookButton {
     if (!_facebookButton) {
-        _facebookButton = [GIIconButton buttonWithIcon:FAIconFacebookSign];
-        _facebookButton.backgroundColor = self.ui.secondaryBackgroundColor;
+        _facebookButton = [GIIconButton facebookButton];
 
         CGFloat x = GI_HELP_VIEW_PADDING;
         CGFloat y = self.height - GI_HELP_BUTTON_HEIGHT - GI_HELP_VIEW_PADDING;
@@ -117,7 +116,6 @@
         _facebookButton.frame = CGRectMake(x, y, width, height);
         _facebookButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
-        [_facebookButton setTitle:@"Facebook" forState:UIControlStateNormal];
         [_facebookButton addTarget:self
                             action:@selector(_facebookTouched:)
                   forControlEvents:UIControlEventTouchUpInside];
@@ -127,8 +125,7 @@
 
 - (UIButton *)twitterButton {
     if (!_twitterButton) {
-        _twitterButton = [GIIconButton buttonWithIcon:FAIconTwitterSign];
-        _twitterButton.backgroundColor = self.ui.secondaryBackgroundColor;
+        _twitterButton = [GIIconButton twitterButton];
 
         CGFloat width = (self.width - (3 * GI_HELP_VIEW_PADDING)) / 2.f;
         CGFloat height = GI_HELP_BUTTON_HEIGHT;
@@ -138,7 +135,6 @@
         _twitterButton.frame = CGRectMake(x, y, width, height);
         _twitterButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
-        [_twitterButton setTitle:@"Twitter" forState:UIControlStateNormal];
         [_twitterButton addTarget:self
                            action:@selector(_twitterTouched:)
                  forControlEvents:UIControlEventTouchUpInside];

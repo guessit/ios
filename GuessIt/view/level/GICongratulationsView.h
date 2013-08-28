@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 
 #import "GILevel.h"
+#import "GICongratulationsViewDelegate.h"
 
 @interface GICongratulationsView : UIView
 
+@property (nonatomic, weak) id<GICongratulationsViewDelegate> delegate;
 @property (nonatomic, strong) GILevel *level;
 
 @end
