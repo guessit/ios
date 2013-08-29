@@ -13,6 +13,10 @@
 #import "GIIconButton.h"
 #import "UIView+CBFrameHelpers.h"
 
+#define GI_CORRECT_LETTER_BACKGROUND_COLOR [UIColor colorWithRed:138.f/255.f green:111.f/255.f blue:179.f/255.f alpha:1.f]
+#define GI_WRONG_LETTER_BACKGROUND_COLOR [UIColor colorWithRed:179.f/255.f green:112.f/255.f blue:120.f/255.f alpha:1.f]
+#define GI_SKIP_LEVEL_BACKGROUND_COLOR [UIColor colorWithRed:111.f/255.f green:160.f/255.f blue:179.f/255.f alpha:1.f]
+
 @interface GIHelpView ()
 
 @property (nonatomic, strong, readonly) GIUserInterfaceElement *ui;
@@ -43,8 +47,11 @@
 
 - (UIButton *)placeCorrectLetterButton {
     if (!_placeCorrectLetterButton) {
-        _placeCorrectLetterButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _placeCorrectLetterButton.backgroundColor = self.ui.secondaryBackgroundColor;
+        _placeCorrectLetterButton = [GIIconButton buttonWithIcon:FAIconMagic];
+
+        _placeCorrectLetterButton.backgroundColor = GI_CORRECT_LETTER_BACKGROUND_COLOR;
+        _placeCorrectLetterButton.layer.borderWidth = GI_SOCIAL_BUTTON_BORDER_WIDTH;
+        _placeCorrectLetterButton.layer.borderColor = GI_SOCIAL_BUTTON_BORDER_COLOR;
 
         CGFloat x = GI_HELP_VIEW_PADDING;
         CGFloat y = GI_HELP_VIEW_PADDING;
@@ -64,8 +71,11 @@
 
 - (UIButton *)eliminateWrongLetterButton {
     if (!_eliminateWrongLetterButton) {
-        _eliminateWrongLetterButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _eliminateWrongLetterButton.backgroundColor = self.ui.secondaryBackgroundColor;
+        _eliminateWrongLetterButton = [GIIconButton buttonWithIcon:FAIconTrash];
+
+        _eliminateWrongLetterButton.backgroundColor = GI_WRONG_LETTER_BACKGROUND_COLOR;
+        _eliminateWrongLetterButton.layer.borderWidth = GI_SOCIAL_BUTTON_BORDER_WIDTH;
+        _eliminateWrongLetterButton.layer.borderColor = GI_SOCIAL_BUTTON_BORDER_COLOR;
 
         CGFloat x = GI_HELP_VIEW_PADDING;
         CGFloat y = (2 * GI_HELP_VIEW_PADDING) + GI_HELP_BUTTON_HEIGHT;
@@ -85,8 +95,11 @@
 
 - (UIButton *)skipLevelButton {
     if (!_skipLevelButton) {
-        _skipLevelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _skipLevelButton.backgroundColor = self.ui.secondaryBackgroundColor;
+        _skipLevelButton = [GIIconButton buttonWithIcon:FAIconRandom];
+
+        _skipLevelButton.backgroundColor = GI_SKIP_LEVEL_BACKGROUND_COLOR;
+        _skipLevelButton.layer.borderWidth = GI_SOCIAL_BUTTON_BORDER_WIDTH;
+        _skipLevelButton.layer.borderColor = GI_SOCIAL_BUTTON_BORDER_COLOR;
 
         CGFloat x = GI_HELP_VIEW_PADDING;
         CGFloat y = (3 * GI_HELP_VIEW_PADDING) + (2 * GI_HELP_BUTTON_HEIGHT);
