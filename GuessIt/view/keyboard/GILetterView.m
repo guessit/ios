@@ -47,7 +47,7 @@
 #pragma mark - Setter
 
 - (void)setLetter:(NSString *)letter {
-    self.label.text = [letter uppercaseString];
+    self.label.text = letter;
 }
 
 #pragma mark - UIView Methods
@@ -103,35 +103,60 @@
 }
 
 - (void)zoomIn {
+    [self zoomInWithCompletion:NULL];
+}
+
+- (void)zoomInWithCompletion:(GICompletionBlock)completion {
     [UIView animateWithDuration:0.2f animations:^{
         self.transform = CGAffineTransformMakeScale(GI_LETTER_ZOOMED_SCALE, GI_LETTER_ZOOMED_SCALE);
         self.backgroundColor = [GIConfiguration sharedInstance].game.interface.letter.secondaryBackgroundColor;
         self.label.textColor = [GIConfiguration sharedInstance].game.interface.letter.secondaryTextColor;
+    } completion:^(BOOL finished) {
+        if (completion) completion(finished);
     }];
 }
 
 - (void)zoomOut {
+    [self zoomOutWithCompletion:NULL];
+}
+
+- (void)zoomOutWithCompletion:(GICompletionBlock)completion {
     [UIView animateWithDuration:0.2f animations:^{
         self.transform = CGAffineTransformIdentity;
         self.backgroundColor = [GIConfiguration sharedInstance].game.interface.letter.backgroundColor;
         self.label.textColor = [GIConfiguration sharedInstance].game.interface.letter.textColor;
+    } completion:^(BOOL finished) {
+        if (completion) completion(finished);
     }];
 }
 
 - (void)minimize {
+    [self minimizeWithCompletion:NULL];
+}
+
+- (void)minimizeWithCompletion:(GICompletionBlock)completion {
     self.transform = CGAffineTransformIdentity;
     [UIView animateWithDuration:0.3f animations:^{
         self.transform = CGAffineTransformMakeScale(GI_LETTER_MINIMIZED_SCALE, GI_LETTER_MINIMIZED_SCALE);
         self.backgroundColor = [GIConfiguration sharedInstance].game.interface.letter.backgroundColor;
         self.label.textColor = [GIConfiguration sharedInstance].game.interface.letter.textColor;
         self.alpha = 0.f;
+    } completion:^(BOOL finished) {
+        if (completion) completion(finished);
     }];
+
 }
 
 - (void)restore {
+    [self restoreWithCompletion:NULL];
+}
+
+- (void)restoreWithCompletion:(GICompletionBlock)completion {
     [UIView animateWithDuration:0.3f animations:^{
         self.transform = CGAffineTransformIdentity;
         self.alpha = 1.f;
+    } completion:^(BOOL finished) {
+        if (completion) completion(finished);
     }];
 }
 

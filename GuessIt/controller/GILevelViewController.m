@@ -151,8 +151,7 @@
 #pragma mark - GIHelpViewDelegate Methods
 
 - (BOOL)helpViewCanEliminateWrongLetter:(GIHelpView *)helpView {
-    #warning TODO: verify if exists wrong letters on keypad
-    return YES;
+    return self.levelView.hasWrongLetterToBeRemoved;
 }
 
 - (BOOL)helpViewCanPlaceCorrectLetter:(GIHelpView *)helpView {
@@ -168,7 +167,8 @@
 }
 
 - (void)helpViewDidRequestToEliminateWrongLetter:(GIHelpView *)helpView {
-    #warning TODO: remove wrong letter form keypad
+    [self.navigationController ma_dismissSemiView];
+    [self.levelView performSelector:@selector(removeWrongLetter) withObject:nil afterDelay:0.3f];
 }
 
 - (void)helpViewDidRequestToPlaceCorrectLetter:(GIHelpView *)helpView {

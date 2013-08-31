@@ -157,6 +157,24 @@
     self.imageViewFrame.x = floorf(self.imageViewFrame.x);
 }
 
+#pragma mark - Public Interface
+
+- (BOOL)hasWrongLetterToBeRemoved {
+    return [self.inputView hasWrongLetterToBeRemoved];
+}
+
+- (BOOL)hasCorrectLetterToBePlaced {
+    return [self.inputView hasCorrectLetterToBePlaced];
+}
+
+- (void)removeWrongLetter {
+    [self.inputView removeWrongLetter];
+}
+
+- (void)placeCorrectLetter {
+    [self.inputView placeCorrectLetter];
+}
+
 #pragma mark - Private Interface
 
 - (void)_initialize {

@@ -8,8 +8,8 @@
 
 #import "NSString+RandomString.h"
 
-#define GI_VOWELS @"aeiou"
-#define GI_CONSONANTS @"bcdfghjklmnpqrstvwxyz"
+#define GI_VOWELS @"AEIOU"
+#define GI_CONSONANTS @"BCDFGHJKLMNPQRSTVWXYZ"
 
 @implementation NSString (RandomString)
 

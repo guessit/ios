@@ -32,6 +32,10 @@
 
 @property (nonatomic, assign) BOOL initialized;
 
+@property (nonatomic, strong, readonly) NSArray *placedLetterViews;
+@property (nonatomic, strong, readonly) NSArray *notPlacedLetterViews;
+@property (nonatomic, strong, readonly) GILetterView *firstWrongLetterView;
+
 - (void)_initialize;
 - (void)_generateKeypad;
 - (void)_actionButtonTouched:(id)sender;
@@ -101,6 +105,29 @@
     }
 
     return letters;
+}
+
+- (NSArray *)placedLetterViews {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K != %@", @"superview", self.lettersContainer];
+    return [self.letterViews filteredArrayUsingPredicate:predicate];
+}
+
+- (NSArray *)notPlacedLetterViews {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %@", @"superview", self.lettersContainer];
+    return [self.letterViews filteredArrayUsingPredicate:predicate];
+}
+
+- (GILetterView *)firstWrongLetterView {
+    GILetterView *wrongLetterView = nil;
+
+    for (GILetterView *letterView in self.notPlacedLetterViews) {
+        if (![self.correctAnswer containsString:letterView.letter]) {
+            wrongLetterView = letterView;
+            break;
+        }
+    }
+
+    return wrongLetterView;
 }
 
 #pragma mark - Setter
@@ -290,12 +317,23 @@
 
 #pragma mark - Public Methods
 
+- (BOOL)hasWrongLetterToBeRemoved {
+    return self.firstWrongLetterView != nil;
+}
+
+- (void)removeWrongLetter {
+    GILetterView *wrongLetter = self.firstWrongLetterView;
+    [wrongLetter minimizeWithCompletion:^(BOOL finished) {
+        [wrongLetter removeFromSuperview];
+    }];
+}
+
 - (void)addLetterView:(GILetterView *)letterView {
     letterView.transform = CGAffineTransformIdentity;
     letterView.frame = letterView.oldFrame;
     letterView.alpha = 0.f;
 
-    [self addSubview:letterView];
+    [self.lettersContainer addSubview:letterView];
 
     letterView.transform = CGAffineTransformMakeScale(GI_LETTER_MINIMIZED_SCALE, GI_LETTER_MINIMIZED_SCALE);
 

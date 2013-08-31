@@ -86,6 +86,27 @@
     return YES;
 }
 
+#pragma mark - Public Interface
+
+- (BOOL)hasWrongLetterToBeRemoved {
+    return self.keypadView.hasWrongLetterToBeRemoved;
+}
+
+- (BOOL)hasCorrectLetterToBePlaced {
+    #warning TODO: verificar se existe letra disponivel para resposta
+    return self.answerView.canAddLetter;
+}
+
+- (void)removeWrongLetter {
+    [self.keypadView removeWrongLetter];
+}
+
+- (void)placeCorrectLetter {
+
+//@property (nonatomic, strong) GIAnswerView *answerView;
+//@property (nonatomic, strong) GIKeypadView *keypadView;
+}
+
 #pragma mark - Private Methods
 
 - (void)_initialize {

@@ -152,7 +152,7 @@
     self.descriptionLabel.center = CGPointMake(self.center.x, self.congratsLabel.center.y + 36.f);
     self.answerDescriptionLabel.center = CGPointMake(self.center.x, self.center.y + 55.f);
 
-    self.answerLabel.text = self.level.answer.uppercaseString;
+    self.answerLabel.text = self.level.answer;
     [self.answerLabel sizeToFit];
     self.answerLabel.w = self.answerLabel.width + 30.f;
     self.answerLabel.center = CGPointMake(self.center.x, self.answerDescriptionLabel.center.y + 34.f);

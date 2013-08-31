@@ -13,7 +13,7 @@
 + (GILevel *)levelWithDictionary:(NSDictionary *)dictionary {
     GILevel *level = [[GILevel alloc] init];
     level.imageName = dictionary[@"image"];
-    level.answer = NSLocalizedStringFromTable(level.imageName, @"items", nil);
+    level.answer = NSLocalizedStringFromTable(level.imageName, @"items", nil).uppercaseString;
     level.hints = dictionary[@"hints"];
     level.category = dictionary[@"category"];
 

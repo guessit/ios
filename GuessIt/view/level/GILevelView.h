@@ -17,4 +17,9 @@
 @property (nonatomic, strong) GILevel *currentLevel;
 @property (nonatomic, strong, readonly) NSString *currentAnswer;
 
+- (BOOL)hasWrongLetterToBeRemoved;
+- (BOOL)hasCorrectLetterToBePlaced;
+- (void)removeWrongLetter;
+- (void)placeCorrectLetter;
+
 @end

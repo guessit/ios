@@ -15,6 +15,8 @@
 @property (nonatomic, weak) id<GIKeypadViewDelegate> delegate;
 @property (nonatomic, copy) NSString *correctAnswer;
 
+- (BOOL)hasWrongLetterToBeRemoved;
+- (void)removeWrongLetter;
 - (void)addLetterView:(GILetterView *)letterView;
 
 @end
