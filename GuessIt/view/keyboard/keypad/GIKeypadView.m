@@ -14,6 +14,7 @@
 #import "GILetterView.h"
 #import "MALazykit.h"
 #import "NSString+RandomString.h"
+#import "NSString+Search.h"
 #import "UIFont+GuessItFonts.h"
 #import "UIView+CBFrameHelpers.h"
 #import "UIView+EasingFunctions/UIView+EasingFunctions.h"
@@ -120,10 +121,26 @@
 - (GILetterView *)firstWrongLetterView {
     GILetterView *wrongLetterView = nil;
 
+    NSMutableDictionary *letters = [NSMutableDictionary dictionaryWithCapacity:self.correctAnswer.length];
     for (GILetterView *letterView in self.notPlacedLetterViews) {
         if (![self.correctAnswer containsString:letterView.letter]) {
             wrongLetterView = letterView;
             break;
+        } else {
+            NSNumber *letterCount = [letters objectForKey:letterView.letter];
+            if (!letterCount) {
+                letterCount = @1;
+            } else {
+                letterCount = @(letterCount.integerValue + 1);
+            }
+
+            [letters setObject:letterCount forKey:letterView.letter];
+
+            NSInteger occurrencesOfLetter = [self.correctAnswer numberOfOccurrencesOfString:letterView.letter];
+            if (letterCount.integerValue > occurrencesOfLetter) {
+                wrongLetterView = letterView;
+                break;
+            }
         }
     }
 
