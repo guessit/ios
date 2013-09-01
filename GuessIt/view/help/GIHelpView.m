@@ -16,8 +16,8 @@
 #define GI_CORRECT_LETTER_BACKGROUND_COLOR [UIColor colorWithRed:138.f/255.f green:111.f/255.f blue:179.f/255.f alpha:1.f]
 #define GI_WRONG_LETTER_BACKGROUND_COLOR [UIColor colorWithRed:179.f/255.f green:112.f/255.f blue:120.f/255.f alpha:1.f]
 #define GI_SKIP_LEVEL_BACKGROUND_COLOR [UIColor colorWithRed:111.f/255.f green:160.f/255.f blue:179.f/255.f alpha:1.f]
-#define GI_DISABLED_TEXT_COLOR [UIColor colorWithWhite:1.f alpha:0.2f]
-#define GI_DISABLED_BACKGROUND_COLOR [UIColor colorWithWhite:1.f alpha:0.1f]
+#define GI_DISABLED_TEXT_COLOR [UIColor colorWithWhite:0.4f alpha:0.4f]
+#define GI_DISABLED_BACKGROUND_COLOR [UIColor colorWithWhite:0.3f alpha:0.2f]
 
 @interface GIHelpView ()
 
