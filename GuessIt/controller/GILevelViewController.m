@@ -260,9 +260,7 @@
 - (void)didCloseModalPanel:(UAModalPanel *)modalPanel {
     GIConfiguration *conf = [GIConfiguration sharedInstance];
 
-//    NSInteger levelsToShowAd = conf.game.levels.count / 10.f;
-    #warning TODO: remover
-    NSInteger levelsToShowAd = 2;
+    NSInteger levelsToShowAd = conf.game.levels.count / 10.f;
     NSInteger levelsPlusHelps = conf.numberOfLevelsPresented + conf.numberOfHelpRequested;
 
     BOOL hasMoreLevels = conf.currentLevel && conf.currentLevel != conf.lastLevel;
