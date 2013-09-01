@@ -166,6 +166,11 @@
     return canPlace;
 }
 
+- (BOOL)helpViewCanSkipLevel:(GIHelpView *)helpView {
+//    return [GIConfiguration sharedInstance].game.todoLevels.count > 1;
+    return NO;
+}
+
 - (void)helpViewDidRequestToEliminateWrongLetter:(GIHelpView *)helpView {
     [self.navigationController ma_dismissSemiView];
     [self.levelView performSelector:@selector(removeWrongLetter) withObject:nil afterDelay:0.3f];
@@ -242,6 +247,7 @@
 
 - (void)didRequestHelpFromLevelView:(GILevelView *)levelView {
     [self.levelView resignFirstResponder];
+    [self.helpView adjustEnabledButtons];
     [self.navigationController ma_presentSemiView:self.helpView];
 }
 

@@ -14,6 +14,7 @@
 
 - (BOOL)helpViewCanPlaceCorrectLetter:(GIHelpView *)helpView;
 - (BOOL)helpViewCanEliminateWrongLetter:(GIHelpView *)helpView;
+- (BOOL)helpViewCanSkipLevel:(GIHelpView *)helpView;
 
 - (void)helpViewDidRequestToPlaceCorrectLetter:(GIHelpView *)helpView;
 - (void)helpViewDidRequestToEliminateWrongLetter:(GIHelpView *)helpView;
