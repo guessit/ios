@@ -160,11 +160,11 @@
 #pragma mark - Public Interface
 
 - (BOOL)hasWrongLetterToBeRemoved {
-    return [self.inputView hasWrongLetterToBeRemoved];
+    return self.inputView.hasWrongLetterToBeRemoved;
 }
 
 - (BOOL)hasCorrectLetterToBePlaced {
-    return [self.inputView hasCorrectLetterToBePlaced];
+    return self.inputView.hasCorrectLetterToBePlaced;
 }
 
 - (void)removeWrongLetter {

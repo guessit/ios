@@ -93,8 +93,19 @@
 }
 
 - (BOOL)hasCorrectLetterToBePlaced {
-    #warning TODO: verificar se existe letra disponivel para resposta
-    return self.answerView.canAddLetter;
+    BOOL hasCorrectLetter = self.answerView.canAddLetter;
+
+    NSString *currentAnswer = self.currentAnswer;
+    NSRange range = [currentAnswer rangeOfString:@"_"];
+    while (range.location != NSNotFound) {
+        NSLog(@"range: %@", NSStringFromRange(range));
+
+        NSInteger start = range.location + range.length;
+        NSRange endRange = NSMakeRange(start, currentAnswer.length - start);
+        range = [currentAnswer rangeOfString:@"_" options:0 range:endRange];
+    }
+
+    return hasCorrectLetter;
 }
 
 - (void)removeWrongLetter {

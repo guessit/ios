@@ -343,6 +343,10 @@
     }];
 }
 
+- (BOOL)hasCorrectLetterToBePlaced {
+    return YES;
+}
+
 - (void)addLetterView:(GILetterView *)letterView {
     letterView.transform = CGAffineTransformIdentity;
     letterView.frame = letterView.oldFrame;

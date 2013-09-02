@@ -155,15 +155,7 @@
 }
 
 - (BOOL)helpViewCanPlaceCorrectLetter:(GIHelpView *)helpView {
-    BOOL canPlace = NO;
-
-    GILevel *currentLevel = [GIConfiguration sharedInstance].currentLevel;
-    if (self.levelView.currentAnswer.length < currentLevel.answer.length) {
-        #warning TODO: verificar se existem letras no keypad a serem colocadas
-        canPlace = YES;
-    }
-
-    return canPlace;
+    return self.levelView.hasCorrectLetterToBePlaced;
 }
 
 - (BOOL)helpViewCanSkipLevel:(GIHelpView *)helpView {

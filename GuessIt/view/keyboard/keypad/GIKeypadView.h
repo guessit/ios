@@ -17,6 +17,7 @@
 
 - (BOOL)hasWrongLetterToBeRemoved;
 - (void)removeWrongLetter;
+- (BOOL)hasCorrectLetterToBePlaced;
 - (void)addLetterView:(GILetterView *)letterView;
 
 @end

@@ -33,7 +33,7 @@
 - (NSString *)answer {
     NSMutableString *answer = [NSMutableString stringWithCapacity:self.correctAnswer.length];
     for (GIPlaceholderView *placeholder in self.placeholderViews) {
-        NSString *letter = @" ";
+        NSString *letter = @"_";
         if (placeholder.letter) letter = placeholder.letter;
         if (placeholder.placedAfterSpace) [answer appendString:@" "];
 
