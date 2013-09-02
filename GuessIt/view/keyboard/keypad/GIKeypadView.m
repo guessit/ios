@@ -273,8 +273,6 @@
 
         if (canAdd) {
             [self.delegate keypadView:self didAddLetterView:self.zoomedInLetter];
-        } else {
-            #warning TODO: MAKE PANNNNN sound
         }
     }
 

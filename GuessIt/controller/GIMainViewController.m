@@ -84,9 +84,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    #warning TODO: Remover
-    NSLog(@"Game: %@", [[GIConfiguration sharedInstance].game prettyDescription]);
-
     [self.view addSubview:self.backgroundImageView];
     [self.view addSubview:self.titleLabel];
     [self.view addSubview:self.tapToPlayLabel];

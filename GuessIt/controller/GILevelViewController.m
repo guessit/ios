@@ -167,8 +167,7 @@
 }
 
 - (BOOL)helpViewCanSkipLevel:(GIHelpView *)helpView {
-//    return [GIConfiguration sharedInstance].game.todoLevels.count > 1;
-    return NO;
+    return [GIConfiguration sharedInstance].game.todoLevels.count > 1;
 }
 
 - (void)helpViewDidRequestToEliminateWrongLetter:(GIHelpView *)helpView {
@@ -266,7 +265,6 @@
     BOOL hasMoreLevels = conf.currentLevel && conf.currentLevel != conf.lastLevel;
 
     if (conf.showAds && levelsPlusHelps >= levelsToShowAd && hasMoreLevels) {
-        NSLog(@"Show ad!");
         [[GIAdManager sharedInstance] presentAdFromViewController:self];
         [conf resetAfterShowingAd];
     }
