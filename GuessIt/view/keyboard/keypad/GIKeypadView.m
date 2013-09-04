@@ -39,6 +39,7 @@
 
 - (void)_initialize;
 - (void)_generateKeypad;
+- (void)_increaseLetterCountOnLetters:(NSMutableDictionary *)letters withLetter:(NSString *)letter;
 - (void)_actionButtonTouched:(id)sender;
 
 @end
@@ -109,7 +110,9 @@
 }
 
 - (NSArray *)placedLetterViews {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K != %@", @"superview", self.lettersContainer];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K != %@ and %K != %f",
+                              @"superview", self.lettersContainer,
+                              @"alpha", 0.f];
     return [self.letterViews filteredArrayUsingPredicate:predicate];
 }
 
@@ -122,20 +125,18 @@
     GILetterView *wrongLetterView = nil;
 
     NSMutableDictionary *letters = [NSMutableDictionary dictionaryWithCapacity:self.correctAnswer.length];
+    for (GILetterView *letterView in self.placedLetterViews) {
+        [self _increaseLetterCountOnLetters:letters withLetter:letterView.letter];
+    }
+
     for (GILetterView *letterView in self.notPlacedLetterViews) {
         if (![self.correctAnswer containsString:letterView.letter]) {
             wrongLetterView = letterView;
             break;
         } else {
+            [self _increaseLetterCountOnLetters:letters withLetter:letterView.letter];
+
             NSNumber *letterCount = [letters objectForKey:letterView.letter];
-            if (!letterCount) {
-                letterCount = @1;
-            } else {
-                letterCount = @(letterCount.integerValue + 1);
-            }
-
-            [letters setObject:letterCount forKey:letterView.letter];
-
             NSInteger occurrencesOfLetter = [self.correctAnswer numberOfOccurrencesOfString:letterView.letter];
             if (letterCount.integerValue > occurrencesOfLetter) {
                 wrongLetterView = letterView;
@@ -326,6 +327,16 @@
     [self setNeedsLayout];
 }
 
+- (void)_increaseLetterCountOnLetters:(NSMutableDictionary *)letters withLetter:(NSString *)letter {
+    NSNumber *letterCount = [letters objectForKey:letter];
+    if (!letterCount) {
+        letterCount = @1;
+    } else {
+        letterCount = @(letterCount.integerValue + 1);
+    }
+    [letters setObject:letterCount forKey:letter];
+}
+
 - (void)_actionButtonTouched:(id)sender {
     [self.delegate keypadView:self actionButtonPressed:sender];
 }
@@ -344,7 +355,7 @@
 }
 
 - (BOOL)hasAvailableLetterViewForLetters:(NSString *)letters {
-    return [self availableLetterViewForLetters:letters];
+    return [self availableLetterViewForLetters:letters] != nil;
 }
 
 - (GILetterView *)availableLetterViewForLetters:(NSString *)letters {

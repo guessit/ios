@@ -32,6 +32,7 @@
 
 - (NSString *)answer {
     NSMutableString *answer = [NSMutableString stringWithCapacity:self.correctAnswer.length];
+
     for (GIPlaceholderView *placeholder in self.placeholderViews) {
         NSString *letter = @"*";
         if (placeholder.letter) letter = placeholder.letter;
