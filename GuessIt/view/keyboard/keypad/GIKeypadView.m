@@ -343,8 +343,28 @@
     }];
 }
 
-- (BOOL)hasCorrectLetterToBePlaced {
-    return YES;
+- (BOOL)hasAvailableLetterViewForLetters:(NSString *)letters {
+    return [self availableLetterViewForLetters:letters];
+}
+
+- (GILetterView *)availableLetterViewForLetters:(NSString *)letters {
+    __block GILetterView *availableLetter = nil;
+
+    for (NSInteger i = 0; i < letters.length; i++) {
+        NSString *letter = [letters substringWithRange:NSMakeRange(i, 1)];
+        [self.letterViews enumerateObjectsUsingBlock:^(GILetterView *letterView, NSUInteger idx, BOOL *stop) {
+            if (letterView.superview == self.lettersContainer) {
+                if ([letter isEqualToString:letterView.letter]) {
+                    availableLetter = letterView;
+                    *stop = YES;
+                }
+            }
+        }];
+
+        if (availableLetter) break;
+    }
+
+    return availableLetter;
 }
 
 - (void)addLetterView:(GILetterView *)letterView {

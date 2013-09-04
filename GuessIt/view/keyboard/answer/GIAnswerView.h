@@ -19,5 +19,6 @@
 
 - (BOOL)canAddLetter;
 - (void)addLetterView:(GILetterView *)letterView;
+- (void)addLetterViewOnCorrectPlace:(GILetterView *)letterView;
 
 @end

@@ -92,20 +92,29 @@
     return self.keypadView.hasWrongLetterToBeRemoved;
 }
 
-- (BOOL)hasCorrectLetterToBePlaced {
-    BOOL hasCorrectLetter = self.answerView.canAddLetter;
+- (NSString *)_missingLetters {
+    NSMutableString *missingLetters = [NSMutableString string];
 
     NSString *currentAnswer = self.currentAnswer;
-    NSRange range = [currentAnswer rangeOfString:@"_"];
+
+    NSRange range = [currentAnswer rangeOfString:@"*"];
     while (range.location != NSNotFound) {
-        NSLog(@"range: %@", NSStringFromRange(range));
+        NSString *missingLetter = [self.answerView.correctAnswer substringWithRange:range];
+        [missingLetters appendString:missingLetter];
 
         NSInteger start = range.location + range.length;
         NSRange endRange = NSMakeRange(start, currentAnswer.length - start);
-        range = [currentAnswer rangeOfString:@"_" options:0 range:endRange];
+        range = [currentAnswer rangeOfString:@"*" options:0 range:endRange];
     }
 
-    return hasCorrectLetter;
+    return missingLetters;
+}
+
+- (BOOL)hasCorrectLetterToBePlaced {
+    BOOL hasCorrectLetter = self.answerView.canAddLetter;
+    BOOL hasAvailableLetter = [self.keypadView hasAvailableLetterViewForLetters:[self _missingLetters]];
+
+    return hasCorrectLetter && hasAvailableLetter;
 }
 
 - (void)removeWrongLetter {
@@ -113,9 +122,13 @@
 }
 
 - (void)placeCorrectLetter {
+    GILetterView *availableLetter = [self.keypadView availableLetterViewForLetters:[self _missingLetters]];
+    [availableLetter zoomOut];
+    [self.answerView addLetterViewOnCorrectPlace:availableLetter];
 
-//@property (nonatomic, strong) GIAnswerView *answerView;
-//@property (nonatomic, strong) GIKeypadView *keypadView;
+    if (!self.answerView.canAddLetter) {
+        [self.delegate inputView:self didFinishGuessingWithAnswer:self.answerView.answer];
+    }
 }
 
 #pragma mark - Private Methods

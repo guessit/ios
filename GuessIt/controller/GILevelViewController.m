@@ -168,7 +168,8 @@
 }
 
 - (void)helpViewDidRequestToPlaceCorrectLetter:(GIHelpView *)helpView {
-    #warning TODO: get a correct letter from keypad and put it on answer
+    [self.navigationController ma_dismissSemiView];
+    [self.levelView performSelector:@selector(placeCorrectLetter) withObject:nil afterDelay:0.3f];
 }
 
 - (void)helpViewDidRequestToSkipLevel:(GIHelpView *)helpView {

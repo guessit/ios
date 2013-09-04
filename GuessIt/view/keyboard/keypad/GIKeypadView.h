@@ -17,7 +17,8 @@
 
 - (BOOL)hasWrongLetterToBeRemoved;
 - (void)removeWrongLetter;
-- (BOOL)hasCorrectLetterToBePlaced;
+- (BOOL)hasAvailableLetterViewForLetters:(NSString *)letters;
+- (GILetterView *)availableLetterViewForLetters:(NSString *)letters;
 - (void)addLetterView:(GILetterView *)letterView;
 
 @end

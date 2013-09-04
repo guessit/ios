@@ -33,7 +33,7 @@
 - (NSString *)answer {
     NSMutableString *answer = [NSMutableString stringWithCapacity:self.correctAnswer.length];
     for (GIPlaceholderView *placeholder in self.placeholderViews) {
-        NSString *letter = @"_";
+        NSString *letter = @"*";
         if (placeholder.letter) letter = placeholder.letter;
         if (placeholder.placedAfterSpace) [answer appendString:@" "];
 
@@ -157,6 +157,22 @@
             [placeholderView displayLetterView:letterView];
             break;
         }
+    }
+}
+
+- (void)addLetterViewOnCorrectPlace:(GILetterView *)letterView {
+    NSRange range = [self.correctAnswer rangeOfString:letterView.letter];
+    while (range.location != NSNotFound) {
+        GIPlaceholderView *placeholderView = self.placeholderViews[range.location];
+        if (placeholderView.canDisplayLetterView) {
+            [placeholderView displayLetterView:letterView];
+            break;
+        }
+
+        range.location += 1;
+        range.length = self.correctAnswer.length - range.location;
+
+        range = [self.correctAnswer rangeOfString:letterView.letter options:0 range:range];
     }
 }
 
