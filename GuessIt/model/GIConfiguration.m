@@ -78,7 +78,7 @@
 }
 
 - (BOOL)showAds {
-    return [[NSUserDefaults standardUserDefaults] boolForKey:GI_SHOW_ADS];
+    return [self _integerForKey:GI_SHOW_ADS] != 42;
 }
 
 #pragma mark - Setter
@@ -103,8 +103,8 @@
 }
 
 - (void)setShowAds:(BOOL)showAds {
-    [[NSUserDefaults standardUserDefaults] setBool:showAds forKey:GI_SHOW_ADS];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    NSInteger value = showAds ? 0 : 42;
+    [self _setInteger:value forKey:GI_SHOW_ADS];
 }
 
 #pragma mark - NSObject Methods

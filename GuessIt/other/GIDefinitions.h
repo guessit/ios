@@ -44,4 +44,10 @@ extern NSString * const GICurrentLevelDidChangeNotification;
 #define GI_HELP_BUTTON_HEIGHT 50.f
 #define GI_HELP_VIEW_HEIGHT (5 * GI_HELP_VIEW_PADDING) + (4 * GI_HELP_BUTTON_HEIGHT)
 
-#define GI_IAP @[@"easy_mode"]
+#define GI_IAP @[    \
+    @"buy_coffee",   \
+    @"buy_sandwich", \
+    @"buy_dinner",   \
+    @"buy_clothes",  \
+    @"buy_gift"      \
+]

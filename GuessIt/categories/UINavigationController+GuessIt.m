@@ -25,6 +25,9 @@
         NSString *productId = [NSString stringWithFormat:@"%@.%@", bundleId, product];
         [identifiers addObject:productId];
     }
+
+    NSLog(@"Identifiers: %@", identifiers);
+
     [[CargoBay sharedManager] productsWithIdentifiers:identifiers
                                               success:^(NSArray *products, NSArray *invalidIdentifiers) {
                                                   NSLog(@"Products: %@", products);
