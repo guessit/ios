@@ -29,6 +29,7 @@
 		BF56593B176E6D3800F5198A /* GIModalPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF56593A176E6D3800F5198A /* GIModalPanel.m */; };
 		BF565941176E721400F5198A /* JotiOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF56593F176E721400F5198A /* JotiOne-Regular.ttf */; };
 		BF565942176E721400F5198A /* Lobster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF565940176E721400F5198A /* Lobster.ttf */; };
+		BF62EB9117D940C2000B6A2C /* GIGameOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF62EB9017D940C1000B6A2C /* GIGameOverView.m */; };
 		BF659F6D1795675C00C99668 /* GICongratulationsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF99CD45176E317300CA2650 /* GICongratulationsView.m */; };
 		BF659F721795AE5700C99668 /* GIConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BF659F711795AE5700C99668 /* GIConfiguration.m */; };
 		BF659F751795AE6300C99668 /* GIUserInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = BF659F741795AE6300C99668 /* GIUserInterface.m */; };
@@ -133,6 +134,8 @@
 		BF56593A176E6D3800F5198A /* GIModalPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIModalPanel.m; sourceTree = "<group>"; };
 		BF56593F176E721400F5198A /* JotiOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JotiOne-Regular.ttf"; sourceTree = "<group>"; };
 		BF565940176E721400F5198A /* Lobster.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lobster.ttf; sourceTree = "<group>"; };
+		BF62EB8F17D940C1000B6A2C /* GIGameOverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGameOverView.h; sourceTree = "<group>"; };
+		BF62EB9017D940C1000B6A2C /* GIGameOverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGameOverView.m; sourceTree = "<group>"; };
 		BF659F701795AE5700C99668 /* GIConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIConfiguration.h; sourceTree = "<group>"; };
 		BF659F711795AE5700C99668 /* GIConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIConfiguration.m; sourceTree = "<group>"; };
 		BF659F731795AE6300C99668 /* GIUserInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIUserInterface.h; sourceTree = "<group>"; };
@@ -380,6 +383,8 @@
 		BF712587175D4238007F99EB /* Level */ = {
 			isa = PBXGroup;
 			children = (
+				BF62EB8F17D940C1000B6A2C /* GIGameOverView.h */,
+				BF62EB9017D940C1000B6A2C /* GIGameOverView.m */,
 				BF712588175D4238007F99EB /* GILevelView.h */,
 				BF712589175D4238007F99EB /* GILevelView.m */,
 				BF71258A175D4238007F99EB /* GILevelViewDelegate.h */,
@@ -773,6 +778,7 @@
 				BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */,
 				BF239B8C179E8E5200005FCA /* GIUserInterfaceElement.m in Sources */,
 				BF1835D5172C3D1D00E2CB5F /* GINavigationBar.m in Sources */,
+				BF62EB9117D940C2000B6A2C /* GIGameOverView.m in Sources */,
 				BF239B8F179E8F9800005FCA /* GIUserInterfaceElement+Factory.m in Sources */,
 				BF1835EB172DC49D00E2CB5F /* UIImage+FromColor.m in Sources */,
 				BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */,

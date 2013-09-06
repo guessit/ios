@@ -22,7 +22,8 @@
     NSString *bundleId = [NSBundle mainBundle].bundleIdentifier.lowercaseString;
     NSMutableSet *identifiers = [NSMutableSet set];
     for (NSString *product in GI_IAP) {
-        NSString *productId = [NSString stringWithFormat:@"%@.%@", bundleId, product];
+//        NSString *productId = [NSString stringWithFormat:@"%@.%@", bundleId, product];
+        NSString *productId = product;
         [identifiers addObject:productId];
     }
 

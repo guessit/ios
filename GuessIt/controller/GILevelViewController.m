@@ -14,6 +14,7 @@
 #import "GICongratulationsViewDelegate.h"
 #import "GIDefinitions.h"
 #import "GIGame.h"
+#import "GIGameOverView.h"
 #import "GIHelpView.h"
 #import "GILevel.h"
 #import "GILevelView.h"
@@ -31,6 +32,7 @@
 @interface GILevelViewController() <GISettingsDelegate, GIHelpViewDelegate, GICongratulationsViewDelegate, GILevelViewDelegate, UAModalPanelDelegate>
 
 @property (nonatomic, strong) GILevelView *levelView;
+@property (nonatomic, strong) GIGameOverView *gameOverView;
 @property (nonatomic, strong) GIHelpView *helpView;
 @property (nonatomic, strong) UIBarButtonItem *rightButtonItem;
 @property (nonatomic, assign) BOOL showAdOnNextLevel;
@@ -53,6 +55,13 @@
         _levelView.levelDelegate = self;
     }
     return _levelView;
+}
+
+- (GIGameOverView *)gameOverView {
+    if (!_gameOverView) {
+        _gameOverView = [GIGameOverView view];
+    }
+    return _gameOverView;
 }
 
 - (GIHelpView *)helpView {
@@ -99,7 +108,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view = self.levelView;
+//    self.view = self.levelView;
+    self.view = self.gameOverView;
 
     self.navigationItem.rightBarButtonItem = self.rightButtonItem;
 }
