@@ -78,6 +78,9 @@
 		BFBAF9F4175B892500AA0AE1 /* GILevel+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBAF9F3175B892400AA0AE1 /* GILevel+Factory.m */; };
 		BFBAF9F9175D773200AA0AE1 /* GIGlowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBAF9F8175D773200AA0AE1 /* GIGlowButton.m */; };
 		BFBDD2121701092000F5698E /* GIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBDD2111701092000F5698E /* GIMainViewController.m */; };
+		BFBF337317E7184700B99DDC /* GIGameOverCongratulationsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBF337217E7184700B99DDC /* GIGameOverCongratulationsView.m */; };
+		BFBF337917E7185C00B99DDC /* GIGameOverOtherGamesView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBF337817E7185C00B99DDC /* GIGameOverOtherGamesView.m */; };
+		BFBF337C17E718C400B99DDC /* GIGameOverCreditsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBF337B17E718C400B99DDC /* GIGameOverCreditsView.m */; };
 		BFDE0173176CFFBC00E704CF /* UINavigationController+GuessIt.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDE0172176CFFBC00E704CF /* UINavigationController+GuessIt.m */; };
 		BFE6170A17B5029D001F1C89 /* MRAID.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BFE6170817B5029D001F1C89 /* MRAID.bundle */; };
 		BFE898EB1796FA630081E646 /* main_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE898EA1796FA630081E646 /* main_background@2x.png */; };
@@ -219,6 +222,12 @@
 		BFBAF9F8175D773200AA0AE1 /* GIGlowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGlowButton.m; sourceTree = "<group>"; };
 		BFBDD2101701092000F5698E /* GIMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIMainViewController.h; sourceTree = "<group>"; };
 		BFBDD2111701092000F5698E /* GIMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIMainViewController.m; sourceTree = "<group>"; };
+		BFBF337117E7184700B99DDC /* GIGameOverCongratulationsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGameOverCongratulationsView.h; sourceTree = "<group>"; };
+		BFBF337217E7184700B99DDC /* GIGameOverCongratulationsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGameOverCongratulationsView.m; sourceTree = "<group>"; };
+		BFBF337717E7185C00B99DDC /* GIGameOverOtherGamesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGameOverOtherGamesView.h; sourceTree = "<group>"; };
+		BFBF337817E7185C00B99DDC /* GIGameOverOtherGamesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGameOverOtherGamesView.m; sourceTree = "<group>"; };
+		BFBF337A17E718C400B99DDC /* GIGameOverCreditsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGameOverCreditsView.h; sourceTree = "<group>"; };
+		BFBF337B17E718C400B99DDC /* GIGameOverCreditsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGameOverCreditsView.m; sourceTree = "<group>"; };
 		BFDE0171176CFFBC00E704CF /* UINavigationController+GuessIt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+GuessIt.h"; sourceTree = "<group>"; };
 		BFDE0172176CFFBC00E704CF /* UINavigationController+GuessIt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GuessIt.m"; sourceTree = "<group>"; };
 		BFE6170817B5029D001F1C89 /* MRAID.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MRAID.bundle; sourceTree = "<group>"; };
@@ -383,8 +392,7 @@
 		BF712587175D4238007F99EB /* Level */ = {
 			isa = PBXGroup;
 			children = (
-				BF62EB8F17D940C1000B6A2C /* GIGameOverView.h */,
-				BF62EB9017D940C1000B6A2C /* GIGameOverView.m */,
+				BFBF337017E7182F00B99DDC /* Game Over */,
 				BF712588175D4238007F99EB /* GILevelView.h */,
 				BF712589175D4238007F99EB /* GILevelView.m */,
 				BF71258A175D4238007F99EB /* GILevelViewDelegate.h */,
@@ -565,6 +573,21 @@
 			);
 			name = View;
 			path = view;
+			sourceTree = "<group>";
+		};
+		BFBF337017E7182F00B99DDC /* Game Over */ = {
+			isa = PBXGroup;
+			children = (
+				BF62EB8F17D940C1000B6A2C /* GIGameOverView.h */,
+				BF62EB9017D940C1000B6A2C /* GIGameOverView.m */,
+				BFBF337117E7184700B99DDC /* GIGameOverCongratulationsView.h */,
+				BFBF337217E7184700B99DDC /* GIGameOverCongratulationsView.m */,
+				BFBF337A17E718C400B99DDC /* GIGameOverCreditsView.h */,
+				BFBF337B17E718C400B99DDC /* GIGameOverCreditsView.m */,
+				BFBF337717E7185C00B99DDC /* GIGameOverOtherGamesView.h */,
+				BFBF337817E7185C00B99DDC /* GIGameOverOtherGamesView.m */,
+			);
+			name = "Game Over";
 			sourceTree = "<group>";
 		};
 		BFE6170517B5029D001F1C89 /* Vendor */ = {
@@ -761,6 +784,7 @@
 				BFBDD2121701092000F5698E /* GIMainViewController.m in Sources */,
 				BF1F29B01707347900A83FE3 /* GILevel.m in Sources */,
 				BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */,
+				BFBF337317E7184700B99DDC /* GIGameOverCongratulationsView.m in Sources */,
 				BF659F721795AE5700C99668 /* GIConfiguration.m in Sources */,
 				BF85FE3517CE0F6800AFDF70 /* GIIconButton.m in Sources */,
 				BF1C462317AFBCF20042D149 /* GIAdManager.m in Sources */,
@@ -785,6 +809,7 @@
 				BFB7CC93175B737B0055DBF0 /* GIGame.m in Sources */,
 				BFBAF9F1175B881400AA0AE1 /* GIGame+Factory.m in Sources */,
 				BFBAF9F4175B892500AA0AE1 /* GILevel+Factory.m in Sources */,
+				BFBF337C17E718C400B99DDC /* GIGameOverCreditsView.m in Sources */,
 				BF71257B175D40D2007F99EB /* GIAnswerView.m in Sources */,
 				BF7CD89517D24083008E23D5 /* NSString+Search.m in Sources */,
 				BF71257C175D40D2007F99EB /* GIKeypadView.m in Sources */,
@@ -797,6 +822,7 @@
 				BFBAF9F9175D773200AA0AE1 /* GIGlowButton.m in Sources */,
 				BF239B9217A1398300005FCA /* GISettingsViewController.m in Sources */,
 				BF56593B176E6D3800F5198A /* GIModalPanel.m in Sources */,
+				BFBF337917E7185C00B99DDC /* GIGameOverOtherGamesView.m in Sources */,
 				BF0EFE77176BC929007CD06F /* GIUserInterface+Factory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
