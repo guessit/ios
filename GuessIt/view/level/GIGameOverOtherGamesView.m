@@ -17,9 +17,13 @@
 
 @property (nonatomic, strong) GIUserInterfaceElement *ui;
 
+@property (nonatomic, strong) UILabel *likedGuessIt;
 @property (nonatomic, strong) UILabel *knowOtherGames;
 @property (nonatomic, strong) UILabel *visitOurWebsite;
 @property (nonatomic, strong) UILabel *website;
+
+@property (nonatomic, strong) UIImageView *backgroundImageView;
+@property (nonatomic, strong) UIImageView *guessItImageView;
 
 @property (nonatomic, strong) UITapGestureRecognizer *gestureRecognizer;
 
@@ -34,6 +38,20 @@
 
 - (GIUserInterfaceElement *)ui {
     return [GIConfiguration sharedInstance].game.interface.congratulations;
+}
+
+- (UILabel *)likedGuessIt {
+    if (!_likedGuessIt) {
+        _likedGuessIt = [UILabel label];
+        _likedGuessIt.text = NSLocalizedStringFromTable(@"liked_guessit", @"game_over", nil);
+        _likedGuessIt.backgroundColor = [UIColor clearColor];
+        _likedGuessIt.font = [UIFont guessItCongratulationTitleFont];
+        _likedGuessIt.textColor = self.ui.secondaryTextColor;
+        _likedGuessIt.shadowColor = self.ui.secondaryShadowColor;
+        _likedGuessIt.shadowOffset = CGSizeMake(0.f, -1.f);
+        [_likedGuessIt sizeToFit];
+    }
+    return _likedGuessIt;
 }
 
 - (UILabel *)knowOtherGames {
@@ -76,6 +94,22 @@
     return _website;
 }
 
+- (UIImageView *)backgroundImageView {
+    if (!_backgroundImageView) {
+        _backgroundImageView = [UIImageView imageViewWithImageNamed:@"background_soon"];
+        _backgroundImageView.contentMode = UIViewContentModeCenter;
+    }
+    return _backgroundImageView;
+}
+
+- (UIImageView *)guessItImageView {
+    if (!_guessItImageView) {
+        _guessItImageView = [UIImageView imageViewWithImageNamed:@"guessit_soon"];
+        _guessItImageView.contentMode = UIViewContentModeCenter;
+    }
+    return _guessItImageView;
+}
+
 - (UITapGestureRecognizer *)gestureRecognizer {
     if (!_gestureRecognizer) {
         _gestureRecognizer = [UITapGestureRecognizer gestureRecognizerWithTarget:self
@@ -97,12 +131,17 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
 
+    CGPoint center = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
+    self.backgroundImageView.center = center;
+    self.guessItImageView.center = center;
+
     CGFloat x = self.bounds.origin.x + (self.bounds.size.width / 2.f);
     CGFloat y = self.bounds.origin.y + (self.bounds.size.height / 2.f);
 
-    self.knowOtherGames.center = CGPointMake(x, y - 100.f);
-    self.visitOurWebsite.center = CGPointMake(x, y - 40.f);
-    self.website.center = CGPointMake(x, y + 50.f);
+    self.likedGuessIt.center = CGPointMake(x, y - 120.f);
+    self.knowOtherGames.center = CGPointMake(x, y - 70.f);
+    self.visitOurWebsite.center = CGPointMake(x, y + 150.f);
+    self.website.center = CGPointMake(x, y + 175.f);
 
     [self addGestureRecognizer:self.gestureRecognizer];
 }
@@ -110,6 +149,10 @@
 #pragma mark - Private Interface
 
 - (void)_initialize {
+    [self addSubview:self.backgroundImageView];
+    [self addSubview:self.guessItImageView];
+
+    [self addSubview:self.likedGuessIt];
     [self addSubview:self.knowOtherGames];
     [self addSubview:self.visitOurWebsite];
     [self addSubview:self.website];
