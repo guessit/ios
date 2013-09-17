@@ -91,6 +91,7 @@
 		BFFDB7D917E868B20038AF56 /* background_soon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFDB7D717E868B20038AF56 /* background_soon@2x.png */; };
 		BFFDB7DC17E868EC0038AF56 /* guessit_soon.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFDB7DA17E868EC0038AF56 /* guessit_soon.png */; };
 		BFFDB7DD17E868EC0038AF56 /* guessit_soon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFDB7DB17E868EC0038AF56 /* guessit_soon@2x.png */; };
+		BFFDB7E017E86C180038AF56 /* game_over.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFFDB7E217E86C180038AF56 /* game_over.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,6 +248,8 @@
 		BFFDB7D717E868B20038AF56 /* background_soon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_soon@2x.png"; sourceTree = "<group>"; };
 		BFFDB7DA17E868EC0038AF56 /* guessit_soon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guessit_soon.png; sourceTree = "<group>"; };
 		BFFDB7DB17E868EC0038AF56 /* guessit_soon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guessit_soon@2x.png"; sourceTree = "<group>"; };
+		BFFDB7E117E86C180038AF56 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/game_over.strings; sourceTree = "<group>"; };
+		BFFDB7E317E86C1C0038AF56 /* pt */ = {isa = PBXFileReference; lastKnownFileType = file; name = pt; path = pt.lproj/game_over.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -428,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				BF92630517A3E4C400C29A70 /* congratulations.strings */,
+				BFFDB7E217E86C180038AF56 /* game_over.strings */,
 				BF92631117A3E56600C29A70 /* general.strings */,
 				BF92630717A3E4C400C29A70 /* settings.strings */,
 				BF68D0E717BB18060006E331 /* social.strings */,
@@ -749,6 +753,7 @@
 				BF92632317A5537E00C29A70 /* icon_buy_dinner.png in Resources */,
 				BF565942176E721400F5198A /* Lobster.ttf in Resources */,
 				BF565941176E721400F5198A /* JotiOne-Regular.ttf in Resources */,
+				BFFDB7E017E86C180038AF56 /* game_over.strings in Resources */,
 				BF92630B17A3E4C400C29A70 /* congratulations.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -896,6 +901,15 @@
 				BF92631217A3E56700C29A70 /* pt */,
 			);
 			name = general.strings;
+			sourceTree = "<group>";
+		};
+		BFFDB7E217E86C180038AF56 /* game_over.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFFDB7E117E86C180038AF56 /* en */,
+				BFFDB7E317E86C1C0038AF56 /* pt */,
+			);
+			name = game_over.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

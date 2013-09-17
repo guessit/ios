@@ -73,6 +73,7 @@
         _visitOurWebsite = [UILabel label];
         _visitOurWebsite.text = NSLocalizedStringFromTable(@"visit_website", @"game_over", nil);
         _visitOurWebsite.backgroundColor = [UIColor clearColor];
+        _visitOurWebsite.font = [UIFont guessItCongratulationDescriptionFont];
         _visitOurWebsite.textColor = self.ui.secondaryTextColor;
         _visitOurWebsite.shadowColor = self.ui.secondaryShadowColor;
         _visitOurWebsite.shadowOffset = CGSizeMake(0.f, -1.f);
@@ -86,6 +87,7 @@
         _website = [UILabel label];
         _website.text = @"http://guessit.mobi";
         _website.backgroundColor = [UIColor clearColor];
+        _website.font = [UIFont guessItCongratulationDescriptionFont];
         _website.textColor = self.ui.secondaryTextColor;
         _website.shadowColor = self.ui.secondaryShadowColor;
         _website.shadowOffset = CGSizeMake(0.f, -1.f);
@@ -138,8 +140,8 @@
     CGFloat x = self.bounds.origin.x + (self.bounds.size.width / 2.f);
     CGFloat y = self.bounds.origin.y + (self.bounds.size.height / 2.f);
 
-    self.likedGuessIt.center = CGPointMake(x, y - 120.f);
-    self.knowOtherGames.center = CGPointMake(x, y - 70.f);
+    self.likedGuessIt.center = CGPointMake(x, y - 100.f);
+    self.knowOtherGames.center = CGPointMake(x, y + 70.f);
     self.visitOurWebsite.center = CGPointMake(x, y + 150.f);
     self.website.center = CGPointMake(x, y + 175.f);
 
