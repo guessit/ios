@@ -45,7 +45,6 @@
         _knowOtherGames.textColor = self.ui.secondaryTextColor;
         _knowOtherGames.shadowColor = self.ui.secondaryShadowColor;
         _knowOtherGames.shadowOffset = CGSizeMake(0.f, -1.f);
-        _knowOtherGames.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(-5.f));
         [_knowOtherGames sizeToFit];
     }
     return _knowOtherGames;

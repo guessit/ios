@@ -17,10 +17,6 @@
 #import "UIView+CBFrameHelpers.h"
 #import <QuartzCore/QuartzCore.h>
 
-#define GI_CONGRATULATIONS_SHARE_BUTTON_MARGIN 10.f
-#define GI_CONGRATULATIONS_SHARE_BUTTON_HEIGHT 45.f
-#define GI_CONGRATULATIONS_SHARE_BUTTON_CORNER_RADIUS 6.f
-
 @interface GICongratulationsView ()
 
 @property (nonatomic, strong, readonly) GIUserInterfaceElement *ui;
