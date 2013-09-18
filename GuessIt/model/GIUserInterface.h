@@ -28,5 +28,8 @@
 @property (nonatomic, strong) GIUserInterfaceElement *action;
 @property (nonatomic, strong) GIUserInterfaceElement *help;
 @property (nonatomic, strong) GIUserInterfaceElement *settings;
+@property (nonatomic, strong) GIUserInterfaceElement *gameOver;
+@property (nonatomic, strong) GIUserInterfaceElement *credits;
+@property (nonatomic, strong) GIUserInterfaceElement *otherGames;
 
 @end

@@ -32,7 +32,6 @@
                                                   NSLog(@"Error :%@", error);
                                               }];
 
-
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
 
     UINavigationController *nav = [UINavigationController navigationControllerWithNavigationBarClass:[GINavigationBar class]

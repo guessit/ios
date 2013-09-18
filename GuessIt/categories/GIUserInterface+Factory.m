@@ -15,22 +15,43 @@
 + (GIUserInterface *)userInterfaceWithDictionary:(NSDictionary *)dictionary {
     GIUserInterface *ui = [[GIUserInterface alloc] init];
 
-    ui.main = [GIUserInterfaceElement elementWithDictionary:dictionary[@"main"]];
-    ui.navigation = [GIUserInterfaceElement elementWithDictionary:dictionary[@"navigation"]];
-    ui.title = [GIUserInterfaceElement elementWithDictionary:dictionary[@"title"]];
-    ui.subtitle = [GIUserInterfaceElement elementWithDictionary:dictionary[@"subtitle"]];
-    ui.congratulations = [GIUserInterfaceElement elementWithDictionary:dictionary[@"congratulations"]];
-    ui.level = [GIUserInterfaceElement elementWithDictionary:dictionary[@"level"]];
-    ui.answer = [GIUserInterfaceElement elementWithDictionary:dictionary[@"answer"]];
-    ui.placeholder = [GIUserInterfaceElement elementWithDictionary:dictionary[@"placeholder"]];
-    ui.category = [GIUserInterfaceElement elementWithDictionary:dictionary[@"category"]];
-    ui.image = [GIUserInterfaceElement elementWithDictionary:dictionary[@"image"]];
-    ui.frame = [GIUserInterfaceElement elementWithDictionary:dictionary[@"frame"]];
-    ui.keypad = [GIUserInterfaceElement elementWithDictionary:dictionary[@"keypad"]];
-    ui.letter = [GIUserInterfaceElement elementWithDictionary:dictionary[@"letter"]];
-    ui.action = [GIUserInterfaceElement elementWithDictionary:dictionary[@"action"]];
-    ui.help = [GIUserInterfaceElement elementWithDictionary:dictionary[@"help"]];
-    ui.settings = [GIUserInterfaceElement elementWithDictionary:dictionary[@"settings"]];
+    NSArray *elements = @[
+        @"main",
+        @"navigation",
+        @"title",
+        @"subtitle",
+        @"congratulations",
+        @"level",
+        @"answer",
+        @"placeholder",
+        @"category",
+        @"image",
+        @"frame",
+        @"keypad",
+        @"letter",
+        @"action",
+        @"help",
+        @"settings",
+        @"game_over",
+        @"credits",
+        @"other_games"
+    ];
+
+    [elements enumerateObjectsUsingBlock:^(NSString *element, NSUInteger idx, BOOL *stop) {
+        __block NSMutableString *setter = [NSMutableString stringWithString:@"set"];
+        NSArray *components = [element componentsSeparatedByString:@"_"];
+        [components enumerateObjectsUsingBlock:^(NSString *component, NSUInteger idx, BOOL *stop) {
+            [setter appendString:[component capitalizedString]];
+        }];
+        [setter appendString:@":"];
+
+        GIUserInterfaceElement *uiElement = [GIUserInterfaceElement elementWithDictionary:dictionary[element]];
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        [ui performSelector:NSSelectorFromString(setter) withObject:uiElement];
+#pragma clang diagnostic pop
+    }];
 
     return ui;
 }
