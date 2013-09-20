@@ -67,7 +67,7 @@
 }
 
 + (UIFont *)guessItKnowOtherGamesLikedItFont {
-    return [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:35.f];
+    return [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:42.f];
 }
 
 + (UIFont *)guessItKnowOtherGamesTitleFont {
