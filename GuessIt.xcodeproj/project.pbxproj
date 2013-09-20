@@ -87,9 +87,7 @@
 		BFF9297317243EF900F230C6 /* UIFont+GuessItFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9297217243EF900F230C6 /* UIFont+GuessItFonts.m */; };
 		BFF92976172443AC00F230C6 /* GIShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF92975172443AC00F230C6 /* GIShineLabel.m */; };
 		BFF9E7391727F815003B4385 /* NSString+RandomString.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF9E7381727F815003B4385 /* NSString+RandomString.m */; };
-		BFFDB7D817E868B20038AF56 /* background_soon.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFDB7D617E868B20038AF56 /* background_soon.png */; };
 		BFFDB7D917E868B20038AF56 /* background_soon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFDB7D717E868B20038AF56 /* background_soon@2x.png */; };
-		BFFDB7DC17E868EC0038AF56 /* guessit_soon.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFDB7DA17E868EC0038AF56 /* guessit_soon.png */; };
 		BFFDB7DD17E868EC0038AF56 /* guessit_soon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFDB7DB17E868EC0038AF56 /* guessit_soon@2x.png */; };
 		BFFDB7E017E86C180038AF56 /* game_over.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFFDB7E217E86C180038AF56 /* game_over.strings */; };
 /* End PBXBuildFile section */
@@ -244,12 +242,10 @@
 		BFF92975172443AC00F230C6 /* GIShineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIShineLabel.m; sourceTree = "<group>"; };
 		BFF9E7371727F815003B4385 /* NSString+RandomString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RandomString.h"; sourceTree = "<group>"; };
 		BFF9E7381727F815003B4385 /* NSString+RandomString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RandomString.m"; sourceTree = "<group>"; };
-		BFFDB7D617E868B20038AF56 /* background_soon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_soon.png; sourceTree = "<group>"; };
 		BFFDB7D717E868B20038AF56 /* background_soon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_soon@2x.png"; sourceTree = "<group>"; };
-		BFFDB7DA17E868EC0038AF56 /* guessit_soon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guessit_soon.png; sourceTree = "<group>"; };
 		BFFDB7DB17E868EC0038AF56 /* guessit_soon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guessit_soon@2x.png"; sourceTree = "<group>"; };
-		BFFDB7E117E86C180038AF56 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/game_over.strings; sourceTree = "<group>"; };
-		BFFDB7E317E86C1C0038AF56 /* pt */ = {isa = PBXFileReference; lastKnownFileType = file; name = pt; path = pt.lproj/game_over.strings; sourceTree = "<group>"; };
+		BFFDB7E117E86C180038AF56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/game_over.strings; sourceTree = "<group>"; };
+		BFFDB7E317E86C1C0038AF56 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/game_over.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -636,9 +632,7 @@
 		BFF9290F17243E0300F230C6 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				BFFDB7D617E868B20038AF56 /* background_soon.png */,
 				BFFDB7D717E868B20038AF56 /* background_soon@2x.png */,
-				BFFDB7DA17E868EC0038AF56 /* guessit_soon.png */,
 				BFFDB7DB17E868EC0038AF56 /* guessit_soon@2x.png */,
 				BF92631917A5536600C29A70 /* icon_buy_coffee.png */,
 				BF92631A17A5536600C29A70 /* icon_buy_coffee@2x.png */,
@@ -731,7 +725,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFFDB7D817E868B20038AF56 /* background_soon.png in Resources */,
 				BFE898EB1796FA630081E646 /* main_background@2x.png in Resources */,
 				BFE6170A17B5029D001F1C89 /* MRAID.bundle in Resources */,
 				BF92632417A5537E00C29A70 /* icon_buy_dinner@2x.png in Resources */,
@@ -743,7 +736,6 @@
 				BF68D0E917BB18060006E331 /* social.strings in Resources */,
 				BF92631C17A5536600C29A70 /* icon_buy_coffee@2x.png in Resources */,
 				BF92632017A5537300C29A70 /* icon_buy_sandwich@2x.png in Resources */,
-				BFFDB7DC17E868EC0038AF56 /* guessit_soon.png in Resources */,
 				BF92632717A5538B00C29A70 /* icon_buy_gift.png in Resources */,
 				BF91795817244A8200B136E2 /* shine_mask@2x.png in Resources */,
 				BF92630F17A3E56600C29A70 /* general.strings in Resources */,

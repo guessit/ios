@@ -66,4 +66,20 @@
     return [UIFont fontWithName:@"AvenirNextCondensed-Bold" size:35.f];
 }
 
++ (UIFont *)guessItKnowOtherGamesLikedItFont {
+    return [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:35.f];
+}
+
++ (UIFont *)guessItKnowOtherGamesTitleFont {
+    return [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:26.f];
+}
+
++ (UIFont *)guessItKnowOtherGamesDescription {
+   return [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:17.f];
+}
+
++ (UIFont *)guessItKnowOtherGamesWebsiteFont {
+    return [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:22.f];
+}
+
 @end

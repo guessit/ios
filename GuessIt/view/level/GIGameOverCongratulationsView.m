@@ -8,13 +8,17 @@
 
 #import "GIGameOverCongratulationsView.h"
 
+#import "GIConfiguration.h"
 #import "GIDefinitions.h"
 #import "GIIconButton.h"
+#import "GIUserInterfaceElement.h"
 #import "MALazykit.h"
 #import "UIFont+GuessItFonts.h"
 #import "UIView+CBFrameHelpers.h"
 
 @interface GIGameOverCongratulationsView ()
+
+@property (nonatomic, strong, readonly) GIUserInterfaceElement *ui;
 
 @property (nonatomic, strong) UILabel *gameOverLabel;
 @property (nonatomic, strong) UILabel *congratulationsLabel;
@@ -32,6 +36,10 @@
 @implementation GIGameOverCongratulationsView
 
 #pragma mark - Getter
+
+- (GIUserInterfaceElement *)ui {
+    return [GIConfiguration sharedInstance].game.interface.gameOver;
+}
 
 - (UILabel *)gameOverLabel {
     if (!_gameOverLabel) {

@@ -37,7 +37,7 @@
 #pragma mark - Getter
 
 - (GIUserInterfaceElement *)ui {
-    return [GIConfiguration sharedInstance].game.interface.congratulations;
+    return [GIConfiguration sharedInstance].game.interface.otherGames;
 }
 
 - (UILabel *)likedGuessIt {
@@ -45,10 +45,11 @@
         _likedGuessIt = [UILabel label];
         _likedGuessIt.text = NSLocalizedStringFromTable(@"liked_guessit", @"game_over", nil);
         _likedGuessIt.backgroundColor = [UIColor clearColor];
-        _likedGuessIt.font = [UIFont guessItCongratulationTitleFont];
+        _likedGuessIt.font = [UIFont guessItKnowOtherGamesLikedItFont];
         _likedGuessIt.textColor = self.ui.secondaryTextColor;
         _likedGuessIt.shadowColor = self.ui.secondaryShadowColor;
         _likedGuessIt.shadowOffset = CGSizeMake(0.f, -1.f);
+        _likedGuessIt.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(-4.f));
         [_likedGuessIt sizeToFit];
     }
     return _likedGuessIt;
@@ -59,10 +60,11 @@
         _knowOtherGames = [UILabel label];
         _knowOtherGames.text = NSLocalizedStringFromTable(@"other_games", @"game_over", nil);
         _knowOtherGames.backgroundColor = [UIColor clearColor];
-        _knowOtherGames.font = [UIFont guessItCongratulationDescriptionFont];
-        _knowOtherGames.textColor = self.ui.secondaryTextColor;
-        _knowOtherGames.shadowColor = self.ui.secondaryShadowColor;
+        _knowOtherGames.font = [UIFont guessItKnowOtherGamesTitleFont];
+        _knowOtherGames.textColor = self.ui.textColor;
+        _knowOtherGames.shadowColor = self.ui.shadowColor;
         _knowOtherGames.shadowOffset = CGSizeMake(0.f, -1.f);
+        _knowOtherGames.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(-4.f));
         [_knowOtherGames sizeToFit];
     }
     return _knowOtherGames;
@@ -73,7 +75,7 @@
         _visitOurWebsite = [UILabel label];
         _visitOurWebsite.text = NSLocalizedStringFromTable(@"visit_website", @"game_over", nil);
         _visitOurWebsite.backgroundColor = [UIColor clearColor];
-        _visitOurWebsite.font = [UIFont guessItCongratulationDescriptionFont];
+        _visitOurWebsite.font = [UIFont guessItKnowOtherGamesDescription];
         _visitOurWebsite.textColor = self.ui.secondaryTextColor;
         _visitOurWebsite.shadowColor = self.ui.secondaryShadowColor;
         _visitOurWebsite.shadowOffset = CGSizeMake(0.f, -1.f);
@@ -87,9 +89,9 @@
         _website = [UILabel label];
         _website.text = @"http://guessit.mobi";
         _website.backgroundColor = [UIColor clearColor];
-        _website.font = [UIFont guessItCongratulationDescriptionFont];
-        _website.textColor = self.ui.secondaryTextColor;
-        _website.shadowColor = self.ui.secondaryShadowColor;
+        _website.font = [UIFont guessItKnowOtherGamesWebsiteFont];
+        _website.textColor = self.ui.textColor;
+        _website.shadowColor = self.ui.shadowColor;
         _website.shadowOffset = CGSizeMake(0.f, -1.f);
         [_website sizeToFit];
     }
@@ -108,6 +110,7 @@
     if (!_guessItImageView) {
         _guessItImageView = [UIImageView imageViewWithImageNamed:@"guessit_soon"];
         _guessItImageView.contentMode = UIViewContentModeCenter;
+        _guessItImageView.alpha = 0.25f;
     }
     return _guessItImageView;
 }
@@ -140,9 +143,9 @@
     CGFloat x = self.bounds.origin.x + (self.bounds.size.width / 2.f);
     CGFloat y = self.bounds.origin.y + (self.bounds.size.height / 2.f);
 
-    self.likedGuessIt.center = CGPointMake(x, y - 100.f);
-    self.knowOtherGames.center = CGPointMake(x, y + 70.f);
-    self.visitOurWebsite.center = CGPointMake(x, y + 150.f);
+    self.likedGuessIt.center = CGPointMake(x, y - 40.f);
+    self.knowOtherGames.center = CGPointMake(x, y + 30.f);
+    self.visitOurWebsite.center = CGPointMake(x, y + 155.f);
     self.website.center = CGPointMake(x, y + 175.f);
 
     [self addGestureRecognizer:self.gestureRecognizer];

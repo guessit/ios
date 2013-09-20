@@ -8,24 +8,21 @@
 
 #import "GIGameOverCreditsView.h"
 
+#import "GIConfiguration.h"
+#import "GIUserInterfaceElement.h"
+
+@interface GIGameOverCreditsView ()
+
+@property (nonatomic, strong, readonly) GIUserInterfaceElement *ui;
+
+@end
+
 @implementation GIGameOverCreditsView
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
+#pragma mark - Getter
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+- (GIUserInterfaceElement *)ui {
+    return [GIConfiguration sharedInstance].game.interface.credits;
 }
-*/
 
 @end
