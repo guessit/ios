@@ -28,4 +28,8 @@
     [self.removeLetter play];
 }
 
+- (void)playCatEasterEggSound {
+    [self.catEasterEgg play];
+}
+
 @end

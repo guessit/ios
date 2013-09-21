@@ -20,6 +20,7 @@
     sound.fail = [engine soundNamed:dictionary[@"fail"] error:NULL];
     sound.levelFinished = [engine soundNamed:dictionary[@"success"] error:NULL];
     sound.removeLetter = [engine soundNamed:dictionary[@"remove_letter"] error:NULL];
+    sound.catEasterEgg = [engine soundNamed:@"cat.wav" error:NULL];
 
     return sound;
 }

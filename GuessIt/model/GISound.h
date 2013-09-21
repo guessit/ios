@@ -16,10 +16,12 @@
 @property (nonatomic, strong) FISound *fail;
 @property (nonatomic, strong) FISound *levelFinished;
 @property (nonatomic, strong) FISound *removeLetter;
+@property (nonatomic, strong) FISound *catEasterEgg;
 
 - (void)playKeypadSound;
 - (void)playFailSound;
 - (void)playLevelFinishedSound;
 - (void)playRemoveLetterSound;
+- (void)playCatEasterEggSound;
 
 @end

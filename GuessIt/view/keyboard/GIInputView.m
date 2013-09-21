@@ -80,12 +80,6 @@
     return self;
 }
 
-#pragma mark - UIInputViewAudioFeedback Methods
-
-- (BOOL)enableInputClicksWhenVisible {
-    return YES;
-}
-
 #pragma mark - Public Interface
 
 - (BOOL)hasWrongLetterToBeRemoved {

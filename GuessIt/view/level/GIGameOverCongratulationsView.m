@@ -129,11 +129,10 @@
     CGPoint descriptionCenter = CGPointMake(self.center.x, congratulationsCenter.y + 36.f);
     self.descriptionLabel.center = descriptionCenter;
 
-
-    self.resetProgressLabel.y = self.height - self.resetProgressLabel.height - 3.f;
+    self.resetProgressLabel.y = self.height - self.resetProgressLabel.height - 5.f;
     self.resetProgressLabel.w = self.width;
 
-    CGFloat shareButtonY = self.resetProgressLabel.y - GI_CONGRATULATIONS_SHARE_BUTTON_HEIGHT;
+    CGFloat shareButtonY = self.resetProgressLabel.y - GI_CONGRATULATIONS_SHARE_BUTTON_HEIGHT - 2.f;
     CGFloat shareButtonWidth = floorf((self.width - (3 * GI_CONGRATULATIONS_SHARE_BUTTON_MARGIN)) / 2.f);
     CGFloat shareButtonHeight = GI_CONGRATULATIONS_SHARE_BUTTON_HEIGHT;
 

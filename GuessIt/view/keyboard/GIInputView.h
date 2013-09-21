@@ -11,7 +11,7 @@
 #import "GILevel.h"
 #import "GIInputViewDelegate.h"
 
-@interface GIInputView : UIView <UIInputViewAudioFeedback>
+@interface GIInputView : UIView
 
 @property (nonatomic, weak) id<GIInputViewDelegate> delegate;
 @property (nonatomic, strong) GILevel *currentLevel;

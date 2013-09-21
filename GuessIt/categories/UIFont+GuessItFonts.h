@@ -45,4 +45,9 @@
 + (UIFont *)guessItKnowOtherGamesDescription;
 + (UIFont *)guessItKnowOtherGamesWebsiteFont;
 
++ (UIFont *)guessItCreditsFont;
++ (UIFont *)guessItCreditsRoleFont;
++ (UIFont *)guessItCreditsPersonFont;
++ (UIFont *)guessItCreditsThankYouFont;
+
 @end

@@ -122,4 +122,20 @@
     return [self guessItBoldFontWithSize:22.f];
 }
 
++ (UIFont *)guessItCreditsFont {
+    return  [self guessItHeavyFontWithSize:40.f];
+}
+
++ (UIFont *)guessItCreditsRoleFont {
+    return [self guessItNormalFontWithSize:12.f];
+}
+
++ (UIFont *)guessItCreditsPersonFont {
+    return [self guessItDemiBoldFontWithSize:15.f];
+}
+
++ (UIFont *)guessItCreditsThankYouFont {
+    return [self guessItDemiBoldFontWithSize:20.f];
+}
+
 @end

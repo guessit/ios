@@ -236,8 +236,6 @@
         GILetterView *letterView = (GILetterView *)touch.view;
         self.zoomedInLetter = letterView;
 
-        [[UIDevice currentDevice] playInputClick];
-
         [self.zoomedInLetter zoomIn];
     }
 }
