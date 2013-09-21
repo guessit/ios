@@ -12,6 +12,7 @@
 #import "GIDefinitions.h"
 #import "GIIconButton.h"
 #import "GIUserInterfaceElement.h"
+#import "GIShineLabel.h"
 #import "MALazykit.h"
 #import "UIFont+GuessItFonts.h"
 #import "UIView+CBFrameHelpers.h"
@@ -20,8 +21,8 @@
 
 @property (nonatomic, strong, readonly) GIUserInterfaceElement *ui;
 
-@property (nonatomic, strong) UILabel *gameOverLabel;
-@property (nonatomic, strong) UILabel *congratulationsLabel;
+@property (nonatomic, strong) GIShineLabel *congratulationsLabel;
+@property (nonatomic, strong) UILabel *descriptionLabel;
 @property (nonatomic, strong) UILabel *resetProgressLabel;
 
 @property (nonatomic, strong) UIButton *facebookButton;
@@ -41,32 +42,35 @@
     return [GIConfiguration sharedInstance].game.interface.gameOver;
 }
 
-- (UILabel *)gameOverLabel {
-    if (!_gameOverLabel) {
-        _gameOverLabel = [UILabel label];
-        _gameOverLabel.text = NSLocalizedStringFromTable(@"game_over", @"game_over", nil);
-        _gameOverLabel.backgroundColor = [UIColor clearColor];
-        _gameOverLabel.font = [UIFont guessItGameOverFont];
-        _gameOverLabel.textColor = self.ui.secondaryTextColor;
-        _gameOverLabel.shadowColor = self.ui.secondaryShadowColor;
-        _gameOverLabel.shadowOffset = CGSizeMake(0.f, -1.f);
-        [_gameOverLabel sizeToFit];
-    }
-    return _gameOverLabel;
-}
-
-- (UILabel *)congratulationsLabel {
+- (GIShineLabel *)congratulationsLabel {
     if (!_congratulationsLabel) {
-        _congratulationsLabel = [UILabel label];
+        _congratulationsLabel = [GIShineLabel label];
         _congratulationsLabel.text = NSLocalizedStringFromTable(@"congratulations", @"game_over", nil);
         _congratulationsLabel.backgroundColor = [UIColor clearColor];
         _congratulationsLabel.font = [UIFont guessItGameOverCongratulationsFont];
         _congratulationsLabel.textColor = self.ui.textColor;
+        _congratulationsLabel.shineColor = self.ui.secondaryColor;
         _congratulationsLabel.shadowColor = self.ui.shadowColor;
         _congratulationsLabel.shadowOffset = CGSizeMake(0.f, -1.f);
+        _congratulationsLabel.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(-5.f));
         [_congratulationsLabel sizeToFit];
     }
     return _congratulationsLabel;
+}
+
+- (UILabel *)descriptionLabel {
+    if (!_descriptionLabel) {
+        _descriptionLabel = [UILabel label];
+        _descriptionLabel.text = NSLocalizedStringFromTable(@"description", @"game_over", nil);
+        _descriptionLabel.backgroundColor = [UIColor clearColor];
+        _descriptionLabel.font = [UIFont guessItGameOverDescriptionFont];
+        _descriptionLabel.textColor = self.ui.secondaryTextColor;
+        _descriptionLabel.shadowColor = self.ui.secondaryShadowColor;
+        _descriptionLabel.shadowOffset = CGSizeMake(0.f, -1.f);
+        _descriptionLabel.transform = self.congratulationsLabel.transform;
+        [_descriptionLabel sizeToFit];
+    }
+    return _descriptionLabel;
 }
 
 - (UILabel *)resetProgressLabel {
@@ -75,9 +79,9 @@
         _resetProgressLabel.text = NSLocalizedStringFromTable(@"reset_progress", @"game_over", nil);
         _resetProgressLabel.backgroundColor = [UIColor clearColor];
         _resetProgressLabel.textAlignment = NSTextAlignmentCenter;
-        // font
-        // textColor
-        // shadowColor
+        _resetProgressLabel.font = [UIFont guessItGameOverResetProgressFont];
+        _resetProgressLabel.textColor = self.ui.secondaryTextColor;
+        _resetProgressLabel.shadowColor = self.ui.secondaryShadowColor;
         _resetProgressLabel.shadowOffset = CGSizeMake(0.f, -1.f);
         [_resetProgressLabel sizeToFit];
     }
@@ -119,16 +123,17 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
 
-    CGPoint gameOverCenter = CGPointMake(self.center.x, self.center.y - 30.f);
-    self.gameOverLabel.center = gameOverCenter;
-
-    CGPoint congratulationsCenter = CGPointMake(self.center.x, self.center.y);
+    CGPoint congratulationsCenter = CGPointMake(self.center.x, self.center.y - 60.f);
     self.congratulationsLabel.center = congratulationsCenter;
 
-    self.resetProgressLabel.y = self.height - self.resetProgressLabel.height - 10.f;
+    CGPoint descriptionCenter = CGPointMake(self.center.x, congratulationsCenter.y + 36.f);
+    self.descriptionLabel.center = descriptionCenter;
+
+
+    self.resetProgressLabel.y = self.height - self.resetProgressLabel.height - 3.f;
     self.resetProgressLabel.w = self.width;
 
-    CGFloat shareButtonY = self.resetProgressLabel.y - GI_CONGRATULATIONS_SHARE_BUTTON_MARGIN - GI_CONGRATULATIONS_SHARE_BUTTON_HEIGHT;
+    CGFloat shareButtonY = self.resetProgressLabel.y - GI_CONGRATULATIONS_SHARE_BUTTON_HEIGHT;
     CGFloat shareButtonWidth = floorf((self.width - (3 * GI_CONGRATULATIONS_SHARE_BUTTON_MARGIN)) / 2.f);
     CGFloat shareButtonHeight = GI_CONGRATULATIONS_SHARE_BUTTON_HEIGHT;
 
@@ -142,11 +147,15 @@
 #pragma mark - Private Methods
 
 - (void)_initialize {
-    [self addSubview:self.gameOverLabel];
+    self.backgroundColor = self.ui.backgroundColor;
+
+    [self addSubview:self.descriptionLabel];
     [self addSubview:self.congratulationsLabel];
     [self addSubview:self.resetProgressLabel];
     [self addSubview:self.facebookButton];
     [self addSubview:self.twitterButton];
+
+    [self.congratulationsLabel shine];
 }
 
 - (void)_facebookTouched:(id)sender {

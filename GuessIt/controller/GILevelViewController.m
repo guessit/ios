@@ -108,8 +108,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view = self.levelView;
-//    self.view = self.gameOverView;
+//    self.view = self.levelView;
+    self.view = self.gameOverView;
 
     self.navigationItem.rightBarButtonItem = self.rightButtonItem;
 }

@@ -94,16 +94,20 @@
     return [self guessItBoldFontWithSize:35.f];
 }
 
-+ (UIFont *)guessItGameOverFont {
-    return [self guessItDemiBoldFontWithSize:30.f];
-}
-
 + (UIFont *)guessItGameOverCongratulationsFont {
     return [self lobsterWithSize:40.f];
 }
 
++ (UIFont *)guessItGameOverDescriptionFont {
+    return [self guessItBoldFontWithSize:18.f];
+}
+
++ (UIFont *)guessItGameOverResetProgressFont {
+    return [self guessItDemiBoldFontWithSize:17.f];
+}
+
 + (UIFont *)guessItKnowOtherGamesLikedItFont {
-    return [self guessItHeavyFontWithSize:42.f];
+    return [self guessItHeavyFontWithSize:40.f];
 }
 
 + (UIFont *)guessItKnowOtherGamesTitleFont {

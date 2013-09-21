@@ -36,8 +36,9 @@
 + (UIFont *)guessItCongratulationAnswerDescriptionFont;
 + (UIFont *)guessItCongratulationAnswerFont;
 
-+ (UIFont *)guessItGameOverFont;
 + (UIFont *)guessItGameOverCongratulationsFont;
++ (UIFont *)guessItGameOverDescriptionFont;
++ (UIFont *)guessItGameOverResetProgressFont;
 
 + (UIFont *)guessItKnowOtherGamesLikedItFont;
 + (UIFont *)guessItKnowOtherGamesTitleFont;

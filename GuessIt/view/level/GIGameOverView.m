@@ -30,10 +30,9 @@
 
 - (GIGameOverCongratulationsView *)congratulationsView {
     if (!_congratulationsView) {
-        CGRect frame = CGRectMake(0.f, 0.f, self.width, 400.f);
+        CGRect frame = CGRectMake(0.f, 0.f, self.width, 300.f);
         _congratulationsView = [GIGameOverCongratulationsView viewWithFrame:frame];
         _congratulationsView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        _congratulationsView.backgroundColor = [UIColor yellowColor];
     }
     return _congratulationsView;
 }
@@ -43,7 +42,6 @@
         CGRect frame = CGRectMake(0.f, self.congratulationsView.maxY, self.width, 400.f);
         _creditsView = [GIGameOverCreditsView viewWithFrame:frame];
         _creditsView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        _creditsView.backgroundColor = [UIColor redColor];
     }
     return _creditsView;
 }
@@ -53,7 +51,6 @@
         CGRect frame = CGRectMake(0.f, self.creditsView.maxY, self.width, 400.f);
         _otherGamesView = [GIGameOverOtherGamesView viewWithFrame:frame];
         _otherGamesView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        _otherGamesView.backgroundColor = [UIColor brownColor];
     }
     return _otherGamesView;
 }
@@ -75,7 +72,10 @@
 #pragma mark - Private Interface
 
 - (void)_initialize {
-    self.contentSize = CGSizeMake(self.width, 1200.f);
+    CGFloat height = (self.congratulationsView.height +
+                      self.creditsView.height +
+                      self.otherGamesView.height);
+    self.contentSize = CGSizeMake(self.width, height);
 
     [self addSubview:self.congratulationsView];
     [self addSubview:self.creditsView];
