@@ -21,6 +21,7 @@
 
 @property (nonatomic, strong, readonly) GIUserInterfaceElement *ui;
 
+@property (nonatomic, strong) UILabel *gameOverLabel;
 @property (nonatomic, strong) GIShineLabel *congratulationsLabel;
 @property (nonatomic, strong) UILabel *descriptionLabel;
 @property (nonatomic, strong) UILabel *resetProgressLabel;
@@ -40,6 +41,19 @@
 
 - (GIUserInterfaceElement *)ui {
     return [GIConfiguration sharedInstance].game.interface.gameOver;
+}
+
+- (UILabel *)gameOverLabel {
+    if (!_gameOverLabel) {
+        _gameOverLabel = [UILabel label];
+        _gameOverLabel.text = [NSLocalizedStringFromTable(@"game_over", @"game_over", nil) uppercaseString];
+        _gameOverLabel.backgroundColor = [UIColor clearColor];
+        _gameOverLabel.font = [UIFont guessItGameOverFont];
+        _gameOverLabel.textColor = self.ui.secondaryTextColor;
+        _gameOverLabel.alpha = 0.03f;
+        [_gameOverLabel sizeToFit];
+    }
+    return _gameOverLabel;
 }
 
 - (GIShineLabel *)congratulationsLabel {
@@ -123,7 +137,10 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
 
-    CGPoint congratulationsCenter = CGPointMake(self.center.x, self.center.y - 60.f);
+    CGPoint gameOverCenter = CGPointMake(self.center.x, self.center.y - 105.f);
+    self.gameOverLabel.center = gameOverCenter;
+
+    CGPoint congratulationsCenter = CGPointMake(self.center.x, self.center.y - 35.f);
     self.congratulationsLabel.center = congratulationsCenter;
 
     CGPoint descriptionCenter = CGPointMake(self.center.x, congratulationsCenter.y + 36.f);
@@ -148,6 +165,7 @@
 - (void)_initialize {
     self.backgroundColor = self.ui.backgroundColor;
 
+    [self addSubview:self.gameOverLabel];
     [self addSubview:self.descriptionLabel];
     [self addSubview:self.congratulationsLabel];
     [self addSubview:self.resetProgressLabel];

@@ -5,6 +5,7 @@
   Created by Marlon Andrade on 17/09/13.
   Copyright (c) 2013 Marlon Andrade. All rights reserved.
 */
+"game_over"="Game Over";
 "congratulations"="Congratulations!";
 "description"="You've finished it!";
 "reset_progress"="Visit settings to restart the game";

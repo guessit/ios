@@ -39,6 +39,7 @@
 @property (nonatomic, assign) BOOL showAdOnNextLevel;
 
 - (void)_adjustViewForCurrentLevel;
+- (void)_showGameOverView;
 - (void)_rightButtonTouched:(id)sender;
 - (void)_shareWithServiceType:(NSString *)service
                       message:(NSString *)message
@@ -110,8 +111,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    self.view = self.levelView;
-    self.view = self.gameOverView;
+    if ([GIConfiguration sharedInstance].hasMoreLevels) {
+        self.view = self.levelView;
+    } else {
+        self.view = self.gameOverView;
+    }
 
     self.navigationItem.rightBarButtonItem = self.rightButtonItem;
 }
@@ -120,6 +124,20 @@
 
 - (void)_adjustViewForCurrentLevel {
     self.levelView.currentLevel = [GIConfiguration sharedInstance].currentLevel;
+}
+
+- (void)_showGameOverView {
+    CGAffineTransform shrinkTransform = CGAffineTransformMakeScale(0.001f, 0.001f);
+
+    self.gameOverView.transform = shrinkTransform;
+    [UIView animateWithDuration:0.2f animations:^{
+        self.levelView.transform = shrinkTransform;
+    } completion:^(BOOL finished) {
+        self.view = self.gameOverView;
+        [UIView animateWithDuration:0.2f animations:^{
+            self.gameOverView.transform = CGAffineTransformIdentity;
+        }];
+    }];
 }
 
 - (void)_rightButtonTouched:(id)sender {
@@ -281,14 +299,16 @@
     NSInteger levelsToShowAd = conf.game.levels.count / 10.f;
     NSInteger levelsPlusHelps = conf.numberOfLevelsPresented + conf.numberOfHelpRequested;
 
-    BOOL hasMoreLevels = conf.currentLevel && conf.currentLevel != conf.lastLevel;
-
-    if (conf.showAds && levelsPlusHelps >= levelsToShowAd && hasMoreLevels) {
+    if (conf.showAds && levelsPlusHelps >= levelsToShowAd && conf.hasMoreLevels) {
         [[GIAdManager sharedInstance] presentAdFromViewController:self];
         [conf resetAfterShowingAd];
     }
 
-    [self _adjustViewForCurrentLevel];
+    if (conf.currentLevel) {
+        [self _adjustViewForCurrentLevel];
+    } else {
+        [self _showGameOverView];
+    }
 }
 
 @end

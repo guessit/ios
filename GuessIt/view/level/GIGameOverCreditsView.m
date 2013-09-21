@@ -127,9 +127,9 @@
         UILabel *roleLabel = self.roleLabels[i];
         UILabel *personLabel = self.personLabels[i];
 
-        CGFloat y = 85 + (16 * i);
+        CGFloat y = 78.f + (17.f * i);
 
-        roleLabel.frame = CGRectMake(0.f, y + 2.f, 142.f, roleLabel.height);
+        roleLabel.frame = CGRectMake(0.f, y + 3.f, 142.f, roleLabel.height);
         personLabel.frame = CGRectMake(145.f, y, self.width - 145.f, personLabel.height);
     }
 }

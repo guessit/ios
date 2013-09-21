@@ -81,6 +81,10 @@
     return [self _integerForKey:GI_SHOW_ADS] != 42;
 }
 
+- (BOOL)hasMoreLevels {
+    return self.currentLevel && self.currentLevel != self.lastLevel;
+}
+
 #pragma mark - Setter
 
 - (void)setCurrentLevel:(GILevel *)currentLevel {

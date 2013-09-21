@@ -94,6 +94,10 @@
     return [self guessItBoldFontWithSize:35.f];
 }
 
++ (UIFont *)guessItGameOverFont {
+    return [self guessItHeavyFontWithSize:48.f];
+}
+
 + (UIFont *)guessItGameOverCongratulationsFont {
     return [self lobsterWithSize:40.f];
 }

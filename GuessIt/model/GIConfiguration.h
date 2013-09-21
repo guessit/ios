@@ -22,6 +22,8 @@
 
 @property (nonatomic, assign) BOOL showAds;
 
+@property (nonatomic, assign, readonly) BOOL hasMoreLevels;
+
 + (instancetype)sharedInstance;
 
 - (GILevel *)loadNextLevel;
