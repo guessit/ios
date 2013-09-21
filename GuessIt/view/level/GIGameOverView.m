@@ -32,6 +32,7 @@
     if (!_congratulationsView) {
         CGRect frame = CGRectMake(0.f, 0.f, self.width, 350.f);
         _congratulationsView = [GIGameOverCongratulationsView viewWithFrame:frame];
+        _congratulationsView.gameOverDelegate = self;
         _congratulationsView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     }
     return _congratulationsView;
