@@ -63,7 +63,6 @@
         _placeCorrectLetterButton.frame = CGRectMake(x, y, width, height);
         _placeCorrectLetterButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
-        [_placeCorrectLetterButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_placeCorrectLetterButton setTitleColor:GI_DISABLED_TEXT_COLOR forState:UIControlStateDisabled];
 
         [_placeCorrectLetterButton setTitle:@"Place correct letter" forState:UIControlStateNormal];
@@ -90,7 +89,6 @@
         _eliminateWrongLetterButton.frame = CGRectMake(x, y, width, height);
         _eliminateWrongLetterButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
-        [_eliminateWrongLetterButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_eliminateWrongLetterButton setTitleColor:GI_DISABLED_TEXT_COLOR forState:UIControlStateDisabled];
 
         [_eliminateWrongLetterButton setTitle:@"Eliminate wrong letter" forState:UIControlStateNormal];
@@ -117,7 +115,6 @@
         _skipLevelButton.frame = CGRectMake(x, y, width, height);
         _skipLevelButton.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 
-        [_skipLevelButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_skipLevelButton setTitleColor:GI_DISABLED_TEXT_COLOR forState:UIControlStateDisabled];
 
         [_skipLevelButton setTitle:@"Skip level" forState:UIControlStateNormal];

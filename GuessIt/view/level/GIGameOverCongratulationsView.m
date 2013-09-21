@@ -46,9 +46,9 @@
         _gameOverLabel = [UILabel label];
         _gameOverLabel.text = NSLocalizedStringFromTable(@"game_over", @"game_over", nil);
         _gameOverLabel.backgroundColor = [UIColor clearColor];
-        // font
-        // textColor
-        // shadowColor
+        _gameOverLabel.font = [UIFont guessItGameOverFont];
+        _gameOverLabel.textColor = self.ui.secondaryTextColor;
+        _gameOverLabel.shadowColor = self.ui.secondaryShadowColor;
         _gameOverLabel.shadowOffset = CGSizeMake(0.f, -1.f);
         [_gameOverLabel sizeToFit];
     }
@@ -60,9 +60,9 @@
         _congratulationsLabel = [UILabel label];
         _congratulationsLabel.text = NSLocalizedStringFromTable(@"congratulations", @"game_over", nil);
         _congratulationsLabel.backgroundColor = [UIColor clearColor];
-        // font
-        // textColor
-        // shadowColor
+        _congratulationsLabel.font = [UIFont guessItGameOverCongratulationsFont];
+        _congratulationsLabel.textColor = self.ui.textColor;
+        _congratulationsLabel.shadowColor = self.ui.shadowColor;
         _congratulationsLabel.shadowOffset = CGSizeMake(0.f, -1.f);
         [_congratulationsLabel sizeToFit];
     }

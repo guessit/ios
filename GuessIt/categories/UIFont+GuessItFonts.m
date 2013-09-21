@@ -10,12 +10,36 @@
 
 @implementation UIFont (GuessItFonts)
 
++ (UIFont *)lobsterWithSize:(CGFloat)size {
+    return [UIFont fontWithName:@"Lobster" size:size];
+}
+
++ (UIFont *)questionMarkWithSize:(CGFloat)size {
+    return [UIFont fontWithName:@"JotiOne-Regular" size:size];
+}
+
++ (UIFont *)guessItNormalFontWithSize:(CGFloat)size {
+    return [UIFont fontWithName:@"AvenirNextCondensed-Medium" size:size];
+}
+
++ (UIFont *)guessItDemiBoldFontWithSize:(CGFloat)size {
+    return [UIFont fontWithName:@"AvenirNextCondensed-DemiBold" size:size];
+}
+
++ (UIFont *)guessItBoldFontWithSize:(CGFloat)size {
+    return [UIFont fontWithName:@"AvenirNextCondensed-Bold" size:size];
+}
+
++ (UIFont *)guessItHeavyFontWithSize:(CGFloat)size {
+    return [UIFont fontWithName:@"AvenirNextCondensed-Heavy" size:size];
+}
+
 + (UIFont *)guessItTitleFont {
-    return [UIFont fontWithName:@"Lobster" size:70.f];
+    return [self lobsterWithSize:70.f];
 }
 
 + (UIFont *)guessItNavigationTitleFont {
-    return [UIFont fontWithName:@"Lobster" size:26.f];
+    return [self lobsterWithSize:26.f];
 }
 
 + (UIFont *)guessItBackButtonFont {
@@ -23,63 +47,75 @@
 }
 
 + (UIFont *)guessItBarButtonFont {
-    return [UIFont fontWithName:@"JotiOne-Regular" size:24.f];
+    return [self questionMarkWithSize:24.f];
 }
 
 + (UIFont *)guessItKeypadLetterFont {
-    return [UIFont fontWithName:@"AvenirNextCondensed-Medium" size:18.f];
+    return [self guessItNormalFontWithSize:18.f];
 }
 
 + (UIFont *)guessItActionFont {
-    return [UIFont fontWithName:@"JotiOne-Regular" size:55.f];
+    return [self questionMarkWithSize:55.f];
 }
 
 + (UIFont *)guessItTapToPlayFont {
-    return [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:20.f];
+    return [self guessItBoldFontWithSize:20.f];
 }
 
 + (UIFont *)guessItCategoryFont {
-    return [UIFont fontWithName:@"AvenirNextCondensed-Bold" size:15.f];
+    return [self guessItDemiBoldFontWithSize:15.f];
+}
+
++ (UIFont *)guessItIconButtonFont {
+    return [self guessItBoldFontWithSize:19.f];
 }
 
 + (UIFont *)guessItSettingsTitleFont {
-    return [UIFont fontWithName:@"AvenirNextCondensed-Medium" size:18.f];
+    return [self guessItNormalFontWithSize:18.f];
 }
 
 + (UIFont *)guessItSettingsTextFont {
-    return [UIFont fontWithName:@"AvenirNextCondensed-Bold" size:16.f];
+    return [self guessItDemiBoldFontWithSize:16.f];
 }
 
 + (UIFont *)guessItCongratulationTitleFont {
-    return [UIFont fontWithName:@"Lobster" size:40.f];
+    return [self lobsterWithSize:40.f];
 }
 
 + (UIFont *)guessItCongratulationDescriptionFont {
-    return [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:18.f];
+    return [self guessItBoldFontWithSize:18.f];
 }
 
 + (UIFont *)guessItCongratulationAnswerDescriptionFont {
-    return [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:15.f];
+    return [self guessItBoldFontWithSize:15.f];
 }
 
 + (UIFont *)guessItCongratulationAnswerFont {
-    return [UIFont fontWithName:@"AvenirNextCondensed-Bold" size:35.f];
+    return [self guessItBoldFontWithSize:35.f];
+}
+
++ (UIFont *)guessItGameOverFont {
+    return [self guessItDemiBoldFontWithSize:30.f];
+}
+
++ (UIFont *)guessItGameOverCongratulationsFont {
+    return [self lobsterWithSize:40.f];
 }
 
 + (UIFont *)guessItKnowOtherGamesLikedItFont {
-    return [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:42.f];
+    return [self guessItHeavyFontWithSize:42.f];
 }
 
 + (UIFont *)guessItKnowOtherGamesTitleFont {
-    return [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:26.f];
+    return [self guessItBoldFontWithSize:26.f];
 }
 
 + (UIFont *)guessItKnowOtherGamesDescription {
-   return [UIFont fontWithName:@"HelveticaNeue-CondensedBold" size:17.f];
+    return [self guessItDemiBoldFontWithSize:17.f];
 }
 
 + (UIFont *)guessItKnowOtherGamesWebsiteFont {
-    return [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:22.f];
+    return [self guessItBoldFontWithSize:22.f];
 }
 
 @end

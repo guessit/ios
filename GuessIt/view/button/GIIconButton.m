@@ -11,6 +11,7 @@
 #import "MALazykit.h"
 #import "UIView+CBFrameHelpers.h"
 #import "UIFont+FontAwesome.h"
+#import "UIFont+GuessItFonts.h"
 
 @interface GIIconButton ()
 
@@ -57,6 +58,11 @@
 + (instancetype)buttonWithIcon:(FAIcon)icon {
     GIIconButton *button = [GIIconButton buttonWithType:UIButtonTypeCustom];
     button.icon = icon;
+    button.titleLabel.font = [UIFont guessItIconButtonFont];
+    [button setTitleColor:[UIColor colorWithWhite:1.f alpha:0.9f] forState:UIControlStateNormal];
+    [button setTitleShadowColor:[UIColor colorWithWhite:0.f alpha:0.2f] forState:UIControlStateNormal];
+    button.titleLabel.shadowOffset = CGSizeMake(0.f, -1.f);
+    button.titleEdgeInsets = UIEdgeInsetsMake(2.f, 0.f, 0.f, 0.f);
     return button;
 }
 

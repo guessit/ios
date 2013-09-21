@@ -10,6 +10,13 @@
 
 @interface UIFont (GuessItFonts)
 
++ (UIFont *)lobsterWithSize:(CGFloat)size;
++ (UIFont *)questionMarkWithSize:(CGFloat)size;
++ (UIFont *)guessItNormalFontWithSize:(CGFloat)size;
++ (UIFont *)guessItDemiBoldFontWithSize:(CGFloat)size;
++ (UIFont *)guessItBoldFontWithSize:(CGFloat)size;
++ (UIFont *)guessItHeavyFontWithSize:(CGFloat)size;
+
 + (UIFont *)guessItTitleFont;
 + (UIFont *)guessItNavigationTitleFont;
 + (UIFont *)guessItBackButtonFont;
@@ -19,6 +26,8 @@
 + (UIFont *)guessItTapToPlayFont;
 + (UIFont *)guessItCategoryFont;
 
++ (UIFont *)guessItIconButtonFont;
+
 + (UIFont *)guessItSettingsTitleFont;
 + (UIFont *)guessItSettingsTextFont;
 
@@ -26,6 +35,9 @@
 + (UIFont *)guessItCongratulationDescriptionFont;
 + (UIFont *)guessItCongratulationAnswerDescriptionFont;
 + (UIFont *)guessItCongratulationAnswerFont;
+
++ (UIFont *)guessItGameOverFont;
++ (UIFont *)guessItGameOverCongratulationsFont;
 
 + (UIFont *)guessItKnowOtherGamesLikedItFont;
 + (UIFont *)guessItKnowOtherGamesTitleFont;
