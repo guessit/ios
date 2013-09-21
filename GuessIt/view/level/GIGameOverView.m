@@ -82,4 +82,14 @@
     [self addSubview:self.creditsView];
 }
 
+#pragma mark - GIGameOverViewDelegate Methods
+
+- (void)gameOverViewDidRequestToPostOnFacebook:(GIGameOverView *)gameOverView {
+    [self.gameOverDelegate gameOverViewDidRequestToPostOnFacebook:self];
+}
+
+- (void)gameOverViewDidRequestToPostOnTwitter:(GIGameOverView *)gameOverView {
+    [self.gameOverDelegate gameOverViewDidRequestToPostOnTwitter:self];
+}
+
 @end

@@ -15,6 +15,7 @@
 #import "GIDefinitions.h"
 #import "GIGame.h"
 #import "GIGameOverView.h"
+#import "GIGameOverViewDelegate.h"
 #import "GIHelpView.h"
 #import "GILevel.h"
 #import "GILevelView.h"
@@ -29,7 +30,7 @@
 #import "UIViewController+MASimplestSemiModal.h"
 #import <Social/Social.h>
 
-@interface GILevelViewController() <GISettingsDelegate, GIHelpViewDelegate, GICongratulationsViewDelegate, GILevelViewDelegate, UAModalPanelDelegate>
+@interface GILevelViewController() <GISettingsDelegate, GIHelpViewDelegate, GICongratulationsViewDelegate, GILevelViewDelegate, GIGameOverViewDelegate, UAModalPanelDelegate>
 
 @property (nonatomic, strong) GILevelView *levelView;
 @property (nonatomic, strong) GIGameOverView *gameOverView;
@@ -60,6 +61,7 @@
 - (GIGameOverView *)gameOverView {
     if (!_gameOverView) {
         _gameOverView = [GIGameOverView view];
+        _gameOverView.gameOverDelegate = self;
     }
     return _gameOverView;
 }
@@ -215,6 +217,20 @@
 - (void)congratulationsViewDidRequestToPostOnTwitter:(GICongratulationsView *)congratulationsView {
     [self _shareWithServiceType:SLServiceTypeTwitter
                         message:NSLocalizedStringFromTable(@"twitter_challenge", @"social", nil)
+                          alert:NSLocalizedStringFromTable(@"twitter_unavailable", @"social", nil)];
+}
+
+#pragma mark - GIGameOverViewDelegate Methods
+
+- (void)gameOverViewDidRequestToPostOnFacebook:(GIGameOverView *)gameOverView {
+    [self _shareWithServiceType:SLServiceTypeFacebook
+                        message:NSLocalizedStringFromTable(@"facebook_game_over", @"social", nil)
+                          alert:NSLocalizedStringFromTable(@"facebook_unavailable", @"social", nil)];
+}
+
+- (void)gameOverViewDidRequestToPostOnTwitter:(GIGameOverView *)gameOverView {
+    [self _shareWithServiceType:SLServiceTypeTwitter
+                        message:NSLocalizedStringFromTable(@"twitter_game_over", @"social", nil)
                           alert:NSLocalizedStringFromTable(@"twitter_unavailable", @"social", nil)];
 }
 

@@ -7,7 +7,9 @@
 */
 "twitter_help"="Can you help me guess it? GuessIt! #help_me #guessit @guessit_mobi";
 "twitter_challenge"="I've just guessed that item! Guess more with me! #guessit @guessit_mobi";
+"twitter_game_over"="Just finished playing this GuessIt! Let's play too! #guessit @guessit_mobi";
 "twitter_unavailable"="Sorry, tweeting is not available right now.\nMake sure you are connected to the internet and you have a Twitter account setted up!";
 "facebook_help"="Can you help me GuessIt? I don't know the answer, maybe you can help me! #guessit @guessit.mobi";
 "facebook_challenge"="I've just guessed that item! Guess more levels with me playing GuessIt! #guessit @guessit.mobi";
+"facebook_game_over"="Just finished playing this GuessIt! Let's play too! #guessit @guessit.mobi";
 "facebook_unavailable"="Sorry, posting to facebook is not available right now.\nMake sure you are connected to the internet and you have a Facebook account setted up!";

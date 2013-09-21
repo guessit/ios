@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "GIGameOverViewDelegate.h"
+
 @interface GIGameOverCongratulationsView : UIView
+
+@property (nonatomic, weak) id<GIGameOverViewDelegate> gameOverDelegate;
 
 @end

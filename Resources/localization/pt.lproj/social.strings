@@ -7,7 +7,9 @@
 */
 "twitter_help"="Pode me ajudar a adivinhar? GuessIt! #help_me #guessit @guessit_mobi";
 "twitter_challenge"="Acabei de adivinhar essa fase! Adivinhe mais comigo! #guessit @guessit_mobi";
+"twitter_game_over"="Acabei de terminar esse GuessIt! Jogue também! #guessit @guessit_mobi";
 "twitter_unavailable"="Desculpe, mas tweetar não está disponível no momento.\nVerifique se você está conectado na internet e possui uma conta do Twitter configurada!";
 "facebook_help"="Pode me ajudar a adivinhar? Não sei a resposta, talvez você pode me ajudar! #guessit @guessit.mobi";
 "facebook_challenge"="Acabei de adivinhar essa fase! Adivinhe também jogando GuessIt! #guessit @guessit.mobi";
+"facebook_game_over"="Acabei de terminar esse GuessIt! Jogue também! #guessit @guessit.mobi";
 "facebook_unavailable"="Desculpe, mas postar no facebook não está disponível no momento.\nVerifique se você está conectado na internet e possui uma conta do Facebook configurada!";

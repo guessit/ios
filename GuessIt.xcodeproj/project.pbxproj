@@ -133,6 +133,7 @@
 		BF239B9017A1398300005FCA /* GISettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GISettingsViewController.h; sourceTree = "<group>"; };
 		BF239B9117A1398300005FCA /* GISettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GISettingsViewController.m; sourceTree = "<group>"; };
 		BF291E8B174ECA320066D5EF /* GIDefinitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIDefinitions.m; sourceTree = "<group>"; };
+		BF2BFEA317EDE8DD00B734AB /* GIGameOverViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIGameOverViewDelegate.h; sourceTree = "<group>"; };
 		BF3DDBA0176D070A0055A388 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF3DDBA2176D07230055A388 /* _GIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _GIAppDelegate.h; sourceTree = "<group>"; };
 		BF3DDBA3176D07230055A388 /* _GIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _GIAppDelegate.m; sourceTree = "<group>"; };
@@ -588,6 +589,7 @@
 			children = (
 				BF62EB8F17D940C1000B6A2C /* GIGameOverView.h */,
 				BF62EB9017D940C1000B6A2C /* GIGameOverView.m */,
+				BF2BFEA317EDE8DD00B734AB /* GIGameOverViewDelegate.h */,
 				BFBF337117E7184700B99DDC /* GIGameOverCongratulationsView.h */,
 				BFBF337217E7184700B99DDC /* GIGameOverCongratulationsView.m */,
 				BFBF337A17E718C400B99DDC /* GIGameOverCreditsView.h */,

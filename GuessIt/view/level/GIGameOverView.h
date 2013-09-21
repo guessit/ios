@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GIGameOverView : UIScrollView
+#import "GIGameOverViewDelegate.h"
+
+@interface GIGameOverView : UIScrollView <GIGameOverViewDelegate>
+
+@property (nonatomic, weak) id<GIGameOverViewDelegate> gameOverDelegate;
 
 @end

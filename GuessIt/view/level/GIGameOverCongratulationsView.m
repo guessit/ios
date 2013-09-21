@@ -158,11 +158,11 @@
 }
 
 - (void)_facebookTouched:(id)sender {
-    #warning TODO: share on facebook
+    [self.gameOverDelegate gameOverViewDidRequestToPostOnFacebook:nil];
 }
 
 - (void)_twitterTouched:(id)sender {
-    #warning TODO: share on twitter
+    [self.gameOverDelegate gameOverViewDidRequestToPostOnTwitter:nil];
 }
 
 @end
