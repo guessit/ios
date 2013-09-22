@@ -49,7 +49,7 @@
 
 - (GIGameOverCreditsView *)creditsView {
     if (!_creditsView) {
-        CGRect frame = CGRectMake(0.f, self.otherGamesView.maxY, self.width, 400.f);
+        CGRect frame = CGRectMake(0.f, self.otherGamesView.maxY, self.width, 430.f);
         _creditsView = [GIGameOverCreditsView viewWithFrame:frame];
         _creditsView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     }

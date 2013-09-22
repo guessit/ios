@@ -57,6 +57,8 @@
                                 ],
             @"4_beta_tester" : @[
                                   @"rosiene",
+                                  @"maurilio",
+                                  @"david",
                                   @"tadeu",
                                   @"fabim",
                                   @"marcella",
@@ -127,7 +129,7 @@
         UILabel *roleLabel = self.roleLabels[i];
         UILabel *personLabel = self.personLabels[i];
 
-        CGFloat y = 78.f + (17.f * i);
+        CGFloat y = 75.f + (17.f * i);
 
         roleLabel.frame = CGRectMake(0.f, y + 3.f, 142.f, roleLabel.height);
         personLabel.frame = CGRectMake(145.f, y, self.width - 145.f, personLabel.height);
