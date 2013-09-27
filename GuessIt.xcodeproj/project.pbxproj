@@ -68,6 +68,7 @@
 		BF92633017A553A400C29A70 /* icon_buy_clothes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF92632E17A553A400C29A70 /* icon_buy_clothes@2x.png */; };
 		BFA68C4817F50E6600A44CE6 /* GISettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA68C4717F50E6600A44CE6 /* GISettingsCell.m */; };
 		BFA68C4B17F50F8A00A44CE6 /* GISettingsBuyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA68C4A17F50F8A00A44CE6 /* GISettingsBuyCell.m */; };
+		BFA68C4E17F51D9500A44CE6 /* help.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFA68C5017F51D9500A44CE6 /* help.strings */; };
 		BFAD126716F136A100F6D429 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126616F136A100F6D429 /* UIKit.framework */; };
 		BFAD126916F136A100F6D429 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126816F136A100F6D429 /* Foundation.framework */; };
 		BFAD126B16F136A100F6D429 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAD126A16F136A100F6D429 /* CoreGraphics.framework */; };
@@ -211,6 +212,8 @@
 		BFA68C4717F50E6600A44CE6 /* GISettingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GISettingsCell.m; sourceTree = "<group>"; };
 		BFA68C4917F50F8A00A44CE6 /* GISettingsBuyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GISettingsBuyCell.h; sourceTree = "<group>"; };
 		BFA68C4A17F50F8A00A44CE6 /* GISettingsBuyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GISettingsBuyCell.m; sourceTree = "<group>"; };
+		BFA68C4F17F51D9500A44CE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/help.strings; sourceTree = "<group>"; };
+		BFA68C5117F51D9800A44CE6 /* pt */ = {isa = PBXFileReference; lastKnownFileType = file; name = pt; path = pt.lproj/help.strings; sourceTree = "<group>"; };
 		BFAD126316F136A100F6D429 /* GuessIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAD126616F136A100F6D429 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BFAD126816F136A100F6D429 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -438,6 +441,7 @@
 				BF92631117A3E56600C29A70 /* general.strings */,
 				BF92630717A3E4C400C29A70 /* settings.strings */,
 				BF68D0E717BB18060006E331 /* social.strings */,
+				BFA68C5017F51D9500A44CE6 /* help.strings */,
 			);
 			path = localization;
 			sourceTree = "<group>";
@@ -750,6 +754,7 @@
 				BFE6170A17B5029D001F1C89 /* MRAID.bundle in Resources */,
 				BF92632417A5537E00C29A70 /* icon_buy_dinner@2x.png in Resources */,
 				BF92630C17A3E4C400C29A70 /* settings.strings in Resources */,
+				BFA68C4E17F51D9500A44CE6 /* help.strings in Resources */,
 				BFFDB7DD17E868EC0038AF56 /* guessit_soon@2x.png in Resources */,
 				BF92633017A553A400C29A70 /* icon_buy_clothes@2x.png in Resources */,
 				BFFDB7D917E868B20038AF56 /* background_soon@2x.png in Resources */,
@@ -916,6 +921,15 @@
 				BF92631217A3E56700C29A70 /* pt */,
 			);
 			name = general.strings;
+			sourceTree = "<group>";
+		};
+		BFA68C5017F51D9500A44CE6 /* help.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFA68C4F17F51D9500A44CE6 /* en */,
+				BFA68C5117F51D9800A44CE6 /* pt */,
+			);
+			name = help.strings;
 			sourceTree = "<group>";
 		};
 		BFFDB7E217E86C180038AF56 /* game_over.strings */ = {

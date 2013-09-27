@@ -65,7 +65,8 @@
 
         [_placeCorrectLetterButton setTitleColor:GI_DISABLED_TEXT_COLOR forState:UIControlStateDisabled];
 
-        [_placeCorrectLetterButton setTitle:@"Place correct letter" forState:UIControlStateNormal];
+        NSString *title = NSLocalizedStringFromTable(@"place_correct_letter", @"help", nil);
+        [_placeCorrectLetterButton setTitle:title forState:UIControlStateNormal];
         [_placeCorrectLetterButton addTarget:self
                                      action:@selector(_placeCorrectLetterTouched:)
                            forControlEvents:UIControlEventTouchUpInside];
@@ -91,7 +92,8 @@
 
         [_eliminateWrongLetterButton setTitleColor:GI_DISABLED_TEXT_COLOR forState:UIControlStateDisabled];
 
-        [_eliminateWrongLetterButton setTitle:@"Eliminate wrong letter" forState:UIControlStateNormal];
+        NSString *title = NSLocalizedStringFromTable(@"eliminate_wrong_letter", @"help", nil);
+        [_eliminateWrongLetterButton setTitle:title forState:UIControlStateNormal];
         [_eliminateWrongLetterButton addTarget:self
                                         action:@selector(_eliminateWrongLetterTouched:)
                               forControlEvents:UIControlEventTouchUpInside];
@@ -117,7 +119,8 @@
 
         [_skipLevelButton setTitleColor:GI_DISABLED_TEXT_COLOR forState:UIControlStateDisabled];
 
-        [_skipLevelButton setTitle:@"Skip level" forState:UIControlStateNormal];
+        NSString *title = NSLocalizedStringFromTable(@"skip_level", @"help", nil);
+        [_skipLevelButton setTitle:title forState:UIControlStateNormal];
         [_skipLevelButton addTarget:self
                              action:@selector(_skipLevelTouched:)
                    forControlEvents:UIControlEventTouchUpInside];
