@@ -22,6 +22,7 @@
 
 - (void)_initialize;
 - (void)_loadGameFromJson;
+- (void)_observePaymentQueue;
 - (NSInteger)_integerForKey:(NSString *)key;
 - (void)_setInteger:(NSInteger)integer forKey:(NSString *)key;
 
@@ -185,7 +186,10 @@
     __weak typeof(self)weakSelf = self;
     [[CargoBay sharedManager] productsWithIdentifiers:identifiers success:^(NSArray *products, NSArray *invalidIdentifiers) {
         __strong __typeof(GIConfiguration*) strongSelf = weakSelf;
-        strongSelf.products = products;
+        NSArray *productsSortedByPrice = [products sortedArrayUsingComparator:^NSComparisonResult(SKProduct *obj1, SKProduct *obj2) {
+            return [obj1.price compare:obj2.price];
+        }];
+        strongSelf.products = productsSortedByPrice;
         [[NSNotificationCenter defaultCenter] postNotificationName:GIProductsDidFinishLoadingNotification
                                                             object:nil];
     } failure:NULL];
@@ -196,6 +200,7 @@
 - (void)_initialize {
     [self _loadGameFromJson];
     [self loadInAppPurchasesProducts];
+    [self _observePaymentQueue];
 
     self.showAds = YES;
 }
@@ -219,6 +224,13 @@
     if (json) {
         self.game = [GIGame gameWithDictionary:json];
     }
+}
+
+- (void)_observePaymentQueue {
+    [[CargoBay sharedManager] setPaymentQueueUpdatedTransactionsBlock:^(SKPaymentQueue *queue, NSArray *transactions) {
+        NSLog(@"Updated transactions: %@", transactions);
+    }];
+    [[SKPaymentQueue defaultQueue] addTransactionObserver:[CargoBay sharedManager]];
 }
 
 - (NSInteger)_integerForKey:(NSString *)key {

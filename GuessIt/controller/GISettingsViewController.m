@@ -10,6 +10,8 @@
 
 #import "GIDefinitions.h"
 #import "GIConfiguration.h"
+#import "GISettingsCell.h"
+#import "GISettingsBuyCell.h"
 #import "MALazykit.h"
 #import <StoreKit/StoreKit.h>
 #import "UIColor+SSToolkitAdditions.h"
@@ -39,10 +41,11 @@ typedef enum {
 @interface GISettingsViewController () <UIAlertViewDelegate>
 
 @property (nonatomic, strong, readonly) GIUserInterface *ui;
+@property (nonatomic, strong, readonly) NSNumberFormatter *priceFormatter;
 
 @property (nonatomic, strong) NSArray *mainOptionsDescription;
-@property (nonatomic, strong) NSArray *buyDeveloper;
 
+@property (nonatomic, strong) NSArray *buyDeveloper;
 @property (nonatomic, strong) NSArray *buyDeveloperImage;
 
 @property (nonatomic, strong) UIAlertView *resetAlert;
@@ -55,10 +58,21 @@ typedef enum {
 
 @implementation GISettingsViewController
 
+@synthesize priceFormatter = _priceFormatter;
+
 #pragma mark - Getter
 
 - (GIUserInterface *)ui {
     return [GIConfiguration sharedInstance].game.interface;
+}
+
+- (NSNumberFormatter *)priceFormatter {
+    if (!_priceFormatter) {
+        _priceFormatter = [[NSNumberFormatter alloc] init];
+        _priceFormatter.formatterBehavior = NSNumberFormatterBehavior10_4;
+        _priceFormatter.numberStyle = NSNumberFormatterCurrencyStyle;
+    }
+    return _priceFormatter;
 }
 
 - (NSArray *)mainOptionsDescription {
@@ -199,28 +213,37 @@ typedef enum {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
 
     if (!cell) {
-        cell = [UITableViewCell cellWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        cell.backgroundColor = self.ui.settings.secondaryBackgroundColor;
-        cell.textLabel.font = [UIFont guessItSettingsTextFont];
-        cell.textLabel.textColor = self.ui.settings.secondaryTextColor;
-        cell.textLabel.shadowColor = self.ui.settings.secondaryShadowColor;
-        cell.textLabel.shadowOffset = CGSizeMake(0.f, -1.f);
-        cell.textLabel.numberOfLines = 2.f;
+        switch (indexPath.section) {
+            case GISettingsSectionsMainOptions:
+                cell = [GISettingsCell cellWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+                break;
+            case GISettingsSectionsBuyDeveloper:
+                cell = [GISettingsBuyCell cellWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+                break;
+        }
     }
 
     NSString *key = nil;
     UIImage *image = nil;
+    SKProduct *product = nil;
+
     switch (indexPath.section) {
         case GISettingsSectionsMainOptions:
             key = self.mainOptionsDescription[indexPath.row];
+            cell.textLabel.text = NSLocalizedStringFromTable(key, @"settings", nil);
             break;
         case GISettingsSectionsBuyDeveloper:
-            key = self.buyDeveloper[indexPath.row];
+            product = [GIConfiguration sharedInstance].products[indexPath.row];
+            self.priceFormatter.locale = product.priceLocale;
+
+            cell.textLabel.text = product.localizedDescription;
             image = self.buyDeveloperImage[indexPath.row];
+
+            GISettingsBuyCell *buyCell = (GISettingsBuyCell *)cell;
+            buyCell.priceLabel.text = [self.priceFormatter stringFromNumber:product.price];
             break;
     }
 
-    cell.textLabel.text = NSLocalizedStringFromTable(key, @"settings", nil);
     cell.imageView.image = image;
 
     return cell;
