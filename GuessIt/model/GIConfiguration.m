@@ -12,6 +12,7 @@
 #import "GIGame.h"
 #import "GIGame+Factory.h"
 #import "GILevel.h"
+#import "CargoBay.h"
 #import <SSToolkit/SSCategories.h>
 
 @interface GIConfiguration ()
@@ -20,6 +21,7 @@
 @property (nonatomic, strong, readonly) NSString *currentLevelName;
 
 - (void)_initialize;
+- (void)_loadGameFromJson;
 - (NSInteger)_integerForKey:(NSString *)key;
 - (void)_setInteger:(NSInteger)integer forKey:(NSString *)key;
 
@@ -172,9 +174,33 @@
     self.numberOfHelpRequested = 0;
 }
 
+- (void)loadInAppPurchasesProducts {
+    NSString *bundleId = [NSBundle mainBundle].bundleIdentifier.lowercaseString;
+    NSMutableSet *identifiers = [NSMutableSet set];
+    for (NSString *product in GI_IAP) {
+        NSString *productId = [NSString stringWithFormat:@"%@.%@", bundleId, product];
+        [identifiers addObject:productId];
+    }
+
+    __weak typeof(self)weakSelf = self;
+    [[CargoBay sharedManager] productsWithIdentifiers:identifiers success:^(NSArray *products, NSArray *invalidIdentifiers) {
+        __strong __typeof(GIConfiguration*) strongSelf = weakSelf;
+        strongSelf.products = products;
+        [[NSNotificationCenter defaultCenter] postNotificationName:GIProductsDidFinishLoadingNotification
+                                                            object:nil];
+    } failure:NULL];
+}
+
 #pragma mark - Private Interface
 
 - (void)_initialize {
+    [self _loadGameFromJson];
+    [self loadInAppPurchasesProducts];
+
+    self.showAds = YES;
+}
+
+- (void)_loadGameFromJson {
     NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"game" ofType:@"json"];
     NSInputStream *jsonFileStream = [NSInputStream inputStreamWithFileAtPath:jsonPath];
     [jsonFileStream open];
@@ -193,8 +219,6 @@
     if (json) {
         self.game = [GIGame gameWithDictionary:json];
     }
-
-    self.showAds = YES;
 }
 
 - (NSInteger)_integerForKey:(NSString *)key {

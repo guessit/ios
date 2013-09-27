@@ -8,8 +8,10 @@
 
 #import "GISettingsViewController.h"
 
+#import "GIDefinitions.h"
 #import "GIConfiguration.h"
 #import "MALazykit.h"
+#import <StoreKit/StoreKit.h>
 #import "UIColor+SSToolkitAdditions.h"
 #import "UIFont+GuessItFonts.h"
 #import "UIView+CBFrameHelpers.h"
@@ -45,6 +47,7 @@ typedef enum {
 
 @property (nonatomic, strong) UIAlertView *resetAlert;
 
+- (void)_productsDidFinishLoading:(NSNotification *)notification;
 - (void)_cancelTouched:(id)sender;
 - (void)_resetProgress;
 
@@ -127,7 +130,27 @@ typedef enum {
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem buttonWithCustomView:cancelButton];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(_productsDidFinishLoading:)
+                                                 name:GIProductsDidFinishLoadingNotification
+                                               object:nil];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+    [super viewDidDisappear:animated];
+}
+
 #pragma mark - Private Interface
+
+- (void)_productsDidFinishLoading:(NSNotification *)notification {
+    [self.tableView reloadData];
+}
 
 - (void)_cancelTouched:(id)sender {
     [self.settingsDelegate didCancelSettingsViewController:self];
@@ -142,7 +165,17 @@ typedef enum {
 #pragma mark - UITableViewDataSource Methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return GI_SETTINGS_NUM_SECTIONS;
+    NSInteger noSections = 1;
+
+    if ([SKPaymentQueue canMakePayments]) {
+        if ([GIConfiguration sharedInstance].products.count > 0) {
+            noSections = GI_SETTINGS_NUM_SECTIONS;
+        } else {
+            [[GIConfiguration sharedInstance] loadInAppPurchasesProducts];
+        }
+    }
+
+    return noSections;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

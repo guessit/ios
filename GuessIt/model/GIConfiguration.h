@@ -17,6 +17,8 @@
 @property (nonatomic, strong) GILevel *currentLevel;
 @property (nonatomic, strong) GILevel *lastLevel;
 
+@property (nonatomic, strong) NSArray *products;
+
 @property (nonatomic, assign) NSInteger numberOfLevelsPresented;
 @property (nonatomic, assign) NSInteger numberOfHelpRequested;
 
@@ -30,5 +32,7 @@
 - (void)resetProgress;
 - (NSArray *)finishedLevelsName;
 - (void)resetAfterShowingAd;
+
+- (void)loadInAppPurchasesProducts;
 
 @end

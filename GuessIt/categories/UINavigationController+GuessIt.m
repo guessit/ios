@@ -11,27 +11,11 @@
 #import "GIDefinitions.h"
 #import "GIMainViewController.h"
 #import "GINavigationBar.h"
-#import "CargoBay.h"
 #import "MALazykit.h"
 
 @implementation UINavigationController (GuessIt)
 
 + (instancetype)guessItGame {
-    NSString *bundleId = [NSBundle mainBundle].bundleIdentifier.lowercaseString;
-    NSMutableSet *identifiers = [NSMutableSet set];
-    for (NSString *product in GI_IAP) {
-        NSString *productId = [NSString stringWithFormat:@"%@.%@", bundleId, product];
-        [identifiers addObject:productId];
-    }
-
-    [[CargoBay sharedManager] productsWithIdentifiers:identifiers
-                                              success:^(NSArray *products, NSArray *invalidIdentifiers) {
-                                                  NSLog(@"Products: %@", products);
-                                                  NSLog(@"Invalid: %@", invalidIdentifiers);
-                                              } failure:^(NSError *error) {
-                                                  NSLog(@"Error :%@", error);
-                                              }];
-
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
 
     UINavigationController *nav = [UINavigationController navigationControllerWithNavigationBarClass:[GINavigationBar class]

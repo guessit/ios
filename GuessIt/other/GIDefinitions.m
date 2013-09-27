@@ -9,3 +9,4 @@
 #import "GIDefinitions.h"
 
 NSString * const GICurrentLevelDidChangeNotification = @"GICurrentLevelDidChangeNotification";
+NSString * const GIProductsDidFinishLoadingNotification = @"GIProductsDidFinishLoadingNotification";
