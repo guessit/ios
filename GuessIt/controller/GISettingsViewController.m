@@ -8,6 +8,7 @@
 
 #import "GISettingsViewController.h"
 
+#import "CargoBay.h"
 #import "GIDefinitions.h"
 #import "GIConfiguration.h"
 #import "GISettingsCell.h"
@@ -295,6 +296,8 @@ typedef enum {
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    SKProduct *product = nil;
+
     switch (indexPath.section) {
         case GISettingsSectionsMainOptions:
             switch (indexPath.row) {
@@ -304,24 +307,13 @@ typedef enum {
             }
             break;
         case GISettingsSectionsBuyDeveloper:
-            switch (indexPath.row) {
-                case GISettingsBuyDeveloperRowsCoffee:
-                    #warning TODO: buy coffee
-                    break;
-                case GISettingsBuyDeveloperRowsSandwich:
-                    #warning TODO: buy sandwich
-                    break;
-                case GISettingsBuyDeveloperRowsDinner:
-                    #warning TODO: buy dinner
-                    break;
-                case GISettingsBuyDeveloperRowsClothes:
-                    #warning TODO: buy clothes
-                    break;
-                case GISettingsBuyDeveloperRowsGift:
-                    #warning TODO: buy gift
-                    break;
-            }
+            product = [GIConfiguration sharedInstance].products[indexPath.row];
             break;
+    }
+
+    if (product) {
+        SKPayment *payment = [SKPayment paymentWithProduct:product];
+        [[SKPaymentQueue defaultQueue] addPayment:payment];
     }
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
