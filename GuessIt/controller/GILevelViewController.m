@@ -111,7 +111,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    if ([GIConfiguration sharedInstance].hasMoreLevels) {
+    if ([GIConfiguration sharedInstance].currentLevel) {
         self.view = self.levelView;
     } else {
         self.view = self.gameOverView;
