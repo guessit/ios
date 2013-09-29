@@ -27,6 +27,7 @@
 - (NSSet *)productsIds {
     if (!_productsIds) {
         NSString *bundleId = [NSBundle mainBundle].bundleIdentifier.lowercaseString;
+        bundleId = [bundleId stringByReplacingOccurrencesOfString:@"-" withString:@"_"];
         NSMutableSet *identifiers = [NSMutableSet set];
         for (NSString *product in GI_IAP) {
             NSString *productId = [NSString stringWithFormat:@"%@.%@", bundleId, product];

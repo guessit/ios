@@ -162,7 +162,8 @@
 }
 
 - (void)addLetterViewOnCorrectPlace:(GILetterView *)letterView {
-    NSRange range = [self.correctAnswer rangeOfString:letterView.letter];
+    NSString *sanitizedAnswer = [self.correctAnswer stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSRange range = [sanitizedAnswer rangeOfString:letterView.letter];
     while (range.location != NSNotFound) {
         GIPlaceholderView *placeholderView = self.placeholderViews[range.location];
         if (placeholderView.canDisplayLetterView) {
@@ -171,9 +172,9 @@
         }
 
         range.location += 1;
-        range.length = self.correctAnswer.length - range.location;
+        range.length = sanitizedAnswer.length - range.location;
 
-        range = [self.correctAnswer rangeOfString:letterView.letter options:0 range:range];
+        range = [sanitizedAnswer rangeOfString:letterView.letter options:0 range:range];
     }
 }
 
