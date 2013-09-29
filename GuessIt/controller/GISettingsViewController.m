@@ -300,6 +300,16 @@ typedef enum {
     return 40.f;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    CGFloat height = 0.f;
+
+    if (section == GISettingsSectionsBuyDeveloper) {
+        height = 55.f;
+    }
+
+    return height;
+}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UILabel *label = [UILabel label];
     label.font = [UIFont guessItSettingsTitleFont];
@@ -311,6 +321,26 @@ typedef enum {
 
     NSString *title = [self tableView:tableView titleForHeaderInSection:section];
     label.text = title;
+
+    return label;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    UILabel *label = nil;
+
+    if (section == GISettingsSectionsBuyDeveloper) {
+        label = [UILabel label];
+        UIFont *headerFont = [UIFont guessItSettingsTitleFont];
+        label.font = [headerFont fontWithSize:headerFont.pointSize - 5.f];
+        label.backgroundColor = self.ui.settings.backgroundColor;
+        label.textColor = self.ui.settings.textColor;
+        label.shadowColor = self.ui.settings.shadowColor;
+        label.shadowOffset = CGSizeMake(0.f, -1.f);
+        label.textAlignment = NSTextAlignmentCenter;
+        label.numberOfLines = 2.f;
+
+        label.text = NSLocalizedStringFromTable(@"remove_ads", @"settings", nil);
+    }
 
     return label;
 }
