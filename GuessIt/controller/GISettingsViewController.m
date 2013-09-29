@@ -8,16 +8,18 @@
 
 #import "GISettingsViewController.h"
 
-#import "CargoBay.h"
 #import "GIDefinitions.h"
 #import "GIConfiguration.h"
+#import "GIIAPManager.h"
 #import "GISettingsCell.h"
 #import "GISettingsBuyCell.h"
 #import "MALazykit.h"
-#import <StoreKit/StoreKit.h>
+#import "SVProgressHUD.h"
 #import "UIColor+SSToolkitAdditions.h"
 #import "UIFont+GuessItFonts.h"
 #import "UIView+CBFrameHelpers.h"
+
+#import <StoreKit/StoreKit.h>
 
 typedef enum {
     GISettingsSectionsMainOptions = 0,
@@ -29,15 +31,6 @@ typedef enum {
     GISettingsMainOptionsRowsReset = 0,
     GI_SETTINGS_MAIN_OPTIONS_NUM_ROWS
 } GISettingsMainOptionsRows;
-
-typedef enum {
-    GISettingsBuyDeveloperRowsCoffee = 0,
-    GISettingsBuyDeveloperRowsSandwich,
-    GISettingsBuyDeveloperRowsDinner,
-    GISettingsBuyDeveloperRowsClothes,
-    GISettingsBuyDeveloperRowsGift,
-    GI_SETTINGS_BUY_DEVELOPER_NUM_ROWS
-} GISettingsBuyDeveloperRows;
 
 @interface GISettingsViewController () <UIAlertViewDelegate>
 
@@ -52,6 +45,9 @@ typedef enum {
 @property (nonatomic, strong) UIAlertView *resetAlert;
 
 - (void)_productsDidFinishLoading:(NSNotification *)notification;
+- (void)_productPurchased:(NSNotification *)notification;
+- (void)_productPurchaseFailed:(NSNotification *)notification;
+- (void)_deselectTableViewSelectedRow;
 - (void)_cancelTouched:(id)sender;
 - (void)_resetProgress;
 
@@ -153,6 +149,14 @@ typedef enum {
                                              selector:@selector(_productsDidFinishLoading:)
                                                  name:GIProductsDidFinishLoadingNotification
                                                object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(_productPurchased:)
+                                                 name:GIIAPManagerProductPurchasedNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(_productPurchaseFailed:)
+                                                 name:GIIAPManagerProductPurchaseFailedNotification
+                                               object:nil];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -165,6 +169,22 @@ typedef enum {
 
 - (void)_productsDidFinishLoading:(NSNotification *)notification {
     [self.tableView reloadData];
+}
+
+- (void)_productPurchased:(NSNotification *)notification {
+    [self _deselectTableViewSelectedRow];
+    [SVProgressHUD showSuccessWithStatus:NSLocalizedStringFromTable(@"thank_you", @"settings", nil)];
+}
+
+- (void)_productPurchaseFailed:(NSNotification *)notification {
+    [self _deselectTableViewSelectedRow];
+    [SVProgressHUD showErrorWithStatus:@"=("];
+}
+
+- (void)_deselectTableViewSelectedRow {
+    if (self.tableView.indexPathForSelectedRow) {
+        [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+    }
 }
 
 - (void)_cancelTouched:(id)sender {
@@ -201,7 +221,7 @@ typedef enum {
             noRows = GI_SETTINGS_MAIN_OPTIONS_NUM_ROWS;
             break;
         case GISettingsSectionsBuyDeveloper:
-            noRows = GI_SETTINGS_BUY_DEVELOPER_NUM_ROWS;
+            noRows = [GIConfiguration sharedInstance].products.count;
             break;
     }
 
@@ -312,11 +332,11 @@ typedef enum {
     }
 
     if (product) {
-        SKPayment *payment = [SKPayment paymentWithProduct:product];
-        [[SKPaymentQueue defaultQueue] addPayment:payment];
+        [[GIIAPManager sharedInstance] purchaseProduct:product];
+        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
+    } else {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
-
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - UIAlertViewDelegate Methods

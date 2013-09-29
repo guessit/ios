@@ -15,6 +15,7 @@
 		BF0EFE77176BC929007CD06F /* GIUserInterface+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0EFE76176BC929007CD06F /* GIUserInterface+Factory.m */; };
 		BF1835D5172C3D1D00E2CB5F /* GINavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */; };
 		BF1835EB172DC49D00E2CB5F /* UIImage+FromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1835EA172DC49D00E2CB5F /* UIImage+FromColor.m */; };
+		BF1B484E17F852F1006A3DBC /* GIIAPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1B484D17F852F1006A3DBC /* GIIAPManager.m */; };
 		BF1C462317AFBCF20042D149 /* GIAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1C462217AFBCF20042D149 /* GIAdManager.m */; };
 		BF1F29B01707347900A83FE3 /* GILevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29AF1707347800A83FE3 /* GILevel.m */; };
 		BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B21707617700A83FE3 /* GIViewController.m */; };
@@ -118,6 +119,8 @@
 		BF1835D4172C3D1D00E2CB5F /* GINavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GINavigationBar.m; sourceTree = "<group>"; };
 		BF1835E9172DC49D00E2CB5F /* UIImage+FromColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FromColor.h"; sourceTree = "<group>"; };
 		BF1835EA172DC49D00E2CB5F /* UIImage+FromColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FromColor.m"; sourceTree = "<group>"; };
+		BF1B484C17F852F1006A3DBC /* GIIAPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIIAPManager.h; sourceTree = "<group>"; };
+		BF1B484D17F852F1006A3DBC /* GIIAPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIIAPManager.m; sourceTree = "<group>"; };
 		BF1C462117AFBCF20042D149 /* GIAdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIAdManager.h; sourceTree = "<group>"; };
 		BF1C462217AFBCF20042D149 /* GIAdManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIAdManager.m; sourceTree = "<group>"; };
 		BF1F29AE1707347800A83FE3 /* GILevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevel.h; sourceTree = "<group>"; };
@@ -212,8 +215,8 @@
 		BFA68C4717F50E6600A44CE6 /* GISettingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GISettingsCell.m; sourceTree = "<group>"; };
 		BFA68C4917F50F8A00A44CE6 /* GISettingsBuyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GISettingsBuyCell.h; sourceTree = "<group>"; };
 		BFA68C4A17F50F8A00A44CE6 /* GISettingsBuyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GISettingsBuyCell.m; sourceTree = "<group>"; };
-		BFA68C4F17F51D9500A44CE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/help.strings; sourceTree = "<group>"; };
-		BFA68C5117F51D9800A44CE6 /* pt */ = {isa = PBXFileReference; lastKnownFileType = file; name = pt; path = pt.lproj/help.strings; sourceTree = "<group>"; };
+		BFA68C4F17F51D9500A44CE6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/help.strings; sourceTree = "<group>"; };
+		BFA68C5117F51D9800A44CE6 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/help.strings; sourceTree = "<group>"; };
 		BFAD126316F136A100F6D429 /* GuessIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAD126616F136A100F6D429 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BFAD126816F136A100F6D429 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -569,6 +572,8 @@
 				BF239B8B179E8E5200005FCA /* GIUserInterfaceElement.m */,
 				BF1C462117AFBCF20042D149 /* GIAdManager.h */,
 				BF1C462217AFBCF20042D149 /* GIAdManager.m */,
+				BF1B484C17F852F1006A3DBC /* GIIAPManager.h */,
+				BF1B484D17F852F1006A3DBC /* GIIAPManager.m */,
 			);
 			name = Model;
 			path = model;
@@ -824,6 +829,7 @@
 				BF1F29B01707347900A83FE3 /* GILevel.m in Sources */,
 				BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */,
 				BFBF337317E7184700B99DDC /* GIGameOverCongratulationsView.m in Sources */,
+				BF1B484E17F852F1006A3DBC /* GIIAPManager.m in Sources */,
 				BF659F721795AE5700C99668 /* GIConfiguration.m in Sources */,
 				BF85FE3517CE0F6800AFDF70 /* GIIconButton.m in Sources */,
 				BF1C462317AFBCF20042D149 /* GIAdManager.m in Sources */,

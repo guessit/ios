@@ -48,7 +48,7 @@ Pod::Spec.new do |s|
   s.dependency 'Finch', '~> 0.1'
   s.dependency 'AdMob'
   s.dependency 'AFNetworking', '1.3.1'
-  s.dependency 'CargoBay'
   s.dependency 'FontAwesome+iOS'
+  s.dependency 'SVProgressHUD'
   
 end

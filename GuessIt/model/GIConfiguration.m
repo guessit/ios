@@ -11,8 +11,8 @@
 #import "GIDefinitions.h"
 #import "GIGame.h"
 #import "GIGame+Factory.h"
+#import "GIIAPManager.h"
 #import "GILevel.h"
-#import "CargoBay.h"
 #import <SSToolkit/SSCategories.h>
 
 @interface GIConfiguration ()
@@ -176,33 +176,18 @@
 }
 
 - (void)loadInAppPurchasesProducts {
-    NSString *bundleId = [NSBundle mainBundle].bundleIdentifier.lowercaseString;
-    NSMutableSet *identifiers = [NSMutableSet set];
-    for (NSString *product in GI_IAP) {
-        NSString *productId = [NSString stringWithFormat:@"%@.%@", bundleId, product];
-        [identifiers addObject:productId];
-    }
-
-    __weak typeof(self)weakSelf = self;
-    [[CargoBay sharedManager] productsWithIdentifiers:identifiers success:^(NSArray *products, NSArray *invalidIdentifiers) {
-        __strong __typeof(GIConfiguration*) strongSelf = weakSelf;
-        NSArray *productsSortedByPrice = [products sortedArrayUsingComparator:^NSComparisonResult(SKProduct *obj1, SKProduct *obj2) {
-            return [obj1.price compare:obj2.price];
-        }];
-        strongSelf.products = productsSortedByPrice;
-        [[NSNotificationCenter defaultCenter] postNotificationName:GIProductsDidFinishLoadingNotification
-                                                            object:nil];
-    } failure:NULL];
+    [[GIIAPManager sharedInstance] fetchProductsWithBlock:^(NSArray *products) {
+        self.products = products;
+        [[NSNotificationCenter defaultCenter] postNotificationName:GIProductsDidFinishLoadingNotification object:nil];
+    }];
 }
 
 #pragma mark - Private Interface
 
 - (void)_initialize {
+    [self _observePaymentQueue];
     [self _loadGameFromJson];
     [self loadInAppPurchasesProducts];
-    [self _observePaymentQueue];
-
-    self.showAds = YES;
 }
 
 - (void)_loadGameFromJson {
@@ -227,10 +212,7 @@
 }
 
 - (void)_observePaymentQueue {
-    [[CargoBay sharedManager] setPaymentQueueUpdatedTransactionsBlock:^(SKPaymentQueue *queue, NSArray *transactions) {
-        NSLog(@"Updated transactions: %@", transactions);
-    }];
-    [[SKPaymentQueue defaultQueue] addTransactionObserver:[CargoBay sharedManager]];
+    [[SKPaymentQueue defaultQueue] addTransactionObserver:[GIIAPManager sharedInstance]];
 }
 
 - (NSInteger)_integerForKey:(NSString *)key {

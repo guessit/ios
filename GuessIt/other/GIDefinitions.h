@@ -10,6 +10,8 @@
 
 extern NSString * const GICurrentLevelDidChangeNotification;
 extern NSString * const GIProductsDidFinishLoadingNotification;
+extern NSString * const GIIAPManagerProductPurchasedNotification;
+extern NSString * const GIIAPManagerProductPurchaseFailedNotification;
 
 #define RADIANS_TO_DEGREES(radians) ((radians) * (180.f / M_PI))
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.f * M_PI)

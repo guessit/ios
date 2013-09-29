@@ -10,3 +10,5 @@
 
 NSString * const GICurrentLevelDidChangeNotification = @"GICurrentLevelDidChangeNotification";
 NSString * const GIProductsDidFinishLoadingNotification = @"GIProductsDidFinishLoadingNotification";
+NSString * const GIIAPManagerProductPurchasedNotification = @"GIIAPManagerProductPurchasedNotification";
+NSString * const GIIAPManagerProductPurchaseFailedNotification = @"GIIAPManagerProductPurchaseFailedNotification";
