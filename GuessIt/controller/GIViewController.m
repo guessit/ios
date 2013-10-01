@@ -8,6 +8,7 @@
 
 #import "GIViewController.h"
 
+#import "GIBarButton.h"
 #import "GIConfiguration.h"
 #import "GIUserInterface.h"
 #import "MALazykit.h"
@@ -30,11 +31,16 @@
 
     GIUserInterface *ui = [GIConfiguration sharedInstance].game.interface;
 
-    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    GIBarButton *backButton = [GIBarButton buttonWithType:UIButtonTypeCustom];
     [backButton setTitle:@"<" forState:UIControlStateNormal];
     [backButton setTitleColor:ui.navigation.color forState:UIControlStateNormal];
     backButton.titleLabel.font = [UIFont guessItBackButtonFont];
-    backButton.titleEdgeInsets = UIEdgeInsetsMake(0.f, 0.f, 0.f, 30.f);
+
+    CGFloat rightEdge = 30.f;
+    if (floorf(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
+        rightEdge = 36.f;
+    }
+    backButton.titleEdgeInsets = UIEdgeInsetsMake(0.f, 0.f, 0.f, rightEdge);
 
     backButton.frame = CGRectMake(0.f, 0.f, 70.f, 40.f);
     [backButton addTarget:self

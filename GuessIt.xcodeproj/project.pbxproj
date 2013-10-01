@@ -52,6 +52,7 @@
 		BF712585175D40F0007F99EB /* GIPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712582175D40F0007F99EB /* GIPlaceholderView.m */; };
 		BF71258B175D4238007F99EB /* GILevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF712589175D4238007F99EB /* GILevelView.m */; };
 		BF7CD89517D24083008E23D5 /* NSString+Search.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7CD89417D24083008E23D5 /* NSString+Search.m */; };
+		BF7DBC3517FA4AF7005831EE /* GIBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7DBC3417FA4AF7005831EE /* GIBarButton.m */; };
 		BF85FE3517CE0F6800AFDF70 /* GIIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF85FE3417CE0F6800AFDF70 /* GIIconButton.m */; };
 		BF91795817244A8200B136E2 /* shine_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF91795717244A8200B136E2 /* shine_mask@2x.png */; };
 		BF92630B17A3E4C400C29A70 /* congratulations.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF92630517A3E4C400C29A70 /* congratulations.strings */; };
@@ -187,6 +188,8 @@
 		BF71258A175D4238007F99EB /* GILevelViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelViewDelegate.h; sourceTree = "<group>"; };
 		BF7CD89317D24083008E23D5 /* NSString+Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Search.h"; sourceTree = "<group>"; };
 		BF7CD89417D24083008E23D5 /* NSString+Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Search.m"; sourceTree = "<group>"; };
+		BF7DBC3317FA4AF7005831EE /* GIBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIBarButton.h; sourceTree = "<group>"; };
+		BF7DBC3417FA4AF7005831EE /* GIBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIBarButton.m; sourceTree = "<group>"; };
 		BF85FE3117CE0B7D00AFDF70 /* GICongratulationsViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GICongratulationsViewDelegate.h; sourceTree = "<group>"; };
 		BF85FE3317CE0F6800AFDF70 /* GIIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIIconButton.h; sourceTree = "<group>"; };
 		BF85FE3417CE0F6800AFDF70 /* GIIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIIconButton.m; sourceTree = "<group>"; };
@@ -427,6 +430,8 @@
 		BF85FE3217CE0F4700AFDF70 /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				BF7DBC3317FA4AF7005831EE /* GIBarButton.h */,
+				BF7DBC3417FA4AF7005831EE /* GIBarButton.m */,
 				BFBAF9F7175D773200AA0AE1 /* GIGlowButton.h */,
 				BFBAF9F8175D773200AA0AE1 /* GIGlowButton.m */,
 				BF85FE3317CE0F6800AFDF70 /* GIIconButton.h */,
@@ -829,6 +834,7 @@
 				BF1F29B01707347900A83FE3 /* GILevel.m in Sources */,
 				BF1F29B31707617700A83FE3 /* GIViewController.m in Sources */,
 				BFBF337317E7184700B99DDC /* GIGameOverCongratulationsView.m in Sources */,
+				BF7DBC3517FA4AF7005831EE /* GIBarButton.m in Sources */,
 				BF1B484E17F852F1006A3DBC /* GIIAPManager.m in Sources */,
 				BF659F721795AE5700C99668 /* GIConfiguration.m in Sources */,
 				BF85FE3517CE0F6800AFDF70 /* GIIconButton.m in Sources */,

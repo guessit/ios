@@ -47,7 +47,7 @@
 }
 
 + (UIFont *)guessItBarButtonFont {
-    return [self questionMarkWithSize:24.f];
+    return [self questionMarkWithSize:30.f];
 }
 
 + (UIFont *)guessItKeypadLetterFont {

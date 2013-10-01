@@ -9,6 +9,7 @@
 #import "GILevelViewController.h"
 
 #import "GIAdManager.h"
+#import "GIBarButton.h"
 #import "GIConfiguration.h"
 #import "GICongratulationsView.h"
 #import "GICongratulationsViewDelegate.h"
@@ -79,7 +80,7 @@
     if (!_rightButtonItem) {
         GIUserInterface *ui = [GIConfiguration sharedInstance].game.interface;
 
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        GIBarButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button addTarget:self
                    action:@selector(_rightButtonTouched:)
          forControlEvents:UIControlEventTouchUpInside];
@@ -87,9 +88,14 @@
         [button setTitleColor:ui.navigation.color forState:UIControlStateNormal];
 
         button.titleLabel.font = [UIFont guessItBarButtonFont];
-        button.titleLabel.textAlignment = NSTextAlignmentCenter;
+        button.titleLabel.textAlignment = NSTextAlignmentRight;
         button.frame = CGRectMake(0.f, 0.f, 70.f, 70.f);
-        button.titleEdgeInsets = UIEdgeInsetsMake(0.f, 30.f, 0.f, 0.f);
+
+        CGFloat leftEdge = 40.f;
+        if (floorf(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1) {
+            leftEdge = 52.f;
+        }
+        button.titleEdgeInsets = UIEdgeInsetsMake(0.f, leftEdge, 0.f, 0.f);
 
         _rightButtonItem = [UIBarButtonItem barButtonItemWithCustomView:button];
     }

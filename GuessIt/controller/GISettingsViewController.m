@@ -8,6 +8,7 @@
 
 #import "GISettingsViewController.h"
 
+#import "GIBarButton.h"
 #import "GIDefinitions.h"
 #import "GIConfiguration.h"
 #import "GIIAPManager.h"
@@ -130,10 +131,13 @@ typedef enum {
     self.view.backgroundColor = self.ui.settings.secondaryBackgroundColor;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
-    UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    cancelButton.frame = CGRectMake(0.f, 0.f, 70.f, 40.f);
+    self.navigationController.navigationBar.tintColor = [UIColor redColor];
+
+    GIBarButton *cancelButton = [GIBarButton buttonWithType:UIButtonTypeCustom];
+    cancelButton.frame = CGRectMake(0.f, 0.f, 80.f, 40.f);
     [cancelButton setTitleColor:self.ui.navigation.color forState:UIControlStateNormal];
-    [cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
+    [cancelButton setTitle:NSLocalizedStringFromTable(@"cancel_button", @"general", nil)
+                  forState:UIControlStateNormal];
     [cancelButton addTarget:self
                      action:@selector(_cancelTouched:)
            forControlEvents:UIControlEventTouchUpInside];
