@@ -13,13 +13,9 @@
 #import "GIGame+PrettyDescription.h"
 #import "GILevelViewController.h"
 #import "MALazykit.h"
+#import "NSObject+Analytics.h"
 #import "UIFont+GuessItFonts.h"
 #import "UIView+CBFrameHelpers.h"
-
-#import "GAI.h"
-#import "GAIFields.h"
-#import "GAITracker.h"
-#import "GAIDictionaryBuilder.h"
 
 @interface GIMainViewController ()
 
@@ -118,9 +114,7 @@
 
     [self.titleLabel shine];
 
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker set:kGAIScreenName value:@"MainView"];
-    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+    [self trackViewWithName:@"MainView"];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

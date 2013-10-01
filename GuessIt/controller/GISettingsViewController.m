@@ -15,6 +15,7 @@
 #import "GISettingsCell.h"
 #import "GISettingsBuyCell.h"
 #import "MALazykit.h"
+#import "NSObject+Analytics.h"
 #import "SVProgressHUD.h"
 #import "UIColor+SSToolkitAdditions.h"
 #import "UIFont+GuessItFonts.h"
@@ -148,6 +149,7 @@ typedef enum {
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
+    [self trackViewWithName:@"SettingsView"];
 
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(_productsDidFinishLoading:)
@@ -368,6 +370,10 @@ typedef enum {
     if (product) {
         [[GIIAPManager sharedInstance] purchaseProduct:product];
         [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeClear];
+        [self trackEventWithCategory:@"game"
+                              action:@"iap"
+                               label:product.productIdentifier
+                               value:nil];
     } else {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
@@ -379,6 +385,10 @@ typedef enum {
     if (buttonIndex > 0) {
         [[GIConfiguration sharedInstance] resetProgress];
         [self.settingsDelegate didResetProgressWithSettingsViewController:self];
+        [self trackEventWithCategory:@"game"
+                              action:@"reset_progress"
+                               label:nil
+                               value:nil];
     }
 }
 

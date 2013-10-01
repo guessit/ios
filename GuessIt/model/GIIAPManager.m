@@ -10,6 +10,7 @@
 
 #import "GIConfiguration.h"
 #import "GIDefinitions.h"
+#import "NSObject+Analytics.h"
 
 @interface GIIAPManager () <SKProductsRequestDelegate>
 
@@ -17,6 +18,8 @@
 @property (nonatomic, copy) GIIAPFetchProducts fetchProductsCallback;
 
 - (void)_productPurchased:(NSString *)productId;
+- (void)_productPurchaseFailed:(NSString *)productId;
+- (void)_trackTransaction:(SKPaymentTransaction *)transaction;
 
 @end
 
@@ -74,6 +77,23 @@
                                                        object:productId];
 }
 
+- (void)_trackTransaction:(SKPaymentTransaction *)transaction {
+    SKProduct *purchasedProduct = nil;
+    for (SKProduct *product in [GIConfiguration sharedInstance].products) {
+        if ([product.productIdentifier isEqualToString:transaction.payment.productIdentifier]) {
+            purchasedProduct = product;
+            break;
+        }
+    }
+
+    [self trackTransactionWithId:transaction.transactionIdentifier
+                     affiliation:@"Apple IAP"
+                         revenue:purchasedProduct.price
+                             tax:@(0)
+                        shipping:@(0)
+                    currencyCode:nil];
+}
+
 #pragma mark - SKPaymentTransactionObserver Methods
 
 - (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions {
@@ -81,6 +101,7 @@
         switch (transaction.transactionState) {
             case SKPaymentTransactionStatePurchased:
                 [self _productPurchased:transaction.payment.productIdentifier];
+                [self _trackTransaction:transaction];
                 break;
             case SKPaymentTransactionStateRestored:
                 [self _productPurchased:transaction.originalTransaction.payment.productIdentifier];

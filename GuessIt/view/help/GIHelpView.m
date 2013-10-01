@@ -11,6 +11,7 @@
 #import "GIConfiguration.h"
 #import "GIDefinitions.h"
 #import "GIIconButton.h"
+#import "NSObject+Analytics.h"
 #import "UIView+CBFrameHelpers.h"
 
 #define GI_CORRECT_LETTER_BACKGROUND_COLOR [UIColor colorWithRed:138.f/255.f green:111.f/255.f blue:179.f/255.f alpha:1.f]
@@ -212,6 +213,12 @@
 - (void)_placeCorrectLetterTouched:(id)sender {
     if ([self.delegate helpViewCanPlaceCorrectLetter:self]) {
         [GIConfiguration sharedInstance].numberOfHelpRequested += 1;
+
+        [self trackEventWithCategory:@"help"
+                              action:@"place_correct_letter"
+                               label:nil
+                               value:nil];
+
         [self.delegate helpViewDidRequestToPlaceCorrectLetter:self];
     }
 }
@@ -219,6 +226,12 @@
 - (void)_eliminateWrongLetterTouched:(id)sender {
     if ([self.delegate helpViewCanEliminateWrongLetter:self]) {
         [GIConfiguration sharedInstance].numberOfHelpRequested += 1;
+
+        [self trackEventWithCategory:@"help"
+                              action:@"eliminate_wrong_letter"
+                               label:nil
+                               value:nil];
+
         [self.delegate helpViewDidRequestToEliminateWrongLetter:self];
     }
 }
@@ -226,6 +239,12 @@
 - (void)_skipLevelTouched:(id)sender {
     if ([self.delegate helpViewCanSkipLevel:self]) {
         [GIConfiguration sharedInstance].numberOfHelpRequested += 1;
+
+        [self trackEventWithCategory:@"help"
+                              action:@"skip_level"
+                               label:nil
+                               value:nil];
+
         [self.delegate helpViewDidRequestToSkipLevel:self];
     }
 }

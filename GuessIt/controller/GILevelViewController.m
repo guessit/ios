@@ -25,6 +25,7 @@
 #import "GINavigationBar.h"
 #import "GISettingsViewController.h"
 #import "MALazykit.h"
+#import "NSObject+Analytics.h"
 #import "UIFont+GuessItFonts.h"
 #import "UIView+CBFrameHelpers.h"
 #import "UIView+GuessIt.h"
@@ -112,6 +113,8 @@
     if ([GIConfiguration sharedInstance].showAds) {
         [[GIAdManager sharedInstance] loadAds];
     }
+
+    [self trackViewWithName:@"LevelView"];
 }
 
 - (void)viewDidLoad {
@@ -130,6 +133,10 @@
 
 - (void)_adjustViewForCurrentLevel {
     self.levelView.currentLevel = [GIConfiguration sharedInstance].currentLevel;
+    [self trackEventWithCategory:@"game"
+                          action:@"level_loaded"
+                           label:self.levelView.currentLevel.answer
+                           value:nil];
 }
 
 - (void)_showGameOverView {
@@ -144,6 +151,11 @@
             self.gameOverView.transform = CGAffineTransformIdentity;
         }];
     }];
+
+    [self trackEventWithCategory:@"game"
+                          action:@"game_over"
+                           label:nil
+                           value:nil];
 }
 
 - (void)_rightButtonTouched:(id)sender {
@@ -159,6 +171,10 @@
                       message:(NSString *)message
                         alert:(NSString *)alert {
     if ([SLComposeViewController isAvailableForServiceType:service]) {
+        [self trackSocialInteractionWithNetwork:service
+                                         action:@"share"
+                                         target:nil];
+
         SLComposeViewController *share = [SLComposeViewController composeViewControllerForServiceType:service];
         [share setInitialText:message];
         [share addURL:[NSURL URLWithString:@"http://guessit.mobi"]];
@@ -262,6 +278,11 @@
 
 - (void)levelView:(GILevelView *)levelView didFinishGuessingLevel:(GILevel *)level withResult:(GIGuessingResult)guessingResult {
     if (guessingResult == GIGuessingResultCorrect) {
+        [self trackEventWithCategory:@"game"
+                              action:@"level_finished"
+                               label:level.answer
+                               value:0];
+
         [[GIConfiguration sharedInstance] loadNextLevel];
 
         UIWindow *mainWindow = [UIApplication sharedApplication].keyWindow;
@@ -291,6 +312,11 @@
     [self.levelView resignFirstResponder];
     [self.helpView adjustEnabledButtons];
     [self.navigationController ma_presentSemiView:self.helpView];
+
+    [self trackEventWithCategory:@"game"
+                          action:@"help_requested"
+                           label:nil
+                           value:nil];
 }
 
 #pragma mark - UAModalPanelDelegate Methods
@@ -308,6 +334,11 @@
     if (conf.showAds && levelsPlusHelps >= levelsToShowAd && conf.hasMoreLevels) {
         [[GIAdManager sharedInstance] presentAdFromViewController:self];
         [conf resetAfterShowingAd];
+
+        [self trackEventWithCategory:@"game"
+                              action:@"ad_shown"
+                               label:nil
+                               value:nil];
     }
 
     if (conf.currentLevel) {
