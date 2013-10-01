@@ -16,6 +16,11 @@
 #import "UIFont+GuessItFonts.h"
 #import "UIView+CBFrameHelpers.h"
 
+#import "GAI.h"
+#import "GAIFields.h"
+#import "GAITracker.h"
+#import "GAIDictionaryBuilder.h"
+
 @interface GIMainViewController ()
 
 @property (nonatomic, strong) UIImageView *backgroundImageView;
@@ -112,6 +117,10 @@
     [self.navigationController setNavigationBarHidden:YES animated:animated];
 
     [self.titleLabel shine];
+
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"MainView"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

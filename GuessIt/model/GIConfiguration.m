@@ -13,6 +13,7 @@
 #import "GIGame+Factory.h"
 #import "GIIAPManager.h"
 #import "GILevel.h"
+#import "GAI.h"
 #import <iRate/iRate.h>
 #import <SSToolkit/SSCategories.h>
 
@@ -24,6 +25,7 @@
 - (void)_initialize;
 - (void)_loadGameFromJson;
 - (void)_setupiRate;
+- (void)_setupAnalytics;
 - (void)_observePaymentQueue;
 - (NSInteger)_integerForKey:(NSString *)key;
 - (void)_setInteger:(NSInteger)integer forKey:(NSString *)key;
@@ -190,6 +192,7 @@
     [self _observePaymentQueue];
     [self _loadGameFromJson];
     [self _setupiRate];
+    [self _setupAnalytics];
     [self loadInAppPurchasesProducts];
 }
 
@@ -218,6 +221,12 @@
     [iRate sharedInstance].applicationName = @"GuessIt";
     [iRate sharedInstance].daysUntilPrompt = 3.f;
     [iRate sharedInstance].promptAgainForEachNewVersion = NO;
+}
+
+- (void)_setupAnalytics {
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    [GAI sharedInstance].dispatchInterval = 30;
+    [[GAI sharedInstance] trackerWithTrackingId:self.game.analyticsTrackingId];
 }
 
 - (void)_observePaymentQueue {

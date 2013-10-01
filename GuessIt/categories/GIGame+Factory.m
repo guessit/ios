@@ -29,6 +29,7 @@
     game.sound = [GISound soundWithDictionary:dictionary[@"sound"]];
     game.levels = gameLevels;
     game.adMediationId = dictionary[@"ad_mediation_id"];
+    game.analyticsTrackingId = dictionary[@"analytics_tracking_id"];
 
     return game;
 }
