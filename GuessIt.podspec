@@ -50,5 +50,7 @@ Pod::Spec.new do |s|
   s.dependency 'AFNetworking', '1.3.1'
   s.dependency 'FontAwesome+iOS'
   s.dependency 'SVProgressHUD'
+  s.dependency 'iRate'
+  s.dependency 'GoogleAnalytics-iOS-SDK'
   
 end

@@ -13,6 +13,7 @@
 #import "GIGame+Factory.h"
 #import "GIIAPManager.h"
 #import "GILevel.h"
+#import <iRate/iRate.h>
 #import <SSToolkit/SSCategories.h>
 
 @interface GIConfiguration ()
@@ -22,6 +23,7 @@
 
 - (void)_initialize;
 - (void)_loadGameFromJson;
+- (void)_setupiRate;
 - (void)_observePaymentQueue;
 - (NSInteger)_integerForKey:(NSString *)key;
 - (void)_setInteger:(NSInteger)integer forKey:(NSString *)key;
@@ -187,6 +189,7 @@
 - (void)_initialize {
     [self _observePaymentQueue];
     [self _loadGameFromJson];
+    [self _setupiRate];
     [self loadInAppPurchasesProducts];
 }
 
@@ -209,6 +212,12 @@
     if (json) {
         self.game = [GIGame gameWithDictionary:json];
     }
+}
+
+- (void)_setupiRate {
+    [iRate sharedInstance].applicationName = @"GuessIt";
+    [iRate sharedInstance].daysUntilPrompt = 3.f;
+    [iRate sharedInstance].promptAgainForEachNewVersion = NO;
 }
 
 - (void)_observePaymentQueue {

@@ -12,3 +12,5 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define IRATE_USE_STOREKIT 1
