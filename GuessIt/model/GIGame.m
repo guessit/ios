@@ -25,4 +25,9 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"imageName in %@", finishedItemsImages];
     return [self.levels filteredArrayUsingPredicate:predicate];
 }
+
+- (CGFloat)progress {
+    return (CGFloat) self.finishedLevels.count / (CGFloat) self.levels.count;
+}
+
 @end

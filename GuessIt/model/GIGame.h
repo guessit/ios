@@ -23,5 +23,7 @@
 @property (nonatomic, strong, readonly) NSArray *todoLevels;
 @property (nonatomic, strong, readonly) NSArray *finishedLevels;
 
+@property (nonatomic, readonly) CGFloat progress;
+
 
 @end

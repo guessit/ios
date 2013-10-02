@@ -278,10 +278,15 @@
 
 - (void)levelView:(GILevelView *)levelView didFinishGuessingLevel:(GILevel *)level withResult:(GIGuessingResult)guessingResult {
     if (guessingResult == GIGuessingResultCorrect) {
+        GIGame *game = [GIConfiguration sharedInstance].game;
         [self trackEventWithCategory:@"game"
-                              action:@"level_finished"
+                              action:@"progress"
+                               label:nil
+                               value:@(game.progress)];
+        [self trackEventWithCategory:@"game"
+                              action:@"level_correct"
                                label:level.answer
-                               value:0];
+                               value:nil];
 
         [[GIConfiguration sharedInstance] loadNextLevel];
 
