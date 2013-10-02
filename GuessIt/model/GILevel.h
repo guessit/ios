@@ -19,12 +19,10 @@ typedef enum {
 @property (nonatomic, copy) NSString *imageName;
 @property (nonatomic, copy) NSString *answer;
 @property (nonatomic, copy) NSString *category;
-@property (nonatomic, strong) NSArray *hints;
 
 + (instancetype)levelWithImageNamed:(NSString *)imageName
                              anwser:(NSString *)answer
-                           category:(NSString *)category
-                              hints:(NSArray *)hints;
+                           category:(NSString *)category;
 + (instancetype)lastLevel;
 
 - (GIGuessingResult)guessWithAnwser:(NSString *)guessingAnwser;

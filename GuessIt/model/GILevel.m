@@ -17,8 +17,7 @@
 
 - (id)initWithImageNamed:(NSString *)imageName
                   answer:(NSString *)answer
-                category:(NSString *)category
-                   hints:(NSArray *)hints;
+                category:(NSString *)category;
 - (void)_markFinished;
 
 @end
@@ -38,16 +37,14 @@
 
 + (instancetype)levelWithImageNamed:(NSString *)imageName
                              anwser:(NSString *)answer
-                           category:(NSString *)category
-                              hints:(NSArray *)hints {
+                           category:(NSString *)category {
     return [[self alloc] initWithImageNamed:imageName
                                      answer:answer
-                                   category:category
-                                      hints:hints];
+                                   category:category];
 }
 
 + (instancetype)lastLevel {
-    return [self levelWithImageNamed:@"guessit_final" anwser:@"GuessIt" category:nil hints:nil];
+    return [self levelWithImageNamed:@"guessit_final" anwser:@"GuessIt" category:nil];
 }
 
 - (GIGuessingResult)guessWithAnwser:(NSString *)guessingAnwser {
@@ -70,14 +67,12 @@
 
 - (id)initWithImageNamed:(NSString *)imageName
                   answer:(NSString *)answer
-                category:(NSString *)category
-                   hints:(NSArray *)hints {
+                category:(NSString *)category {
     self = [super init];
     if (self) {
         self.imageName = imageName;
         self.answer = answer;
         self.category = category;
-        self.hints = hints;
     }
     return self;
 }

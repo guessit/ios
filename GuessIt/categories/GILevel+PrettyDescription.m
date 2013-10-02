@@ -11,8 +11,8 @@
 @implementation GILevel (PrettyDescription)
 
 - (NSString *)prettyDescription {
-    return [NSString stringWithFormat:@"Item: %@ <imageNamed:%@ answer:%@ category:%@ hints:%@>",
-            self, self.imageName, self.answer, self.category, self.hints];
+    return [NSString stringWithFormat:@"Item: %@ <imageNamed:%@ answer:%@ category:%@>",
+            self, self.imageName, self.answer, self.category];
 }
 
 @end
