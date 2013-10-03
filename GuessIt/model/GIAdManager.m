@@ -96,8 +96,9 @@ typedef enum {
 
 - (GADRequest *)_adMobRequest {
     GADRequest *request = [GADRequest request];
-    request.testDevices = @[GAD_SIMULATOR_ID];
-    request.testing = YES;
+
+//    request.testDevices = @[GAD_SIMULATOR_ID];
+//    request.testing = YES;
 
     return request;
 }
