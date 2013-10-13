@@ -23,6 +23,10 @@
 
 @interface GIKeypadView ()
 
+@property (nonatomic, assign, readonly) NSInteger numberOfRows;
+@property (nonatomic, assign, readonly) NSInteger numberOfColumns;
+@property (nonatomic, assign, readonly) CGFloat keypadHelpWidth;
+
 @property (nonatomic, strong) UIView *lettersContainer;
 @property (nonatomic, strong) NSMutableArray *letterViews;
 @property (nonatomic, strong) GIGlowButton *actionButton;
@@ -48,6 +52,18 @@
 
 #pragma mark - Getter
 
+- (NSInteger)numberOfRows {
+    return [[GIConfiguration sharedInstance].game.options[@"keypad_rows"] integerValue];
+}
+
+- (NSInteger)numberOfColumns {
+    return [[GIConfiguration sharedInstance].game.options[@"keypad_columns"] integerValue];
+}
+
+- (CGFloat)keypadHelpWidth {
+    return [[GIConfiguration sharedInstance].game.options[@"keypad_help_width"] floatValue];
+}
+
 - (UIView *)lettersContainer {
     if (!_lettersContainer) {
         _lettersContainer = [UIView view];
@@ -58,7 +74,7 @@
 
 - (NSMutableArray *)letterViews {
     if (!_letterViews) {
-        NSInteger numberOfKeys = GI_KEYPAD_NO_ROWS * GI_KEYPAD_NO_COLUMNS;
+        NSInteger numberOfKeys = self.numberOfRows * self.numberOfColumns;
         NSMutableArray *views = [NSMutableArray arrayWithCapacity:numberOfKeys];
 
         for (NSInteger i = 0; i < numberOfKeys; i++) {
@@ -75,8 +91,8 @@
 - (GIGlowButton *)actionButton {
     if (!_actionButton) {
         _actionButton = [GIGlowButton buttonWithType:UIButtonTypeCustom];
-        CGRect frame = CGRectMake(self.width - GI_KEYPAD_ACTION_WIDTH, GI_KEYPAD_PADDING,
-                                  GI_KEYPAD_ACTION_WIDTH - GI_KEYPAD_PADDING, self.height - 2 * GI_KEYPAD_PADDING);
+        CGRect frame = CGRectMake(self.width - self.keypadHelpWidth, GI_KEYPAD_PADDING,
+                                  self.keypadHelpWidth - GI_KEYPAD_PADDING, self.height - 2 * GI_KEYPAD_PADDING);
         _actionButton.frame = frame;
         _actionButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
 
@@ -188,15 +204,18 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
 
-    [self.lettersContainer setSizeFromSize:CGSizeMake(self.width - GI_KEYPAD_ACTION_WIDTH, self.height)];
+    [self.lettersContainer setSizeFromSize:CGSizeMake(self.width - self.keypadHelpWidth, self.height)];
     
     if (!self.initialized) {
-        CGFloat letterWidth = (self.lettersContainer.width - (GI_KEYPAD_NO_COLUMNS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_COLUMNS;
-        CGFloat letterHeight = (self.lettersContainer.height - (GI_KEYPAD_NO_ROWS + 1) * GI_KEYPAD_PADDING) / GI_KEYPAD_NO_ROWS;
+        NSInteger noColumns = self.numberOfColumns;
+        NSInteger noRows = self.numberOfRows;
+
+        CGFloat letterWidth = (self.lettersContainer.width - (noColumns + 1) * GI_KEYPAD_PADDING) / noColumns;
+        CGFloat letterHeight = (self.lettersContainer.height - (noRows + 1) * GI_KEYPAD_PADDING) / noRows;
 
         [self.letterViews enumerateObjectsUsingBlock:^(GILetterView *letterView, NSUInteger idx, BOOL *stop) {
-            NSUInteger xIdx = idx % GI_KEYPAD_NO_COLUMNS;
-            NSUInteger yIdx = idx / GI_KEYPAD_NO_COLUMNS;
+            NSUInteger xIdx = idx % noColumns;
+            NSUInteger yIdx = idx / noColumns;
             
             CGFloat xOffset = xIdx * letterWidth + (xIdx + 1) * GI_KEYPAD_PADDING;
             CGFloat yOffset = yIdx * letterHeight + (yIdx + 1) * GI_KEYPAD_PADDING;

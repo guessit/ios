@@ -35,10 +35,7 @@ extern NSString * const GIIAPManagerProductPurchaseFailedNotification;
 #define GI_ANSWER_PLACEHOLDER_SPACE_WIDTH 6.f
 
 #define GI_KEYPAD_HEIGHT 88.f
-#define GI_KEYPAD_NO_ROWS 2
-#define GI_KEYPAD_NO_COLUMNS 7
 #define GI_KEYPAD_PADDING 2.f
-#define GI_KEYPAD_ACTION_WIDTH 50.f
 
 #define GI_LETTER_ZOOMED_SCALE 1.15f
 #define GI_LETTER_MINIMIZED_SCALE 0.3f
