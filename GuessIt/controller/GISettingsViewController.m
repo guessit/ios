@@ -39,6 +39,8 @@ typedef enum {
 @property (nonatomic, strong, readonly) GIUserInterface *ui;
 @property (nonatomic, strong, readonly) NSNumberFormatter *priceFormatter;
 
+@property (nonatomic, strong) UIImageView *secondaryBackgroundImageView;
+
 @property (nonatomic, strong) NSArray *mainOptionsDescription;
 
 @property (nonatomic, strong) NSArray *buyDeveloper;
@@ -72,6 +74,14 @@ typedef enum {
         _priceFormatter.numberStyle = NSNumberFormatterCurrencyStyle;
     }
     return _priceFormatter;
+}
+
+- (UIImageView *)secondaryBackgroundImageView {
+    if (!_secondaryBackgroundImageView) {
+        _secondaryBackgroundImageView = [UIImageView imageViewWithImageNamed:@"secondary_background"];
+        _secondaryBackgroundImageView.contentMode = UIViewContentModeCenter;
+    }
+    return _secondaryBackgroundImageView;
 }
 
 - (NSArray *)mainOptionsDescription {
@@ -128,6 +138,10 @@ typedef enum {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    if (self.secondaryBackgroundImageView.image) {
+        self.tableView.backgroundView = self.secondaryBackgroundImageView;
+    }
 
     self.view.backgroundColor = self.ui.settings.secondaryBackgroundColor;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
