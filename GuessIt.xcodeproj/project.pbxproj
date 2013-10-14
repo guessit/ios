@@ -27,6 +27,7 @@
 		BF291E8C174ECA320066D5EF /* GIDefinitions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF291E8B174ECA320066D5EF /* GIDefinitions.m */; };
 		BF3DDBA1176D070B0055A388 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3DDBA0176D070A0055A388 /* main.m */; };
 		BF3DDBA4176D07230055A388 /* _GIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3DDBA3176D07230055A388 /* _GIAppDelegate.m */; };
+		BF4D5E59180B737B0013C698 /* GILevelBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4D5E58180B737B0013C698 /* GILevelBackView.m */; };
 		BF56593B176E6D3800F5198A /* GIModalPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF56593A176E6D3800F5198A /* GIModalPanel.m */; };
 		BF565941176E721400F5198A /* JotiOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF56593F176E721400F5198A /* JotiOne-Regular.ttf */; };
 		BF565942176E721400F5198A /* Lobster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF565940176E721400F5198A /* Lobster.ttf */; };
@@ -145,6 +146,9 @@
 		BF3DDBA0176D070A0055A388 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BF3DDBA2176D07230055A388 /* _GIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _GIAppDelegate.h; sourceTree = "<group>"; };
 		BF3DDBA3176D07230055A388 /* _GIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _GIAppDelegate.m; sourceTree = "<group>"; };
+		BF4D5E57180B737B0013C698 /* GILevelBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelBackView.h; sourceTree = "<group>"; };
+		BF4D5E58180B737B0013C698 /* GILevelBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelBackView.m; sourceTree = "<group>"; };
+		BF4D5E5A180B74A70013C698 /* GILevelBackViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GILevelBackViewDelegate.h; sourceTree = "<group>"; };
 		BF565939176E6D3800F5198A /* GIModalPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIModalPanel.h; sourceTree = "<group>"; };
 		BF56593A176E6D3800F5198A /* GIModalPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIModalPanel.m; sourceTree = "<group>"; };
 		BF56593F176E721400F5198A /* JotiOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JotiOne-Regular.ttf"; sourceTree = "<group>"; };
@@ -424,6 +428,9 @@
 				BF712588175D4238007F99EB /* GILevelView.h */,
 				BF712589175D4238007F99EB /* GILevelView.m */,
 				BF71258A175D4238007F99EB /* GILevelViewDelegate.h */,
+				BF4D5E57180B737B0013C698 /* GILevelBackView.h */,
+				BF4D5E58180B737B0013C698 /* GILevelBackView.m */,
+				BF4D5E5A180B74A70013C698 /* GILevelBackViewDelegate.h */,
 				BF99CD44176E317300CA2650 /* GICongratulationsView.h */,
 				BF99CD45176E317300CA2650 /* GICongratulationsView.m */,
 				BF85FE3117CE0B7D00AFDF70 /* GICongratulationsViewDelegate.h */,
@@ -874,6 +881,7 @@
 				BF712584175D40F0007F99EB /* GILetterView.m in Sources */,
 				BF712585175D40F0007F99EB /* GIPlaceholderView.m in Sources */,
 				BFA68C4B17F50F8A00A44CE6 /* GISettingsBuyCell.m in Sources */,
+				BF4D5E59180B737B0013C698 /* GILevelBackView.m in Sources */,
 				BF659F6D1795675C00C99668 /* GICongratulationsView.m in Sources */,
 				BF659F781795AE7200C99668 /* GISound.m in Sources */,
 				BF71258B175D4238007F99EB /* GILevelView.m in Sources */,

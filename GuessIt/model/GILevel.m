@@ -63,6 +63,10 @@
     return [[GIConfiguration sharedInstance].finishedLevelsName containsObject:self.imageName];
 }
 
+- (BOOL)canFlip {
+    return self.url.length > 0;
+}
+
 #pragma mark - Private Interface
 
 - (id)initWithImageNamed:(NSString *)imageName

@@ -12,6 +12,8 @@
 
 @protocol GIInputViewDelegate <NSObject>
 
+- (void)inputView:(GIInputView *)inputView didAddLetterToAnswer:(NSString *)currentAnswer;
+- (void)inputView:(GIInputView *)inputView didRemoveLetterFromAnswer:(NSString *)currentAnswer;
 - (void)inputView:(GIInputView *)inputView didFinishGuessingWithAnswer:(NSString *)answer;
 - (void)helpRequestedFromInputView:(GIInputView *)inputView;
 

@@ -20,11 +20,15 @@
 @interface GIMainViewController ()
 
 @property (nonatomic, strong) UIImageView *backgroundImageView;
+@property (nonatomic, strong) UIImageView *secondaryBackgroundImageView;
+@property (nonatomic, strong) UIImageView *externalLogoImageView;
 @property (nonatomic, strong) GIShineLabel *titleLabel;
 @property (nonatomic, strong) UILabel *tapToPlayLabel;
 
 - (void)_applicationDidBecomeActive:(NSNotification *)notification;
+
 - (void)_tapRecognized:(UITapGestureRecognizer *)gesture;
+- (void)_externalLogoTapRecognized:(UITapGestureRecognizer *)gesture;
 
 @end
 
@@ -38,6 +42,27 @@
         _backgroundImageView.contentMode = UIViewContentModeCenter;
     }
     return _backgroundImageView;
+}
+
+- (UIImageView *)secondaryBackgroundImageView {
+    if (!_secondaryBackgroundImageView) {
+        _secondaryBackgroundImageView = [UIImageView imageViewWithImageNamed:@"secondary_background"];
+        _secondaryBackgroundImageView.contentMode = UIViewContentModeCenter;
+    }
+    return _secondaryBackgroundImageView;
+}
+
+- (UIImageView *)externalLogoImageView {
+    if (!_externalLogoImageView) {
+        _externalLogoImageView = [UIImageView imageViewWithImageNamed:@"external_logo"];
+        _externalLogoImageView.contentMode = UIViewContentModeCenter;
+        _externalLogoImageView.userInteractionEnabled = YES;
+
+        UIGestureRecognizer *tapGesture = [UITapGestureRecognizer gestureRecognizerWithTarget:self
+                                                                                       action:@selector(_externalLogoTapRecognized:)];
+        [_externalLogoImageView addGestureRecognizer:tapGesture];
+    }
+    return _externalLogoImageView;
 }
 
 - (GIShineLabel *)titleLabel {
@@ -85,10 +110,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    if (self.secondaryBackgroundImageView.image) {
+        [self.view addSubview:self.secondaryBackgroundImageView];
+    }
+
     [self.view addSubview:self.backgroundImageView];
+
+    if (self.externalLogoImageView.image) {
+        [self.view addSubview:self.externalLogoImageView];
+        self.externalLogoImageView.y = self.view.height - self.externalLogoImageView.height;
+    }
+
     [self.view addSubview:self.titleLabel];
     [self.view addSubview:self.tapToPlayLabel];
 
+    self.secondaryBackgroundImageView.frame = self.view.bounds;
     self.backgroundImageView.frame = self.view.bounds;
 
     self.titleLabel.center = CGPointMake(self.view.center.x, self.view.center.y - 50.f);
@@ -136,6 +172,12 @@
 - (void)_tapRecognized:(UITapGestureRecognizer *)gesture {
     GILevelViewController *level = [GILevelViewController viewController];
     [self.navigationController pushViewController:level animated:YES];
+}
+
+- (void)_externalLogoTapRecognized:(UITapGestureRecognizer *)gesture {
+    NSString *urlString = [GIConfiguration sharedInstance].game.options[@"external_url"];
+    NSURL *url = [NSURL URLWithString:urlString];
+    [[UIApplication sharedApplication] openURL:url];
 }
 
 @end

@@ -19,6 +19,7 @@ typedef enum {
 @property (nonatomic, copy) NSString *imageName;
 @property (nonatomic, copy) NSString *answer;
 @property (nonatomic, copy) NSString *category;
+@property (nonatomic, copy) NSString *url;
 
 + (instancetype)levelWithImageNamed:(NSString *)imageName
                              anwser:(NSString *)answer
@@ -27,5 +28,6 @@ typedef enum {
 
 - (GIGuessingResult)guessWithAnwser:(NSString *)guessingAnwser;
 - (BOOL)isFinished;
+- (BOOL)canFlip;
 
 @end

@@ -137,6 +137,7 @@
 - (void)answerView:(GIAnswerView *)answerView didRemoveLetterView:(GILetterView *)letterView {
     [self.keypadView addLetterView:letterView];
     [[GIConfiguration sharedInstance].game.sound playRemoveLetterSound];
+    [self.delegate inputView:self didRemoveLetterFromAnswer:self.answerView.answer];
 }
 
 #pragma mark - GIKeypadViewDelegate Methods
@@ -153,6 +154,7 @@
     [self.answerView addLetterView:letterView];
     [[GIConfiguration sharedInstance].game.sound playKeypadSound];
 
+    [self.delegate inputView:self didAddLetterToAnswer:self.answerView.answer];
     if (!self.answerView.canAddLetter) {
         [self.delegate inputView:self didFinishGuessingWithAnswer:self.answerView.answer];
     }
