@@ -33,6 +33,7 @@
     if (!_closeButton) {
         _closeButton = [GIIconButton buttonWithIcon:FAIconRemove];
         _closeButton.frame = CGRectMake(0.f, 0.f, 44.f, 44.f);
+        [_closeButton setTitle:@" " forState:UIControlStateNormal];
         [_closeButton addTarget:self
                          action:@selector(_closeTouched:)
                forControlEvents:UIControlEventTouchUpInside];
@@ -84,7 +85,8 @@
 
 - (void)_initialize {
     GIUserInterface *interface = [GIConfiguration sharedInstance].game.interface;
-    self.backgroundColor = interface.image.backgroundColor;
+    self.backgroundColor = interface.frame.backgroundColor;
+    [self.closeButton setTitleColor:interface.frame.secondaryColor forState:UIControlStateNormal];
 
     [self addSubview:self.imageView];
     [self addSubview:self.closeButton];
