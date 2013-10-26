@@ -10,14 +10,27 @@
 
 #import "GIConfiguration.h"
 
+@interface GIGame ()
+
+@property (nonatomic, strong, readonly) NSArray *availableLevels;
+
+@end
+
 @implementation GIGame
 
 #pragma mark - Getter
 
+- (NSArray *)availableLevels {
+    NSMutableArray *bundles = [NSMutableArray arrayWithObject:@""];
+    [bundles addObjectsFromArray:[GIConfiguration sharedInstance].boughtBundles];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"bundle in %@", bundles];
+    return [self.levels filteredArrayUsingPredicate:predicate];
+}
+
 - (NSArray *)todoLevels {
     NSArray *finishedItemsImages = [GIConfiguration sharedInstance].finishedLevelsName;
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"not (imageName in %@)", finishedItemsImages];
-    return [self.levels filteredArrayUsingPredicate:predicate];
+    return [self.availableLevels filteredArrayUsingPredicate:predicate];
 }
 
 - (NSArray *)finishedLevels {
@@ -27,7 +40,7 @@
 }
 
 - (CGFloat)progress {
-    return (CGFloat) self.finishedLevels.count / (CGFloat) self.levels.count;
+    return (CGFloat) self.finishedLevels.count / (CGFloat) self.availableLevels.count;
 }
 
 @end

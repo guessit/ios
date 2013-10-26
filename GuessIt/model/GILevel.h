@@ -20,6 +20,7 @@ typedef enum {
 @property (nonatomic, copy) NSString *answer;
 @property (nonatomic, copy) NSString *category;
 @property (nonatomic, copy) NSString *url;
+@property (nonatomic, copy) NSString *bundle;
 
 + (instancetype)levelWithImageNamed:(NSString *)imageName
                              anwser:(NSString *)answer

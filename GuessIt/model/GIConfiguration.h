@@ -30,9 +30,11 @@
 
 - (GILevel *)loadNextLevel;
 - (void)resetProgress;
+- (NSArray *)boughtBundles;
 - (NSArray *)finishedLevelsName;
 - (void)resetAfterShowingAd;
 
+- (void)markBundleBought:(NSString *)bundleName;
 - (void)loadInAppPurchasesProducts;
 
 @end

@@ -19,6 +19,7 @@ extern NSString * const GIIAPManagerProductPurchaseFailedNotification;
 #pragma mark - NSUserDefaults Keys
 
 #define GI_CURRENT_LEVEL @"GuessItCurrentLevel"
+#define GI_BOUGHT_BUNDLES @"GuessItBundles"
 #define GI_FINISHED_LEVELS @"GuessItFinishedLevels"
 #define GI_NUMBER_OF_LEVELS_PRESENTED @"GuessItNumberOfLevelsPresented"
 #define GI_NUMBER_OF_HELPS_REQUESTED @"GuessItNumberOfHelpsRequested"

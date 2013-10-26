@@ -146,6 +146,8 @@
         todoLevels = [todoLevels filteredArrayUsingPredicate:predicate];
     }
 
+    NSLog(@"Todo levels: %@", todoLevels);
+
     GILevel *nextLevel = nil;
 
     if ([self.game.options[@"randomize"] boolValue]) {
@@ -169,6 +171,9 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+- (NSArray *)boughtBundles {
+    return [[NSUserDefaults standardUserDefaults] arrayForKey:GI_BOUGHT_BUNDLES];
+}
 
 - (NSArray *)finishedLevelsName {
     return [[NSUserDefaults standardUserDefaults] arrayForKey:GI_FINISHED_LEVELS];
@@ -177,6 +182,16 @@
 - (void)resetAfterShowingAd {
     self.numberOfLevelsPresented = 0;
     self.numberOfHelpRequested = 0;
+}
+
+- (void)markBundleBought:(NSString *)bundleName {
+    NSMutableArray *boughtBundles = [NSMutableArray arrayWithArray:self.boughtBundles];
+    if (![boughtBundles containsObject:bundleName]) {
+        [boughtBundles addObject:bundleName];
+
+        [[NSUserDefaults standardUserDefaults] setObject:boughtBundles forKey:GI_BOUGHT_BUNDLES];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
 
 - (void)loadInAppPurchasesProducts {

@@ -16,6 +16,7 @@
     level.answer = NSLocalizedStringFromTable(level.imageName, @"items", nil).uppercaseString;
     level.category = NSLocalizedStringFromTable(dictionary[@"category"], @"categories", nil);
     level.url = dictionary[@"url"];
+    level.bundle = dictionary[@"bundle"];
 
     return level;
 }
