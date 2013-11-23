@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSSet *productsIds;
 @property (nonatomic, copy) GIIAPFetchProducts fetchProductsCallback;
 
+- (NSString *)_bundleFromProduct:(NSString *)productId;
 - (void)_productPurchased:(NSString *)productId;
 - (void)_productPurchaseFailed:(NSString *)productId;
 - (void)_trackTransaction:(SKPaymentTransaction *)transaction;
@@ -66,8 +67,26 @@
 
 #pragma mark - Private Methods
 
+- (NSString *)_bundleFromProduct:(NSString *)productId {
+    NSString *bundle = nil;
+
+    NSRange lastDot = [productId rangeOfString:@"." options:NSBackwardsSearch];
+    if (lastDot.location != NSNotFound) {
+        bundle = [productId substringFromIndex:lastDot.location + 1];
+    }
+
+    return bundle;
+}
+
 - (void)_productPurchased:(NSString *)productId {
-    [GIConfiguration sharedInstance].showAds = NO;
+    GIConfiguration *conf = [GIConfiguration sharedInstance];
+    conf.showAds = NO;
+
+    NSString *bundle = [self _bundleFromProduct:productId];
+    if ([conf.game.bundles containsObject:bundle]) {
+        [conf markBundleBought:bundle];
+    }
+
     [[NSNotificationCenter defaultCenter] postNotificationName:GIIAPManagerProductPurchasedNotification
                                                         object:productId];
 }
