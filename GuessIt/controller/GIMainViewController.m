@@ -110,6 +110,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [[GIConfiguration sharedInstance] loadInAppPurchasesProducts];
+
     if (self.secondaryBackgroundImageView.image) {
         [self.view addSubview:self.secondaryBackgroundImageView];
     }

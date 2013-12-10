@@ -17,7 +17,9 @@
 @property (nonatomic, strong) GILevel *currentLevel;
 @property (nonatomic, strong) GILevel *lastLevel;
 
-@property (nonatomic, strong) NSArray *products;
+@property (nonatomic, strong, readonly) NSArray *allProducts;
+@property (nonatomic, strong) NSArray *donationProducts;
+@property (nonatomic, strong) NSArray *bundleProducts;
 
 @property (nonatomic, assign) NSInteger numberOfLevelsPresented;
 @property (nonatomic, assign) NSInteger numberOfHelpRequested;

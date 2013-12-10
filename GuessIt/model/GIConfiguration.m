@@ -23,6 +23,8 @@
 @property (nonatomic, strong, readonly) NSString *currentLevelName;
 
 - (void)_initialize;
+- (void)_loadDonations;
+- (void)_loadBundles;
 - (void)_loadGameFromJson;
 - (void)_setupiRate;
 - (void)_setupAnalytics;
@@ -61,6 +63,10 @@
         _lastLevel = [GILevel lastLevel];
     }
     return _lastLevel;
+}
+
+- (NSArray *)allProducts {
+    return [self.donationProducts arrayByAddingObjectsFromArray:self.bundleProducts];
 }
 
 - (NSString *)currentLevelName {
@@ -195,10 +201,8 @@
 }
 
 - (void)loadInAppPurchasesProducts {
-    [[GIIAPManager sharedInstance] fetchProductsWithBlock:^(NSArray *products) {
-        self.products = products;
-        [[NSNotificationCenter defaultCenter] postNotificationName:GIProductsDidFinishLoadingNotification object:nil];
-    }];
+    [self _loadDonations];
+    [self _loadBundles];
 }
 
 #pragma mark - Private Interface
@@ -208,7 +212,22 @@
     [self _loadGameFromJson];
     [self _setupiRate];
     [self _setupAnalytics];
-    [self loadInAppPurchasesProducts];
+}
+
+- (void)_loadDonations {
+    [[GIIAPManager sharedInstance] fetchDonationProductsWithBlock:^(NSArray *products) {
+        self.donationProducts = products;
+        [[NSNotificationCenter defaultCenter] postNotificationName:GIProductsDidFinishLoadingNotification
+                                                            object:nil];
+    }];
+}
+
+- (void)_loadBundles {
+    [[GIIAPManager sharedInstance] fetchBundleProductsWithBlock:^(NSArray *products) {
+        self.bundleProducts = products;
+        [[NSNotificationCenter defaultCenter] postNotificationName:GIProductsDidFinishLoadingNotification
+                                                            object:nil];
+    }];
 }
 
 - (void)_loadGameFromJson {

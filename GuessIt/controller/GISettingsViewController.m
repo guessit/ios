@@ -25,7 +25,8 @@
 
 typedef enum {
     GISettingsSectionsMainOptions = 0,
-    GISettingsSectionsBuyDeveloper,
+    GISettingsSectionsBundleIAP,
+    GISettingsSectionsDonationIAP,
     GI_SETTINGS_NUM_SECTIONS
 } GISettingsSections;
 
@@ -223,7 +224,7 @@ typedef enum {
     NSInteger noSections = 1;
 
     if ([SKPaymentQueue canMakePayments]) {
-        if ([GIConfiguration sharedInstance].products.count > 0) {
+        if ([GIConfiguration sharedInstance].allProducts.count > 0) {
             noSections = GI_SETTINGS_NUM_SECTIONS;
         } else {
             [[GIConfiguration sharedInstance] loadInAppPurchasesProducts];
@@ -240,8 +241,11 @@ typedef enum {
         case GISettingsSectionsMainOptions:
             noRows = GI_SETTINGS_MAIN_OPTIONS_NUM_ROWS;
             break;
-        case GISettingsSectionsBuyDeveloper:
-            noRows = [GIConfiguration sharedInstance].products.count;
+        case GISettingsSectionsBundleIAP:
+            noRows = [GIConfiguration sharedInstance].bundleProducts.count;
+            break;
+        case GISettingsSectionsDonationIAP:
+            noRows = [GIConfiguration sharedInstance].donationProducts.count;
             break;
     }
 
@@ -258,34 +262,37 @@ typedef enum {
             case GISettingsSectionsMainOptions:
                 cell = [GISettingsCell cellWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
                 break;
-            case GISettingsSectionsBuyDeveloper:
+            case GISettingsSectionsBundleIAP:
+                cell = [GISettingsBuyCell cellWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+                break;
+            case GISettingsSectionsDonationIAP:
                 cell = [GISettingsBuyCell cellWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
                 break;
         }
     }
 
-    NSString *key = nil;
-    UIImage *image = nil;
     SKProduct *product = nil;
+    UIImage *image = nil;
 
-    switch (indexPath.section) {
-        case GISettingsSectionsMainOptions:
-            key = self.mainOptionsDescription[indexPath.row];
-            cell.textLabel.text = NSLocalizedStringFromTable(key, @"settings", nil);
-            break;
-        case GISettingsSectionsBuyDeveloper:
-            product = [GIConfiguration sharedInstance].products[indexPath.row];
-            self.priceFormatter.locale = product.priceLocale;
-
-            cell.textLabel.text = product.localizedDescription;
-            image = self.buyDeveloperImage[indexPath.row];
-
-            GISettingsBuyCell *buyCell = (GISettingsBuyCell *)cell;
-            buyCell.priceLabel.text = [self.priceFormatter stringFromNumber:product.price];
-            break;
+    if (indexPath.section == GISettingsSectionsBundleIAP) {
+        product = [GIConfiguration sharedInstance].bundleProducts[indexPath.row];
+    } else if (indexPath.section == GISettingsSectionsDonationIAP) {
+        product = [GIConfiguration sharedInstance].donationProducts[indexPath.row];
+        image = self.buyDeveloperImage[indexPath.row];
     }
 
-    cell.imageView.image = image;
+    if (product) {
+        self.priceFormatter.locale = product.priceLocale;
+
+        GISettingsBuyCell *buyCell = (GISettingsBuyCell *)cell;
+
+        buyCell.textLabel.text = product.localizedDescription;
+        buyCell.imageView.image = image;
+        buyCell.priceLabel.text = [self.priceFormatter stringFromNumber:product.price];
+    } else {
+        NSString *key = self.mainOptionsDescription[indexPath.row];
+        cell.textLabel.text = NSLocalizedStringFromTable(key, @"settings", nil);
+    }
 
     return cell;
 }
@@ -296,7 +303,10 @@ typedef enum {
         case GISettingsSectionsMainOptions:
             title = NSLocalizedStringFromTable(@"settings", @"settings", nil);
             break;
-        case GISettingsSectionsBuyDeveloper:
+        case GISettingsSectionsBundleIAP:
+            title = NSLocalizedStringFromTable(@"play_more", @"settings", nil);
+            break;
+        case GISettingsSectionsDonationIAP:
             title = NSLocalizedStringFromTable(@"liked_the_game", @"settings", nil);
             break;
     }
@@ -323,7 +333,7 @@ typedef enum {
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     CGFloat height = 0.f;
 
-    if (section == GISettingsSectionsBuyDeveloper) {
+    if (section == GISettingsSectionsDonationIAP) {
         height = 55.f;
     }
 
@@ -348,7 +358,7 @@ typedef enum {
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     UILabel *label = nil;
 
-    if (section == GISettingsSectionsBuyDeveloper) {
+    if (section == GISettingsSectionsDonationIAP) {
         label = [UILabel label];
         UIFont *headerFont = [UIFont guessItSettingsTitleFont];
         label.font = [headerFont fontWithSize:headerFont.pointSize - 5.f];
@@ -376,8 +386,11 @@ typedef enum {
                     break;
             }
             break;
-        case GISettingsSectionsBuyDeveloper:
-            product = [GIConfiguration sharedInstance].products[indexPath.row];
+        case GISettingsSectionsBundleIAP:
+            product = [GIConfiguration sharedInstance].bundleProducts[indexPath.row];
+            break;
+        case GISettingsSectionsDonationIAP:
+            product = [GIConfiguration sharedInstance].donationProducts[indexPath.row];
             break;
     }
 

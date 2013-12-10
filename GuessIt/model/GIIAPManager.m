@@ -14,13 +14,20 @@
 
 @interface GIIAPManager () <SKProductsRequestDelegate>
 
-@property (nonatomic, strong) NSSet *productsIds;
-@property (nonatomic, copy) GIIAPFetchProducts fetchProductsCallback;
+@property (nonatomic, strong) NSSet *donationProductsIds;
+@property (nonatomic, strong) NSSet *bundleProductsIds;
+
+@property (nonatomic, copy) GIIAPFetchProducts donationFetchCallback;
+@property (nonatomic, copy) GIIAPFetchProducts bundleFetchCallback;
+
+@property (nonatomic, strong) SKRequest *donationRequest;
+@property (nonatomic, strong) SKRequest *bundleRequest;
 
 - (NSString *)_bundleFromProduct:(NSString *)productId;
 - (void)_productPurchased:(NSString *)productId;
 - (void)_productPurchaseFailed:(NSString *)productId;
 - (void)_trackTransaction:(SKPaymentTransaction *)transaction;
+- (GIIAPFetchProducts)_callbackForRequest:(SKRequest *)request;
 
 @end
 
@@ -28,8 +35,8 @@
 
 #pragma mark - Getter
 
-- (NSSet *)productsIds {
-    if (!_productsIds) {
+- (NSSet *)donationProductsIds {
+    if (!_donationProductsIds) {
         NSString *bundleId = [NSBundle mainBundle].bundleIdentifier.lowercaseString;
         bundleId = [bundleId stringByReplacingOccurrencesOfString:@"-" withString:@"_"];
         NSMutableSet *identifiers = [NSMutableSet set];
@@ -37,9 +44,10 @@
             NSString *productId = [NSString stringWithFormat:@"%@.%@", bundleId, product];
             [identifiers addObject:productId];
         }
-        _productsIds = identifiers;
+
+        _donationProductsIds = identifiers;
     }
-    return _productsIds;
+    return _donationProductsIds;
 }
 
 #pragma mark - Public Methods
@@ -53,11 +61,21 @@
     return __sharedInstance;
 }
 
-- (void)fetchProductsWithBlock:(GIIAPFetchProducts)callback {
-    self.fetchProductsCallback = callback;
-    SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:self.productsIds];
-    request.delegate = self;
-    [request start];
+- (void)fetchDonationProductsWithBlock:(GIIAPFetchProducts)callback {
+    self.donationFetchCallback = callback;
+
+    self.donationRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:self.donationProductsIds];
+    self.donationRequest.delegate = self;
+    [self.donationRequest start];
+}
+
+- (void)fetchBundleProductsWithBlock:(GIIAPFetchProducts)callback {
+    self.bundleFetchCallback = callback;
+
+    NSSet *bundleIds = [NSSet setWithArray:[GIConfiguration sharedInstance].game.bundles];
+    self.bundleRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:bundleIds];
+    self.bundleRequest.delegate = self;
+    [self.bundleRequest start];
 }
 
 - (void)purchaseProduct:(SKProduct *)product {
@@ -98,7 +116,7 @@
 
 - (void)_trackTransaction:(SKPaymentTransaction *)transaction {
     SKProduct *purchasedProduct = nil;
-    for (SKProduct *product in [GIConfiguration sharedInstance].products) {
+    for (SKProduct *product in [GIConfiguration sharedInstance].allProducts) {
         if ([product.productIdentifier isEqualToString:transaction.payment.productIdentifier]) {
             purchasedProduct = product;
             break;
@@ -111,6 +129,14 @@
                              tax:@(0)
                         shipping:@(0)
                     currencyCode:nil];
+}
+
+- (GIIAPFetchProducts)_callbackForRequest:(SKRequest *)request {
+    GIIAPFetchProducts callback = self.donationFetchCallback;
+    if (request == self.bundleRequest) {
+        callback = self.bundleFetchCallback;
+    }
+    return callback;
 }
 
 #pragma mark - SKPaymentTransactionObserver Methods
@@ -144,11 +170,13 @@
         return [p1.price compare:p2.price];
     }];
 
-    self.fetchProductsCallback(productsByPrice);
+    GIIAPFetchProducts callback = [self _callbackForRequest:request];
+    callback(productsByPrice);
 }
 
 - (void)request:(SKRequest *)request didFailWithError:(NSError *)error {
-    self.fetchProductsCallback(nil);
+    GIIAPFetchProducts callback = [self _callbackForRequest:request];
+    callback(nil);
 }
 
 @end

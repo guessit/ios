@@ -14,7 +14,8 @@ typedef void (^GIIAPFetchProducts)(NSArray *products);
 @interface GIIAPManager : NSObject <SKPaymentTransactionObserver>
 
 + (GIIAPManager *)sharedInstance;
-- (void)fetchProductsWithBlock:(GIIAPFetchProducts)callback;
+- (void)fetchDonationProductsWithBlock:(GIIAPFetchProducts)callback;
+- (void)fetchBundleProductsWithBlock:(GIIAPFetchProducts)callback;
 - (void)purchaseProduct:(SKProduct *)product;
 
 @end
