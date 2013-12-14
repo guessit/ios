@@ -1,4 +1,3 @@
-GuessIt!
-========
+# GuessIt!
 
 Guessing game framework
