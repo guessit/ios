@@ -1,5 +1,5 @@
 //
-//  _GIAppDelegate.h
+//  GIAppDelegate.h
 //  GuessIt
 //
 //  Created by Marlon Andrade on 15/06/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface _GIAppDelegate : UIResponder <UIApplicationDelegate>
+@interface GIAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

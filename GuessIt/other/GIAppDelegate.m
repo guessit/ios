@@ -1,13 +1,14 @@
 //
 //  GIAppDelegate.m
-//  Country Flags
+//  GuessIt
 //
-//  Created by Marlon Andrade on 20/05/14.
-//  Copyright (c) 2014 Marlon Andrade. All rights reserved.
+//  Created by Marlon Andrade on 15/06/13.
+//  Copyright (c) 2013 GuessIt. All rights reserved.
 //
 
 #import "GIAppDelegate.h"
 
+#import "MALazykit.h"
 #import "UINavigationController+GuessIt.h"
 
 @implementation GIAppDelegate
