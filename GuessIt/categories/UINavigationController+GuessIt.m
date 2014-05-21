@@ -18,6 +18,10 @@
 + (instancetype)guessItGame {
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
 
+#ifdef LIGHT_STATUS_BAR
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+#endif
+
     UINavigationController *nav = [UINavigationController navigationControllerWithNavigationBarClass:[GINavigationBar class]
                                                                                         toolbarClass:nil];
     nav.viewControllers = @[[GIMainViewController viewController]];

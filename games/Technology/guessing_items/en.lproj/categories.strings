@@ -1,0 +1,19 @@
+/* 
+  categories.strings
+  technology
+
+  Created by Marlon Andrade on 02/10/13.
+  Copyright (c) 2013 GuessIt. All rights reserved.
+*/
+"company"="Company";
+"cloud"="Cloud Service";
+"database"="Database";
+"framework"="Framework";
+"ide"="IDE";
+"programming_language"="Programming Language";
+"social_network"="Social Network";
+"software"="Software";
+"text_editor"="Text Editor";
+"ios_apple_icons"="iOS Apple Icon";
+"ios_game_icons"="iOS Game Icon";
+"browser_logos"="Browser Logo";
