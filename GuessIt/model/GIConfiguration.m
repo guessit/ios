@@ -15,7 +15,7 @@
 #import "GILevel.h"
 #import "GAI.h"
 #import <iRate/iRate.h>
-#import <SSToolkit/SSCategories.h>
+#import "SAMCategories.h"
 
 @interface GIConfiguration ()
 
@@ -157,7 +157,7 @@
     GILevel *nextLevel = nil;
 
     if ([self.game.options[@"randomize"] boolValue]) {
-        nextLevel = todoLevels.randomObject;
+        nextLevel = todoLevels.sam_randomObject;
     } else {
         nextLevel = todoLevels.firstObject;
     }
@@ -254,7 +254,6 @@
 - (void)_setupiRate {
     [iRate sharedInstance].applicationName = @"GuessIt";
     [iRate sharedInstance].daysUntilPrompt = 3.f;
-    [iRate sharedInstance].promptAgainForEachNewVersion = NO;
 }
 
 - (void)_setupAnalytics {

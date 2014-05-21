@@ -8,7 +8,7 @@
 
 #import "GIUserInterfaceElement+Factory.h"
 
-#import <SSToolkit/SSCategories.h>
+#import "SAMCategories.h"
 
 @implementation GIUserInterfaceElement (Factory)
 
@@ -33,7 +33,7 @@
         NSString *camel = [[property capitalizedString] stringByReplacingOccurrencesOfString:@"_"
                                                                                   withString:@""];
         SEL setter = NSSelectorFromString([NSString stringWithFormat:@"set%@:", camel]);
-        UIColor *color = [UIColor colorWithHex:dictionary[property]];
+        UIColor *color = [UIColor sam_colorWithHex:dictionary[property]];
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"

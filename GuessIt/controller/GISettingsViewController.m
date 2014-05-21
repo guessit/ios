@@ -17,7 +17,7 @@
 #import "MALazykit.h"
 #import "NSObject+Analytics.h"
 #import "SVProgressHUD.h"
-#import "UIColor+SSToolkitAdditions.h"
+#import "UIColor+SAMAdditions.h"
 #import "UIFont+GuessItFonts.h"
 #import "UIView+CBFrameHelpers.h"
 

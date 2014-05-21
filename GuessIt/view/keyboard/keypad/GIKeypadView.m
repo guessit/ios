@@ -19,7 +19,7 @@
 #import "UIView+CBFrameHelpers.h"
 #import "UIView+EasingFunctions/UIView+EasingFunctions.h"
 #import <AHEasing/easing.h>
-#import <SSToolkit/SSCategories.h>
+#import "SAMCategories.h"
 
 @interface GIKeypadView ()
 
@@ -146,7 +146,7 @@
     }
 
     for (GILetterView *letterView in self.notPlacedLetterViews) {
-        if (![self.correctAnswer containsString:letterView.letter]) {
+        if (![self.correctAnswer sam_containsString:letterView.letter]) {
             wrongLetterView = letterView;
             break;
         } else {
@@ -338,7 +338,7 @@
         [letterView reset];
     }];
 
-    [self.letterViews shuffle];
+    [self.letterViews sam_shuffle];
 
     self.initialized = NO;
     [self setNeedsLayout];

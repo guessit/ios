@@ -107,7 +107,7 @@
     CGFloat height = width;
     self.imageButton.frame = CGRectMake(x, y, width, height);
 
-    self.imageButton.defaultView.font = [UIFont iconicFontOfSize:self.imageButton.bounds.size.height];
+    self.imageButton.defaultView.font = [UIFont fontAwesomeFontOfSize:self.imageButton.bounds.size.height];
     self.imageButton.defaultView.textColor = self.titleLabel.textColor;
     self.imageButton.defaultView.backgroundColor = [UIColor clearColor];
     self.imageButton.defaultView.shadowColor = self.titleLabel.shadowColor;
