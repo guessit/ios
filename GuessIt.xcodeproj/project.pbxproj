@@ -6700,6 +6700,9 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "GuessIt!";
 				TargetAttributes = {
+					BF847C81193A478800D31732 = {
+						DevelopmentTeam = BZP7G3CCW6;
+					};
 					BF988590192C30C8004EA013 = {
 						DevelopmentTeam = BZP7G3CCW6;
 					};
