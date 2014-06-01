@@ -3,7 +3,7 @@
   "ad_mediation_id": "bf9d05a7e40e416b",
   "analytics_tracking_id": "UA-42974394-8",
   "options": {
-    "randomize": true,
+    "randomize": false,
     "keypad_rows": 2,
     "keypad_columns": 7,
     "keypad_help_width": 50
