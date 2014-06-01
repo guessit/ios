@@ -81,10 +81,10 @@
       "secondary_shadow_color": "#266104ff"
     },
     "game_over": {
-      "background_color": "#b81a0aff",
-      "text_color": "#ffffffff",
-      "shadow_color": "#600c04ff",
-      "secondary_color": "#e9eac6ff",
+      "background_color": "#2d881fff",
+      "text_color": "#fed90eff",
+      "shadow_color": "#1f3c0fff",
+      "secondary_color": "#f9fad6ff",
       "secondary_text_color": "#efefefff",
       "secondary_shadow_color": "#2b2b2bff"
     },
