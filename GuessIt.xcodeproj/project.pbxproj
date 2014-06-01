@@ -392,7 +392,6 @@
 		BFA3B369192C4EAA00093C78 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD1E83A192C344B005CF312 /* libPods.a */; };
 		BFA3B384192C4EAA00093C78 /* icon_buy_dinner.png in Resources */ = {isa = PBXBuildFile; fileRef = BF92632117A5537E00C29A70 /* icon_buy_dinner.png */; };
 		BFA3B385192C4EAA00093C78 /* icon_buy_sandwich@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF92631E17A5537300C29A70 /* icon_buy_sandwich@2x.png */; };
-		BFA3B386192C4EAA00093C78 /* game.json in Resources */ = {isa = PBXBuildFile; fileRef = BFF48787192C4B2800B3306B /* game.json */; };
 		BFA3B38C192C4EAA00093C78 /* game_over.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFFDB7E217E86C180038AF56 /* game_over.strings */; };
 		BFA3B3AF192C4EAA00093C78 /* shine_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF91795717244A8200B136E2 /* shine_mask@2x.png */; };
 		BFA3B3BE192C4EAA00093C78 /* icon_buy_clothes.png in Resources */ = {isa = PBXBuildFile; fileRef = BF92632D17A553A400C29A70 /* icon_buy_clothes.png */; };
@@ -1713,6 +1712,7 @@
 		BFD1E83F192C347A005CF312 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF04BBEB17B3AE3800D83137 /* AdSupport.framework */; };
 		BFD1E840192C347A005CF312 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF04BBE917B3AE3300D83137 /* StoreKit.framework */; };
 		BFD1E8F0192C37BB005CF312 /* game.json in Resources */ = {isa = PBXBuildFile; fileRef = BFD1E8EF192C37BB005CF312 /* game.json */; };
+		BFEA4CE6193BF391006518FA /* game.json in Resources */ = {isa = PBXBuildFile; fileRef = BFEA4CE5193BF391006518FA /* game.json */; };
 		BFF4866B192C491400B3306B /* JotiOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF56593F176E721400F5198A /* JotiOne-Regular.ttf */; };
 		BFF4866C192C492600B3306B /* Lobster.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF565940176E721400F5198A /* Lobster.ttf */; };
 		BFF4866D192C494B00B3306B /* background_soon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFDB7D717E868B20038AF56 /* background_soon@2x.png */; };
@@ -3629,13 +3629,13 @@
 		BFDE0172176CFFBC00E704CF /* UINavigationController+GuessIt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GuessIt.m"; sourceTree = "<group>"; };
 		BFE6170817B5029D001F1C89 /* MRAID.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MRAID.bundle; sourceTree = "<group>"; };
 		BFE898EA1796FA630081E646 /* main_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_background@2x.png"; sourceTree = "<group>"; };
+		BFEA4CE5193BF391006518FA /* game.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game.json; sourceTree = "<group>"; };
 		BFF48682192C49C400B3306B /* cat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cat.wav; sourceTree = "<group>"; };
 		BFF48683192C49C400B3306B /* fail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fail.wav; sourceTree = "<group>"; };
 		BFF48684192C49C400B3306B /* keystroke.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = keystroke.wav; sourceTree = "<group>"; };
 		BFF48685192C49C400B3306B /* remove_letter.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = remove_letter.wav; sourceTree = "<group>"; };
 		BFF48686192C49C400B3306B /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
 		BFF48784192C4B0800B3306B /* Technology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Technology.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFF48787192C4B2800B3306B /* game.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game.json; sourceTree = "<group>"; };
 		BFF48789192C4B2800B3306B /* 001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 001.png; sourceTree = "<group>"; };
 		BFF4878A192C4B2800B3306B /* 001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "001@2x.png"; sourceTree = "<group>"; };
 		BFF4878B192C4B2800B3306B /* 002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 002.png; sourceTree = "<group>"; };
@@ -5973,7 +5973,7 @@
 		BFF48786192C4B2800B3306B /* Technology */ = {
 			isa = PBXGroup;
 			children = (
-				BFF48787192C4B2800B3306B /* game.json */,
+				BFEA4CE5193BF391006518FA /* game.json */,
 				BFF48788192C4B2800B3306B /* guessing_items */,
 				BFF48987192C4B2E00B3306B /* icons */,
 				BFF4898A192C4B2E00B3306B /* Images.xcassets */,
@@ -7234,7 +7234,6 @@
 				BFA3B642192C4F0600093C78 /* 017.png in Resources */,
 				BFA3B695192C4F0600093C78 /* 059@2x.png in Resources */,
 				BFA3B65B192C4F0600093C78 /* 029@2x.png in Resources */,
-				BFA3B386192C4EAA00093C78 /* game.json in Resources */,
 				BFA3B69C192C4F0600093C78 /* 064.png in Resources */,
 				BFA3B680192C4F0600093C78 /* 048.png in Resources */,
 				BFA3B67A192C4F0600093C78 /* 045.png in Resources */,
@@ -8324,6 +8323,7 @@
 				BFF48A18192C4B2E00B3306B /* 071.png in Resources */,
 				BFF4870C192C4B0800B3306B /* fail.wav in Resources */,
 				BFF48B34192C4B2E00B3306B /* 213.png in Resources */,
+				BFEA4CE6193BF391006518FA /* game.json in Resources */,
 				BFF489A8192C4B2E00B3306B /* 015.png in Resources */,
 				BFF489A4192C4B2E00B3306B /* 013.png in Resources */,
 				BFF48AC4192C4B2E00B3306B /* 157.png in Resources */,
@@ -9520,6 +9520,7 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -9542,6 +9543,7 @@
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "World Cup 2014";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -9557,6 +9559,7 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -9580,6 +9583,7 @@
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "World Cup 2014";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
