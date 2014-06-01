@@ -14,7 +14,6 @@
 #import "GIIAPManager.h"
 #import "GILevel.h"
 #import "GAI.h"
-#import <iRate/iRate.h>
 #import "SAMCategories.h"
 
 @interface GIConfiguration ()
@@ -26,7 +25,6 @@
 - (void)_loadDonations;
 - (void)_loadBundles;
 - (void)_loadGameFromJson;
-- (void)_setupiRate;
 - (void)_setupAnalytics;
 - (void)_observePaymentQueue;
 - (NSInteger)_integerForKey:(NSString *)key;
@@ -210,7 +208,6 @@
 - (void)_initialize {
     [self _observePaymentQueue];
     [self _loadGameFromJson];
-    [self _setupiRate];
     [self _setupAnalytics];
 }
 
@@ -249,11 +246,6 @@
     if (json) {
         self.game = [GIGame gameWithDictionary:json];
     }
-}
-
-- (void)_setupiRate {
-    [iRate sharedInstance].applicationName = @"GuessIt";
-    [iRate sharedInstance].daysUntilPrompt = 3.f;
 }
 
 - (void)_setupAnalytics {

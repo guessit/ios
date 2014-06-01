@@ -5,7 +5,6 @@ PODS:
   - FontAwesome+iOS (0.1.1)
   - Google-Mobile-Ads-SDK (6.9.2)
   - GoogleAnalytics-iOS-SDK (3.0.7)
-  - iRate (1.10.2)
   - MALazykit (HEAD based on 0.1.10)
   - MASimplestSemiModalViewController (0.1)
   - SAMAddressBar (0.1.0)
@@ -50,7 +49,6 @@ DEPENDENCIES:
   - FontAwesome+iOS
   - Google-Mobile-Ads-SDK
   - GoogleAnalytics-iOS-SDK
-  - iRate
   - MALazykit (HEAD)
   - MASimplestSemiModalViewController
   - SSToolkit
@@ -66,7 +64,6 @@ SPEC CHECKSUMS:
   FontAwesome+iOS: 3c574273fb301c2e0a88f983551562bf8768b623
   Google-Mobile-Ads-SDK: da74aff80d80e7451a24ab76dd422fad29911230
   GoogleAnalytics-iOS-SDK: bb285d8eef15a682f1b82971becd0d22edd0e53b
-  iRate: 7d204971bab2f727195b868e32e05216fe257681
   MALazykit: fcbe3df40f58c4755a07141543aed4b2fd9de4a8
   MASimplestSemiModalViewController: 8dbadc2affaab66c69c355b804692a7e5d135474
   SAMAddressBar: 5880d7cc6fea49e7371b8183924b59cdd14b82fe
