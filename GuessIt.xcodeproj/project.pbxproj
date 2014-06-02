@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF4E86B8193BFE9A003B6FFE /* WC2014-Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4E86B7193BFE9A003B6FFE /* WC2014-Images.xcassets */; };
 		BF847C84193A478800D31732 /* GILevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B5170761D400A83FE3 /* GILevelViewController.m */; };
 		BF847C85193A478800D31732 /* GIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBDD2111701092000F5698E /* GIMainViewController.m */; };
 		BF847C86193A478800D31732 /* GIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F29B21707617700A83FE3 /* GIViewController.m */; };
@@ -97,7 +98,6 @@
 		BF847E61193A4AC300D31732 /* items.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF847DDF193A4AC300D31732 /* items.strings */; };
 		BF847E64193A4AC300D31732 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = BF847DE5193A4AC300D31732 /* iTunesArtwork.png */; };
 		BF847E65193A4AC300D31732 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF847DE6193A4AC300D31732 /* iTunesArtwork@2x.png */; };
-		BF847E66193A4AC300D31732 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF847DE7193A4AC300D31732 /* Images.xcassets */; };
 		BF847F4D193BDC5900D31732 /* 001.png in Resources */ = {isa = PBXBuildFile; fileRef = BF847E67193BDC5800D31732 /* 001.png */; };
 		BF847F4E193BDC5900D31732 /* 001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF847E68193BDC5800D31732 /* 001@2x.png */; };
 		BF847F4F193BDC5900D31732 /* 002.png in Resources */ = {isa = PBXBuildFile; fileRef = BF847E69193BDC5800D31732 /* 002.png */; };
@@ -2378,6 +2378,7 @@
 		BF4D5E57180B737B0013C698 /* GILevelBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GILevelBackView.h; sourceTree = "<group>"; };
 		BF4D5E58180B737B0013C698 /* GILevelBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GILevelBackView.m; sourceTree = "<group>"; };
 		BF4D5E5A180B74A70013C698 /* GILevelBackViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GILevelBackViewDelegate.h; sourceTree = "<group>"; };
+		BF4E86B7193BFE9A003B6FFE /* WC2014-Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "WC2014-Images.xcassets"; sourceTree = "<group>"; };
 		BF565939176E6D3800F5198A /* GIModalPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIModalPanel.h; sourceTree = "<group>"; };
 		BF56593A176E6D3800F5198A /* GIModalPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIModalPanel.m; sourceTree = "<group>"; };
 		BF56593F176E721400F5198A /* JotiOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JotiOne-Regular.ttf"; sourceTree = "<group>"; };
@@ -2432,7 +2433,6 @@
 		BF847DE3193A4AC300D31732 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/items.strings; sourceTree = "<group>"; };
 		BF847DE5193A4AC300D31732 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		BF847DE6193A4AC300D31732 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		BF847DE7193A4AC300D31732 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BF847E67193BDC5800D31732 /* 001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 001.png; sourceTree = "<group>"; };
 		BF847E68193BDC5800D31732 /* 001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "001@2x.png"; sourceTree = "<group>"; };
 		BF847E69193BDC5800D31732 /* 002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 002.png; sourceTree = "<group>"; };
@@ -4431,7 +4431,7 @@
 				BF847D65193A4AC200D31732 /* game.json */,
 				BF847D66193A4AC200D31732 /* guessing_items */,
 				BF847DE4193A4AC300D31732 /* icons */,
-				BF847DE7193A4AC300D31732 /* Images.xcassets */,
+				BF4E86B7193BFE9A003B6FFE /* WC2014-Images.xcassets */,
 			);
 			path = "World Cup 2014";
 			sourceTree = "<group>";
@@ -6830,7 +6830,6 @@
 				BF847F66193BDC5900D31732 /* 013@2x.png in Resources */,
 				BF848020193BDC5900D31732 /* 112@2x.png in Resources */,
 				BF847FA1193BDC5900D31732 /* 044.png in Resources */,
-				BF847E66193A4AC300D31732 /* Images.xcassets in Resources */,
 				BF847F6B193BDC5900D31732 /* 016.png in Resources */,
 				BF847FDD193BDC5900D31732 /* 076.png in Resources */,
 				BF847FF7193BDC5900D31732 /* 090.png in Resources */,
@@ -7000,6 +6999,7 @@
 				BF847D4A193A478800D31732 /* JotiOne-Regular.ttf in Resources */,
 				BF847D4B193A478800D31732 /* remove_letter.wav in Resources */,
 				BF847FEA193BDC5900D31732 /* 083@2x.png in Resources */,
+				BF4E86B8193BFE9A003B6FFE /* WC2014-Images.xcassets in Resources */,
 				BF847D4F193A478800D31732 /* settings.strings in Resources */,
 				BF847F56193BDC5900D31732 /* 005@2x.png in Resources */,
 				BF847F55193BDC5900D31732 /* 005.png in Resources */,
@@ -9735,7 +9735,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Anime-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -9772,7 +9772,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Anime-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
