@@ -92,7 +92,7 @@
       "background_color": "#000000ff",
       "text_color": "#ffffffff",
       "shadow_color": "#606060ff",
-      "secondary_text_color": "#ffffffff",
+      "secondary_text_color": "#ffffffff"
     },
     "other_games": {
       "text_color": "#ffcc00ff",
