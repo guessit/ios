@@ -1,3 +1,16 @@
-# GuessIt!
+## GuessIt iOS Project
 
-Guessing game framework
+iOS app that contains a target for each game.
+
+Games:
+
+* Anime?
+* Brazilian Football?
+* Country Flags?
+* Dragon Ball?
+* Retro Games?
+* Technology?
+* Vida de Programador?
+* World Cup 2014?
+
+Please see http://marlonandrade.com.br/2014/09/11/guessit-going-opensource/ for details.
