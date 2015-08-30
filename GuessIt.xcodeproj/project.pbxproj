@@ -2340,7 +2340,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BD30177A3D9541AEB54F865D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		31B5B9A1C4B8CD46BE18D9B6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		3D570DCB2E07CD497CD538AC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BF04BBE917B3AE3300D83137 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BF04BBEB17B3AE3800D83137 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		BF04BBED17B3AE4300D83137 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -4292,6 +4293,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BF055BF1E687DD955A033FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D570DCB2E07CD497CD538AC /* Pods.debug.xcconfig */,
+				31B5B9A1C4B8CD46BE18D9B6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BF239B85179D462000005FCA /* Help */ = {
 			isa = PBXGroup;
 			children = (
@@ -5598,7 +5608,7 @@
 				BFAD126516F136A100F6D429 /* Frameworks */,
 				BFAD126416F136A100F6D429 /* Products */,
 				BFE6170517B5029D001F1C89 /* Vendor */,
-				BD30177A3D9541AEB54F865D /* Pods.xcconfig */,
+				0BF055BF1E687DD955A033FF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -8696,7 +8706,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 		};
 		BFA3B32C192C4EAA00093C78 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -8724,7 +8734,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 		};
 		BFA3B6B7192C4F9B00093C78 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -8752,7 +8762,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 		};
 		BFA3B893192C50AB00093C78 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -8780,7 +8790,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 		};
 		BFA3BA8F192C519F00093C78 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -8808,7 +8818,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 		};
 		BFA3BC88192C527D00093C78 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -8836,7 +8846,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 		};
 		BFF4868D192C4B0800B3306B /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -8864,7 +8874,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 		};
 		BFFE7139192C38E000BD02EE /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -8892,7 +8902,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -9511,7 +9521,7 @@
 /* Begin XCBuildConfiguration section */
 		BF847D60193A478800D31732 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			baseConfigurationReference = 3D570DCB2E07CD497CD538AC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "WC2014-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "WC2014-LaunchImage";
@@ -9550,7 +9560,7 @@
 		};
 		BF847D61193A478800D31732 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			baseConfigurationReference = 31B5B9A1C4B8CD46BE18D9B6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "WC2014-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "WC2014-LaunchImage";
@@ -9590,7 +9600,7 @@
 		};
 		BF9885B7192C30C9004EA013 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			baseConfigurationReference = 3D570DCB2E07CD497CD538AC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "CountryFlags-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "CountryFlags-LaunchImage";
@@ -9624,7 +9634,7 @@
 		};
 		BF9885B8192C30C9004EA013 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			baseConfigurationReference = 31B5B9A1C4B8CD46BE18D9B6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "CountryFlags-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "CountryFlags-LaunchImage";
@@ -9658,7 +9668,7 @@
 		};
 		BFA3B587192C4EAA00093C78 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			baseConfigurationReference = 3D570DCB2E07CD497CD538AC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Retro-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Retro-LaunchImage";
@@ -9695,7 +9705,7 @@
 		};
 		BFA3B588192C4EAA00093C78 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			baseConfigurationReference = 31B5B9A1C4B8CD46BE18D9B6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Retro-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Retro-LaunchImage";
@@ -9733,7 +9743,7 @@
 		};
 		BFA3B7AC192C4F9B00093C78 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			baseConfigurationReference = 3D570DCB2E07CD497CD538AC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Anime-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -9770,7 +9780,7 @@
 		};
 		BFA3B7AD192C4F9B00093C78 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			baseConfigurationReference = 31B5B9A1C4B8CD46BE18D9B6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Anime-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -9808,7 +9818,7 @@
 		};
 		BFA3B95F192C50AB00093C78 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			baseConfigurationReference = 3D570DCB2E07CD497CD538AC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ClubesBrasileiros-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "ClubesBrasileiros-LaunchImage";
@@ -9845,7 +9855,7 @@
 		};
 		BFA3B960192C50AB00093C78 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			baseConfigurationReference = 31B5B9A1C4B8CD46BE18D9B6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "ClubesBrasileiros-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "ClubesBrasileiros-LaunchImage";
@@ -9883,7 +9893,7 @@
 		};
 		BFA3BB80192C519F00093C78 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			baseConfigurationReference = 3D570DCB2E07CD497CD538AC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "DragonBall-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "DragonBall-LaunchImage";
@@ -9920,7 +9930,7 @@
 		};
 		BFA3BB81192C519F00093C78 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			baseConfigurationReference = 31B5B9A1C4B8CD46BE18D9B6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "DragonBall-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "DragonBall-LaunchImage";
@@ -9958,7 +9968,7 @@
 		};
 		BFA3BD7D192C527D00093C78 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			baseConfigurationReference = 3D570DCB2E07CD497CD538AC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "VdP-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "VdP-LaunchImage";
@@ -9992,7 +10002,7 @@
 		};
 		BFA3BD7E192C527D00093C78 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			baseConfigurationReference = 31B5B9A1C4B8CD46BE18D9B6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "VdP-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "VdP-LaunchImage";
@@ -10026,6 +10036,7 @@
 		};
 		BFAD129916F136A200F6D429 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D570DCB2E07CD497CD538AC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -10057,6 +10068,7 @@
 		};
 		BFAD129A16F136A200F6D429 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31B5B9A1C4B8CD46BE18D9B6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -10082,7 +10094,7 @@
 		};
 		BFF48782192C4B0800B3306B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			baseConfigurationReference = 3D570DCB2E07CD497CD538AC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Tech-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Tech-LaunchImage";
@@ -10119,7 +10131,7 @@
 		};
 		BFF48783192C4B0800B3306B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD30177A3D9541AEB54F865D /* Pods.xcconfig */;
+			baseConfigurationReference = 31B5B9A1C4B8CD46BE18D9B6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Tech-AppIcon";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Tech-LaunchImage";

@@ -120,11 +120,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    if ([GIConfiguration sharedInstance].currentLevel) {
-//        self.view = self.levelView;
-//    } else {
+    if ([GIConfiguration sharedInstance].currentLevel) {
+        self.view = self.levelView;
+    } else {
         self.view = self.gameOverView;
-//    }
+    }
 
     self.navigationItem.rightBarButtonItem = self.rightButtonItem;
 }

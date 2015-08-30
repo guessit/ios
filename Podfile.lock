@@ -35,8 +35,8 @@ PODS:
   - SVProgressHUD (1.0)
   - UAModalPanel (1.1.1)
   - UIView+EasingFunctions (0.0.2):
-    - UIView+EasingFunctions/Bare
-    - UIView+EasingFunctions/WithAHEasing
+    - UIView+EasingFunctions/Bare (= 0.0.2)
+    - UIView+EasingFunctions/WithAHEasing (= 0.0.2)
   - UIView+EasingFunctions/Bare (0.0.2)
   - UIView+EasingFunctions/WithAHEasing (0.0.2):
     - AHEasing
@@ -58,30 +58,30 @@ DEPENDENCIES:
   - uiview-frame-helpers
 
 SPEC CHECKSUMS:
-  AFNetworking: 80c4e0652b08eb34e25b9c0ff3c82556fe5967b4
-  AHEasing: ecab36683ef8c3a9a925fb85e892d1335e750f31
-  Finch: 0c52f62de579f09689f0eba06f68ae3105dca7bf
-  FontAwesome+iOS: 3c574273fb301c2e0a88f983551562bf8768b623
-  Google-Mobile-Ads-SDK: da74aff80d80e7451a24ab76dd422fad29911230
-  GoogleAnalytics-iOS-SDK: bb285d8eef15a682f1b82971becd0d22edd0e53b
-  MALazykit: fcbe3df40f58c4755a07141543aed4b2fd9de4a8
-  MASimplestSemiModalViewController: 8dbadc2affaab66c69c355b804692a7e5d135474
-  SAMAddressBar: 5880d7cc6fea49e7371b8183924b59cdd14b82fe
-  SAMBadgeView: 6f29c18e5dc4ddf6d843c3c5e9c9207028c2e8a8
-  SAMCategories: dc26f9dc67d371d22f391ee2173bc607a887912e
-  SAMCircleProgressView: 8ec885aeaf60bd1ab717d82da166d3a807c63931
-  SAMGradientView: 37ef027b0da8b5fd85bfdfef49801b5262160998
-  SAMHUDView: d16d5814ab1a2e86a0c6c5aba8d67bbd845d78b1
-  SAMLabel: 14570303160fa7844fd4ebb0358cdb3841076825
-  SAMLoadingView: 11b746311268140f6a2380723215fe96a6d15dee
-  SAMRateLimit: f47a9961333e2d44fe189ef2233cee48012905ee
-  SAMTextField: 2dece66424f76a0aea1209adb0becbe728ad9098
-  SAMTextView: 1062a784ba7b2080b0c17748001c416b53010b4b
-  SAMWebView: e615d50d3683b9b4fd3e10da9d079ed03230ee24
-  SSToolkit: 64d8bb043b4f36da68936ddbb4ec4e8cb3c5a8df
-  SVProgressHUD: 5034c6e22b8c2ca3e09402e48d41ed0340aa1c50
-  UAModalPanel: 9363c43a927fa8374a73366c8524b6ab22368b66
-  UIView+EasingFunctions: c878c58f881b08540d075a5312212b8e247be261
-  uiview-frame-helpers: 68ff15193c81e40695cb50f7eedee88e57077efc
+  AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
+  AHEasing: 847f583bcd83a2bb850e38ccdb26d22e2593f34d
+  Finch: 1c4160b5dc530ae0bcede7fb05beeb4151b88ded
+  FontAwesome+iOS: 26037dac07b0768df058a1abfd28b10d553db393
+  Google-Mobile-Ads-SDK: c260aeff59be1eecdaa5e57f26e6699a3ecbc50e
+  GoogleAnalytics-iOS-SDK: 8737363000dd5ba8ba20efd90bcfb730ca22bc2d
+  MALazykit: c24ef27490e86d8552746fff046da6b37d035918
+  MASimplestSemiModalViewController: fbcfb30f1616bebe3595641058032fa989c3741a
+  SAMAddressBar: ca4278987cca36a65fd8d29fae3fc5f3fa732469
+  SAMBadgeView: fb5c4b7f13b311b4e754a179fb6c783df19767e1
+  SAMCategories: bf8287f7961a0b343168d1fee16338dc1626ea39
+  SAMCircleProgressView: 8bfac68a15d1dd1e3d0c1ec411895898efed9dda
+  SAMGradientView: dd5edfe971cea0f1f3369b49f5fb255c0ff3921a
+  SAMHUDView: 374d9b53c2d52bf2e7b49e943ae66ee7ed5538b2
+  SAMLabel: 3792d68d0a04da5600420843d44ec50631695c15
+  SAMLoadingView: 7ffc4f0efe85f9717d6e367b6b93e32befe4407c
+  SAMRateLimit: ba2d40ccb3a4bf04e425035ef1ca88751d969e47
+  SAMTextField: 772c39fb1601cd15fe565239724fc056dd720ed9
+  SAMTextView: 95ba155e3ecd4ef5236311f0137ae1b8ce928352
+  SAMWebView: d141ed60d23f82a0cbfeeb952e93a690f55bc89f
+  SSToolkit: 6aa7a0966ee45788d0ec3748be7d753a2fef9629
+  SVProgressHUD: 46088807596a795cbcb4affd92cf3f13b6ab3dda
+  UAModalPanel: f53b27c1c2704b49335c14ccfab1b427167cb8b0
+  UIView+EasingFunctions: 6d0194f58ddeb8c2d380d016cb54b593fcbb2482
+  uiview-frame-helpers: c3feade603cca5c805dd857e64692c7e7e01d5ec
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.38.2

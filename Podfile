@@ -13,3 +13,6 @@ pod 'AFNetworking', '~> 1.3.1'
 pod 'FontAwesome+iOS'
 pod 'SVProgressHUD'
 pod 'GoogleAnalytics-iOS-SDK'
+
+link_with 'Anime', 'Clubes Brasileiros', 'Country Flags', 'Dragon Ball',
+  'Retro Games', 'Technology', 'Vida de Programador', 'World Cup 2014'
